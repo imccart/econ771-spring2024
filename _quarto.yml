@@ -23,13 +23,13 @@ website:
   site-url: "https://econ771s24.classes.ianmccarthyecon.com/"
 
   twitter-card:
-    image: "/files/social-image-f22.png"
+    image: "/files/econ771-logo.png"
     card-style: summary_large_image
     creator: "@ianhealthecon"
-    # site: "@andrewheiss"
+    site: "@ianhealthecon"
 
   open-graph:
-    image: "/files/social-image-f22.png"
+    image: "/files/econ771-logo.png"
     locale: en_US
 
   repo-url: "https://github.com/imccart/econ771-spring2024"
