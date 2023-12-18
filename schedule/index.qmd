@@ -10,9 +10,9 @@ Below is a breakdown of topics for each class day this semester. Assignments are
 
 ## Welcome to the class!
 
-| Class | Dates      | Topic                                       | Details | Slides | Assignment  |
-|:-----:|------------|---------------------------------------------|:-------:|:------:|:-----------:|
-|  1    | 1/17       | Introduction to the economics of healthcare | [{{< fa magnifying-glass  >}}](/schedule/class-01.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...)  |  |
+| Class | Dates      | Topic                    | Details | Slides | Assignment  |
+|:-----:|------------|--------------------------|:-------:|:------:|:-----------:|
+|  1    | 1/17       | Economics of healthcare  | [{{< fa magnifying-glass  >}}](/schedule/class-01.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...)  |  |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
@@ -20,23 +20,42 @@ Below is a breakdown of topics for each class day this semester. Assignments are
 
 | Class | Dates      | Topic                                       | Details | Slides | Assignment |
 |:-----:|------------|---------------------------------------------|:-------:|:------:|:----------:|
-|  6    | 2/5        | Basics of Hospital Pricing                  | [{{< fa magnifying-glass >}}](/schedule/class-06.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/health-methods-slides/01-so/so-01.html) | | 
+|  2    | 1/19       | Background                                  | [{{< fa magnifying-glass >}}](/schedule/class-02.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  3    | 1/22       | What does health insurance do? Part I       | [{{< fa magnifying-glass >}}](/schedule/class-03.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  4    | 1/24       | What does health insurance do? Part II      | [{{< fa magnifying-glass >}}](/schedule/class-04.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  8    | 1/26       | **Research proposals** (demonstration)      | [{{< fa magnifying-glass >}}](/schedule/class-05.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  6    | 1/29       | What does health insurance do? Part III     | [{{< fa magnifying-glass >}}](/schedule/class-06.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  7    | 1/31       | Health insurance markets, Part I            | [{{< fa magnifying-glass >}}](/schedule/class-07.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  8    | 2/2        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-08.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  9    | 2/5        | Health insurance markets, Part II           | [{{< fa magnifying-glass >}}](/schedule/class-09.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  10   | 2/7        | Health insurance markets, Part III          | [{{< fa magnifying-glass >}}](/schedule/class-10.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | |
+|  11   | 2/9        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-11.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
 ## Module 2: Variation in spending and physician agency
 
-| Class | Dates       | Topic                                       | Details | Slides | Assignment |
-|:-----:|-------------|---------------------------------------------|:-------:|:------:|:----------:|
-|  12   | 2/26        | Smoking and Demand Elasticity               | [{{< fa magnifying-glass >}}](/schedule/class-12.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/health-methods-slides/02-iv/iv-01.html) | | 
+| Class | Dates       | Topic                                      | Details | Slides | Assignment |
+|:-----:|-------------|--------------------------------------------|:-------:|:------:|:----------:|
+|  12   | 2/12        | Background                                 | [{{< fa magnifying-glass >}}](/schedule/class-12.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  13   | 2/14        | Spending and agency, Part I                | [{{< fa magnifying-glass >}}](/schedule/class-13.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  14   | 2/16        | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-14.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  15   | 2/19        | Spending and agency, Part II               | [{{< fa magnifying-glass >}}](/schedule/class-15.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  16   | 2/21        | Spending and agency, Part III              | [{{< fa magnifying-glass >}}](/schedule/class-16.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  17   | 2/23        | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-17.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
 ## Module 3: Pricing and competition
 
-| Class | Dates       | Topic                                       | Details | Slides | Assignment |
-|:-----:|-------------|---------------------------------------------|:-------:|:------:|:----------:|
-|  18   | 3/25        | Basics of Medicare Advantage                | [{{< fa magnifying-glass >}}](/schedule/class-18.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/health-methods-slides/03-rd/rd-01.html) | | 
+| Class | Dates       | Topic                                      | Details | Slides | Assignment |
+|:-----:|-------------|--------------------------------------------|:-------:|:------:|:----------:|
+|  18   | 2/26        | Background                                 | [{{< fa magnifying-glass >}}](/schedule/class-18.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | |
+|  19   | 2/28        | Pricing and competition, Part I            | [{{< fa magnifying-glass >}}](/schedule/class-19.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  20   | 3/1         | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-20.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  21   | 3/4         | Pricing and competition, Part II           | [{{< fa magnifying-glass >}}](/schedule/class-21.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  22   | 3/6         | Pricing and competition, Part III          | [{{< fa magnifying-glass >}}](/schedule/class-22.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  23   | 3/8         | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-23.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
@@ -44,7 +63,12 @@ Below is a breakdown of topics for each class day this semester. Assignments are
 
 | Class | Dates       | Topic                                       | Details | Slides | Assignment |
 |:-----:|-------------|---------------------------------------------|:-------:|:------:|:----------:|
-|  24   | 4/15        | Background on Medicaid Expansion            | [{{< fa magnifying-glass >}}](/schedule/class-24.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/health-methods-slides/04-dd/dd-01.html) | | 
+|  24   | 3/18        | Background                                  | [{{< fa magnifying-glass >}}](/schedule/class-24.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | |
+|  25   | 3/20        | Information disclosure, Part I              | [{{< fa magnifying-glass >}}](/schedule/class-25.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  26   | 3/22        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-26.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  27   | 3/25        | Information disclosure, Part II             | [{{< fa magnifying-glass >}}](/schedule/class-27.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  28   | 3/27        | Information disclosure, Part III            | [{{< fa magnifying-glass >}}](/schedule/class-28.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  29   | 3/29        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-29.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
@@ -52,13 +76,31 @@ Below is a breakdown of topics for each class day this semester. Assignments are
 
 | Class | Dates       | Topic                                       | Details | Slides | Assignment |
 |:-----:|-------------|---------------------------------------------|:-------:|:------:|:----------:|
-|  24   | 4/15        | Background on Medicaid Expansion            | [{{< fa magnifying-glass >}}](/schedule/class-24.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/health-methods-slides/04-dd/dd-01.html) | | 
+|  30   | 4/1         | Background                                  | [{{< fa magnifying-glass >}}](/schedule/class-30.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | |
+|  31   | 4/3         | Information disclosure, Part I              | [{{< fa magnifying-glass >}}](/schedule/class-31.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  32   | 4/5         | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-32.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  33   | 4/8         | Information disclosure, Part II             | [{{< fa magnifying-glass >}}](/schedule/class-33.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  34   | 4/10        | Information disclosure, Part III            | [{{< fa magnifying-glass >}}](/schedule/class-34.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  35   | 4/12        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-35.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
 ## Module 6: Waste and fraud
 
-| Class | Dates       | Topic                                       | Details | Slides | Assignment |
-|:-----:|-------------|---------------------------------------------|:-------:|:------:|:----------:|
-|  24   | 4/15        | Background on Medicaid Expansion            | [{{< fa magnifying-glass >}}](/schedule/class-24.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/health-methods-slides/04-dd/dd-01.html) | | 
+| Class | Dates       | Topic                                      | Details | Slides | Assignment |
+|:-----:|-------------|--------------------------------------------|:-------:|:------:|:----------:|
+|  36   | 4/15        | Background                                 | [{{< fa magnifying-glass >}}](/schedule/class-36.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | |
+|  37   | 4/17        | Waste and fraud, Part I                    | [{{< fa magnifying-glass >}}](/schedule/class-37.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  38   | 4/19        | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-38.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  39   | 4/22        | Waste and fraud, Part II                   | [{{< fa magnifying-glass >}}](/schedule/class-39.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  40   | 4/24        | Waste and fraud, Part III                  | [{{< fa magnifying-glass >}}](/schedule/class-40.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  41   | 4/26        | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-41.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+: {tbl-colwidths="\[10,15,35,10,10,10\]"}
+
+
+## Final Research Plans
+
+| Class | Dates       | Topic                                      | Details | Slides | Assignment |
+|:-----:|-------------|--------------------------------------------|:-------:|:------:|:----------:|
+|  42   | 4/29        | **Research plans**                         | [{{< fa magnifying-glass >}}](/schedule/class-42.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
