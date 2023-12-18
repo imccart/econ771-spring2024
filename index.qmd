@@ -4,6 +4,11 @@ details: " "
 page-layout: custom
 sidebar: false
 toc: false
+format:
+  html:
+    template-partials:
+      - html/title-block.html
+course-logo: /files/econ771-logo.png
 ---
 
 ```{r setup, include=FALSE}
