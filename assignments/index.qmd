@@ -1,0 +1,65 @@
+---
+title: "Assignments"
+---
+
+Below are basic descriptions of each category of assignments for this semester. More details are available on the individual pages for each assignment. Please be sure to check the due dates on each assignment and come to class on those days ready to discuss your work in small groups.
+
+## Homework
+The homework assignments are almost entirely empirical, with each assignment focusing on a specific identification strategy, research question, and health-related dataset. I will provide all answers in `R`; however, you are free to use any software you'd like. Just keep in mind that I will be best able to answer your questions if you also use `R`. I can also answer most any question if you choose to use `Stata`. I can point you in the right direction with `Python`, but I likely can't provide you with any sample code or specific syntax advice.
+
+Please submit all of your homework answers as a PDF via GradeScope (accessed from Canvas). Your PDF must also include a hyperlink to a GitHub repository with all of your code files. If you keep the repository private, please be sure to share the repository with me using my *ian.mccarthy@emory.edu* email address. I strongly encourage you to use `RMarkdown`, `Quarto`, or `Jupyter Notebooks`, which will help you to easily create PDFs and is much better for writing data-oriented documents.  If you are not familiar with these tools, take a look at the following resources:
+
+- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+- [Using R Markdown for Class Reports](https://www.stat.cmu.edu/~cshalizi/rmarkdown/)
+- [Introduction to Quarto](https://quarto.org/docs/get-started/hello/rstudio.html)
+- [Quarto in R for Data Science](https://r4ds.hadley.nz/quarto.html)
+- [Introduction to Jupyter Notebooks](https://www.codecademy.com/article/introducing-jupyter-notebook)
+
+If you're new to these tools, then there will be some growing pains. Please be patient with yourself and stick to it. One of the goals of the course is to develop good workflow habits. This means doing work in a way that minimizes mistakes and maximizes reproducibility. These tools exist exactly for these reasons. It allows you to keep your data analysis and the description of that analysis together in a single document or group of documents. It's really easy to introduce mistakes when copying and pasting empirical results into a text document, and it's even easier to waste hours (*days/weeks?*) re-pasting results into your text document and re-writing the results accordingly. Doing everything in `R Markdown`, `Quarto`, or `Jupyter Notebooks` avoids all of these issues. In the long run, it's much more efficient.
+
+Note that, for your submission, I do **not** need to see all of your code. Your PDF should be a finalized, clean, visually engaging summary of your work. The code belongs in the GitHub repository.
+
+Each homework assignment is worth 30 points toward your final grade (15% each) and consists of 10 individual questions. Each question is worth 3 points, graded as follows:
+
+- 1 point for an attempted answer as of the initial due date
+- 1 point for a nearly-correct answer as of the revision date
+- 1 point for a correct final answer as of the final due date 
+
+Due to the staged structure of each assignment, you should submit **three** PDFs for each assignment, and your repository should similarly be organized with three subfolders for each submission. To make it easy to navigate everyone's repositories, we need everyone to adopt the same directory structure and naming convention. Please be sure to name your solution documents as follows: `lastname-firstinitial-hwk(num)-(submission num)`. For example, if I'm finalizing the initial submission for homework 1, then the file should be named `mccarthy-i-hwk1-1.pdf`. A complete directory structure is provided below. Please adopt this structure as it will also help you to keep your analysis and data organized. Finally, please note that you **should not** include the "data" folder in git or github. The data files are too big and should never be tracked in that way. Instead, please be sure to add the data folder to your gitignore file.
+
+```
+homework1
+|   README.md
+|
+|---data (not tracked in git or pushed to github)
+|   |   input (symbolic links)
+|   |   output (analytic data sets)
+|
+|---submission1
+|   |---data-code
+|   |---analysis
+|   |---results
+|   |   mccarthy-i-hwk1-1.pdf
+|
+|---submission2
+|   |---data-code
+|   |---analysis
+|   |---results
+|   |   mccarthy-i-hwk1-2.pdf
+|
+|---submission3
+|   |---data-code
+|   |---analysis
+|   |---results
+|   |   mccarthy-i-hwk1-3.pdf
+|
+```
+
+
+## Code Review
+One of the best ways to improve your own coding is to see other people's code and learn from them. For each of the first four assignments, we'll do this through a peer code review. Please see the [Peer Review](/assignments/code-review) for more details.
+
+## Participation
+Participation is graded based on your engagement in small-group homework discussions. At the end of each assignment review day (the final due date for each assignment), each member of each small group will be asked to evaluate their peers on a scale of 1-3, with 3 indicated high level of engagement and effort with the group. Please see the [Participation](/assignments/participation) for more details on the peer evaluation process.
+
+Your median score across peers in your group will be your participation grade in that assignment. At the end of the semester, your peer grades will be totaled. Your final participation grade is then based on your total number of points out of 10. Note that there are 15 possible points, so there is some margin for error.

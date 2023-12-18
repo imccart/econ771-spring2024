@@ -1,0 +1,34 @@
+---
+title: "Homework 3"
+---
+
+## Instructions
+In this assignment, you'll recreate the CDC Tax Burden on Tobacco data and answer a few questions along the way. As with the last assignment, the first step is to make sure you've got the [CDC Tax Burden on Tobacco repository](https://github.com/imccart/CDC-tobacco) and downloaded all of the raw data sources. Be sure to get the CPI data from the BLS as well, since we'll be working with *real* dollar values. Once you have the data downloaded and the code running, answer the following questions.
+
+The due date for initial submission is **3/18**, the revision due date is **3/20**, and the final due date is Friday, **3/22**.
+
+## Summarize the data
+
+1. Present a bar graph showing the proportion of states with a change in their cigarette tax in each year from 1970 to 1985.
+
+2. Plot on a single graph the average tax (in 2012 dollars) on cigarettes and the average price of a pack of cigarettes from 1970 to 2018.
+
+3. Identify the 5 states with the highest increases in cigarette prices (in dollars) over the time period. Plot the average number of packs sold per capita for those states from 1970 to 2018.
+
+4. Identify the 5 states with the lowest increases in cigarette prices over the time period. Plot the average number of packs sold per capita for those states from 1970 to 2018. 
+
+5. Compare the trends in sales from the 5 states with the highest price increases to those with the lowest price increases.
+
+
+## Estimate ATEs
+Now let's work on estimating a demand curve for cigarettes. Specifically, we're going to estimate the price elasticity of demand for cigarettes. When explaining your findings, try to limit your discussion just to a couple of sentences. 
+
+6. Focusing only on the time period from 1970 to 1990, regress log sales on log prices to estimate the price elasticity of demand over that period. Interpret your results.
+
+7. Again limiting to 1970 to 1990, regress log sales on log prices using the total (federal and state) cigarette tax (in dollars) as an instrument for log prices. Interpret your results and compare your estimates to those without an instrument. Are they different? If so, why?
+
+8. Show the first stage and reduced-form results from the instrument.
+
+9. Repeat questions 1-3 focusing on the period from 1991 to 2015. 
+
+10. Compare your elasticity estimates from 1970-1990 versus those from 1991-2015. Are they different? If so, why?

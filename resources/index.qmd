@@ -1,0 +1,20 @@
+---
+title: "Resources"
+toc: false
+format:
+  html:
+    page-layout: full
+---
+
+Here are a few additional resources that you may find helpful throughout the semester. I'll add to these as we go.
+
+- Some resources for honing your data analysis skills in `R`:
+  - [R for Data Science](https://r4ds.had.co.nz/) by Hadley Wickham and Garrett Grolemund. This is the go-to resource for starting to work with `R`. Highly recommended, free, and informative.
+  - [R Language Basics](https://raw.githack.com/uo-ec607/lectures/master/04-rlang/04-rlang.html#1) by Grant McDermott
+  - [Data cleaning and wrangling in R](https://raw.githack.com/uo-ec607/lectures/master/05-tidyverse/05-tidyverse.html#1) by Grant McDermott
+- Some free econometric resources
+  - [Causal Inference Book](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/) by Jamie Robin and Miguel Hernan
+  - [Econometrics](https://www.ssc.wisc.edu/~bhansen/econometrics/) by Bruce Hansen
+  - [Introductory Econometrics](https://github.com/NickCH-K/econometrics) class notes from Nick Huntington-Klein
+  - [Econometrics Notes](http://www.carolinacaetano.net/) from Carolina Caetano at UGA
+  - Ever wish you had a central resource for lots of little commands and how to do things in different stats packages? Nick Huntington-Klein thought the same thing in his [Library of Statistical Techniques (LOST)](https://lost-stats.github.io/).

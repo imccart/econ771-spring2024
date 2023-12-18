@@ -1,0 +1,93 @@
+---
+pagetitle: "Health Economics II"
+details: " "
+page-layout: custom
+sidebar: false
+toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.align = "center", fig.retina = 3,
+                      dev = "png", dev.args = list(type = "cairo-png"),
+                      collapse = TRUE)
+
+options(digits = 3, width = 120,
+        dplyr.summarise.inform = FALSE,
+        knitr.kable.NA = "")
+```
+
+
+```{css, echo=FALSE}
+.content-block {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+@media(min-width: 900px) {
+  .content-block {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media(min-width: 1200px) {
+  .content-block {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
+
+```
+
+
+::: {.content-block}
+
+# Health Economics II
+
+::: {.text-secondary .fs-4}
+
+An economics PhD course exploring the industrial organization of healthcare markets in the U.S., focusing on health insurance, physician agency and healthcare spending, healthcare pricing (bargaining and competition), information disclosure, physician learning and technology adoption, and healthcare waste.
+
+Spring 2024<br>
+Department of Economics<br>
+Emory University<br>
+**Follow us!** [{{< fa brands twitter >}}](https://twitter.com/emoryeconomics), [{{< fa brands linkedin >}}](https://www.linkedin.com/company/emory-university-department-of-economics), [{{< fa brands facebook >}}](https://www.facebook.com/EmoryEcon/), and [{{< fa brands instagram >}}](https://www.instagram.com/econemory/)
+
+
+:::
+
+
+---
+
+::: {.grid}
+
+::: {.g-col-6}
+
+
+## Instructor
+
+{{< fa user >}} [Ian McCarthy](https://www.ianmccarthyecon.com)<br>
+{{< fa university >}} R. Rollins, R432<br>
+{{< fa envelope >}} [ian.mccarthy@emory.edu](mailto:ian.mccarthy@emory.edu)<br>
+{{< fa brands twitter >}} [\@ianhealthecon](https://twitter.com/ianhealthecon)<br>
+{{< fa calendar-check >}} [Schedule an appointment](https://mccarthy-meetings.youcanbook.me/)
+
+:::
+
+::: {.g-col-6}
+
+
+## Course Details
+
+{{< fa calendar-alt >}} 1-17-2024 to 4-29-2024<br>
+{{< fa calendar >}} Monday, Wednesday, Friday<br>
+{{< fa clock >}} 11:30am to 12:45pm M/W, 11:30 to 12:20pm Friday<br>
+{{< fa university >}} Woodruff Library 874
+
+:::
+
+:::
+
+:::

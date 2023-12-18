@@ -1,0 +1,15 @@
+---
+title: "Peer Code Review"
+---
+
+One of the best ways to improve your own coding and workflow is to study someone else's. That's the goal of the peer code review. For each of the first four homework assignments, you will be assigned a partner to review. The partner will be someone that you have not worked with as part of that assignment. You will be responsible for reviewing their code and providing feedback. You will also receive feedback from your partner on your code. Each peer code review is worth 5% toward your final grade (10 points total, 2 points per question) and consists of the following questions. You will submit your answers to these questions as a PDF on Canvas.
+
+1. **Code Review and Efficiency**: Are there any parts of the code that seem inefficient or redundant? How could these sections be optimized for better performance or clarity?
+
+2. **Data Interpretation and Results**: How well does the interpretation of the results align with the data analysis conducted? Are there alternative interpretations or analyses that could be considered?
+
+3. **Replicability and Documentation**: How easily could another researcher replicate this study based on the provided code and documentation? Are there any barriers to replicability, such as unclear steps or missing data?
+
+4. **Validation and Error Handling**: How has the project accounted for potential errors or anomalies in the data? Is there sufficient validation or error handling in the code to ensure robust results?
+
+5. **Presentation of Results**: How clear and concise are the results presented in the report? Are there any additional visualizations or tables that could be included to improve the presentation of the results?

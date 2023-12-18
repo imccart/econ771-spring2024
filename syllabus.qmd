@@ -1,0 +1,104 @@
+---
+title: "Syllabus"
+page-layout: full
+---
+  
+## Course description
+
+This course explores the industrial organization of healthcare markets in the U.S. We will focus on the following areas: health insurance,  physician agency and healthcare spending, healthcare pricing (bargaining and competition), information disclosure, physician learning and technology adoption, and healthcare waste. As we cover some of the key papers in these areas, we will discuss and employ tools from the fields of empirical IO and causal inference. As such, we will also examine several econometric methods and causal inference identification strategies. These methods will be introduced as needed throughout the course.
+
+Supply-side health economics is a rapidly growing field with many new developments, particularly in the areas of bargaining in two-sided markets and physician learning. Some of these recent developments use tools from network analysis and machine learning, which we unfortunately do not have time to cover in this course. I've also chosen specific topics that overlap most with my own research --- the upside here is that I can speak somewhat confidently about the literature and empirical studies in this area, but the downside is that some very interesting areas of health economics are not studied. For example, we will largely ignore issues of the prescription drug market, medical devices, and physician labor supply. My hope is that the content that we do cover will provide a springboard for those interested in these other important areas.
+
+## Learning outcomes
+
+I have four central goals for this course:
+
+1. Synthesize the current literature in each of the main areas of health economics covered in this class
+2. Apply standard causal inference techniques in the area of healthcare
+3. Organize real-world data with current workflow and versioning tools
+4. Develop your own preliminary research in some area of health economics
+
+## Text, Software, and Class Materials
+
+1. **Readings:** As an elective PhD course, we will rely on academic papers from the reading list below. I expect everyone to read the papers in advance and come to class with questions on the study's contribution, empirical techniques, identification strategies, and datasets used. My goal with each paper is to discuss the analysis in detail. As such, the primary reading list is perhaps shorter than a standard PhD course. I've provided supplemental reading in each section for those interested in additional readings in a specific area.
+
+2. **Software:** For almost everything in this class, I'll use `R`, but you are free to use whatever software you're most comfortable with. I encourage you to use `R`, `Stata`, or `Python` simply because these are the most common programs used in practice right now. You'll also need to have a basic working knowledge of Git and GitHub. If you're new to these tools, take a look at [Grant McDermott's](https://grantmcdermott.com/) notes on [Data Science for Economists](https://github.com/uo-ec607/lectures) as well as [Jenny Bryan's](https://jennybryan.org/) online reference book, [Happy Git and GitHub with R](https://happygitwithr.com/).
+
+3. **Accessing Data:** For any in-class activities, I will house all of the code and links to the data on our class website. For any real-life datasets, I will also point you to other GitHub repositories where available, and I'll make some data available via OneDrive. Details will be posted on Canvas and in class. 
+
+4. **Logistics:** For day-to-day communication, grades, and other private information (such as Zoom meeting links if needed), I'll use *Canvas*. I'll post all other materials to our class website. Please be sure to set up you Canvas alerts so that you receive class announcements in a timely manner.
+
+5. **Slides and Notes:** Any presentations will be made available on our class website prior to any given class.
+
+## Course policies
+
+Various policies for this course are described below. Basically, let's all work to be good citizens and take seriously our various roles as a student, teacher, friend, colleague, human, etc.
+
+
+### Academic integrity
+
+The Emory University Honor Code is taken seriously and governs all work in this course. Details about the Honor Code are available in the Laney Graduate School Handbook and available online [here](https://www.gs.emory.edu/academics/policies-progress/conduct.html). By taking this course, you affirm that it is a violation of the code to plagiarize, to deviate from the instructions about collaboration on work that is submitted for grades, to give false information to a faculty member, and to undertake any other form of academic misconduct. You also affirm that if you witness others violating the code you have a duty to report them to the honor council.
+
+### Accessibility services
+
+If you anticipate issues related to the format or requirements of this course, please meet with me. I would like us to discuss ways to ensure your full participation in the course. If you determine that accommodations are necessary, you may register with Accessibility Services at (404)727-9877 or via e-mail at accessibility@emory.edu. To register with OAS, students must self identify and initiate contact with the OAS office.
+
+
+### Communication
+
+I will post regular announcements to the class on *Canvas*, so please set up your notifications on *Canvas* accordingly. I will also use *Canvas* to post all grades and any other information that needs to stay in the class (like our *Zoom* meeting link for virtual meetings, if needed). All other course materials will be available on our class website, [econ771s24.classes.ianmccarthyecon.com/](https://econ771f22.classes.ianmccarthyecon.com/).
+
+Please feel free to reach out to me for any reason. I generally respond to all e-mails within 24 hours.
+
+
+### Office Hours
+
+My office is in room 432 of the R. Randall Rollins building. This is where I'll be for official office hours; however, I'm happy to meet outside of normal office hours as well. Please feel free to schedule another time to meet by following the link to select a time that works for you, [https://mccarthy-meetings.youcanbook.me](https://mccarthy-meetings.youcanbook.me). 
+
+
+### Attendance
+
+While there is no official "attendance" credit, everyone is expected to attend all class sessions. Given our small class, it is very important that we are all present and engaged.
+
+
+## Assignments and Grading
+
+There are four main assignments throughout the semester. I describe each assignment below, with more detail provided on our [class website](https://econ771s24.classes.ianmccarthyecon.com/). Note that I **do not** expect or want anyone to treat these assignments as entirely separate. By that, I mean you should try to identify datasets from the exercises that you can use in your replication project, and you should try to select papers to present that use those data. At a minimum, you should present the paper that you will be replicating. With a little bit of up-front planning, you can create a lot of overlap across assignments, which will make your life much easier. 
+
+
+### Research Proposals
+
+You will submit four research proposals throughout the semester. These are short, 1-2 page documents that outline a research question, the relevant literature, and a proposed empirical strategy. The goal of these proposals is to help you develop your own research ideas and to get feedback from me and your classmates. You will submit and present one proposal roughly every 3 weeks. After you've presented and received feedback on four proposals, you will develop the best of these proposals into a more complete research plan. Details of the research proposal and plans are available on the assignments page of our class website.
+
+### Replication
+
+There is an applied component of this course where we spend some time replicating analyses from selected papers based on real-world data. You will be asked to pick one such paper to more fully replicate. This will require some of your time outside of class to get the data in working order and implement the relevant identification strategy and econometric estimator. Details of the replication are available on the assignments page of our class website.
+
+### Presentations
+
+You will present three papers throughout the course of the semester. Any paper listed as **Primary Reading** in the class schedule can be selected for presentation, with the exception of papers or class days indicated by ** . Please inform me of your selected papers no later than **Friday, January 26**. Please also note your papers and class dates on the Google Sheet [here](link). Details of the expectations for each presentation are available on the assignments page of our class website.
+
+### Due dates
+
+This section is just to highlight the most important dates on which an assignment is due. These dates are repeated within the description of each assignment on the assignments page. Note that you can always turn assignments in prior to the official due date. Late assignments will receive an automatic 5% reduction in the grade for each day the assignment is turned in after the due date.
+
+  - **January 26**: Note the papers you plan to present on the Google Sheet [here](). Only one student can present each paper, so this is first-come first-served.
+  - **February 9**: First research proposal and presentation
+  - **March 1**: Second research proposal and presentation
+  - **March 22**: Third research proposal and presentation
+  - **April 12**: Fourth research proposal and presentation
+  - **April 26**: Replication exercise
+  - **May 3**: Final research plan
+
+
+## Final grades
+
+- **40%** for research proposals (10% for each proposal and 10% for the research plan)
+
+- **30%** for presentations of selected papers (10% each)
+
+- **30%** for paper replication
+
+Letter grades will be assigned at the end of the course based on total score achieved:
+(A = 100-93%, A- = 92.99-90%, B+ = 89.99-87%, B = 86.99-83%, B- = 82.99-80%, C+ = 79.99-77%, C = 76.99-73%, C- = 72.99-70%, D+ = 69.99-67%, D = 66.99-60%, F = 60% or less)
+
