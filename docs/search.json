@@ -1,0 +1,156 @@
+[
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "This course explores the industrial organization of healthcare markets in the U.S. We will focus on the following areas: health insurance, physician agency and healthcare spending, healthcare pricing (bargaining and competition), information disclosure, physician learning and technology adoption, and healthcare waste. As we cover some of the key papers in these areas, we will discuss and employ tools from the fields of empirical IO and causal inference. As such, we will also examine several econometric methods and causal inference identification strategies. These methods will be introduced as needed throughout the course.\nSupply-side health economics is a rapidly growing field with many new developments, particularly in the areas of bargaining in two-sided markets and physician learning. Some of these recent developments use tools from network analysis and machine learning, which we unfortunately do not have time to cover in this course. I’ve also chosen specific topics that overlap most with my own research — the upside here is that I can speak somewhat confidently about the literature and empirical studies in this area, but the downside is that some very interesting areas of health economics are not studied. For example, we will largely ignore issues of the prescription drug market, medical devices, and physician labor supply. My hope is that the content that we do cover will provide a springboard for those interested in these other important areas."
+  },
+  {
+    "objectID": "syllabus.html#course-description",
+    "href": "syllabus.html#course-description",
+    "title": "Syllabus",
+    "section": "",
+    "text": "This course explores the industrial organization of healthcare markets in the U.S. We will focus on the following areas: health insurance, physician agency and healthcare spending, healthcare pricing (bargaining and competition), information disclosure, physician learning and technology adoption, and healthcare waste. As we cover some of the key papers in these areas, we will discuss and employ tools from the fields of empirical IO and causal inference. As such, we will also examine several econometric methods and causal inference identification strategies. These methods will be introduced as needed throughout the course.\nSupply-side health economics is a rapidly growing field with many new developments, particularly in the areas of bargaining in two-sided markets and physician learning. Some of these recent developments use tools from network analysis and machine learning, which we unfortunately do not have time to cover in this course. I’ve also chosen specific topics that overlap most with my own research — the upside here is that I can speak somewhat confidently about the literature and empirical studies in this area, but the downside is that some very interesting areas of health economics are not studied. For example, we will largely ignore issues of the prescription drug market, medical devices, and physician labor supply. My hope is that the content that we do cover will provide a springboard for those interested in these other important areas."
+  },
+  {
+    "objectID": "syllabus.html#learning-outcomes",
+    "href": "syllabus.html#learning-outcomes",
+    "title": "Syllabus",
+    "section": "Learning outcomes",
+    "text": "Learning outcomes\nI have four central goals for this course:\n\nSynthesize the current literature in each of the main areas of health economics covered in this class\nApply standard causal inference techniques in the area of healthcare\nOrganize real-world data with current workflow and versioning tools\nDevelop your own preliminary research in some area of health economics"
+  },
+  {
+    "objectID": "syllabus.html#text-software-and-class-materials",
+    "href": "syllabus.html#text-software-and-class-materials",
+    "title": "Syllabus",
+    "section": "Text, Software, and Class Materials",
+    "text": "Text, Software, and Class Materials\n\nReadings: As an elective PhD course, we will rely on academic papers from the reading list below. I expect everyone to read the papers in advance and come to class with questions on the study’s contribution, empirical techniques, identification strategies, and datasets used. My goal with each paper is to discuss the analysis in detail. As such, the primary reading list is perhaps shorter than a standard PhD course. I’ve provided supplemental reading in each section for those interested in additional readings in a specific area.\nSoftware: For almost everything in this class, I’ll use R, but you are free to use whatever software you’re most comfortable with. I encourage you to use R, Stata, or Python simply because these are the most common programs used in practice right now. You’ll also need to have a basic working knowledge of Git and GitHub. If you’re new to these tools, take a look at Grant McDermott’s notes on Data Science for Economists as well as Jenny Bryan’s online reference book, Happy Git and GitHub with R.\nAccessing Data: For any in-class activities, I will house all of the code and links to the data on our class website. For any real-life datasets, I will also point you to other GitHub repositories where available, and I’ll make some data available via OneDrive. Details will be posted on Canvas and in class.\nLogistics: For day-to-day communication, grades, and other private information (such as Zoom meeting links if needed), I’ll use Canvas. I’ll post all other materials to our class website. Please be sure to set up you Canvas alerts so that you receive class announcements in a timely manner.\nSlides and Notes: Any presentations will be made available on our class website prior to any given class."
+  },
+  {
+    "objectID": "syllabus.html#course-policies",
+    "href": "syllabus.html#course-policies",
+    "title": "Syllabus",
+    "section": "Course policies",
+    "text": "Course policies\nVarious policies for this course are described below. Basically, let’s all work to be good citizens and take seriously our various roles as a student, teacher, friend, colleague, human, etc.\n\nAcademic integrity\nThe Emory University Honor Code is taken seriously and governs all work in this course. Details about the Honor Code are available in the Laney Graduate School Handbook and available online here. By taking this course, you affirm that it is a violation of the code to plagiarize, to deviate from the instructions about collaboration on work that is submitted for grades, to give false information to a faculty member, and to undertake any other form of academic misconduct. You also affirm that if you witness others violating the code you have a duty to report them to the honor council.\n\n\nAccessibility services\nIf you anticipate issues related to the format or requirements of this course, please meet with me. I would like us to discuss ways to ensure your full participation in the course. If you determine that accommodations are necessary, you may register with Accessibility Services at (404)727-9877 or via e-mail at accessibility@emory.edu. To register with OAS, students must self identify and initiate contact with the OAS office.\n\n\nCommunication\nI will post regular announcements to the class on Canvas, so please set up your notifications on Canvas accordingly. I will also use Canvas to post all grades and any other information that needs to stay in the class (like our Zoom meeting link for virtual meetings, if needed). All other course materials will be available on our class website, econ771s24.classes.ianmccarthyecon.com/.\nPlease feel free to reach out to me for any reason. I generally respond to all e-mails within 24 hours.\n\n\nOffice Hours\nMy office is in room 432 of the R. Randall Rollins building. This is where I’ll be for official office hours; however, I’m happy to meet outside of normal office hours as well. Please feel free to schedule another time to meet by following the link to select a time that works for you, https://mccarthy-meetings.youcanbook.me.\n\n\nAttendance\nWhile there is no official “attendance” credit, everyone is expected to attend all class sessions. Given our small class, it is very important that we are all present and engaged."
+  },
+  {
+    "objectID": "syllabus.html#assignments-and-grading",
+    "href": "syllabus.html#assignments-and-grading",
+    "title": "Syllabus",
+    "section": "Assignments and Grading",
+    "text": "Assignments and Grading\nThere are four main assignments throughout the semester. I describe each assignment below, with more detail provided on our class website. Note that I do not expect or want anyone to treat these assignments as entirely separate. By that, I mean you should try to identify datasets from the exercises that you can use in your replication project, and you should try to select papers to present that use those data. At a minimum, you should present the paper that you will be replicating. With a little bit of up-front planning, you can create a lot of overlap across assignments, which will make your life much easier.\n\nResearch Proposals\nYou will submit four research proposals throughout the semester. These are short, 1-2 page documents that outline a research question, the relevant literature, and a proposed empirical strategy. The goal of these proposals is to help you develop your own research ideas and to get feedback from me and your classmates. You will submit and present one proposal roughly every 3 weeks. After you’ve presented and received feedback on four proposals, you will develop the best of these proposals into a more complete research plan. Details of the research proposal and plans are available on the assignments page of our class website.\n\n\nReplication\nThere is an applied component of this course where we spend some time replicating analyses from selected papers based on real-world data. You will be asked to pick one such paper to more fully replicate. This will require some of your time outside of class to get the data in working order and implement the relevant identification strategy and econometric estimator. Details of the replication are available on the assignments page of our class website.\n\n\nPresentations\nYou will present three papers throughout the course of the semester. Any paper listed as Primary Reading in the class schedule can be selected for presentation, with the exception of papers or class days indicated by ** . Please inform me of your selected papers no later than Friday, January 26. Please also note your papers and class dates on the Google Sheet here. Details of the expectations for each presentation are available on the assignments page of our class website.\n\n\nDue dates\nThis section is just to highlight the most important dates on which an assignment is due. These dates are repeated within the description of each assignment on the assignments page. Note that you can always turn assignments in prior to the official due date. Late assignments will receive an automatic 5% reduction in the grade for each day the assignment is turned in after the due date.\n\nJanuary 26: Note the papers you plan to present on the Google Sheet here. Only one student can present each paper, so this is first-come first-served.\nFebruary 9: First research proposal and presentation\nMarch 1: Second research proposal and presentation\nMarch 22: Third research proposal and presentation\nApril 12: Fourth research proposal and presentation\nApril 26: Replication exercise\nMay 3: Final research plan"
+  },
+  {
+    "objectID": "syllabus.html#final-grades",
+    "href": "syllabus.html#final-grades",
+    "title": "Syllabus",
+    "section": "Final grades",
+    "text": "Final grades\n\n40% for research proposals (10% for each proposal and 10% for the research plan)\n30% for presentations of selected papers (10% each)\n30% for paper replication\n\nLetter grades will be assigned at the end of the course based on total score achieved: (A = 100-93%, A- = 92.99-90%, B+ = 89.99-87%, B = 86.99-83%, B- = 82.99-80%, C+ = 79.99-77%, C = 76.99-73%, C- = 72.99-70%, D+ = 69.99-67%, D = 66.99-60%, F = 60% or less)"
+  },
+  {
+    "objectID": "resources/index.html",
+    "href": "resources/index.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Here are a few additional resources that you may find helpful throughout the semester. I’ll add to these as we go.\n\nSome resources for honing your data analysis skills in R:\n\nR for Data Science by Hadley Wickham and Garrett Grolemund. This is the go-to resource for starting to work with R. Highly recommended, free, and informative.\nR Language Basics by Grant McDermott\nData cleaning and wrangling in R by Grant McDermott\n\nSome free econometric resources\n\nCausal Inference Book by Jamie Robin and Miguel Hernan\nEconometrics by Bruce Hansen\nIntroductory Econometrics class notes from Nick Huntington-Klein\nEconometrics Notes from Carolina Caetano at UGA\nEver wish you had a central resource for lots of little commands and how to do things in different stats packages? Nick Huntington-Klein thought the same thing in his Library of Statistical Techniques (LOST)."
+  },
+  {
+    "objectID": "assignments/index.html",
+    "href": "assignments/index.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "Below are basic descriptions of each category of assignments for this semester. More details are available on the individual pages for each assignment. Please be sure to check the due dates on each assignment and come to class on those days ready to discuss your work in small groups."
+  },
+  {
+    "objectID": "assignments/index.html#homework",
+    "href": "assignments/index.html#homework",
+    "title": "Assignments",
+    "section": "Homework",
+    "text": "Homework\nThe homework assignments are almost entirely empirical, with each assignment focusing on a specific identification strategy, research question, and health-related dataset. I will provide all answers in R; however, you are free to use any software you’d like. Just keep in mind that I will be best able to answer your questions if you also use R. I can also answer most any question if you choose to use Stata. I can point you in the right direction with Python, but I likely can’t provide you with any sample code or specific syntax advice.\nPlease submit all of your homework answers as a PDF via GradeScope (accessed from Canvas). Your PDF must also include a hyperlink to a GitHub repository with all of your code files. If you keep the repository private, please be sure to share the repository with me using my ian.mccarthy@emory.edu email address. I strongly encourage you to use RMarkdown, Quarto, or Jupyter Notebooks, which will help you to easily create PDFs and is much better for writing data-oriented documents. If you are not familiar with these tools, take a look at the following resources:\n\nR Markdown: The Definitive Guide\nUsing R Markdown for Class Reports\nIntroduction to Quarto\nQuarto in R for Data Science\nIntroduction to Jupyter Notebooks\n\nIf you’re new to these tools, then there will be some growing pains. Please be patient with yourself and stick to it. One of the goals of the course is to develop good workflow habits. This means doing work in a way that minimizes mistakes and maximizes reproducibility. These tools exist exactly for these reasons. It allows you to keep your data analysis and the description of that analysis together in a single document or group of documents. It’s really easy to introduce mistakes when copying and pasting empirical results into a text document, and it’s even easier to waste hours (days/weeks?) re-pasting results into your text document and re-writing the results accordingly. Doing everything in R Markdown, Quarto, or Jupyter Notebooks avoids all of these issues. In the long run, it’s much more efficient.\nNote that, for your submission, I do not need to see all of your code. Your PDF should be a finalized, clean, visually engaging summary of your work. The code belongs in the GitHub repository.\nEach homework assignment is worth 30 points toward your final grade (15% each) and consists of 10 individual questions. Each question is worth 3 points, graded as follows:\n\n1 point for an attempted answer as of the initial due date\n1 point for a nearly-correct answer as of the revision date\n1 point for a correct final answer as of the final due date\n\nDue to the staged structure of each assignment, you should submit three PDFs for each assignment, and your repository should similarly be organized with three subfolders for each submission. To make it easy to navigate everyone’s repositories, we need everyone to adopt the same directory structure and naming convention. Please be sure to name your solution documents as follows: lastname-firstinitial-hwk(num)-(submission num). For example, if I’m finalizing the initial submission for homework 1, then the file should be named mccarthy-i-hwk1-1.pdf. A complete directory structure is provided below. Please adopt this structure as it will also help you to keep your analysis and data organized. Finally, please note that you should not include the “data” folder in git or github. The data files are too big and should never be tracked in that way. Instead, please be sure to add the data folder to your gitignore file.\nhomework1\n|   README.md\n|\n|---data (not tracked in git or pushed to github)\n|   |   input (symbolic links)\n|   |   output (analytic data sets)\n|\n|---submission1\n|   |---data-code\n|   |---analysis\n|   |---results\n|   |   mccarthy-i-hwk1-1.pdf\n|\n|---submission2\n|   |---data-code\n|   |---analysis\n|   |---results\n|   |   mccarthy-i-hwk1-2.pdf\n|\n|---submission3\n|   |---data-code\n|   |---analysis\n|   |---results\n|   |   mccarthy-i-hwk1-3.pdf\n|"
+  },
+  {
+    "objectID": "assignments/index.html#code-review",
+    "href": "assignments/index.html#code-review",
+    "title": "Assignments",
+    "section": "Code Review",
+    "text": "Code Review\nOne of the best ways to improve your own coding is to see other people’s code and learn from them. For each of the first four assignments, we’ll do this through a peer code review. Please see the Peer Review for more details."
+  },
+  {
+    "objectID": "assignments/index.html#participation",
+    "href": "assignments/index.html#participation",
+    "title": "Assignments",
+    "section": "Participation",
+    "text": "Participation\nParticipation is graded based on your engagement in small-group homework discussions. At the end of each assignment review day (the final due date for each assignment), each member of each small group will be asked to evaluate their peers on a scale of 1-3, with 3 indicated high level of engagement and effort with the group. Please see the Participation for more details on the peer evaluation process.\nYour median score across peers in your group will be your participation grade in that assignment. At the end of the semester, your peer grades will be totaled. Your final participation grade is then based on your total number of points out of 10. Note that there are 15 possible points, so there is some margin for error."
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "Health Economics II",
+    "section": "Instructor",
+    "text": "Instructor\n Ian McCarthy R. Rollins, R432 ian.mccarthy@emory.edu @ianhealthecon Schedule an appointment"
+  },
+  {
+    "objectID": "index.html#course-details",
+    "href": "index.html#course-details",
+    "title": "Health Economics II",
+    "section": "Course Details",
+    "text": "Course Details\n 1-17-2024 to 4-29-2024 Monday, Wednesday, Friday 11:30am to 12:45pm M/W, 11:30 to 12:20pm Friday Woodruff Library 874"
+  },
+  {
+    "objectID": "schedule/index.html",
+    "href": "schedule/index.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Below is a breakdown of topics for each class day this semester. Assignments are also listed according to their due dates. The associated links take you to additional information relevant for that day or for that assignment. The Details link provides specific readings for that class and any additional supplemental materials for that day; the Slides link takes you to the relevant slides for that day; and the Assignment link takes you to the relevant details for each assignment. Each heading is also linked to a broader literature review for that topic, containing many more papers than we will cover in class. For those of you interested in learning more about a particular topic, this is a good place to start."
+  },
+  {
+    "objectID": "schedule/index.html#welcome-to-the-class",
+    "href": "schedule/index.html#welcome-to-the-class",
+    "title": "Schedule",
+    "section": "Welcome to the class!",
+    "text": "Welcome to the class!\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n1\n1/17\nIntroduction to the economics of healthcare"
+  },
+  {
+    "objectID": "schedule/index.html#module-1-health-insurance",
+    "href": "schedule/index.html#module-1-health-insurance",
+    "title": "Schedule",
+    "section": "Module 1: Health insurance",
+    "text": "Module 1: Health insurance\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n6\n2/5\nBasics of Hospital Pricing"
+  },
+  {
+    "objectID": "schedule/index.html#module-2-variation-in-spending-and-physician-agency",
+    "href": "schedule/index.html#module-2-variation-in-spending-and-physician-agency",
+    "title": "Schedule",
+    "section": "Module 2: Variation in spending and physician agency",
+    "text": "Module 2: Variation in spending and physician agency\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n12\n2/26\nSmoking and Demand Elasticity"
+  },
+  {
+    "objectID": "schedule/index.html#module-3-pricing-and-competition",
+    "href": "schedule/index.html#module-3-pricing-and-competition",
+    "title": "Schedule",
+    "section": "Module 3: Pricing and competition",
+    "text": "Module 3: Pricing and competition\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n18\n3/25\nBasics of Medicare Advantage"
+  },
+  {
+    "objectID": "schedule/index.html#module-4-information-disclosure",
+    "href": "schedule/index.html#module-4-information-disclosure",
+    "title": "Schedule",
+    "section": "Module 4: Information disclosure",
+    "text": "Module 4: Information disclosure\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n24\n4/15\nBackground on Medicaid Expansion"
+  },
+  {
+    "objectID": "schedule/index.html#module-5-physician-learning-and-technology-adoption",
+    "href": "schedule/index.html#module-5-physician-learning-and-technology-adoption",
+    "title": "Schedule",
+    "section": "Module 5: Physician learning and technology adoption",
+    "text": "Module 5: Physician learning and technology adoption\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n24\n4/15\nBackground on Medicaid Expansion"
+  },
+  {
+    "objectID": "schedule/index.html#module-6-waste-and-fraud",
+    "href": "schedule/index.html#module-6-waste-and-fraud",
+    "title": "Schedule",
+    "section": "Module 6: Waste and fraud",
+    "text": "Module 6: Waste and fraud\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n24\n4/15\nBackground on Medicaid Expansion"
+  }
+]
