@@ -4,47 +4,7 @@ details: " "
 page-layout: custom
 sidebar: false
 toc: false
-format:
-  html:
-    template-partials:
-      - html/title-block.html
-course-logo: /files/econ771-logo.png
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(fig.align = "center", fig.retina = 3,
-                      dev = "png", dev.args = list(type = "cairo-png"),
-                      collapse = TRUE)
-
-options(digits = 3, width = 120,
-        dplyr.summarise.inform = FALSE,
-        knitr.kable.NA = "")
-```
-
-
-```{css, echo=FALSE}
-.content-block {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-@media(min-width: 900px) {
-  .content-block {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-}
-
-@media(min-width: 1200px) {
-  .content-block {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-}
-
-```
 
 
 ::: {.content-block}
