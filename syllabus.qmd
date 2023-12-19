@@ -76,28 +76,26 @@ There is an applied component of this course where we spend some time replicatin
 
 ### Presentations
 
-You will present three papers throughout the course of the semester. Any paper listed as **Primary Reading** in the class schedule can be selected for presentation, with the exception of papers or class days indicated by ** . Please inform me of your selected papers no later than **Friday, January 26**. Please also note your papers and class dates on the Google Sheet [here](link). Details of the expectations for each presentation are available on the assignments page of our class website.
+You will present four papers throughout the course of the semester. Any paper listed as **Primary Reading** in the class schedule can be selected for presentation, with the exception of papers or class days indicated by ** . Please inform me of your selected papers no later than **Friday, January 26**. Please also note your papers and class dates on the Google Sheet [here](link). Details of the expectations for each presentation are available on the assignments page of our class website.
 
 ### Due dates
 
 This section is just to highlight the most important dates on which an assignment is due. These dates are repeated within the description of each assignment on the assignments page. Note that you can always turn assignments in prior to the official due date. Late assignments will receive an automatic 5% reduction in the grade for each day the assignment is turned in after the due date.
 
-  - **January 26**: Note the papers you plan to present on the Google Sheet [here](). Only one student can present each paper, so this is first-come first-served.
-  - **February 9**: First research proposal and presentation
-  - **March 1**: Second research proposal and presentation
-  - **March 22**: Third research proposal and presentation
-  - **April 12**: Fourth research proposal and presentation
-  - **April 26**: Replication exercise
-  - **May 3**: Final research plan
+   - **January 26**: Note the papers you plan to present on the Google Sheet [here](). Only one student can present each paper, so this is first-come first-served.
+   - **February 2, 9, 16**: First research proposal and presentation
+   - **February 23, March 1, 8**: Second research proposal and presentation
+   - **March 22, 29, April 5**: Third research proposal and presentation
+   - **April 12, 19, 26**: Fourth research proposal and presentation
+   - **April 26**: Replication exercise
+   - **April 29**: Final research plans
 
 
 ## Final grades
 
-- **40%** for research proposals (10% for each proposal and 10% for the research plan)
-
-- **30%** for presentations of selected papers (10% each)
-
-- **30%** for paper replication
+   - **50%** for research proposals (10% for each proposal and 10% for the research plan)
+   - **30%** for paper replication
+   - **20%** for presentations of selected papers (5% each)
 
 Letter grades will be assigned at the end of the course based on total score achieved:
 (A = 100-93%, A- = 92.99-90%, B+ = 89.99-87%, B = 86.99-83%, B- = 82.99-80%, C+ = 79.99-77%, C = 76.99-73%, C- = 72.99-70%, D+ = 69.99-67%, D = 66.99-60%, F = 60% or less)

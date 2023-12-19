@@ -46,6 +46,18 @@ options(digits = 3, width = 120,
 
 ::: {.text-secondary .fs-4}
 
+:::: {.columns}
+
+::: {.column width=20%}
+![](/files/econ771-logo.png)
+:::
+
+::: {.column width=5%}
+
+:::
+
+::: {.column width=75%}
+
 An economics PhD course exploring the industrial organization of healthcare markets in the U.S., focusing on health insurance, physician agency and healthcare spending, healthcare pricing (bargaining and competition), information disclosure, physician learning and technology adoption, and healthcare waste.
 
 Spring 2024<br>
@@ -53,6 +65,9 @@ Department of Economics<br>
 Emory University<br>
 **Follow us!** [{{< fa brands twitter >}}](https://twitter.com/emoryeconomics), [{{< fa brands linkedin >}}](https://www.linkedin.com/company/emory-university-department-of-economics), [{{< fa brands facebook >}}](https://www.facebook.com/EmoryEcon/), and [{{< fa brands instagram >}}](https://www.instagram.com/econemory/)
 
+:::
+
+::::
 
 :::
 

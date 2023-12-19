@@ -8,7 +8,7 @@
 
 <meta name="description" content="PhD Course on the Economics of Healthcare">
 
-<title>Health Economics II</title>
+<title>Health Economics II - Health Insurance</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,26 +21,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,13 +82,15 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Health Economics II">
+<meta property="og:title" content="Health Economics II - Health Insurance">
+<meta property="og:description" content="">
 <meta property="og:image" content="https://econ771s24.classes.ianmccarthyecon.com//files/econ771-logo.png">
 <meta property="og:site-name" content="Health Economics II">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:width" content="512">
-<meta name="twitter:title" content="Health Economics II">
+<meta name="twitter:title" content="Health Economics II - Health Insurance">
+<meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://econ771s24.classes.ianmccarthyecon.com//files/econ771-logo.png">
 <meta name="twitter:creator" content="@ianhealthecon">
 <meta name="twitter:site" content="@ianhealthecon">
@@ -78,14 +99,14 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:image-width" content="512">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Health Economics II</span>
     </a>
   </div>
@@ -96,19 +117,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html" rel="" target="">
+    <a class="nav-link" href="../syllabus.html" rel="" target="">
  <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./schedule/index.html" rel="" target="">
+    <a class="nav-link" href="../schedule/index.html" rel="" target="">
  <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./assignments/index.html" rel="" target="">
+    <a class="nav-link" href="../assignments/index.html" rel="" target="">
  <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resources/index.html" rel="" target="">
+    <a class="nav-link" href="../resources/index.html" rel="" target="">
  <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item compact">
@@ -124,68 +145,83 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-does-health-insurance-do" id="toc-what-does-health-insurance-do" class="nav-link active" data-scroll-target="#what-does-health-insurance-do">What does health insurance do?</a>
+  <ul class="collapse">
+  <li><a href="#list-of-key-papers" id="toc-list-of-key-papers" class="nav-link" data-scroll-target="#list-of-key-papers">List of Key Papers</a></li>
+  </ul></li>
+  <li><a href="#health-insurance-markets" id="toc-health-insurance-markets" class="nav-link" data-scroll-target="#health-insurance-markets">Health insurance markets</a>
+  <ul class="collapse">
+  <li><a href="#list-of-key-papers-1" id="toc-list-of-key-papers-1" class="nav-link" data-scroll-target="#list-of-key-papers-1">List of Key Papers</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content" id="quarto-document-content">
 
-
-
-<div class="cell" data-layout-align="center">
-<style type="text/css">
-.content-block {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-@media(min-width: 900px) {
-  .content-block {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-}
-
-@media(min-width: 1200px) {
-  .content-block {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-}
-
-</style>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Health Insurance</h1>
 </div>
-<section id="health-economics-ii" class="level1 content-block">
-<h1>Health Economics II</h1>
-<div class="text-secondary fs-4">
-<div class="columns">
-<div class="column" style="width:20%;">
-<p><img src=".\files/econ771-logo.png" class="img-fluid"></p>
-</div><div class="column" style="width:5%;">
 
-</div><div class="column" style="width:75%;">
-<p>An economics PhD course exploring the industrial organization of healthcare markets in the U.S., focusing on health insurance, physician agency and healthcare spending, healthcare pricing (bargaining and competition), information disclosure, physician learning and technology adoption, and healthcare waste.</p>
-<p>Spring 2024<br> Department of Economics<br> Emory University<br> <strong>Follow us!</strong> <a href="https://twitter.com/emoryeconomics"><i class="fa-brands fa-twitter" aria-label="twitter"></i></a>, <a href="https://www.linkedin.com/company/emory-university-department-of-economics"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a>, <a href="https://www.facebook.com/EmoryEcon/"><i class="fa-brands fa-facebook" aria-label="facebook"></i></a>, and <a href="https://www.instagram.com/econemory/"><i class="fa-brands fa-instagram" aria-label="instagram"></i></a></p>
-</div>
-</div>
-</div>
-<hr>
-<div class="grid">
-<section id="instructor" class="level2 g-col-6">
-<h2 data-anchor-id="instructor">Instructor</h2>
-<p><i class="fa-solid fa-user" aria-label="user"></i> <a href="https://www.ianmccarthyecon.com">Ian McCarthy</a><br> <i class="fa-solid fa-university" aria-label="university"></i> R. Rollins, R432<br> <i class="fa-solid fa-envelope" aria-label="envelope"></i> <a href="mailto:ian.mccarthy@emory.edu">ian.mccarthy@emory.edu</a><br> <i class="fa-brands fa-twitter" aria-label="twitter"></i> <a href="https://twitter.com/ianhealthecon">@ianhealthecon</a><br> <i class="fa-solid fa-calendar-check" aria-label="calendar-check"></i> <a href="https://mccarthy-meetings.youcanbook.me/">Schedule an appointment</a></p>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Module 1 covers health insurance. We’ll start by examining the purpose and effects of health insurance, and then we’ll move into the study of health insurance markets.</p>
+<section id="what-does-health-insurance-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-health-insurance-do">What does health insurance do?</h2>
+<p>The most basic function of health insurance is to protect against the financial risk of health shocks. But health insurance also provides access to health care services, which can improve health outcomes. Health insurance might also encourage overuse by shielding patients from the financial implications of their health and health care decisions (i.e., ex ante and ex post moral hazard). Some of the key papers in this literature are listed below. This is not an exhaustive list, but rather a list of papers that I have found useful in my own research. I’ve excluded papers focusing on the long-term effects of health insurance (e.g., on education, future labor market outcomes, or intergenerational health). If you’re intersted in that space, you might start with <span class="citation" data-cites="miller2018">Miller and Wherry (<a href="#ref-miller2018" role="doc-biblioref">2018</a>)</span> and <span class="citation" data-cites="east2023">East et al. (<a href="#ref-east2023" role="doc-biblioref">2023</a>)</span>. There’s also a large literature on the effects of health insurance on labor force participation and mobility, which we won’t cover here. For a review of that literature, you might start with <span class="citation" data-cites="gruber2002">Gruber and Madrian (<a href="#ref-gruber2002" role="doc-biblioref">2002</a>)</span>.</p>
+<section id="list-of-key-papers" class="level3">
+<h3 class="anchored" data-anchor-id="list-of-key-papers">List of Key Papers</h3>
+<iframe src="healthinsurance-bib.html" width="100%" height="600px"></iframe>
 </section>
-<section id="course-details" class="level2 g-col-6">
-<h2 data-anchor-id="course-details">Course Details</h2>
-<p><i class="fa-solid fa-calendar-alt" aria-label="calendar-alt"></i> 1-17-2024 to 4-29-2024<br> <i class="fa-solid fa-calendar" aria-label="calendar"></i> Monday, Wednesday, Friday<br> <i class="fa-solid fa-clock" aria-label="clock"></i> 11:30am to 12:45pm M/W, 11:30 to 12:20pm Friday<br> <i class="fa-solid fa-university" aria-label="university"></i> Woodruff Library 874</p>
 </section>
-</div>
+<section id="health-insurance-markets" class="level2">
+<h2 class="anchored" data-anchor-id="health-insurance-markets">Health insurance markets</h2>
+<p>One of the key features of health insurance markets is the presence of adverse selection. Adverse selection occurs when individuals with different health risks have different preferences for health insurance. For example, individuals with high health risks may be more likely to purchase health insurance than individuals with low health risks. This can lead to a market failure in which health insurance is not offered at a price that is affordable to low-risk individuals. The consequences of adverse selection have been known for a very long time - for an initial treatment of this topic, see <span class="citation" data-cites="ackerloff1970">Ackerloff (<a href="#ref-ackerloff1970" role="doc-biblioref">1970</a>)</span> and <span class="citation" data-cites="rothschild1976">Rothschild and Stiglitz (<a href="#ref-rothschild1976" role="doc-biblioref">1976</a>)</span>.</p>
+<section id="list-of-key-papers-1" class="level3">
+<h3 class="anchored" data-anchor-id="list-of-key-papers-1">List of Key Papers</h3>
+<iframe src="insurancemarkets-bib.html" width="100%" height="600px"></iframe>
+
+
+
+</section>
 </section>
 
-
-
-
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-ackerloff1970" class="csl-entry" role="listitem">
+Ackerloff, George. 1970. <span>“The Market for Lemons: <span>Quality</span> Uncertainty and the Market Mechanism.”</span> <em>Quarterly Journal of Economics</em> 84 (3): 488–500.
+</div>
+<div id="ref-east2023" class="csl-entry" role="listitem">
+East, Chloe N., Sarah Miller, Marianne Page, and Laura R. Wherry. 2023. <span>“Multigenerational <span>Impacts</span> of <span>Childhood</span> <span>Access</span> to the <span>Safety</span> <span>Net</span>: <span>Early</span> <span>Life</span> <span>Exposure</span> to <span>Medicaid</span> and the <span>Next</span> <span>Generation</span>’s <span>Health</span>.”</span> <em>American Economic Review</em> 113 (1): 98–135. <a href="https://doi.org/10.1257/aer.20210937">https://doi.org/10.1257/aer.20210937</a>.
+</div>
+<div id="ref-gruber2002" class="csl-entry" role="listitem">
+Gruber, Jonathan, and Brigitte C. Madrian. 2002. <span>“Health <span>Insurance</span>, <span>Labor</span> <span>Supply</span>, and <span>Job</span> <span>Mobility</span>: <span>A</span> <span>Critical</span> <span>Review</span> of the <span>Literature</span>.”</span> Working {Paper}. Working <span>Paper</span> <span>Series</span>. National Bureau of Economic Research. <a href="https://doi.org/10.3386/w8817">https://doi.org/10.3386/w8817</a>.
+</div>
+<div id="ref-miller2018" class="csl-entry" role="listitem">
+Miller, Sarah, and Laura R. Wherry. 2018. <span>“The <span>Long</span>-<span>Term</span> <span>Effects</span> of <span>Early</span> <span>Life</span> <span>Medicaid</span> <span>Coverage</span>.”</span> <em>Journal of Human Resources</em>, January. <a href="https://doi.org/10.3368/jhr.54.3.0816.8173R1">https://doi.org/10.3368/jhr.54.3.0816.8173R1</a>.
+</div>
+<div id="ref-rothschild1976" class="csl-entry" role="listitem">
+Rothschild, Michael, and Joseph Stiglitz. 1976. <span>“Equilibrium in Competitive Insurance Markets: <span>An</span> Essay on the Economics of Imperfect Information.”</span> <em>Quarterly Journal of Economics</em>, 629–49.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

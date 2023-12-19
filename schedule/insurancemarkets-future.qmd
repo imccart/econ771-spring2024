@@ -1,0 +1,7 @@
+---
+title: "Insurance Markets: What we need to know"
+---
+
+Here are some key questions that I view as important and await further research in the area of health insurance markets. These questions are not exhaustive, but they provide a starting point for understanding the current state of research in health insurance and identifying gaps in the literature.
+
+1. **Policies for Expanding Health Insurance Access and Affordability**: In light of the debates around healthcare reform, there's a pressing need to evaluate which policies are most effective in expanding access to and affordability of health insurance. Understanding the welfare consequences of these policies helps inform decisions that could impact millions of lives.

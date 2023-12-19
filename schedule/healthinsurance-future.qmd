@@ -1,0 +1,25 @@
+---
+title: "Health Insurance: What we need to know"
+---
+
+Here are some key questions that I view as important and await further research in the area of health insurance demand and the effects of health insurance coverage. These questions are not exhaustive, but they provide a starting point for understanding the current state of research in health insurance and identifying gaps in the literature.
+
+1. **Effects of Health Insurance on Preventive Care and Chronic Disease Management**: This question is critical as preventive care can significantly reduce long-term healthcare costs and improve outcomes. Understanding the role of health insurance in promoting such care is essential, especially as chronic diseases become more prevalent in aging populations. Some examples of current working papers in this area are listed below:
+   
+   - "Encouraging Preventative Care to Manage Chronic Disease at Scale" by Claire E. Boone, Pablo A. Celhay, Paul Gertler, and Tadeja Gracner. [Working Paper 31643, August 2023](https://www.nber.org/papers/w31643): This paper examines the effects of a large-scale intervention in Chile that provided free access to primary care for chronic disease management. The authors find that the intervention increased the use of primary care services and reduced hospitalizations for chronic disease management. The results suggest that providing free access to primary care can improve health outcomes and reduce healthcare costs.
+
+   - "The Effects of Primary Care Chronic-Disease Management in Rural China" by Yiwei Chen, Hui Ding, Min Yu, and others. [Working Paper 26100, July 2019](https://www.nber.org/papers/w26100): This paper examines the effects of a large-scale intervention in China that provided free access to primary care for chronic disease management. The authors find that the intervention increased the use of primary care services and reduced hospitalizations for chronic disease management. The results suggest that providing free access to primary care can improve health outcomes and reduce healthcare costs.
+
+    - "The Effect of Medicaid on Care and Outcomes for Chronic Conditions: Evidence from the Oregon Health Insurance Experiment" by Heidi Allen and Katherine Baicker. [Working Paper 29373, October 2021](https://www.nber.org/papers/w29373). This paper assesses the impact of Medicaid on the management of diabetes and asthma, as well as several markers of physical health. Utilizing data from Oregon’s 2008 Medicaid lottery, the study found that while insurance increases the diagnosis and use of medication for diabetes, it does not significantly increase the likelihood of diabetic patients receiving recommended care such as eye exams and regular blood sugar monitoring, nor does it improve the management of patients with asthma. This suggests that Medicaid, while crucial for access to care, may not have detectable effects on the management of some chronic physical health conditions over the first two years​
+
+    These papers collectively highlight the complexity and significance of health insurance and care management in addressing chronic diseases and the implications of care fragmentation. They provide insights into how health insurance interacts with healthcare delivery systems, influencing both the quality and efficiency of care for chronic conditions.
+
+
+2. **Health Insurance Design and Consumer Behavior**: The design of health insurance plans (like copayments, deductibles) directly affects consumer choices and healthcare utilization. This area is crucial for policy design, ensuring that insurance structures meet both economic efficiency and equity goals.
+
+3. **Health Insurance and Health Disparities**: With increasing focus on health equity, understanding how health insurance can mitigate disparities in healthcare access and outcomes among marginalized communities is vital. This is particularly relevant given ongoing discussions about healthcare reform and universal coverage.
+
+4. **Technological Advancements and Health Insurance**: The rapid advancement in healthcare technology, like telemedicine, poses new questions about insurance coverage and access. This area is increasingly important as technology becomes more integrated into healthcare delivery, potentially reshaping the landscape of health insurance.
+    - "The Impact of Increased Access to Telemedicine" by Dan Zeltzer, Liran Einav, Joseph Rashba, and Ran D. Balicer. Working Paper 28978, July 2021
+
+Each question ties into significant trends in healthcare, such as demographic shifts, technological advancements, policy debates, and growing concerns about equity and efficiency in healthcare delivery. Addressing these questions can provide insights that are pivotal for informing policy and practice in health economics.
