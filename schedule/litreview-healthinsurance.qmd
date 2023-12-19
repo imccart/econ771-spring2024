@@ -22,3 +22,6 @@ One of the key features of health insurance markets is the presence of adverse s
 ```{=html}
 <iframe src="insurancemarkets-bib.html" width="100%" height="600px"></iframe>
 ```
+
+
+## Supplemental References
