@@ -18,22 +18,21 @@ I have four central goals for this course:
 3. Organize real-world data with current workflow and versioning tools
 4. Develop your own preliminary research in some area of health economics
 
+Our class times and your presentations are designed to help achieve the first goal; the second and third goals are part of our replication project; and the final goal is achieved through the research proposals and research plan. The assignments are described in more detail on the [class assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments).
+
 ## Text, Software, and Class Materials
 
-1. **Readings:** As an elective PhD course, we will rely on academic papers from the reading list below. I expect everyone to read the papers in advance and come to class with questions on the study's contribution, empirical techniques, identification strategies, and datasets used. My goal with each paper is to discuss the analysis in detail. As such, the primary reading list is perhaps shorter than a standard PhD course. I've provided supplemental reading in each section for those interested in additional readings in a specific area.
+1. **Readings:** As an elective PhD course, we will rely on academic papers from the reading list in each module. I expect everyone to read the papers in advance and come to class with questions on the study's contribution, empirical techniques, identification strategies, and datasets used. My goal with each paper is to discuss the analysis in detail. As such, the primary reading list is perhaps shorter than a standard PhD course. I've provided supplemental reading in each section for those interested in additional readings in a specific area.
 
-2. **Software:** For almost everything in this class, I'll use `R`, but you are free to use whatever software you're most comfortable with. I encourage you to use `R`, `Stata`, or `Python` simply because these are the most common programs used in practice right now. You'll also need to have a basic working knowledge of Git and GitHub. If you're new to these tools, take a look at [Grant McDermott's](https://grantmcdermott.com/) notes on [Data Science for Economists](https://github.com/uo-ec607/lectures) as well as [Jenny Bryan's](https://jennybryan.org/) online reference book, [Happy Git and GitHub with R](https://happygitwithr.com/).
+2. **Software:** For anything data related, I'll use `R`, but you are free to use whatever software you're most comfortable with in your replication. I encourage you to use `R`, `Stata`, or `Python` simply because these are the most common programs used in practice right now. You'll also need to have a basic working knowledge of Git and GitHub. If you're new to these tools, take a look at [Grant McDermott's](https://grantmcdermott.com/) notes on [Data Science for Economists](https://github.com/uo-ec607/lectures) as well as [Jenny Bryan's](https://jennybryan.org/) online reference book, [Happy Git and GitHub with R](https://happygitwithr.com/).
 
-3. **Accessing Data:** For any in-class activities, I will house all of the code and links to the data on our class website. For any real-life datasets, I will also point you to other GitHub repositories where available, and I'll make some data available via OneDrive. Details will be posted on Canvas and in class. 
+3. **Logistics:** For day-to-day communication, grades, and other private information (such as Zoom meeting links if needed), I'll use *Canvas*. I'll post all other materials to our class website. Please be sure to set up you Canvas alerts so that you receive class announcements in a timely manner.
 
-4. **Logistics:** For day-to-day communication, grades, and other private information (such as Zoom meeting links if needed), I'll use *Canvas*. I'll post all other materials to our class website. Please be sure to set up you Canvas alerts so that you receive class announcements in a timely manner.
-
-5. **Slides and Notes:** Any presentations will be made available on our class website prior to any given class.
+4. **Slides and Notes:** Any presentations will be made available on our class website prior to any given class.
 
 ## Course policies
 
 Various policies for this course are described below. Basically, let's all work to be good citizens and take seriously our various roles as a student, teacher, friend, colleague, human, etc.
-
 
 ### Academic integrity
 
@@ -53,7 +52,7 @@ Please feel free to reach out to me for any reason. I generally respond to all e
 
 ### Office Hours
 
-My office is in room 432 of the R. Randall Rollins building. This is where I'll be for official office hours; however, I'm happy to meet outside of normal office hours as well. Please feel free to schedule another time to meet by following the link to select a time that works for you, [https://mccarthy-meetings.youcanbook.me](https://mccarthy-meetings.youcanbook.me). 
+My designated office hours are 1:30-2:15pm on Monday and Wednesday in R432 of the R. Randall Rollins building. I'm happy to meet outside of normal office hours as well. Please feel free to schedule another time to meet by following the link to select a time that works for you, [https://mccarthy-meetings.youcanbook.me](https://mccarthy-meetings.youcanbook.me). Unless otherwise noted, all meetings will be held in my office. If you need to meet virtually, please let me know and I'll send you a *Zoom* link.
 
 
 ### Attendance
@@ -63,32 +62,33 @@ While there is no official "attendance" credit, everyone is expected to attend a
 
 ## Assignments and Grading
 
-There are four main assignments throughout the semester. I describe each assignment below, with more detail provided on our [class website](https://econ771s24.classes.ianmccarthyecon.com/). Note that I **do not** expect or want anyone to treat these assignments as entirely separate. By that, I mean you should try to identify datasets from the exercises that you can use in your replication project, and you should try to select papers to present that use those data. At a minimum, you should present the paper that you will be replicating. With a little bit of up-front planning, you can create a lot of overlap across assignments, which will make your life much easier. 
+There are four main assignments throughout the semester. I describe each assignment below, with more detail provided on our [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments). Note that I **do not** expect or want anyone to treat these assignments as entirely separate. By that, I mean you should try to identify datasets from the exercises that you can use in your replication project, and you should try to select papers to present that use those data. At a minimum, you should present the paper that you will be replicating. With a little bit of up-front planning, you can create a lot of overlap across assignments, which will make your life much easier. 
 
 
 ### Research Proposals
 
-You will submit four research proposals throughout the semester. These are short, 1-2 page documents that outline a research question, the relevant literature, and a proposed empirical strategy. The goal of these proposals is to help you develop your own research ideas and to get feedback from me and your classmates. You will submit and present one proposal roughly every 3 weeks. After you've presented and received feedback on four proposals, you will develop the best of these proposals into a more complete research plan. Details of the research proposal and plans are available on the assignments page of our class website.
+You will submit four research proposals throughout the semester. These are short, 1-2 page documents that outline a research question, the relevant literature, and a proposed empirical strategy. The goal of these proposals is to help you develop your own research ideas and to get feedback from me and your classmates. You will submit one proposal roughly every 3 weeks and present the proposal to the class. After you've presented and received feedback on four proposals, you will develop the best of these proposals into a more complete research plan. Details of the research proposal and plans are available on the [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments) of our class website.
 
 ### Replication
 
-There is an applied component of this course where we spend some time replicating analyses from selected papers based on real-world data. You will be asked to pick one such paper to more fully replicate. This will require some of your time outside of class to get the data in working order and implement the relevant identification strategy and econometric estimator. Details of the replication are available on the assignments page of our class website.
+There is an applied component of this course where we spend some time replicating analyses from selected papers based on real-world data. You will be asked to pick one such paper to more fully replicate. This will require some time to get the data in working order and implement the relevant identification strategy and econometric estimator. Details of the replication are available on the [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments) of our class website.
 
 ### Presentations
 
-You will present four papers throughout the course of the semester. Any paper listed as **Primary Reading** in the class schedule can be selected for presentation, with the exception of papers or class days indicated by ** . Please inform me of your selected papers no later than **Friday, January 26**. Please also note your papers and class dates on the Google Sheet [here](link). Details of the expectations for each presentation are available on the assignments page of our class website.
+You will present four papers throughout the course of the semester. Any paper listed as **Primary Reading** in the class schedule can be selected for presentation. Please inform me of your selected papers no later than **Friday, January 26**. Please also note your papers and class dates on the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Details of the expectations for each presentation are available on the [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments) of our class website.
 
-### Due dates
+### Important Deadlines
 
-This section is just to highlight the most important dates on which an assignment is due. These dates are repeated within the description of each assignment on the assignments page. Note that you can always turn assignments in prior to the official due date. Late assignments will receive an automatic 5% reduction in the grade for each day the assignment is turned in after the due date.
+This section is just to highlight important dates for assignments throughout the semester. Note that late assignments will receive an automatic 5% reduction in the grade for each day the assignment is turned in after the due date.
 
-   - **January 26**: Note the papers you plan to present on the Google Sheet [here](). Only one student can present each paper, so this is first-come first-served.
-   - **February 2, 9, 16**: First research proposal and presentation
-   - **February 23, March 1, 8**: Second research proposal and presentation
-   - **March 22, 29, April 5**: Third research proposal and presentation
-   - **April 12, 19, 26**: Fourth research proposal and presentation
-   - **April 26**: Replication exercise
-   - **April 29**: Final research plans
+   - **Select Papers to Present** no later than **January 26**: Note the papers you plan to present on the *Presentations* tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Only one student per paper, so this is first-come first-served. Remember you need to select four papers to present throughout the semester. Please spread these presentations out over the semester.
+   - **Select Paper to Replicate** no later than **February 2**: Note the paper you plan to replicate on the *Replications* tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Only one student per paper, so this is first-come first-served.
+   - The first round of **Research Proposals and Presentations** will be on **February 2, 9, and 16**
+   - The second round of **Research Proposals and Presentations** will be on **February 23, March 1, and March 8**
+   - The third round of **Research Proposals and Presentations** will be on **March 22, March 29, and April 5**
+   - The fourth and final round of **Research Proposals and Presentations** will be on **April 12, 19, and 26**
+   - **Replications** are due on **April 26**
+   - **Final Research Plans** are due on **April 29**
 
 
 ## Final grades

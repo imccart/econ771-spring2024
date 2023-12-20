@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -64,12 +83,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Health Economics II - Health Insurance: What we know">
+<meta property="og:description" content="">
 <meta property="og:image" content="https://econ771s24.classes.ianmccarthyecon.com//files/econ771-logo.png">
 <meta property="og:site-name" content="Health Economics II">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:width" content="512">
 <meta name="twitter:title" content="Health Economics II - Health Insurance: What we know">
+<meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://econ771s24.classes.ianmccarthyecon.com//files/econ771-logo.png">
 <meta name="twitter:creator" content="@ianhealthecon">
 <meta name="twitter:site" content="@ianhealthecon">
@@ -128,7 +149,15 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#aron-dine2013" id="toc-aron-dine2013" class="nav-link active" data-scroll-target="#aron-dine2013"><span class="citation" data-cites="aron-dine2013">Aron-Dine, Einav, and Finkelstein (2013)</span></a></li>
+  <li><a href="#baiker2013nejm-and-finkelstein2012" id="toc-baiker2013nejm-and-finkelstein2012" class="nav-link" data-scroll-target="#baiker2013nejm-and-finkelstein2012"><span class="citation" data-cites="baiker2013nejm">(<strong>baiker2013nejm?</strong>)</span> and <span class="citation" data-cites="finkelstein2012">Finkelstein et al. (2012)</span></a></li>
+  <li><a href="#einav2018" id="toc-einav2018" class="nav-link" data-scroll-target="#einav2018"><span class="citation" data-cites="einav2018">Einav, Finkelstein, and Mahoney (2018)</span></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -150,10 +179,38 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>The goal for today’s class is to understand the effects of health insurance. While there is a substantial literature in this area, we’ll focus on the following three papers in class. These papers generally address the effects of health insurance on healthcare utilization (including the role of moral hazard), health, and financial strain. These are areas where we have a very solid understanding, both theoretically and empirically.</p>
+<section id="aron-dine2013" class="level3">
+<h3 class="anchored" data-anchor-id="aron-dine2013"><span class="citation" data-cites="aron-dine2013">Aron-Dine, Einav, and Finkelstein (<a href="#ref-aron-dine2013" role="doc-biblioref">2013</a>)</span></h3>
+<p>This paper revisits the findings of the original RAND Health Insurance Experiment (HIE) conducted between 1974 and 1982. The RAND HIE was one of the largest and most comprehensive studies of its time, randomly assigning families to different health insurance plans with varying levels of cost-sharing to assess the impact on healthcare utilization and outcomes. This later analysis, conducted three decades after the original experiment, aims to provide a modern interpretation of the HIE’s findings.</p>
+<p>The authors find that higher cost-sharing reduces healthcare utilization. This doesn’t have a significant health effect for most patients, but it does for certain vulnerable populations, such as the chronically ill.&nbsp;The paper also provides methodological insights, discussing the strengths and limitations of the original RAND experiment and the implications for current health economics research. Overall, the paper underscores the importance of the RAND HIE’s findings, highlighting how cost-sharing can influence healthcare utilization without broadly affecting health outcomes, and contextualizes these insights in the modern healthcare environment.</p>
+</section>
+<section id="baiker2013nejm-and-finkelstein2012" class="level3">
+<h3 class="anchored" data-anchor-id="baiker2013nejm-and-finkelstein2012"><span class="citation" data-cites="baiker2013nejm">(<a href="#ref-baiker2013nejm" role="doc-biblioref"><strong>baiker2013nejm?</strong></a>)</span> and <span class="citation" data-cites="finkelstein2012">Finkelstein et al. (<a href="#ref-finkelstein2012" role="doc-biblioref">2012</a>)</span></h3>
+<p>The authors exploited a unique opportunity in Oregon, where a limited number of Medicaid slots were allocated through a lottery to low-income adults. This lottery system essentially created a randomized controlled experiment, allowing the researchers to compare outcomes between those who received Medicaid coverage and those who did not. Both studies found that Medicaid coverage resulted in increased healthcare utilization, including more doctor visits, hospital admissions, and prescription medications. Medicaid coverage also led to a significant reduction in financial strain for recipients, such as lowering the incidence of catastrophic out-of-pocket medical expenditures and reducing the likelihood of unpaid medical bills. While <span class="citation" data-cites="baicker2013">Baicker et al. (<a href="#ref-baicker2013" role="doc-biblioref">2013</a>)</span> finds no significant improvements in measured physical health outcomes (like blood pressure, cholesterol levels, and blood sugar control), <span class="citation" data-cites="finkelstein2012">Finkelstein et al. (<a href="#ref-finkelstein2012" role="doc-biblioref">2012</a>)</span> finds that Medicaid coverage led to a significant reduction in the incidence of depression and improved self-reported health.</p>
+</section>
+<section id="einav2018" class="level3">
+<h3 class="anchored" data-anchor-id="einav2018"><span class="citation" data-cites="einav2018">Einav, Finkelstein, and Mahoney (<a href="#ref-einav2018" role="doc-biblioref">2018</a>)</span></h3>
+<p>This paper is a review and analysis of the concept of moral hazard in health insurance. The authors explain moral hazard as the phenomenon where insurance coverage changes the insured individual’s behavior, leading to increased utilization of healthcare services. This concept is central in the design and evaluation of health insurance policies. The paper surveys empirical evidence of moral hazrd from various studies, including randomized experiments like the RAND Health Insurance Experiment. The authors also discuss the challenge of quantifying the extent of moral hazard and the importance of designing policies that balance the need to provide financial protection (insurance) while minimizing inefficient overuse of healthcare resources.</p>
 
 
 
-</main> <!-- /main -->
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-aron-dine2013" class="csl-entry" role="listitem">
+Aron-Dine, Aviva, Liran Einav, and Amy Finkelstein. 2013. <span>“The <span>RAND</span> <span>Health</span> <span>Insurance</span> <span>Experiment</span>, <span>Three</span> <span>Decades</span> <span>Later</span>.”</span> <em>Journal of Economic Perspectives</em> 27 (1): 197–222.
+</div>
+<div id="ref-baicker2013" class="csl-entry" role="listitem">
+Baicker, Katherine, Sarah L. Taubman, Heidi L. Allen, Mira Bernstein, Jonathan H. Gruber, Joseph P. Newhouse, Eric C. Schneider, et al. 2013. <span>“The <span>Oregon</span> Experiment–Effects of <span>Medicaid</span> on Clinical Outcomes.”</span> <em>The New England Journal of Medicine</em> 368 (18): 1713–22. <a href="https://doi.org/10.1056/NEJMsa1212321">https://doi.org/10.1056/NEJMsa1212321</a>.
+</div>
+<div id="ref-einav2018" class="csl-entry" role="listitem">
+Einav, Liran, Amy Finkelstein, and Neale Mahoney. 2018. <span>“Provider <span>Incentives</span> and <span>Healthcare</span> <span>Costs</span>: <span>Evidence</span> <span>From</span> <span>Long</span>-<span>Term</span> <span>Care</span> <span>Hospitals</span>.”</span> <em>Econometrica</em> 86 (6): 2161–2219. <a href="https://doi.org/10.3982/ECTA15022">https://doi.org/10.3982/ECTA15022</a>.
+</div>
+<div id="ref-finkelstein2012" class="csl-entry" role="listitem">
+Finkelstein, Amy, Sarah Taubman, Bill Wright, Mira Bernstein, Jonathan Gruber, Joseph P Newhouse, Heidi Allen, Katherine Baicker, et al. 2012. <span>“The <span>Oregon</span> <span>Health</span> <span>Insurance</span> <span>Experiment</span>: <span>Evidence</span> from the <span>First</span> <span>Year</span>.”</span> <em>Quarterly Journal of Economics</em> 127 (3): 1057–1106.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
