@@ -8,4 +8,4 @@ Here are two areas that I view as important moving forward and where there is bo
 
 2. **Innovation/Technology Adoption and Health Insurance**: In affecting how services are paid for, insurance can also affect the adoption of new technologies and innovations in healthcare. We'll discuss @agha2022aeri as an example of this line of work.
 
-3. **Health Insurance Networks**: The structure of health insurance networks can affect the quality of care that patients receive. We'll discuss 
+3. **Health Insurance Networks**: The structure of health insurance networks can affect the quality of care that patients receive. We'll discuss @gruber2016 as an example of this line of work, even though it is a little bit older for "current/future" research.

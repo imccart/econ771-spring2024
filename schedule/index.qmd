@@ -14,7 +14,7 @@ In general, I've split each topic into three parts: 1) what we know; 2) what we'
 
 | Class | Dates      | Topic                    | Details | Slides | Assignment  |
 |:-----:|------------|--------------------------|:-------:|:------:|:-----------:|
-|  1    | 1/17       | Economics of healthcare  | [{{< fa magnifying-glass  >}}](/schedule/class-01.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...)  |  |
+|  1    | 1/17       | Economics of healthcare  | [{{< fa magnifying-glass  >}}](/schedule/introduction.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...)  |  |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
@@ -23,10 +23,10 @@ In general, I've split each topic into three parts: 1) what we know; 2) what we'
 | Class | Dates      | Topic                                       | Details | Slides | Assignment |
 |:-----:|------------|---------------------------------------------|:-------:|:------:|:----------:|
 |  2    | 1/19       | Background                                  | [{{< fa magnifying-glass >}}](/schedule/insurance-background.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  3    | 1/22       | What does health insurance do? Part I       | [{{< fa magnifying-glass >}}](/schedule/healthinsurance-past.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  4    | 1/24       | What does health insurance do? Part II      | [{{< fa magnifying-glass >}}](/schedule/healthinsurance-present.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  3    | 1/22       | Health insurance, Part I       | [{{< fa magnifying-glass >}}](/schedule/healthinsurance-past.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  4    | 1/24       | Health insurance, Part II      | [{{< fa magnifying-glass >}}](/schedule/healthinsurance-present.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  8    | 1/26       | **Research proposals** (demonstration)      | [{{< fa magnifying-glass >}}](/schedule/proposals1.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
-|  6    | 1/29       | What does health insurance do? Part III     | [{{< fa magnifying-glass >}}](/schedule/healthinsurance-future.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  6    | 1/29       | Health insurance, Part III     | [{{< fa magnifying-glass >}}](/schedule/healthinsurance-future.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  7    | 1/31       | Health insurance markets, Part I            | [{{< fa magnifying-glass >}}](/schedule/insurancemarkets-past.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  8    | 2/2        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/proposals2.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
 |  9    | 2/5        | Health insurance markets, Part II           | [{{< fa magnifying-glass >}}](/schedule/insurancemarkets-present.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
