@@ -7,3 +7,5 @@ Here are two areas that I view as important moving forward and where there is bo
 1. **Health Insurance Design and Consumer Behavior**: The design of health insurance plans (like copayments, deductibles, and coverage decisions) directly affects consumer choices and healthcare utilization. This area is crucial for policy design, ensuring that insurance structures meet both economic efficiency and equity goals. We'll discuss @brown2023 and @ho2020 as an example of this line of current/future research.
 
 2. **Innovation/Technology Adoption and Health Insurance**: In affecting how services are paid for, insurance can also affect the adoption of new technologies and innovations in healthcare. We'll discuss @agha2022aeri as an example of this line of work.
+
+3. **Health Insurance Networks**: The structure of health insurance networks can affect the quality of care that patients receive. We'll discuss 

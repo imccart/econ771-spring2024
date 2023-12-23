@@ -1,0 +1,14 @@
+---
+title: "Insurance Markets: What we're learning"
+---
+
+The more recent literature in health insurance markets continues to consider the role of adverse selection, as well as the role of competition in other dimensions of health insurance products (like network construction), and the feasibility of "managed competition".For this class, we'll focus on the following papers:
+
+### @kong2023
+Looks at adverse selection as a source of natural monopoly in insurance markets.
+
+### @shepard2022
+Looks at the role of competition in other dimensions of health insurance, in this case network construction.
+
+### @cabral2018 and @curto2021
+Managed competition
