@@ -5,10 +5,10 @@ title: "Insurance Markets: What we know"
 The goal for today's class is to understand the literature on health insurance markets and competition. While there is a substantial literature in this area, we'll focus on the following papers (or groups of papers) in class. These papers generally address how to model competition in health insurance, the effects of competitiveness on health insurance premiums, and the effects of adverse selection on health insurance market equilibrium. These are areas where the existing literature is relatively robust.
 
 ### @bundorf2012 and @einav2010qje
-Basic structure for examining health insurance competition competition
+These papers provide some of the standard tools and current results in the study of health insurance competition. They analyze how consumers respond to prices when selecting health plans, focusing on the implications for consumer welfare and market efficiency. This research contributes to understanding consumer behavior in health insurance markets and the role of pricing in health plan choice. 
 
 ### @dafny2012
-The effects of mergers on health insurance premiums.
+This paper examines competition in health insurance markets and quantifies the effect of insurer market power on premiums. @dafny2012 is particularly relevant in the context of policy debates regarding the regulation of insurance markets and the potential benefits of increasing competition to control healthcare costs.
 
 ### @handel2013, @handel2015, and @handel2019
-Adverse selection in health insurance markets
+These papers collectively provide a comprehensive analysis of the challenges posed by adverse selection and information asymmetries in health insurance markets, and the potential unintended consequences of policy interventions. The papers demonstrate that while adverse selection is a fundamental challenge in these markets, its manifestations and solutions are diverse and complex. 
