@@ -1,0 +1,17 @@
+---
+title: "Background on Health Insurance"
+---
+
+Module 1 covers health insurance. We'll start by examining the purpose and effects of health insurance (as well as how people pick health insurance plans), and then we'll move into the study of health insurance markets. Today, we'll discuss some basic background in this area, focusing on three core issues in the study of health insurance and health insurance markets. In keeping with the organization of Module 1, I'll split this into "health insurance" (mainly demand-side issues) and then "health insurance markets" (mainly supply-side issues).
+
+## Health insurance
+
+We'll start by introducing some basic health insurance terminology, how insurance is intended to function, and how it functions in practice. We'll briefly discuss health insurance premiums in the context of financial risk and some of the key theoretical drivers of willingness to pay for health insurance in this context. We'll also discuss some of the history of health insurance in the U.S., how it has evolved over time, and how it is structured today, including background on how people get health insurance (Employer Sponsored Health Insurance, Medicare, Medicare Advantage, Medicaid, and the Health Insurance Exchanges).
+
+## Health insurance markets
+
+We'll focus on the key role of adverse selection in health insurance markets. We'll also discuss some basic health insurance policy issues, including "managed care", the Affordable Care Act (ACA), and the introduction of the health insurance exchanges.
+
+
+
+

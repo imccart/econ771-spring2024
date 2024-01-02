@@ -153,15 +153,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#homework" id="toc-homework" class="nav-link active" data-scroll-target="#homework">Homework</a></li>
-  <li><a href="#code-review" id="toc-code-review" class="nav-link" data-scroll-target="#code-review">Code Review</a></li>
-  <li><a href="#participation" id="toc-participation" class="nav-link" data-scroll-target="#participation">Participation</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -183,64 +175,9 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Below are basic descriptions of each category of assignments for this semester. More details are available on the individual pages for each assignment. Please be sure to check the due dates on each assignment and come to class on those days ready to discuss your work in small groups.</p>
-<section id="homework" class="level2">
-<h2 class="anchored" data-anchor-id="homework">Homework</h2>
-<p>The homework assignments are almost entirely empirical, with each assignment focusing on a specific identification strategy, research question, and health-related dataset. I will provide all answers in <code>R</code>; however, you are free to use any software you’d like. Just keep in mind that I will be best able to answer your questions if you also use <code>R</code>. I can also answer most any question if you choose to use <code>Stata</code>. I can point you in the right direction with <code>Python</code>, but I likely can’t provide you with any sample code or specific syntax advice.</p>
-<p>Please submit all of your homework answers as a PDF via GradeScope (accessed from Canvas). Your PDF must also include a hyperlink to a GitHub repository with all of your code files. If you keep the repository private, please be sure to share the repository with me using my <em>ian.mccarthy@emory.edu</em> email address. I strongly encourage you to use <code>RMarkdown</code>, <code>Quarto</code>, or <code>Jupyter Notebooks</code>, which will help you to easily create PDFs and is much better for writing data-oriented documents. If you are not familiar with these tools, take a look at the following resources:</p>
-<ul>
-<li><a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></li>
-<li><a href="https://www.stat.cmu.edu/~cshalizi/rmarkdown/">Using R Markdown for Class Reports</a></li>
-<li><a href="https://quarto.org/docs/get-started/hello/rstudio.html">Introduction to Quarto</a></li>
-<li><a href="https://r4ds.hadley.nz/quarto.html">Quarto in R for Data Science</a></li>
-<li><a href="https://www.codecademy.com/article/introducing-jupyter-notebook">Introduction to Jupyter Notebooks</a></li>
-</ul>
-<p>If you’re new to these tools, then there will be some growing pains. Please be patient with yourself and stick to it. One of the goals of the course is to develop good workflow habits. This means doing work in a way that minimizes mistakes and maximizes reproducibility. These tools exist exactly for these reasons. It allows you to keep your data analysis and the description of that analysis together in a single document or group of documents. It’s really easy to introduce mistakes when copying and pasting empirical results into a text document, and it’s even easier to waste hours (<em>days/weeks?</em>) re-pasting results into your text document and re-writing the results accordingly. Doing everything in <code>R Markdown</code>, <code>Quarto</code>, or <code>Jupyter Notebooks</code> avoids all of these issues. In the long run, it’s much more efficient.</p>
-<p>Note that, for your submission, I do <strong>not</strong> need to see all of your code. Your PDF should be a finalized, clean, visually engaging summary of your work. The code belongs in the GitHub repository.</p>
-<p>Each homework assignment is worth 30 points toward your final grade (15% each) and consists of 10 individual questions. Each question is worth 3 points, graded as follows:</p>
-<ul>
-<li>1 point for an attempted answer as of the initial due date</li>
-<li>1 point for a nearly-correct answer as of the revision date</li>
-<li>1 point for a correct final answer as of the final due date</li>
-</ul>
-<p>Due to the staged structure of each assignment, you should submit <strong>three</strong> PDFs for each assignment, and your repository should similarly be organized with three subfolders for each submission. To make it easy to navigate everyone’s repositories, we need everyone to adopt the same directory structure and naming convention. Please be sure to name your solution documents as follows: <code>lastname-firstinitial-hwk(num)-(submission num)</code>. For example, if I’m finalizing the initial submission for homework 1, then the file should be named <code>mccarthy-i-hwk1-1.pdf</code>. A complete directory structure is provided below. Please adopt this structure as it will also help you to keep your analysis and data organized. Finally, please note that you <strong>should not</strong> include the “data” folder in git or github. The data files are too big and should never be tracked in that way. Instead, please be sure to add the data folder to your gitignore file.</p>
-<pre><code>homework1
-|   README.md
-|
-|---data (not tracked in git or pushed to github)
-|   |   input (symbolic links)
-|   |   output (analytic data sets)
-|
-|---submission1
-|   |---data-code
-|   |---analysis
-|   |---results
-|   |   mccarthy-i-hwk1-1.pdf
-|
-|---submission2
-|   |---data-code
-|   |---analysis
-|   |---results
-|   |   mccarthy-i-hwk1-2.pdf
-|
-|---submission3
-|   |---data-code
-|   |---analysis
-|   |---results
-|   |   mccarthy-i-hwk1-3.pdf
-|</code></pre>
-</section>
-<section id="code-review" class="level2">
-<h2 class="anchored" data-anchor-id="code-review">Code Review</h2>
-<p>One of the best ways to improve your own coding is to see other people’s code and learn from them. For each of the first four assignments, we’ll do this through a peer code review. Please see the <a href="../assignments/code-review">Peer Review</a> for more details.</p>
-</section>
-<section id="participation" class="level2">
-<h2 class="anchored" data-anchor-id="participation">Participation</h2>
-<p>Participation is graded based on your engagement in small-group homework discussions. At the end of each assignment review day (the final due date for each assignment), each member of each small group will be asked to evaluate their peers on a scale of 1-3, with 3 indicated high level of engagement and effort with the group. Please see the <a href="../assignments/participation">Participation</a> for more details on the peer evaluation process.</p>
-<p>Your median score across peers in your group will be your participation grade in that assignment. At the end of the semester, your peer grades will be totaled. Your final participation grade is then based on your total number of points out of 10. Note that there are 15 possible points, so there is some margin for error.</p>
+<p>Below are basic descriptions of each category of assignments for this semester. More details are available on the individual pages for each assignment.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
