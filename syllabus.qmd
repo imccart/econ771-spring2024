@@ -26,7 +26,7 @@ Our class times and your presentations are designed to help achieve the first go
 
 2. **Software:** For anything data related, I'll use `R`, but you are free to use whatever software you're most comfortable with in your replication. I encourage you to use `R`, `Stata`, or `Python` simply because these are the most common programs used in practice right now. You'll also need to have a basic working knowledge of Git and GitHub. If you're new to these tools, take a look at [Grant McDermott's](https://grantmcdermott.com/) notes on [Data Science for Economists](https://github.com/uo-ec607/lectures) as well as [Jenny Bryan's](https://jennybryan.org/) online reference book, [Happy Git and GitHub with R](https://happygitwithr.com/).
 
-3. **Logistics:** For day-to-day communication, grades, and other private information (such as Zoom meeting links if needed), I'll use *Canvas*. I'll post all other materials to our class website. Please be sure to set up you Canvas alerts so that you receive class announcements in a timely manner.
+3. **Logistics:** For day-to-day communication, grades, and other private information (such as Zoom meeting links if needed), I'll use **Canvas**. I'll post all other materials to our class website. Please be sure to set up you **Canvas** alerts so that you receive class announcements in a timely manner.
 
 4. **Slides and Notes:** Any presentations will be made available on our class website prior to any given class.
 
@@ -45,7 +45,7 @@ If you anticipate issues related to the format or requirements of this course, p
 
 ### Communication
 
-I will post regular announcements to the class on *Canvas*, so please set up your notifications on *Canvas* accordingly. I will also use *Canvas* to post all grades and any other information that needs to stay in the class (like our *Zoom* meeting link for virtual meetings, if needed). All other course materials will be available on our class website, [econ771s24.classes.ianmccarthyecon.com/](https://econ771f22.classes.ianmccarthyecon.com/).
+I will post regular announcements to the class on **Canvas**, so please set up your notifications on **Canvas** accordingly. I will also use **Canvas** to post all grades and any other information that needs to stay in the class (like our **Zoom** meeting link for virtual meetings, if needed). All other course materials will be available on our class website, [econ771s24.classes.ianmccarthyecon.com/](https://econ771f22.classes.ianmccarthyecon.com/).
 
 Please feel free to reach out to me for any reason. I generally respond to all e-mails within 24 hours.
 
