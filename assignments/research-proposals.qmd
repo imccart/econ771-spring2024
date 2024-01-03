@@ -1,0 +1,22 @@
+---
+title: "Research Proposals"
+---
+
+The research proposal is a starting point for a research project. It’s a basic structure that can help you think through specific aspects of a new project and begin to assess its viability and its potential contribution. For our purposes, a research proposal should consist of a two-page report and a 10-15 minute presentation addressing the following four points:
+
+### What is your research question?
+This should be formulated as an input-output question, e.g., I’m interested in studying the effects of T on Y, or I’m interested in understanding the association between X and Y. While there are many types of research questions, in general your question should satisfy three key criteria (adapted from Jesse Shapiro’s “Four Steps to an Applied Micro Paper”)
+
+- The question has an answer. We may not know what the answer is, but we can agree that an answer exists. "What is the effect on quantity sold of imposing a price ceiling on ketchup?" has an answer. "What is the nature of firm and consumer behavior in the ketchup industry?" does not.
+- The answer is not obvious. We cannot readily determine the answer to the question based on logic, common sense, or existing evidence. "Would making ketchup available only on Tuesdays improve consumer welfare?" has an answer, but we can probably guess what it is.
+- The answer is actionable. If we knew the answer, someone (say, a policymaker, firm, or NGO) might care to do things differently. "What is the effect on consumer welfare of imposing uniform wholesale pricing on the ketchup market?" seems actionable, because in fact ketchup is subject to uniform wholesale pricing restrictions in the US, and a policymaker might be interested to know whether such restrictions are a good idea. "What is the effect on consumer welfare of a technology that instantly transports ketchup to your fries whenever you need it?" seems more hypothetical.
+
+### What is the hook?
+Why is your question important and relevant? This should be aimed at a general audience, not someone specific to your field and perhaps not even to an economist.
+
+### What is your economic model?
+Your research question should be specific enough so that you are able to write down a model, an equation, or a series of equations that would facilitate answering this question. The model is not simply a mathematical representation of your research question. Rather, it should help inform the empirical methods and variation you will be using. 
+
+### What is the data and source of variation used for identification?
+You must provide a detailed description of the data that you plan to use to estimate the model and answer the research question.  This must include a discussion of where the variation in the data is coming from, why is it credible, and how it maps onto the research question. You don’t need to have the data yet, but you need to know it exists and how to access it. The data must also be accessible in a reasonable time period. Course instructors are expected to verify the existence and feasibility of obtaining the data.
+

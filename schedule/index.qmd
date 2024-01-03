@@ -35,7 +35,7 @@ In general, I've split each topic into three parts: 1) what we know; 2) what we'
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
-## Module 2: [Healthcare variation](litreview-variation.qmd) and [physician agency](litreview-physicianagency.qmd)
+## Module 2: [Healthcare variation and physician agency](litreview-variation-agency.qmd)
 
 | Class | Dates       | Topic                                      | Details | Slides | Assignment |
 |:-----:|-------------|--------------------------------------------|:-------:|:------:|:----------:|

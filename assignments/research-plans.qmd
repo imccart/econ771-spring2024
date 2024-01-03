@@ -1,0 +1,11 @@
+---
+title: "Research Plan"
+---
+
+Your research plan consists of a three-page report addressing the following five points:
+
+1.	**What is your research question?** (from research proposal)
+2.	**What is the hook?** (from research proposal)
+3.	**What is your economic model?** (from research proposal)
+4.	**What is the data and source of variation used for identification?** (from research proposal)
+5.	**What is the value-added?** Given points (1) to (4), what do we know in the literature about this problem? What are the relevant papers when it comes to the topic, methods, and data? How exactly do you contribute to the literature, above and beyond what was already done. Note that doing the same thing for a different population or using different methods or different data is not exciting unless the hook is related to the specific population, data, method, etc. The research plan is therefore an extension of the research proposal that includes the equivalent of a small-scale literature review.

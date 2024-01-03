@@ -45,14 +45,14 @@ If you anticipate issues related to the format or requirements of this course, p
 
 ### Communication
 
-I will post regular announcements to the class on **Canvas**, so please set up your notifications on **Canvas** accordingly. I will also use **Canvas** to post all grades and any other information that needs to stay in the class (like our **Zoom** meeting link for virtual meetings, if needed). All other course materials will be available on our class website, [econ771s24.classes.ianmccarthyecon.com/](https://econ771f22.classes.ianmccarthyecon.com/).
+I will post regular announcements to the class on **Canvas**, so please set up your notifications on **Canvas** accordingly. I will also use **Canvas** to post all grades and any other information that needs to stay in the class (like our **Zoom** meeting link for virtual meetings, if needed). All other course materials will be available on our class website, [econ771s24.classes.ianmccarthyecon.com/](https://econ771s24.classes.ianmccarthyecon.com).
 
 Please feel free to reach out to me for any reason. I generally respond to all e-mails within 24 hours.
 
 
 ### Office Hours
 
-My designated office hours are 1:30-2:15pm on Monday and Wednesday in R432 of the R. Randall Rollins building. I'm happy to meet outside of normal office hours as well. Please feel free to schedule another time to meet by following the link to select a time that works for you, [https://mccarthy-meetings.youcanbook.me](https://mccarthy-meetings.youcanbook.me). Unless otherwise noted, all meetings will be held in my office. If you need to meet virtually, please let me know and I'll send you a *Zoom* link.
+My designated office hours are 1:30-2:15pm on Monday and Wednesday in R432 of the R. Randall Rollins building. I'm happy to meet outside of normal office hours as well. Please feel free to schedule another time to meet by following the link to select a time that works for you, [https://mccarthy-meetings.youcanbook.me](https://mccarthy-meetings.youcanbook.me). Unless otherwise noted, all meetings will be held in my office. If you need to meet virtually, please let me know and I'll send you a **Zoom** link.
 
 
 ### Attendance
@@ -62,31 +62,35 @@ While there is no official "attendance" credit, everyone is expected to attend a
 
 ## Assignments and Grading
 
-There are four main assignments throughout the semester. I describe each assignment below, with more detail provided on our [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments). Note that I **do not** expect or want anyone to treat these assignments as entirely separate. By that, I mean you should try to identify datasets from the exercises that you can use in your replication project, and you should try to select papers to present that use those data. At a minimum, you should present the paper that you will be replicating. With a little bit of up-front planning, you can create a lot of overlap across assignments, which will make your life much easier. 
+There are four main assignments throughout the semester. I describe each assignment below, with more detail provided on our [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments). Note that I **do not** expect or want anyone to treat these assignments as entirely separate. By that, I mean you should try to identify overlap in your presentations, replications, and ultimately your research plan. With a little bit of up-front planning, such overlap can make your life much easier. 
 
 
 ### Research Proposals
 
-You will submit four research proposals throughout the semester. These are short, 1-2 page documents that outline a research question, the relevant literature, and a proposed empirical strategy. The goal of these proposals is to help you develop your own research ideas and to get feedback from me and your classmates. You will submit one proposal roughly every 3 weeks and present the proposal to the class. After you've presented and received feedback on four proposals, you will develop the best of these proposals into a more complete research plan. Details of the research proposal and plans are available on the [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments) of our class website.
+You will submit four research proposals throughout the semester. These are short, 1-2 page documents that outline a problem/motivation, a related research question, potential data to help answer this question, and a proposed empirical strategy. The goal of these proposals is to help you develop your own research ideas and to get feedback from me and your classmates. You will submit one proposal roughly every 3 weeks and present the proposal to the class. After you've presented and received feedback on four proposals, you will develop the best of these proposals into a more complete research plan. Details of the research proposal and plans are available on the [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments) of our class website.
 
-### Replication
-
-There is an applied component of this course where we spend some time replicating analyses from selected papers based on real-world data. You will be asked to pick one such paper to more fully replicate. This will require some time to get the data in working order and implement the relevant identification strategy and econometric estimator. Details of the replication are available on the [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments) of our class website.
+Please select a date to present your research proposals on the **Proposals** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing) no later than **Friday, January 26**. Note that even though the presentations are spread out over three weeks for each proposal, everyone has the same due date.
 
 ### Presentations
 
-You will present four papers throughout the course of the semester. Any paper listed as **Primary Reading** in the class schedule can be selected for presentation. Please inform me of your selected papers no later than **Friday, January 26**. Please also note your papers and class dates on the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Details of the expectations for each presentation are available on the [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments) of our class website.
+You will present four papers throughout the course of the semester. Please note your selected papers and class dates on the **Presentations** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing) no later than **Friday, January 26**. If you do not select papers by then, I will assign you papers randomly. The list of potential papers to present and details of the expectations for each presentation are available on the [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments) of our class website.
+
+### Replication
+
+There is an applied component of this course where we spend some time replicating analyses from selected papers based on real-world data. You will be asked to pick one such paper to more fully replicate. This will require some time to get the data in working order and implement the relevant identification strategy and econometric estimator. Please note your selected paper on the **Replications** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing) no later than **February 2**. The list of potential papers to replicate and other details of the replication are available on the [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments) of our class website. Students are also welcome to propose their own paper to replicate, but this must be approved by me in advance.
+
 
 ### Important Deadlines
 
 This section is just to highlight important dates for assignments throughout the semester. Note that late assignments will receive an automatic 5% reduction in the grade for each day the assignment is turned in after the due date.
 
-   - **Select Papers to Present** no later than **January 26**: Note the papers you plan to present on the *Presentations* tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Only one student per paper, so this is first-come first-served. Remember you need to select four papers to present throughout the semester. Please spread these presentations out over the semester.
-   - **Select Paper to Replicate** no later than **February 2**: Note the paper you plan to replicate on the *Replications* tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Only one student per paper, so this is first-come first-served.
-   - The first round of **Research Proposals and Presentations** will be on **February 2, 9, and 16**
-   - The second round of **Research Proposals and Presentations** will be on **February 23, March 1, and March 8**
-   - The third round of **Research Proposals and Presentations** will be on **March 22, March 29, and April 5**
-   - The fourth and final round of **Research Proposals and Presentations** will be on **April 12, 19, and 26**
+   - **Select Papers to Present** no later than **January 26**: Note the papers you plan to present on the **Presentations** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Only one student per paper, so this is first-come first-served. Remember you need to select four papers to present throughout the semester. Please spread these presentations out over the semester.
+   - **Select Research Proposal Presentation Dates** no later than **January 26**: Note the dates you plan to present your proposals on the **Proposals** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Only two students can present on any given Friday.
+   - **Select Paper to Replicate** no later than **February 2**: Note the paper you plan to replicate on the **Replications** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Only one student per paper, so this is first-come first-served.
+   - The first round of **Research Proposals and Presentations** is due by class time on **February 2**
+   - The second round of **Research Proposals and Presentations** is due by class time on **February 23**
+   - The third round of **Research Proposals and Presentations** is due by class time on **March 22**
+   - The fourth and final round of **Research Proposals and Presentations** is due by class time on **April 12**
    - **Replications** are due on **April 26**
    - **Final Research Plans** are due on **April 29**
 
