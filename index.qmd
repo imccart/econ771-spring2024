@@ -58,7 +58,7 @@ options(digits = 3, width = 120,
 
 ::: {.column width=75%}
 
-An economics PhD course exploring the industrial organization of healthcare markets in the U.S., focusing on health insurance, physician agency and healthcare spending, healthcare pricing (bargaining and competition), information disclosure, physician learning and technology adoption, and healthcare waste.
+An economics PhD course exploring the industrial organization of healthcare markets in the U.S., focusing on health insurance, physician agency, healthcare pricing and competition, information disclosure, physician learning, and waste.
 
 Spring 2024<br>
 Department of Economics<br>
@@ -96,7 +96,8 @@ Emory University<br>
 
 {{< fa calendar-alt >}} 1-17-2024 to 4-29-2024<br>
 {{< fa calendar >}} Monday, Wednesday, Friday<br>
-{{< fa clock >}} 11:30am to 12:45pm M/W, 11:30 to 12:20pm Friday<br>
+{{< fa clock >}} 11:30am to 12:45pm M/W<br>
+{{< fa clock >}} 11:30am to 12:20pm Friday<br>
 {{< fa university >}} Woodruff Library 874
 
 :::

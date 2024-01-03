@@ -1,0 +1,16 @@
+---
+title: "Variation and Physician Agency: What we know"
+---
+
+The goal for today's class is to understand the literature on geographic variation in healthcare spending/utilization and the role of physician agency. As before, we'll focus our discussion on three groups of papers.
+
+### @finkelstein2016 and @hull2023
+These papers attempt to decompose variation in healthcare spending between demand and supply-side factors.
+
+
+### @clemens2014
+This paper examines physician responses to financial incentives.
+
+
+### @afendulis2007 and @iizuka2012
+These papers examine the role of physician agency in treatment decisions, @afendulis2007 in the context of surgical intervention among cardiologists and @iizuka2012 in the context of prescription drug decisions. 
