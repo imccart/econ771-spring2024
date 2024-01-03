@@ -4,18 +4,19 @@ title: "Assignments"
 
 Below are basic descriptions of each category of assignments for this semester. More details are available on the individual pages for each assignment. 
 
-## [Research Proposals](/assignments/research-proposals)
-Your research proposal consists of four parts, explained in more detail [here](/assignments/research-proposals). Each proposal is worth 10 points toward your final grade, 8 points for the written proposal and 2 points for the presentation. The written proposal should be 2 pages, double-spaced, 12-point font, 1-inch margins. The presentation should be 10-15 minutes and no more than 5 slides. 
+## Research Proposals
+Your research proposal consists of four parts, explained in more detail [here](/assignments/research-proposals). Each proposal is worth 10 points toward your final grade, 8 points for the written proposal and 2 points for the presentation. The written proposal should be 2 pages, double-spaced, 12-point font, 1-inch margins, and the presentation should be 10-15 minutes and no more than 5 slides. 
 
-You'll present four proposals thoughout the semester. Please pick a date for each proposal and sign up on the **Proposals** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Note that you have to pick one date for each proposal, so you can really only choose between three days for each proposal. All written proposals and presentations are due via **Canvas** by the first due date in each block (2/2, 2/23, 3/22, and 4/12). So if you select 2/9 as your presentation date for the first proposal, you still have to submit your written proposal and presentation slides by 2/2. This is just to ensure a common due date for everyone.
+You'll present four proposals thoughout the semester. Please pick dates for each proposal and sign up on the **Proposals** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing) by **January 26**. Note that you have to pick one date for each proposal, so you can really only choose between three days for each proposal. All written proposals and presentations are due via **Canvas** by the first due date in each block (2/2, 2/23, 3/22, and 4/12). So if you select 2/9 as your presentation date for the first proposal, you still have to submit your written proposal and presentation slides by 2/2. This is just to ensure a common due date for everyone.
 
 Think of the research proposal as a more informed version of brainstorming. This should be something for which you've given some serious thought but where you haven't yet started any analysis. You at least have some idea of the data you'd like to use, where to find it, and how to use it (i.e., you have some identification strategy and estimation method in mind). The purpose of the proposal is to get feedback from me and your peers on your research idea. 
 
 There will be a lot of constructive criticism in these proposals and presentations. This is a good thing! It's how we learn. But it can be a bit uncomfortable at first. The key is to disassociate yourself from your research. It's not personal. It's just research. And it's not even research yet. It's just an idea. So don't take it personally. And don't be afraid to give constructive criticism to others, provided it's delivered in a respectful manner. The more we can create a constructive, supportive, and participative environment, the easier and more productive these propposals will be for everyone.
 
-## [Research Plan](/assignments/research-plans)
+## Research Plans
 Your research plan consists of five parts, explained in more detail [here](/assignments/research-plans). This is an extension of the research proposal where you consider the value-added of your work relative to the existing literature. Essentially, the research plan is your research proposal plus a literature review. You should take your best research proposal, based on feedback from me and your peers, and develop a slightly longer three-page report (double-spaced, 12-point font, 1-inch margins). 
 
 The research plan is worth 10 points toward your final grade (2 points per section of the report). It is due via **Canvas** by 11:59pm on 4/29. We'll spend the final class day discussing your research plans and how best to turn them into papers!
 
-## [Paper Presentations](/assignments/presentations)
+## Paper Presentations
+You will present four papers throughout the course of the semester. A list of potential papers, their general topic area, and the dates covered in class are available [here](/assignments/presentations).  Please note your selected papers and class dates on the **Presentations** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing) no later than **Friday, January 26**. 

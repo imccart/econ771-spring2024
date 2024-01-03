@@ -1,0 +1,17 @@
+---
+title: "Presentations"
+---
+
+Please review the [class schedule](../schedule/) and select four papers (or groups of papers) from the list of papers from each class. Focus only on the Part I, Part II, or Part III classes in each section (i.e., do not select any papers listed solely as background). Your selections must also be on different dates. Once you've identified your papers, note your paper title, authors, your name, and the date of your presentation on the **Presentations** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing) no later than **Friday, January 26**.
+
+We will have no more than four paper groupings per class day, which means we have to keep each presentation plus discussion to no more than 20 minutes. We'll have a few extra minutes on days with just three paper groupings, but even on those days, let's aim for 20 minutes. The presentation should follow a standard conference setup, with some brief discussion of the research question, discussion of the data, empirical analysis, and results and key contributions. You should also prepare two discussion questions to lead a 5 minute discussion after your presentation. Please submit your presentations via **Canvas** no later than **11:59pm on the day before your presentation**.
+
+Your presentation should be no more than 10 slides (including a title slide and your discussion questions at the end). Since the papers have already been motivated from prior classes, you can safely ignore the "motivation" section of a typical presentation. Each presentation is worth 5 points toward your final grade, with one point allocated to each of the following categories:
+
+- Slide length: no more than 10 slides in total (including your discussion questions)
+- Slide layout: slides should be clear and concise, with no more than 5 lines of text per slide and at least one figure
+- Presentation "quality": the presentation should be clear and well-organized, with a clear description of the research question, data, empirical analysis, and results
+- Presentation length: the presentation should be no more than 15 minutes, including clarifying questions
+- Discussion questions: the discussion questions should be clear and thought-provoking. Please conclude your presentation with a final slide listing these questions.
+
+Note that a presentation is not just a re-hashing of the paper in slide form. A good academic presentation should have as little information as possible on each slide, and the content on the slides doesn't necessarily need to follow that of the paper. For example, in a real-time environment, it is much easier to move between different aspects of the empirical analysis and data.

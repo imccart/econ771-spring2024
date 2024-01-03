@@ -25,13 +25,13 @@ In general, I've split each topic into three parts: 1) what we know; 2) what we'
 |  2    | 1/19       | Background                                  | [{{< fa magnifying-glass >}}](/schedule/insurance-background.html)     | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  3    | 1/22       | Health insurance, Part I                    | [{{< fa magnifying-glass >}}](/schedule/healthinsurance-past.html)     | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  4    | 1/24       | Health insurance, Part II                   | [{{< fa magnifying-glass >}}](/schedule/healthinsurance-present.html)  | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  8    | 1/26       | **Research proposals** (demonstration)      | [{{< fa magnifying-glass >}}](/schedule/proposals1.html)               |                                                               | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  8    | 1/26       | **Research proposals** (demonstration)      | [{{< fa magnifying-glass >}}](/schedule/proposals1.html)               |                                                               | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 |  6    | 1/29       | Health insurance, Part III                  | [{{< fa magnifying-glass >}}](/schedule/healthinsurance-future.html)   | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  7    | 1/31       | Health insurance markets, Part I            | [{{< fa magnifying-glass >}}](/schedule/insurancemarkets-past.html)    | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  8    | 2/2        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/proposals2.html)               |                                                               | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  8    | 2/2        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/proposals2.html)               |                                                               | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 |  9    | 2/5        | Health insurance markets, Part II           | [{{< fa magnifying-glass >}}](/schedule/insurancemarkets-present.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  10   | 2/7        | Health insurance markets, Part III          | [{{< fa magnifying-glass >}}](/schedule/insurancemarkets-future.html)  | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | |
-|  11   | 2/9        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/proposals3.html)               |                                                               | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  11   | 2/9        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/proposals3.html)               |                                                               | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
@@ -41,10 +41,10 @@ In general, I've split each topic into three parts: 1) what we know; 2) what we'
 |:-----:|-------------|--------------------------------------------|:-------:|:------:|:----------:|
 |  12   | 2/12        | Background                                 | [{{< fa magnifying-glass >}}](/schedule/agency-background.html)     | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  13   | 2/14        | Variation and agency, Part I               | [{{< fa magnifying-glass >}}](/schedule/agency-past.html)              | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  14   | 2/16        | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/proposals4.html)               |                                                               | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  14   | 2/16        | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/proposals4.html)               |                                                               | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 |  15   | 2/19        | Variation and agency, Part II              | [{{< fa magnifying-glass >}}](/schedule/agency-present.html)           | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  16   | 2/21        | Variation and agency, Part III             | [{{< fa magnifying-glass >}}](/schedule/agency-future.html)            | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  17   | 2/23        | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/proposals5.html)               |                                                               | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  17   | 2/23        | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/proposals5.html)               |                                                               | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
@@ -54,10 +54,10 @@ In general, I've split each topic into three parts: 1) what we know; 2) what we'
 |:-----:|-------------|--------------------------------------------|:-------:|:------:|:----------:|
 |  18   | 2/26        | Background                                 | [{{< fa magnifying-glass >}}](/schedule/class-18.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | |
 |  19   | 2/28        | Pricing and competition, Part I            | [{{< fa magnifying-glass >}}](/schedule/class-19.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  20   | 3/1         | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-20.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  20   | 3/1         | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-20.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 |  21   | 3/4         | Pricing and competition, Part II           | [{{< fa magnifying-glass >}}](/schedule/class-21.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  22   | 3/6         | Pricing and competition, Part III          | [{{< fa magnifying-glass >}}](/schedule/class-22.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  23   | 3/8         | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-23.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  23   | 3/8         | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-23.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
@@ -67,10 +67,10 @@ In general, I've split each topic into three parts: 1) what we know; 2) what we'
 |:-----:|-------------|---------------------------------------------|:-------:|:------:|:----------:|
 |  24   | 3/18        | Background                                  | [{{< fa magnifying-glass >}}](/schedule/class-24.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | |
 |  25   | 3/20        | Information disclosure, Part I              | [{{< fa magnifying-glass >}}](/schedule/class-25.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  26   | 3/22        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-26.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  26   | 3/22        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-26.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 |  27   | 3/25        | Information disclosure, Part II             | [{{< fa magnifying-glass >}}](/schedule/class-27.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  28   | 3/27        | Information disclosure, Part III            | [{{< fa magnifying-glass >}}](/schedule/class-28.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  29   | 3/29        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-29.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  29   | 3/29        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-29.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
@@ -80,10 +80,10 @@ In general, I've split each topic into three parts: 1) what we know; 2) what we'
 |:-----:|-------------|---------------------------------------------|:-------:|:------:|:----------:|
 |  30   | 4/1         | Background                                  | [{{< fa magnifying-glass >}}](/schedule/class-30.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | |
 |  31   | 4/3         | Information disclosure, Part I              | [{{< fa magnifying-glass >}}](/schedule/class-31.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  32   | 4/5         | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-32.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  32   | 4/5         | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-32.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 |  33   | 4/8         | Information disclosure, Part II             | [{{< fa magnifying-glass >}}](/schedule/class-33.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  34   | 4/10        | Information disclosure, Part III            | [{{< fa magnifying-glass >}}](/schedule/class-34.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  35   | 4/12        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-35.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  35   | 4/12        | **Research proposals**                      | [{{< fa magnifying-glass >}}](/schedule/class-35.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
@@ -93,10 +93,11 @@ In general, I've split each topic into three parts: 1) what we know; 2) what we'
 |:-----:|-------------|--------------------------------------------|:-------:|:------:|:----------:|
 |  36   | 4/15        | Background                                 | [{{< fa magnifying-glass >}}](/schedule/class-36.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | |
 |  37   | 4/17        | Waste and fraud, Part I                    | [{{< fa magnifying-glass >}}](/schedule/class-37.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  38   | 4/19        | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-38.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  38   | 4/19        | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-38.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 |  39   | 4/22        | Waste and fraud, Part II                   | [{{< fa magnifying-glass >}}](/schedule/class-39.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
 |  40   | 4/24        | Waste and fraud, Part III                  | [{{< fa magnifying-glass >}}](/schedule/class-40.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  41   | 4/26        | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-41.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  41   | 4/26        | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-41.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
+|       |             | **Empirical exercises**                    |                                                        | | [{{< fa pen  >}}](/assignments/empirical-exercises.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
@@ -104,5 +105,5 @@ In general, I've split each topic into three parts: 1) what we know; 2) what we'
 
 | Class | Dates       | Topic                                      | Details | Slides | Assignment |
 |:-----:|-------------|--------------------------------------------|:-------:|:------:|:----------:|
-|  42   | 4/29        | **Research plans**                         | [{{< fa magnifying-glass >}}](/schedule/class-42.html) | | [{{< fa pen  >}}](/assignments/research-proposal.html) |
+|  42   | 4/29        | **Research plans**                         | [{{< fa magnifying-glass >}}](/schedule/class-42.html) | | [{{< fa pen  >}}](/assignments/research-plans.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}

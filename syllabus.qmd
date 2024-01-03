@@ -18,13 +18,13 @@ I have four central goals for this course:
 3. Organize real-world data with current workflow and versioning tools
 4. Develop your own preliminary research in some area of healthcare economics
 
-Our class times and your presentations are designed to help achieve the first goal; the second and third goals are part of our replication project; and the final goal is achieved through the research proposals and research plan. The assignments are described in more detail on the [class assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments).
+Our class times and your presentations are designed to help achieve the first goal; the second and third goals are part of our empirical exercise project; and the final goal is achieved through the research proposals and research plan. The assignments are described in more detail on the [class assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments).
 
 ## Text, Software, and Class Materials
 
 1. **Readings:** As an elective PhD course, we will rely on academic papers from the reading list in each module. I expect everyone to read the papers in advance and come to class with questions on the study's contribution, empirical techniques, identification strategies, and datasets used. My goal with each paper is to discuss the analysis in detail. As such, the primary reading list is perhaps shorter than a standard PhD course. I've provided a more comprehensive reading list in each module for those interested in additional readings in a specific area.
 
-2. **Software:** For anything data related, I'll use `R`, but you are free to use whatever software you're most comfortable with in your replication. I encourage you to use `R`, `Stata`, or `Python` simply because these are the most common programs used in practice right now. You'll also need to have a basic working knowledge of Git and GitHub. If you're new to these tools, take a look at [Grant McDermott's](https://grantmcdermott.com/) notes on [Data Science for Economists](https://github.com/uo-ec607/lectures) as well as [Jenny Bryan's](https://jennybryan.org/) online reference book, [Happy Git and GitHub with R](https://happygitwithr.com/).
+2. **Software:** For anything data related, I'll use `R`, but you are free to use whatever software you're most comfortable with in your empirical work. I encourage you to use `R`, `Stata`, or `Python` simply because these are the most common programs used in practice right now. You'll also need to have a basic working knowledge of Git and GitHub. If you're new to these tools, take a look at [Grant McDermott's](https://grantmcdermott.com/) notes on [Data Science for Economists](https://github.com/uo-ec607/lectures) as well as [Jenny Bryan's](https://jennybryan.org/) online reference book, [Happy Git and GitHub with R](https://happygitwithr.com/).
 
 3. **Logistics:** For day-to-day communication, grades, and other private information (such as Zoom meeting links if needed), I'll use **Canvas**. I'll post all other materials to our class website. Please be sure to set up you **Canvas** alerts so that you receive class announcements in a timely manner.
 
@@ -62,8 +62,7 @@ While there is no official "attendance" credit, everyone is expected to attend a
 
 ## Assignments and Grading
 
-There are four main assignments throughout the semester. I describe each assignment below, with more detail provided on our [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments). Note that I **do not** expect or want anyone to treat these assignments as entirely separate. By that, I mean you should try to identify overlap in your presentations, replications, and ultimately your research plan. With a little bit of up-front planning, such overlap can make your life much easier. 
-
+There are four main assignments throughout the semester. I describe each assignment below, with more detail provided on our [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments). 
 
 ### Research Proposals
 
@@ -75,9 +74,9 @@ Please select a date to present your research proposals on the **Proposals** tab
 
 You will present four papers throughout the course of the semester. Please note your selected papers and class dates on the **Presentations** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing) no later than **Friday, January 26**. If you do not select papers by then, I will assign you papers randomly. The list of potential papers to present and details of the expectations for each presentation are available on the [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments) of our class website.
 
-### Replication
+### Empirical Exercises
 
-There is an applied component of this course where we spend some time replicating analyses from selected papers based on real-world data. You will be asked to pick one such paper to more fully replicate. This will require some time to get the data in working order and implement the relevant identification strategy and econometric estimator. Please note your selected paper on the **Replications** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing) no later than **February 2**. The list of potential papers to replicate and other details of the replication are available on the [assignments page](https://econ771s24.classes.ianmccarthyecon.com/assignments) of our class website. Students are also welcome to propose their own paper to replicate, but this must be approved by me in advance.
+There is an applied component of this course where we spend some time with a real-life causal inference question. These will require some of your time outside of class to get the data in working order and implement the relevant identification strategy and econometric estimator. Raw data for each exercise will be provided on our class OneDrive notebook, the link to which is on **Canvas**. There are four possible empirical exercises, from which you must choose one. Please note your selection paper on the **Exercises** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing) no later than **February 2**. 
 
 
 ### Important Deadlines
@@ -86,19 +85,19 @@ This section is just to highlight important dates for assignments throughout the
 
    - **Select Papers to Present** no later than **January 26**: Note the papers you plan to present on the **Presentations** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Only one student per paper, so this is first-come first-served. Remember you need to select four papers to present throughout the semester. Please spread these presentations out over the semester.
    - **Select Research Proposal Presentation Dates** no later than **January 26**: Note the dates you plan to present your proposals on the **Proposals** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Only two students can present on any given Friday.
-   - **Select Paper to Replicate** no later than **February 2**: Note the paper you plan to replicate on the **Replications** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). Only one student per paper, so this is first-come first-served.
+   - **Select Empirical Exercise** no later than **February 2**: Note your selection on the **Exercises** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing). No more than two students per exercise.
    - The first round of **Research Proposals and Presentations** is due by class time on **February 2**
    - The second round of **Research Proposals and Presentations** is due by class time on **February 23**
    - The third round of **Research Proposals and Presentations** is due by class time on **March 22**
    - The fourth and final round of **Research Proposals and Presentations** is due by class time on **April 12**
-   - **Replications** are due on **April 26**
+   - **Empirical Exercises** are due on **April 26**
    - **Final Research Plans** are due on **April 29**
 
 
 ## Final grades
 
    - **50%** for research proposals (10% for each proposal and 10% for the research plan)
-   - **30%** for paper replication
+   - **30%** for empirical exercises
    - **20%** for presentations of selected papers (5% each)
 
 Letter grades will be assigned at the end of the course based on total score achieved:
