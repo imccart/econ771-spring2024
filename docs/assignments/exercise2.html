@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="PhD Course on the Economics of Healthcare">
+
+<title>Health Economics II - Exercise 2: Instrumental Variables</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<meta property="og:title" content="Health Economics II - Exercise 2: Instrumental Variables">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://econ771s24.classes.ianmccarthyecon.com//files/econ771-logo.png">
+<meta property="og:site-name" content="Health Economics II">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="512">
+<meta name="twitter:title" content="Health Economics II - Exercise 2: Instrumental Variables">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://econ771s24.classes.ianmccarthyecon.com//files/econ771-logo.png">
+<meta name="twitter:creator" content="@ianhealthecon">
+<meta name="twitter:site" content="@ianhealthecon">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="512">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Health Economics II</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule/index.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../assignments/index.html" rel="" target="">
+ <span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources/index.html" rel="" target="">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/imccart/econ771-spring2024" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#resources-and-data" id="toc-resources-and-data" class="nav-link" data-scroll-target="#resources-and-data">Resources and data</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Exercise 2: Instrumental Variables</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>In this assignment, we’re going to work through some applied issues related to instrumental variables. For a long time, IV (or 2SLS) was a very common identification strategy for applied empirical micro, but it fell out of favor as people became more aware of the assumptions underlying the estimator and better understood what IV actually estimates (not the ATE in most cases). People also started to find other strategies that were more compelling in some applications (and of course with some other assumptions). In this assignment, we’re going to study the effects of a physician’s affiliation with a hospital on physician practice patterns, and we’ll instrument for physician affiliation using some specific Medicare payment shocks.</p>
+</section>
+<section id="resources-and-data" class="level1">
+<h1>Resources and data</h1>
+<p>The data for this assignment comes from three sources:</p>
+<ol type="1">
+<li><p><a href="https://resdac.org/cms-data/files/md-ppas">MD-PPAS</a>; The Medicare Data on Provider Practice and Specialty includes data on physician specialties, practice IDs, demographics, and place of service. Be sure to follow the link and read the data documentation. We’ll use these data to construct a measure of physician integration.</p></li>
+<li><p><a href="https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners/medicare-physician-other-practitioners-by-provider-and-service">Medicare Utilization and Payment Data</a>: These files provide data on the quantities and Medicare spending of each physician and service. We’ll use these data to capture total physician-level billing activity, and we’ll use the service-level data to measure the revenue effects from our plausibly exogenous policy shock. These data are only available beginning in 2012. These files are large but otherwise relatively clean and easy to use, so there’s no separate repo for these data. Note that we will only work with data for MDs, so you can drop a lot of observations with that restriction.</p></li>
+<li><p><a href="https://github.com/imccart/PFS_Update_2010">Physician Fee Schedule 2010 Update</a>: Our instrument mainly consists of a shock to physician payments introduced in 2010. The shock further increased payments for services in an outpatient facility compared to services billed in a physician’s office. The GitHub repo (linked above) provides code to recreate a dataset with service-specific price shocks introduced by the 2010 fee schedule update. To save us some time, I’ve posed the final dataset from that repo into our class data folder.</p></li>
+</ol>
+</section>
+<section id="questions" class="level1">
+<h1>Questions</h1>
+<p>In your GitHub repository, please be sure to clearly address/answer the following questions. Note that our utilization and payment data only start in 2012 (just a limitation of using publicly available data), while the price shock first takes place in 2010. Thankfully, the price shock was introduced gradually from 2010 through 2013, so our instrument (see question 4 below) still has some variation over our time period. For all of this analysis, please focus only on the years from 2012 through 2017 and focus only on MDs (based on the “NPPES Credentials” field in the PUF data). Please use the raw values for your summary statistics, but you might consider using logs in the rest of the analysis due to the heavily skewed nature of the data.</p>
+<ol type="1">
+<li><p>Provide and discuss a table of simple summary statistics showing the mean, standard deviation, min, and max of total physician-level Medicare spending, claims, and patients. Use the Medicare utilization and payment data to calculate total spending, claims, and patients at the physician level. You can do this using the average Medicare allowed amt * bene_day_srvc_cnt (or Medicare allowed amt * line_srvc_cnt) for spending, bene_day_srvc_cnt or the line_srvc_cnt for claims, and bene_unique_cnt for patients. The patient counts will include some overlap since the data are by service, but that’s OK for our purposes.</p></li>
+<li><p>Form a proxy for integration using the ratio: <span class="math display">\[\begin{equation}
+INT_{it} = \mathbf{1} \left(\frac{HOPD_{it}}{HOPD_{it} + OFFICE_{it} + ASC_{it}} \geq 0.75\right),
+(\#eq:int)
+\end{equation}\]</span> where <span class="math inline">\(HOPD_{it}\)</span> reflects the total number of claims in which physician <span class="math inline">\(i\)</span> bills in a hospital outpatient setting, <span class="math inline">\(OFFICE_{it}\)</span> is the total number of claims billed to an office setting, and <span class="math inline">\(ASC_{it}\)</span> is the total number of claims billed to an ambulatory surgery center. As reflected in Equation @ref(eq:int), you can assume that any physician with at least 75% of claims billed in an outpatient setting is integrated with a hospital. Using this 75% threshold, plot the mean of total physician-level claims for integrated versus non-integrated physicians over time.</p></li>
+<li><p>Estimate the relationship between integration on (log) total physician claims using OLS, with the following specification: <span class="math display">\[\begin{equation}
+y_{it} = \delta INT_{it} + \beta x_{it} + \gamma_{i} + \gamma_{t} + \varepsilon_{it},
+(\#eq:ols)
+\end{equation}\]</span> where <span class="math inline">\(INT_{it}\)</span> is defined in Equation @ref(eq:int), <span class="math inline">\(x_{it}\)</span> captures time-varying physician characteristics, and <span class="math inline">\(\gamma_{i}\)</span> and <span class="math inline">\(\gamma_{t}\)</span> denote physician and time fixed effects. Please focus on physician’s that weren’t yet integrated as of 2012, that way we have some pre-integration data for everyone. Impose this restriction for the remaining questions. Feel free to experiment with different covariates in <span class="math inline">\(x_{it}\)</span> or simply omit that term and only include the fixed effects.</p></li>
+<li><p>How much should we be “worried” about endogeneity here? Extending the work of <span class="citation" data-cites="altonji2005">Altonji, Elder, and Taber (<a href="#ref-altonji2005" role="doc-biblioref">2005</a>)</span>, <span class="citation" data-cites="oster2019">Oster (<a href="#ref-oster2019" role="doc-biblioref">2019</a>)</span> derives the expression <span class="math display">\[\begin{equation}
+\delta^{*} \approx \hat{\delta}_{D,x_{1}} - \rho \times \left[\hat{\delta}_{D} - \hat{\delta}_{D,x_{1}}\right] \times \frac{R_{max}^{2} - R_{D,x_{1}}^{2}}{R_{D,x_{1}}^{2} - R_{D}^{2}} \xrightarrow{p} \delta,
+(\#eq:oster)
+\end{equation}\]</span> where <span class="math inline">\(x_{1}\)</span> captures our observable covariates (or fixed effects in our case); <span class="math inline">\(\delta\)</span> denotes the treatment effect of interest; <span class="math inline">\(\hat{\delta}_{D,x_{1}}\)</span> denotes the coefficient on <span class="math inline">\(D\)</span> from a regression of <span class="math inline">\(y\)</span> on <span class="math inline">\(D\)</span> and <span class="math inline">\(x_{1}\)</span>; <span class="math inline">\(R_{D,x_{1}}^{2}\)</span> denotes the <span class="math inline">\(R^{2}\)</span> from that regression; <span class="math inline">\(\hat{\delta}_{D}\)</span> denotes the coefficient on <span class="math inline">\(D\)</span> from a regression of <span class="math inline">\(y\)</span> on <span class="math inline">\(D\)</span> only; <span class="math inline">\(R_{D}^{2}\)</span> reflects the <span class="math inline">\(R^{2}\)</span> from that regression; <span class="math inline">\(R_{max}^{2}\)</span> denotes an unobserved “maximum” <span class="math inline">\(R^{2}\)</span> from a regression of <span class="math inline">\(y\)</span> on <span class="math inline">\(D\)</span>, observed covariates <span class="math inline">\(x_{1}\)</span>, and some unobserved covariates <span class="math inline">\(x_{2}\)</span>; and <span class="math inline">\(\rho\)</span> denotes the degree of selection on observed variables relative to unobserved variables. One approach that Oster suggests is to consider a range of <span class="math inline">\(R^{2}_{max}\)</span> and <span class="math inline">\(\rho\)</span> to bound the estimated treatment effect, where the bounds are given by <span class="math inline">\(\left[ \hat{\delta}_{D,x_{1}}, \delta^{*}(R^{2}_{max}, \rho) \right]\)</span>. Construct these bounds based on all combinations of <span class="math inline">\(\rho \in (0, .5, 1, 1.5, 2)\)</span> and <span class="math inline">\(R_{max}^{2} \in (0.5, 0.6, 0.7, 0.8, 0.9, 1)\)</span> and present your results in a table. What do your results say about the extent to which selection on observables could be problematic here? Hint: you can also look into <code>psacalc</code> in <code>Stata</code> or <code>robomit</code> in <code>R</code> for implementation of <span class="citation" data-cites="oster2019">Oster (<a href="#ref-oster2019" role="doc-biblioref">2019</a>)</span> in <code>Stata</code> or <code>R</code>, respectively.</p></li>
+<li><p>Construct the change in Medicare payments achievable for an integrated versus non-integrated physician practice due to the 2010 update to the physician fee schedule, <span class="math inline">\(\Delta P_{it}\)</span>. Use this as an instrument for <span class="math inline">\(INT_{it}\)</span> in a 2SLS estimator following the same specification as in Equation @ref(eq:ols). Present your results along with those of your “first stage” and “reduced form”.</p></li>
+</ol>
+<p>Here is a little code snippet to help you work with the fee schedule update and the utilization and payment data in constructing the instrument. In this code chunk, the <code>medicare.puf</code> object is the provider and utilization data for a specific year, the <code>pfs.yearly</code> object is the physician fee schedule update data for the same year (except for years after 2013, in which case <code>pfs.yearly</code> should just be the 2013 data because the price shock is fully implemented as of 2013), and the <code>taxid.base</code> object is the MD-PPAS data from 2009 limited to just the NPI and the group1 variable (the group1 and group2 variables are encrypted versions of the physician’s tax ID, and I use the 2009 data so that I get a baseline measure of the practice before the price shock takes effect). The purpose of this code is to first merge the price shock information into service-level quantity data, then construct the total increase in revenue from the price shock based on observed quantities (that’s the <code>numer</code> variable), and divide by the total hypothetical revenue if payments never changed. The resulting <code>phy_rev_change</code> is intended to measure the increase in revenue for a given physician relative to revenue without the price shock. Finally, I average this across all physicians in a practice based on their observed practice affiliation as of 2009 and multiply by the practice size (I really just sum the ratio, but that’s the same thing). The resulting <code>practice_rev_change</code> variable is what you should use as your instrument for <span class="math inline">\(INT_{it}\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  price.shock <span class="ot">&lt;-</span> medicare.puf <span class="sc">%&gt;%</span> <span class="fu">inner_join</span>(taxid.base, <span class="at">by=</span><span class="st">"npi"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">inner_join</span>(pfs.yearly <span class="sc">%&gt;%</span> </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">select</span>(hcpcs, dprice_rel_2010, price_nonfac_orig_2010, price_nonfac_orig_2007), </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">by=</span><span class="fu">c</span>(<span class="st">"hcpcs_code"</span><span class="ot">=</span><span class="st">"hcpcs"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate_at</span>(<span class="fu">vars</span>(dprice_rel_2010, price_nonfac_orig_2010, price_nonfac_orig_2007), replace_na, <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">price_shock =</span> <span class="fu">case_when</span>(</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            i<span class="sc">&lt;=</span><span class="dv">2013</span> <span class="sc">~</span> ((i<span class="dv">-2009</span>)<span class="sc">/</span><span class="dv">4</span>)<span class="sc">*</span>dprice_rel_2010,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>            i<span class="sc">&gt;</span><span class="dv">2013</span>  <span class="sc">~</span> dprice_rel_2010),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">denom =</span> line_srvc_cnt<span class="sc">*</span>price_nonfac_orig_2010,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">numer =</span> price_shock<span class="sc">*</span>line_srvc_cnt<span class="sc">*</span>price_nonfac_orig_2010) <span class="sc">%&gt;%</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(npi) <span class="sc">%&gt;%</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">phy_numer=</span><span class="fu">sum</span>(numer, <span class="at">na.rm=</span><span class="cn">TRUE</span>), <span class="at">phy_denom=</span><span class="fu">sum</span>(denom, <span class="at">na.rm=</span><span class="cn">TRUE</span>), <span class="at">tax_id=</span><span class="fu">first</span>(tax_id)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">phy_rev_change=</span>phy_numer<span class="sc">/</span>phy_denom) <span class="sc">%&gt;%</span>    </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(tax_id) <span class="sc">%&gt;%</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">practice_rev_change=</span><span class="fu">sum</span>(phy_rev_change, <span class="at">na.rm=</span><span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Yes, the idea of summing a ratio is a bit odd. But it’s easier to think of the instrument as the product of baseline (pre-shock) practice size and the average relative revenue change due to the price shock. In that context, the sum of the ratio is really just an interaction term that incorporates information on the price shock magnitude and baseline practice size. Each of these things alone are poor instruments, but together for the practice it reflects a “better” instrument.</p>
+<ol start="6" type="1">
+<li><p>Assess the “need” for IV by implementing a Durbin-Wu-Hausman test with an augmented regression. Do this by first estimating the regression, <span class="math inline">\(INT_{it} = \lambda \Delta P_{it} + \beta x_{it} + \gamma_{i} + \gamma_{t} + \varepsilon_{it}\)</span>, take the residual <span class="math inline">\(\hat{\nu} = INT_{it} - \hat{INT}_{it}\)</span>, and run the regression <span class="math display">\[y_{it} = \delta INT_{it} + \beta x_{it} + \gamma_{i} + \gamma_{t} + \kappa \hat{\nu} + \varepsilon_{it}.\]</span> Discuss your results for <span class="math inline">\(\hat{\kappa}\)</span>.</p></li>
+<li><p>Now let’s pay attention to potential issues of weak instruments. As we discussed in class, one issue with weak instruments is that our typical critical values (say, 1.96 for a 95% confidence interval) from the equation of interest (sometimes called the structural equation) are too low in the presence of a weak first-stage. These issues are presented very clearly and more formally in the Andrews, Stock, and Sun (2019) survey article. For this question, you will consider two forms of inference in the presence of weak instruments. Hint: Check out the <code>ivmodel</code> package in R or the <code>ivreg2</code> command in Stata for help getting the AR Wald statistic.</p>
+<ul>
+<li>Present the results of a test of the null, <span class="math inline">\(H_{0}: \delta=0\)</span>, using the Anderson-Rubin Wald statistic. Do your conclusions from this test differ from a traditional t-test following 2SLS estimation of Equation @ref(eq:ols)?</li>
+<li>Going back to your 2SLS results…inflate your 2SLS standard errors to form the <span class="math inline">\(tF\)</span> adjusted standard error, following Table 3 in <span class="citation" data-cites="lee2021">Lee et al. (<a href="#ref-lee2021" role="doc-biblioref">2021</a>)</span>. Repeat the test of the null, <span class="math inline">\(H_{0}: \delta=0\)</span>, using standard critical values and the <span class="math inline">\(tF\)</span> adjusted standard error.</li>
+</ul></li>
+<li><p>Following the Borusyak and Hull (2021) working paper (BH), we can consider our instrument as a function of some exogenous policy shocks and some possibly endogenous physician characteristics, <span class="math inline">\(\Delta P_{it}=f\left(g_{pt}; z_{ipt}\right)\)</span>, where <span class="math inline">\(g_{pt}\)</span> captures overall payment shocks for procedure <span class="math inline">\(p\)</span> at time <span class="math inline">\(t\)</span>, and <span class="math inline">\(z_{ip}\)</span> denotes a physician’s quantity of different procedures at baseline. We can implement the BH re-centering approach as follows:</p>
+<ul>
+<li>Consider hypothetical price changes over a set of possible counterfactuals by assuming that the counterfactuals consist of different allocations of the observed relative price changes. For example, take the vector of all relative price changes, reallocate this vector randomly, and assign new hypothetical relative price changes. Do this 100 times. This isn’t “all” possible counterfactuals by any means, but it will be fine for our purposes.</li>
+<li>Construct the expected revenue change over all possible realizations from previously, <span class="math inline">\(\mu_{it} = E [\Delta P_{it}]= \sum_{s=1}^{100} \sum_{p} g_{pt}^{s} z_{ip}\)</span>.</li>
+<li>Re-estimate Equation @ref(eq:ols) by 2SLS when instrumenting for <span class="math inline">\(INT_{it}\)</span> with <span class="math inline">\(\tilde{\Delta} P_{it} = \Delta P_{it} - \mu_{it}\)</span>. Intuitively, this re-centering should isolate variation in the instrument that is only due to the policy and remove variation in our instrument that is due to physician practice styles (the latter of which is not a great instrument).</li>
+</ul></li>
+<li><p>Discuss your findings and compare estimates from different estimators.</p></li>
+<li><p>Reflect on this assignment. What did you find most challenging? What did you find most surprising?</p></li>
+</ol>
+</section>
+<section id="references" class="level1">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-altonji2005" class="csl-entry" role="listitem">
+Altonji, Joseph G, Todd E Elder, and Christopher R Taber. 2005. <span>“An Evaluation of Instrumental Variable Strategies for Estimating the Effects of Catholic Schooling.”</span> <em>Journal of Human Resources</em> 40 (4): 791–821.
+</div>
+<div id="ref-lee2021" class="csl-entry" role="listitem">
+Lee, David S., Justin McCrary, Marcelo J. Moreira, and Jack R. Porter. 2021. <span>“Valid t-Ratio <span>Inference</span> for <span>IV</span>.”</span> Working {Paper}. Working <span>Paper</span> <span>Series</span>. National Bureau of Economic Research. <a href="https://doi.org/10.3386/w29124">https://doi.org/10.3386/w29124</a>.
+</div>
+<div id="ref-oster2019" class="csl-entry" role="listitem">
+Oster, Emily. 2019. <span>“Unobservable <span>Selection</span> and <span>Coefficient</span> <span>Stability</span>: <span>Theory</span> and <span>Evidence</span>.”</span> <em>Journal of Business &amp; Economic Statistics</em> 37 (2): 187–204. <a href="https://doi.org/10.1080/07350015.2016.1227711">https://doi.org/10.1080/07350015.2016.1227711</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Content <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2024 by Ian McCarthy<br> All content licensed under a <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-nc" aria-label="creative-commons-nc"></i> <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/imccart/econ771-spring2024">View the source at <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>

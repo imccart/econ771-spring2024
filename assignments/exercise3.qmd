@@ -1,0 +1,36 @@
+---
+title: "Exercise 3: Regression Discontinuity"
+---
+
+
+# Overview
+In this assignment, we're going to work through some applied issues related to regression discontinuity designs. We'll cover the basics of strict and fuzzy RD, and we'll work through standard specification tests. We'll also introduce some more technical aspects of bin and bandwidth selection.
+
+# Resources and data
+The data for this assignment comes from the AEJ: Policy website, where Keith Ericson's complete dataset is available. The data are available [here](https://www.aeaweb.org/articles?id=10.1257/pol.6.1.38). I've also uploaded the data to our class OneDrive folder under the directory "Ericson 2014."
+
+# Questions
+In your GitHub repository, please be sure to clearly address/answer the following questions.
+
+1. Recreate the table of descriptive statistics (Table 1) from @ericson2014.
+
+2. Recreate Figure 3 from @ericson2014. 
+
+3. @calonico2015 discuss the appropriate partition size for binned scatterplots such as that in Figure 3 of Ericson (2014). More formally, denote by $\mathcal{P}_{-,n} = \{ P_{-,j} : j=1, 2, ... J_{-, n} \}$ and $\mathcal{P}_{+,n} = \{ P_{+,j} : j=1, 2, ... J_{+, n} \}$ the partitions of the support of the running variable $x_{i}$ on the left and right (respectively) of the cutoff, $\bar{x}$. $P_{-, j}$ and $P_{+, n}$ denote the actual supports for each $j$ partition of size $J_{-,n}$ and $J_{+,n}$, such that $[x_{l}, \bar{x}) = \bigcup_{j=1}^{J_{-,n}} P_{-, j}$ and $(\bar{x}, x_{u}] = \bigcup_{j=1}^{J_{+,n}} P_{+, j}$. Individual bins are denoted by $p_{-,j}$ and $p_{+,j}$. With this notation in hand, we can write the partitions $J_{-,n}$ and $J_{+,n}$ with equally-spaced bins as $$p_{-,j}=x_{l} + j \times \frac{\bar{x} - x_{l}}{J_{-,n}},$$ and $$p_{+,j} = \bar{x} + j \times \frac{x_{u} - \bar{x}}{J_{+,n}}.$$ Recreate Figure 3 from Ericson (2014) using $J_{-,n}=J_{+,n}=10$ and $J_{-,n}=J_{+,n}=30$. Discuss your results and compare them to your figure in Part 2.
+
+4. With the notation above, @calonico2015 derive the optimal number of partitions for an evenly-spaced (ES) RD plot. They show that $$J_{ES,-,n} = \left\lceil \frac{V_{-}}{\mathcal{V}_{ES,-}} \frac{n}{\text{log}(n)^{2}} \right\rceil$$ and $$J_{ES,+,n} = \left\lceil \frac{V_{+}}{\mathcal{V}_{ES,+}} \frac{n}{\text{log}(n)^{2}} \right\rceil,$$ where $V_{-}$ and $V_{+}$ denote the sample variance of the subsamples to the left and right of the cutoff and $\mathcal{V}_{ES,.}$ is an integrated variance term derived in the paper. Use the `rdrobust` package in `R` (or `Stata` or `Python`) to find the optimal number of bins with an evenly-spaced binning strategy. Report this bin count and recreate your binned scatterplots from parts 2 and 3 based on the optimal bin number.
+
+5. One key underlying assumption for RD design is that agents cannot precisely manipulate the running variable. While "precisely" is not very scientific, we can at least test for whether there appears to be a discrete jump in the running variable around the threshold. Evidence of such a jump may suggest that manipulation is present. Provide the results from the manipulation tests described in @cattaneo2018. This test can be implemented with the `rddensity` package in `R`, `Stata`, or `Python`.
+
+6. Recreate Panels A and B of Table 3 in @ericson2014 using the same bandwidth of $4.00 but without any covariates.
+
+7. @calonico2020 show that pre-existing optimal bandwidth calculations (such as those used in @ericson2014) are invalid for appropriate inference. They propose an alternative method to derive minimal coverage error (CE)-optimal bandwidths. Re-estimate your RD results using the CE-optimal bandwidth (`rdrobust` will do this for you) and compare the bandwidth and RD estimates to that in Table 3 of @ericson2014.
+
+8. Now let's extend the analysis in Section V of @ericson2014 using IV. Use the presence of Part D low-income subsidy as an IV for market share to examine the effect of market share in 2006 on future premium changes. 
+
+9. Discuss your findings and compare results from different binwidths and bandwidths. Compare your results in part 8 to the invest-then-harvest estimates from Table 4 in @ericson2014.
+
+10. Reflect on this assignment. What did you find most challenging? What did you find most surprising? 
+
+
+# References

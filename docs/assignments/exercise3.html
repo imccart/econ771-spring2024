@@ -8,7 +8,7 @@
 
 <meta name="description" content="PhD Course on the Economics of Healthcare">
 
-<title>Health Economics II - Presentations</title>
+<title>Health Economics II - Exercise 3: Regression Discontinuity</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +49,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../assignments/exercises.html" rel="next">
-<link href="../assignments/research-plans.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -64,15 +81,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Health Economics II - Presentations">
+<meta property="og:title" content="Health Economics II - Exercise 3: Regression Discontinuity">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://econ771s24.classes.ianmccarthyecon.com//files/econ771-logo.png">
 <meta property="og:site-name" content="Health Economics II">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:width" content="512">
-<meta name="twitter:title" content="Health Economics II - Presentations">
+<meta name="twitter:title" content="Health Economics II - Exercise 3: Regression Discontinuity">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://econ771s24.classes.ianmccarthyecon.com//files/econ771-logo.png">
 <meta name="twitter:creator" content="@ianhealthecon">
@@ -82,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:image-width" content="512">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -108,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../assignments/index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../assignments/index.html" rel="" target="">
  <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
@@ -126,67 +145,29 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../assignments/presentations.html">Presentations</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignments/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Assignments</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignments/research-proposals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Research Proposals</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignments/research-plans.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Research Plans</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignments/presentations.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Presentations</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignments/exercises.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Empirical Exercises</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#resources-and-data" id="toc-resources-and-data" class="nav-link" data-scroll-target="#resources-and-data">Resources and data</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Presentations</h1>
+<h1 class="title">Exercise 3: Regression Discontinuity</h1>
 </div>
 
 
@@ -201,21 +182,51 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Please review the <a href="../schedule/">class schedule</a> and select four papers (or groups of papers) from the list of papers from each class. Focus only on the Part I, Part II, or Part III classes in each section (i.e., do not select any papers listed solely as background). Your selections must also be on different dates. Once you’ve identified your papers, note your paper title, authors, your name, and the date of your presentation on the <strong>Presentations</strong> tab of the Google Sheet <a href="https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing">here</a> no later than <strong>Friday, January 26</strong>.</p>
-<p>We will have no more than four paper groupings per class day, which means we have to keep each presentation plus discussion to no more than 20 minutes. We’ll have a few extra minutes on days with just three paper groupings, but even on those days, let’s aim for 20 minutes. The presentation should follow a standard conference setup, with some brief discussion of the research question, discussion of the data, empirical analysis, and results and key contributions. You should also prepare two discussion questions to lead a 5 minute discussion after your presentation. Please submit your presentations via <strong>Canvas</strong> no later than <strong>11:59pm on the day before your presentation</strong>.</p>
-<p>Your presentation should be no more than 10 slides (including a title slide and your discussion questions at the end). Since the papers have already been motivated from prior classes, you can safely ignore the “motivation” section of a typical presentation. Each presentation is worth 5 points toward your final grade, with one point allocated to each of the following categories:</p>
-<ul>
-<li><strong>Slide length:</strong> no more than 10 slides in total (including your discussion questions)</li>
-<li><strong>Slide layout:</strong> slides should be clear and concise, with no more than 5 lines of text per slide and at least one figure</li>
-<li><strong>Presentation clarity:</strong> the presentation should be clear and well-organized, with a clear description of the research question, data, empirical analysis, and results</li>
-<li><strong>Presentation length:</strong> the presentation should be no more than 15 minutes, including clarifying questions</li>
-<li><strong>Discussion questions:</strong> the discussion questions should be clear and thought-provoking. Please conclude your presentation with a final slide listing these questions.</li>
-</ul>
-<p>Note that a presentation is not just a re-hashing of the paper in slide form. A good academic presentation should have as little information as possible on each slide, and the content on the slides doesn’t necessarily need to follow that of the paper. For example, in a real-time environment, it is much easier to move between different aspects of the empirical analysis and data.</p>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>In this assignment, we’re going to work through some applied issues related to regression discontinuity designs. We’ll cover the basics of strict and fuzzy RD, and we’ll work through standard specification tests. We’ll also introduce some more technical aspects of bin and bandwidth selection.</p>
+</section>
+<section id="resources-and-data" class="level1">
+<h1>Resources and data</h1>
+<p>The data for this assignment comes from the AEJ: Policy website, where Keith Ericson’s complete dataset is available. The data are available <a href="https://www.aeaweb.org/articles?id=10.1257/pol.6.1.38">here</a>. I’ve also uploaded the data to our class OneDrive folder under the directory “Ericson 2014.”</p>
+</section>
+<section id="questions" class="level1">
+<h1>Questions</h1>
+<p>In your GitHub repository, please be sure to clearly address/answer the following questions.</p>
+<ol type="1">
+<li><p>Recreate the table of descriptive statistics (Table 1) from <span class="citation" data-cites="ericson2014">Ericson (<a href="#ref-ericson2014" role="doc-biblioref">2014</a>)</span>.</p></li>
+<li><p>Recreate Figure 3 from <span class="citation" data-cites="ericson2014">Ericson (<a href="#ref-ericson2014" role="doc-biblioref">2014</a>)</span>.</p></li>
+<li><p><span class="citation" data-cites="calonico2015">Calonico, Cattaneo, and Titiunik (<a href="#ref-calonico2015" role="doc-biblioref">2015</a>)</span> discuss the appropriate partition size for binned scatterplots such as that in Figure 3 of Ericson (2014). More formally, denote by <span class="math inline">\(\mathcal{P}_{-,n} = \{ P_{-,j} : j=1, 2, ... J_{-, n} \}\)</span> and <span class="math inline">\(\mathcal{P}_{+,n} = \{ P_{+,j} : j=1, 2, ... J_{+, n} \}\)</span> the partitions of the support of the running variable <span class="math inline">\(x_{i}\)</span> on the left and right (respectively) of the cutoff, <span class="math inline">\(\bar{x}\)</span>. <span class="math inline">\(P_{-, j}\)</span> and <span class="math inline">\(P_{+, n}\)</span> denote the actual supports for each <span class="math inline">\(j\)</span> partition of size <span class="math inline">\(J_{-,n}\)</span> and <span class="math inline">\(J_{+,n}\)</span>, such that <span class="math inline">\([x_{l}, \bar{x}) = \bigcup_{j=1}^{J_{-,n}} P_{-, j}\)</span> and <span class="math inline">\((\bar{x}, x_{u}] = \bigcup_{j=1}^{J_{+,n}} P_{+, j}\)</span>. Individual bins are denoted by <span class="math inline">\(p_{-,j}\)</span> and <span class="math inline">\(p_{+,j}\)</span>. With this notation in hand, we can write the partitions <span class="math inline">\(J_{-,n}\)</span> and <span class="math inline">\(J_{+,n}\)</span> with equally-spaced bins as <span class="math display">\[p_{-,j}=x_{l} + j \times \frac{\bar{x} - x_{l}}{J_{-,n}},\]</span> and <span class="math display">\[p_{+,j} = \bar{x} + j \times \frac{x_{u} - \bar{x}}{J_{+,n}}.\]</span> Recreate Figure 3 from Ericson (2014) using <span class="math inline">\(J_{-,n}=J_{+,n}=10\)</span> and <span class="math inline">\(J_{-,n}=J_{+,n}=30\)</span>. Discuss your results and compare them to your figure in Part 2.</p></li>
+<li><p>With the notation above, <span class="citation" data-cites="calonico2015">Calonico, Cattaneo, and Titiunik (<a href="#ref-calonico2015" role="doc-biblioref">2015</a>)</span> derive the optimal number of partitions for an evenly-spaced (ES) RD plot. They show that <span class="math display">\[J_{ES,-,n} = \left\lceil \frac{V_{-}}{\mathcal{V}_{ES,-}} \frac{n}{\text{log}(n)^{2}} \right\rceil\]</span> and <span class="math display">\[J_{ES,+,n} = \left\lceil \frac{V_{+}}{\mathcal{V}_{ES,+}} \frac{n}{\text{log}(n)^{2}} \right\rceil,\]</span> where <span class="math inline">\(V_{-}\)</span> and <span class="math inline">\(V_{+}\)</span> denote the sample variance of the subsamples to the left and right of the cutoff and <span class="math inline">\(\mathcal{V}_{ES,.}\)</span> is an integrated variance term derived in the paper. Use the <code>rdrobust</code> package in <code>R</code> (or <code>Stata</code> or <code>Python</code>) to find the optimal number of bins with an evenly-spaced binning strategy. Report this bin count and recreate your binned scatterplots from parts 2 and 3 based on the optimal bin number.</p></li>
+<li><p>One key underlying assumption for RD design is that agents cannot precisely manipulate the running variable. While “precisely” is not very scientific, we can at least test for whether there appears to be a discrete jump in the running variable around the threshold. Evidence of such a jump may suggest that manipulation is present. Provide the results from the manipulation tests described in <span class="citation" data-cites="cattaneo2018">Cattaneo, Jansson, and Ma (<a href="#ref-cattaneo2018" role="doc-biblioref">2018</a>)</span>. This test can be implemented with the <code>rddensity</code> package in <code>R</code>, <code>Stata</code>, or <code>Python</code>.</p></li>
+<li><p>Recreate Panels A and B of Table 3 in <span class="citation" data-cites="ericson2014">Ericson (<a href="#ref-ericson2014" role="doc-biblioref">2014</a>)</span> using the same bandwidth of $4.00 but without any covariates.</p></li>
+<li><p><span class="citation" data-cites="calonico2020">Calonico, Cattaneo, and Farrell (<a href="#ref-calonico2020" role="doc-biblioref">2020</a>)</span> show that pre-existing optimal bandwidth calculations (such as those used in <span class="citation" data-cites="ericson2014">Ericson (<a href="#ref-ericson2014" role="doc-biblioref">2014</a>)</span>) are invalid for appropriate inference. They propose an alternative method to derive minimal coverage error (CE)-optimal bandwidths. Re-estimate your RD results using the CE-optimal bandwidth (<code>rdrobust</code> will do this for you) and compare the bandwidth and RD estimates to that in Table 3 of <span class="citation" data-cites="ericson2014">Ericson (<a href="#ref-ericson2014" role="doc-biblioref">2014</a>)</span>.</p></li>
+<li><p>Now let’s extend the analysis in Section V of <span class="citation" data-cites="ericson2014">Ericson (<a href="#ref-ericson2014" role="doc-biblioref">2014</a>)</span> using IV. Use the presence of Part D low-income subsidy as an IV for market share to examine the effect of market share in 2006 on future premium changes.</p></li>
+<li><p>Discuss your findings and compare results from different binwidths and bandwidths. Compare your results in part 8 to the invest-then-harvest estimates from Table 4 in <span class="citation" data-cites="ericson2014">Ericson (<a href="#ref-ericson2014" role="doc-biblioref">2014</a>)</span>.</p></li>
+<li><p>Reflect on this assignment. What did you find most challenging? What did you find most surprising?</p></li>
+</ol>
+</section>
+<section id="references" class="level1">
 
 
 
-</main> <!-- /main -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-calonico2020" class="csl-entry" role="listitem">
+Calonico, Sebastian, Matias D Cattaneo, and Max H Farrell. 2020. <span>“Optimal Bandwidth Choice for Robust Bias-Corrected Inference in Regression Discontinuity Designs.”</span> <em>The Econometrics Journal</em> 23 (2): 192–210. <a href="https://doi.org/10.1093/ectj/utz022">https://doi.org/10.1093/ectj/utz022</a>.
+</div>
+<div id="ref-calonico2015" class="csl-entry" role="listitem">
+Calonico, Sebastian, Matias D. Cattaneo, and Rocío Titiunik. 2015. <span>“Optimal <span>Data</span>-<span>Driven</span> <span>Regression</span> <span>Discontinuity</span> <span>Plots</span>.”</span> <em>Journal of the American Statistical Association</em> 110 (512): 1753–69. <a href="https://doi.org/10.1080/01621459.2015.1017578">https://doi.org/10.1080/01621459.2015.1017578</a>.
+</div>
+<div id="ref-cattaneo2018" class="csl-entry" role="listitem">
+Cattaneo, Matias D, Michael Jansson, and Xinwei Ma. 2018. <span>“Manipulation Testing Based on Density Discontinuity.”</span> <em>The Stata Journal</em> 18 (1): 234–61.
+</div>
+<div id="ref-ericson2014" class="csl-entry" role="listitem">
+Ericson, Keith M. 2014. <span>“Consumer Inertia and Firm Pricing in the <span>Medicare</span> <span>Part</span> <span>D</span> Prescription Drug Insurance Exchange.”</span> <em>American Economic Journal: Economic Policy</em> 6 (1): 38–64.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -449,18 +460,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../assignments/research-plans.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Research Plans</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../assignments/exercises.html" class="pagination-link">
-        <span class="nav-page-text">Empirical Exercises</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

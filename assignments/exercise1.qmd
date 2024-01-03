@@ -1,0 +1,54 @@
+---
+title: "Exercise 1: Difference-in-Differences"
+---
+
+# Overview
+In this exercise, we're going to focus on causal inference in panel data, specifically on difference-in-differences and event studies. These are the workhorses of modern applied empirical microeconomics (although not as much of a panacea as once perceived). We'll employ these research designs in the context of hospital "uncompensated care." The simple question we want to consider is, "Does insurance expansion reduce hospital uncompensated care?"
+
+# Resources and data
+The data for this assignment comes from three sources. These data will be made available on our class OneDrive folder. Note that you may want to use (or create) a crosswalk file between state names and abbreviations, as different datasets often have different ways to capture "state". Stata has a user-written program, statastates, that should do what you need. R has a similar object, stcrosswalk, as part of the crosswalkr package.
+
+1. **Hospital Cost Report Information System**: Hospitals submit cost reports to CMS with a wealth of (very messy) data on the hospital, including information on the extent of uncompensated care provided by the hospital in that fiscal year. You can get started with these data using my GitHub repository, [HCRIS](https://github.com/imccart/HCRIS).
+
+2. **Provider of Services files**: These raw data (through 2019) are available from [NBER POS](https://data.nber.org/data/provider-of-services.html). Data for more recent years is available directly from the [CMS POS Data](https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/provider-of-services-file-hospital-non-hospital-facilities). The data provide information on characteristics of healthcare providers, including information on hospital ownership type. We'll use these files to collect some basic hospital-level covariates. You can access my GitHub repository for these data [here](https://github.com/imccart/cms-pos), as well as a similar repo using Stata from Adam Sacarny, available [here](https://github.com/asacarny/provider-of-services). 
+
+3. **Medicaid Expansion**: Data on which states expanded Medicaid under the ACA, and when they expanded, is available from the Kaiser Family Foundation website. For more info, see my GitHub repository, [Insurance Access](https://github.com/imccart/Insurance-Access). The relevant dataset is also available on our class OneDrive folder, "KFF_medicaid_expansion_2019.txt".
+
+
+# Questions
+Focus on the years from 2003 through 2019, which are years for which data on uncompensated care are available. In your GitHub repository, please be sure to clearly address/answer the following questions. 
+
+1. Provide and discuss a table of simple summary statistics showing the mean, standard deviation, min, and max of hospital total revenues and uncompensated care over time.
+
+2. Create a figure showing the mean hospital uncompensated care from 2003 to 2019. Show this trend separately by hospital ownership type (private not for profit and private for profit).
+
+3. Using a simple DD identification strategy, estimate the effect of Medicaid expansion on hospital uncompensated care using a traditional two-way fixed effects (TWFE) estimation:
+\begin{equation}
+y_{it} = \alpha_{i} + \gamma_{t} + \delta D_{it} + \varepsilon_{it},
+(\#eq:dd)
+\end{equation}
+where $D_{it}=1(E_{i}\leq t)$ in Equation \@ref(eq:dd) is an indicator set to 1 when a hospital is in a state that expanded as of year $t$ or earlier, $\gamma_{t}$ denotes time fixed effects, $\alpha_{i}$ denotes hospital fixed effects, and $y_{it}$ denotes the hospital's amount of uncompensated care in year $t$. Present four estimates from this estimation in a table: one based on the full sample (regardless of treatment timing); one when limiting to the 2014 treatment group (with never treated as the control group); one when limiting to the 2015 treatment group (with never treated as the control group); and one when limiting to the 2016 treatment group (with never treated as the control group). Briefly explain any differences.
+
+4. Estimate an "event study" version of the specification in part 3:
+\begin{equation}
+y_{it} = \alpha_{i} + \gamma_{t} +\sum_{\tau < -1} D_{it}^{\tau} \delta_{\tau} + \sum_{\tau>=0} D_{it}^{\tau} \delta_{\tau} + \varepsilon_{it},
+(\#eq:event)
+\end{equation}
+where $D_{it}^{\tau} = 1(t-E_{i}=\tau)$ in Equation \@ref(eq:event) is essentially an interaction between the treatment dummy and a relative time dummy. In this notation and context, $\tau$ denotes years relative to Medicaid expansion, so that $\tau=-1$ denotes the year before a state expanded Medicaid, $\tau=0$ denotes the year of expansion, etc. Estimate with two different samples: one based on the full sample and one based only on those that expanded in 2014 (with never treated as the control group).
+
+5. Sun and Abraham (SA) show that the $\delta_{\tau}$ coefficients in Equation \@ref(eq:event) can be written as a non-convex average of all other group-time specific average treatment effects. They propose an interaction weighted specification:
+\begin{equation}
+y_{it} = \alpha_{i} + \gamma_{t} +\sum_{e} \sum_{\tau \neq -1} \left(D_{it}^{\tau} \times 1(E_{i}=e)\right) \delta_{e, \tau} + \varepsilon_{it}.
+(\#eq:iwevent)
+\end{equation}
+Re-estimate your event study using the SA specification in Equation \@ref(eq:iwevent). Show your results for $\hat{\delta}_{e, \tau}$ in a Table, focusing on states with $E_{i}=2014$, $E_{i}=2015$, and $E_{i}=2016$.
+
+6. Present an event study graph based on the results in part 5. Hint: you can do this automatically in `R` with the `fixest` package (using the `sunab` syntax for interactions), or with `eventstudyinteract` in `Stata`. These packages help to avoid mistakes compared to doing the tables/figures manually and also help to get the standard errors correct.
+
+7. Callaway and Sant'Anna (CS) offer a non-parametric solution that effectively calculates a set of group-time specific differences, $ATT(g,t)= E[y_{it}(g) - y_{it}(\infty) | G_{i}=g]$, where $g$ reflects treatment timing and $t$ denotes time. They show that under the standard DD assumptions of parallel trends and no anticipation, $ATT(g,t) = E[y_{it} - y_{i, g-1} | G_{i}=g] - E[y_{it} - y_{i,g-1} | G_{i} = \infty]$, so that $\hat{ATT}(g,t)$ is directly estimable from sample analogs. CS also propose aggregations of $\hat{ATT}(g,t)$ to form an overall ATT or a time-specific ATT (e.g., ATTs for $\tau$ periods before/after treatment). With this framework in mind, provide an alternative event study using the CS estimator. Hint: check out the `did` package in `R` or the `csdid` package in `Stata`.
+
+8. Rambachan and Roth (RR) show that traditional tests of parallel pre-trends may be underpowered, and they provide an alternative estimator that essentially bounds the treatment effects by the size of an assumed violation in parallel trends. One such bound RR propose is to limit the post-treatment violation of parallel trends to be no worse than some multiple of the pre-treatment violation of parallel trends. Assuming linear trends, such a relative violation is reflected by $$\Delta(\bar{M}) = \left\{ \delta : \forall t \geq 0, \lvert (\delta_{t+1} - \delta_{t}) - (\delta_{t} - \delta_{t-1}) \rvert \leq \bar{M} \times \max_{s<0} \lvert (\delta_{s+1} - \delta_{s}) - (\delta_{s} - \delta_{s-1}) \rvert \right\}.$$ The authors also propose a similar approach with what they call "smoothness restrictions," in which violations in trends changes no more than $M$ between periods. The only difference is that one restriction is imposed relative to observed trends, and one restriction is imposed using specific values. Using the `HonestDiD` package in `R` or `Stata`, present a sensitivity plot of your CS ATT estimates using smoothness restrictions, with assumed violations of size $M \in \left\{ 500, 1000, 1500, 2000 \right\}$. Check out the GitHub repo [here](https://github.com/pedrohcgs/CS_RR) for some help in combining the `HonestDiD` package with CS estimates. Note that you'll need to edit the function in that repo in order to use pre-specified smoothness restrictions. You can do that by simply adding `Mvec=Mvec` in the `createSensitivityResults` function for `type=smoothness`.
+
+9. Discuss your findings and compare estimates from different estimators (e.g., are your results sensitive to different specifications or estimators? Are your results sensitive to violation of parallel trends assumptions?).
+
+10. Reflect on this assignment. What did you find most challenging? What did you find most surprising? 

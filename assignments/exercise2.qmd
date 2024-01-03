@@ -1,0 +1,88 @@
+---
+title: "Exercise 2: Instrumental Variables"
+---
+
+# Overview
+In this assignment, we're going to work through some applied issues related to instrumental variables. For a long time, IV (or 2SLS) was a very common identification strategy for applied empirical micro, but it fell out of favor as people became more aware of the assumptions underlying the estimator and better understood what IV actually estimates (not the ATE in most cases). People also started to find other strategies that were more compelling in some applications (and of course with some other assumptions). In this assignment, we're going to study the effects of a physician's affiliation with a hospital on physician practice patterns, and we'll instrument for physician affiliation using some specific Medicare payment shocks.
+
+
+# Resources and data
+The data for this assignment comes from three sources:
+
+1. [MD-PPAS](https://resdac.org/cms-data/files/md-ppas); The Medicare Data on Provider Practice and Specialty includes data on physician specialties, practice IDs, demographics, and place of service. Be sure to follow the link and read the data documentation. We'll use these data to construct a measure of physician integration.
+
+2. [Medicare Utilization and Payment Data](https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners/medicare-physician-other-practitioners-by-provider-and-service): These files provide data on the quantities and Medicare spending of each physician and service. We'll use these data to capture total physician-level billing activity, and we'll use the service-level data to measure the revenue effects from our plausibly exogenous policy shock. These data are only available beginning in 2012. These files are large but otherwise relatively clean and easy to use, so there's no separate repo for these data. Note that we will only work with data for MDs, so you can drop a lot of observations with that restriction.
+
+3. [Physician Fee Schedule 2010 Update](https://github.com/imccart/PFS_Update_2010): Our instrument mainly consists of a shock to physician payments introduced in 2010. The shock further increased payments for services in an outpatient facility compared to services billed in a physician's office. The GitHub repo (linked above) provides code to recreate a dataset with service-specific price shocks introduced by the 2010 fee schedule update. To save us some time, I've posed the final dataset from that repo into our class data folder.
+
+# Questions
+In your GitHub repository, please be sure to clearly address/answer the following questions. Note that our utilization and payment data only start in 2012 (just a limitation of using publicly available data), while the price shock first takes place in 2010. Thankfully, the price shock was introduced gradually from 2010 through 2013, so our instrument (see question 4 below) still has some variation over our time period. For all of this analysis, please focus only on the years from 2012 through 2017 and focus only on MDs (based on the "NPPES Credentials" field in the PUF data). Please use the raw values for your summary statistics, but you might consider using logs in the rest of the analysis due to the heavily skewed nature of the data.
+
+1. Provide and discuss a table of simple summary statistics showing the mean, standard deviation, min, and max of total physician-level Medicare spending, claims, and patients. Use the Medicare utilization and payment data to calculate total spending, claims, and patients at the physician level. You can do this using the average Medicare allowed amt * bene_day_srvc_cnt (or Medicare allowed amt * line_srvc_cnt) for spending, bene_day_srvc_cnt or the line_srvc_cnt for claims, and bene_unique_cnt for patients. The patient counts will include some overlap since the data are by service, but that's OK for our purposes.
+
+2. Form a proxy for integration using the ratio:
+\begin{equation}
+INT_{it} = \mathbf{1} \left(\frac{HOPD_{it}}{HOPD_{it} + OFFICE_{it} + ASC_{it}} \geq 0.75\right),
+(\#eq:int)
+\end{equation}
+where $HOPD_{it}$ reflects the total number of claims in which physician $i$ bills in a hospital outpatient setting, $OFFICE_{it}$ is the total number of claims billed to an office setting, and $ASC_{it}$ is the total number of claims billed to an ambulatory surgery center. As reflected in Equation \@ref(eq:int), you can assume that any physician with at least 75% of claims billed in an outpatient setting is integrated with a hospital. Using this 75% threshold, plot the mean of total physician-level claims for integrated versus non-integrated physicians over time.
+
+3. Estimate the relationship between integration on (log) total physician claims using OLS, with the following specification:
+\begin{equation}
+y_{it} = \delta INT_{it} + \beta x_{it} + \gamma_{i} + \gamma_{t} + \varepsilon_{it}, 
+(\#eq:ols)
+\end{equation}
+where $INT_{it}$ is defined in Equation \@ref(eq:int), $x_{it}$ captures time-varying physician characteristics, and $\gamma_{i}$ and $\gamma_{t}$ denote physician and time fixed effects. Please focus on physician's that weren't yet integrated as of 2012, that way we have some pre-integration data for everyone. Impose this restriction for the remaining questions. Feel free to experiment with different covariates in $x_{it}$ or simply omit that term and only include the fixed effects.
+
+4. How much should we be "worried" about endogeneity here? Extending the work of @altonji2005, @oster2019 derives the expression
+\begin{equation}
+\delta^{*} \approx \hat{\delta}_{D,x_{1}} - \rho \times \left[\hat{\delta}_{D} - \hat{\delta}_{D,x_{1}}\right] \times \frac{R_{max}^{2} - R_{D,x_{1}}^{2}}{R_{D,x_{1}}^{2} - R_{D}^{2}} \xrightarrow{p} \delta,
+(\#eq:oster)
+\end{equation}
+where $x_{1}$ captures our observable covariates (or fixed effects in our case); $\delta$ denotes the treatment effect of interest; $\hat{\delta}_{D,x_{1}}$ denotes the coefficient on $D$ from a regression of $y$ on $D$ and $x_{1}$; $R_{D,x_{1}}^{2}$ denotes the $R^{2}$ from that regression; $\hat{\delta}_{D}$ denotes the coefficient on $D$ from a regression of $y$ on $D$ only; $R_{D}^{2}$ reflects the $R^{2}$ from that regression; $R_{max}^{2}$ denotes an unobserved "maximum" $R^{2}$ from a regression of $y$ on $D$, observed covariates $x_{1}$, and some unobserved covariates $x_{2}$; and $\rho$ denotes the degree of selection on observed variables relative to unobserved variables. One approach that Oster suggests is to consider a range of $R^{2}_{max}$ and $\rho$ to bound the estimated treatment effect, where the bounds are given by $\left[ \hat{\delta}_{D,x_{1}}, \delta^{*}(R^{2}_{max}, \rho) \right]$. Construct these bounds based on all combinations of $\rho \in (0, .5, 1, 1.5, 2)$ and $R_{max}^{2} \in (0.5, 0.6, 0.7, 0.8, 0.9, 1)$ and present your results in a table. What do your results say about the extent to which selection on observables could be problematic here? Hint: you can also look into `psacalc` in `Stata` or `robomit` in `R` for implementation of @oster2019 in `Stata` or `R`, respectively.
+
+5. Construct the change in Medicare payments achievable for an integrated versus non-integrated physician practice due to the 2010 update to the physician fee schedule, $\Delta P_{it}$. Use this as an instrument for $INT_{it}$ in a 2SLS estimator following the same specification as in Equation \@ref(eq:ols). Present your results along with those of your "first stage" and "reduced form".
+
+Here is a little code snippet to help you work with the fee schedule update and the utilization and payment data in constructing the instrument. In this code chunk, the `medicare.puf` object is the provider and utilization data for a specific year, the `pfs.yearly` object is the physician fee schedule update data for the same year (except for years after 2013, in which case `pfs.yearly` should just be the 2013 data because the price shock is fully implemented as of 2013), and the `taxid.base` object is the MD-PPAS data from 2009 limited to just the NPI and the group1 variable (the group1 and group2 variables are encrypted versions of the physician's tax ID, and I use the 2009 data so that I get a baseline measure of the practice before the price shock takes effect). The purpose of this code is to first merge the price shock information into service-level quantity data, then construct the total increase in revenue from the price shock based on observed quantities (that's the `numer` variable), and divide by the total hypothetical revenue if payments never changed. The resulting `phy_rev_change` is intended to measure the increase in revenue for a given physician relative to revenue without the price shock. Finally, I average this across all physicians in a practice based on their observed practice affiliation as of 2009 and multiply by the practice size (I really just sum the ratio, but that's the same thing). The resulting `practice_rev_change` variable is what you should use as your instrument for $INT_{it}$. 
+
+
+```{r, eval=FALSE, echo=TRUE}
+  price.shock <- medicare.puf %>% inner_join(taxid.base, by="npi") %>%
+    inner_join(pfs.yearly %>% 
+                 select(hcpcs, dprice_rel_2010, price_nonfac_orig_2010, price_nonfac_orig_2007), 
+               by=c("hcpcs_code"="hcpcs")) %>%
+    mutate_at(vars(dprice_rel_2010, price_nonfac_orig_2010, price_nonfac_orig_2007), replace_na, 0) %>%
+    mutate(price_shock = case_when(
+            i<=2013 ~ ((i-2009)/4)*dprice_rel_2010,
+            i>2013  ~ dprice_rel_2010),
+          denom = line_srvc_cnt*price_nonfac_orig_2010,
+          numer = price_shock*line_srvc_cnt*price_nonfac_orig_2010) %>%
+    group_by(npi) %>%
+    summarize(phy_numer=sum(numer, na.rm=TRUE), phy_denom=sum(denom, na.rm=TRUE), tax_id=first(tax_id)) %>%
+    ungroup() %>%
+    mutate(phy_rev_change=phy_numer/phy_denom) %>%    
+    group_by(tax_id) %>%
+    summarize(practice_rev_change=sum(phy_rev_change, na.rm=TRUE)) %>%
+    ungroup()
+```
+
+
+Yes, the idea of summing a ratio is a bit odd. But it's easier to think of the instrument as the product of baseline (pre-shock) practice size and the average relative revenue change due to the price shock. In that context, the sum of the ratio is really just an interaction term that incorporates information on the price shock magnitude and baseline practice size. Each of these things alone are poor instruments, but together for the practice it reflects a "better" instrument.
+
+6. Assess the "need" for IV by implementing a Durbin-Wu-Hausman test with an augmented regression. Do this by first estimating the regression, $INT_{it} = \lambda \Delta P_{it} + \beta x_{it} + \gamma_{i} + \gamma_{t} + \varepsilon_{it}$, take the residual $\hat{\nu} = INT_{it} - \hat{INT}_{it}$, and run the regression $$y_{it} = \delta INT_{it} + \beta x_{it} + \gamma_{i} + \gamma_{t} + \kappa \hat{\nu} + \varepsilon_{it}.$$ Discuss your results for $\hat{\kappa}$.
+
+7. Now let's pay attention to potential issues of weak instruments. As we discussed in class, one issue with weak instruments is that our typical critical values (say, 1.96 for a 95% confidence interval) from the equation of interest (sometimes called the structural equation) are too low in the presence of a weak first-stage. These issues are presented very clearly and more formally in the Andrews, Stock, and Sun (2019) survey article. For this question, you will consider two forms of inference in the presence of weak instruments. Hint: Check out the `ivmodel` package in R or the `ivreg2` command in Stata for help getting the AR Wald statistic.
+    - Present the results of a test of the null, $H_{0}: \delta=0$, using the Anderson-Rubin Wald statistic. Do your conclusions from this test differ from a traditional t-test following 2SLS estimation of Equation \@ref(eq:ols)?
+    - Going back to your 2SLS results...inflate your 2SLS standard errors to form the $tF$ adjusted standard error, following Table 3 in @lee2021. Repeat the test of the null, $H_{0}: \delta=0$, using standard critical values and the $tF$ adjusted standard error.
+    
+8. Following the Borusyak and Hull (2021) working paper (BH), we can consider our instrument as a function of some exogenous policy shocks and some possibly endogenous physician characteristics, $\Delta P_{it}=f\left(g_{pt}; z_{ipt}\right)$, where $g_{pt}$ captures overall payment shocks for procedure $p$ at time $t$, and $z_{ip}$ denotes a physician's quantity of different procedures at baseline. We can implement the BH re-centering approach as follows:
+    - Consider hypothetical price changes over a set of possible counterfactuals by assuming that the counterfactuals consist of different allocations of the observed relative price changes. For example, take the vector of all relative price changes, reallocate this vector randomly, and assign new hypothetical relative price changes. Do this 100 times. This isn't "all" possible counterfactuals by any means, but it will be fine for our purposes.
+    - Construct the expected revenue change over all possible realizations from previously, $\mu_{it} = E [\Delta P_{it}]= \sum_{s=1}^{100} \sum_{p} g_{pt}^{s} z_{ip}$.
+    - Re-estimate Equation \@ref(eq:ols) by 2SLS when instrumenting for $INT_{it}$ with $\tilde{\Delta} P_{it} = \Delta P_{it} - \mu_{it}$. Intuitively, this re-centering should isolate variation in the instrument that is only due to the policy and remove variation in our instrument that is due to physician practice styles (the latter of which is not a great instrument).
+    
+
+9. Discuss your findings and compare estimates from different estimators.
+
+10. Reflect on this assignment. What did you find most challenging? What did you find most surprising? 
+
+# References

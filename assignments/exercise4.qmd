@@ -1,0 +1,39 @@
+---
+title: "Exercise 4: Hospital Markets and Demand Estimation"
+---
+
+# Overview
+In this exercise, we're going to work through some applied issues related to measuring hospital markets and estimating demand with market-level data.
+
+# Resources and data
+The data for this assignment comes from two sources:
+
+1. **Hospital Cost Report Information System**: We used these data for assignment 1. Info and code for these data are available at my GitHub page [here](https://github.com/imccart/HCRIS). The raw data are available in our class OneDrive folder. Use these data for information on total discharges and to construct a measure of hospital prices.
+
+2. **Hospital Market GitHub Repo**: John Graves has an excellent GitHub repository detailing the issues in measuring hospital markets. You can access that repo [here](https://github.com/graveja0/health-care-markets). To replicate some of his work using the community detection algorithm, you'll need to use the [Hospital Service Area Files](https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Hospital-Service-Area-File/index). The link takes you to the CMS website where you can download the data directly. For a condensed version of the code focusing more on the market formation rather than mapping, see my GitHub repo [here](https://github.com/imccart/hospital-markets).
+
+But given the time crunch of the semester and the complexity of some of the raw data work for this assignment, I'm going to try to give you all a break here by skipping some steps for you. In our OneDrive folder, you'll find the 'hospital_markets.txt' data, which is the data output from the hospital market github repo. I've also uploaded a couple of other geographic data files to give you info on HRR, zip, and fips. 
+
+
+# Questions
+In your GitHub repository, please be sure to clearly address/answer the following questions. In all cases, limit your data to the years 2000 through 2017.
+
+1. Calculate hospital market shares when defining the "market" by zip code and using hospital discharges as your measure of quantity. Plot the distribution of market shares over time (e.g., with a box plot or a violin plot).
+
+2. Still using zip codes as your definition of the market, provide descriptive evidence on the relationship between market concentration and price by estimating a linear regression of the following: $$p_{ht} = \beta HHI_{m(h)t} + \lambda x_{ht} + \theta z_{m(h)t} + \gamma_{h} + \gamma_{t} + \varepsilon_{ht},$$ where $p_{ht}$ denotes the estimated price for hospital $h$ at time $t$, $HHI_{m(h)t}$ denotes market concentration, $x_{ht}$ denotes time-varying hospital characteristics, $z_{m(h)t}$ denotes time-varying market characteristics, and $\gamma_{h}$ and $\gamma_{t}$ denote hospital and time fixed effects.
+
+3. Calculate hospital market shares when defining the "market" as the HRR, again using hospital discharges as your measure of quantity. Plot the distribution of market shares over time. How do these results differ from part 1?
+
+4. Still using HRR as your definition of the market, provide descriptive evidence on the relationship between market concentration and price by estimating the same linear regression from part (2), but now with HRR as your definition of the market. 
+
+5. Calculate hospital market shares when defining the market based on the community detection algorithms described [here](https://github.com/graveja0/health-care-markets). Continue to use hospital discharges as your measure of quantity, and again provide a plot of market shares over time. How do these results differ from those in parts 1 and 3?
+
+6. Using your community detection measure of markets, provide descriptive evidence on the relationship between market concentration and price by estimating the same linear regression from part (2), but with your new market definition.
+
+7. Estimate a logit discrete choice model using market share data based on the different definition of markets in parts 1, 3, and 5. Be sure to include year and hospital fixed effects in your estimation. What is your price elasticity estimate in each case, and how does it differ based on your measure of the market? *hint: don't worry about instrumenting for anything right now.*
+
+8. Discuss your findings and compare results from different market definitions. Also compare your descriptive evidence from what you find in the share-based discrete choice model.
+
+9. Reflect on this assignment. What did you find most challenging? What did you find most surprising? 
+
+10. Please write a couple of sentences about the course. What would you change about the class? What content would you remove or add? What did you wish you could have learned about but didn't (or did learn about and wish you hadn't)? 
