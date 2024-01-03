@@ -2,10 +2,13 @@
 title: "Variation and Physician Agency: What we need to know"
 ---
 
-The goal for today's class is to consider where this area is headed.
+The goal for today's class is to consider where this area is headed. Much of this work is not explicitly about physician agency, but it is about the variation that physicians create and how that variation is shaped by the incentives they face. Such analyses fit squarely within the notion of physician agency.
 
 ### @whaley2021 and @richards2022
 Each of these papers link physician agency with policy questions in healthcare, focusing on the increasing role of hospital employment of physicians.
 
-### @sing2023
+### @singh2023
 This paper also looks at the role of physician agency and organizational structure, focusing on the role of private equity acquisitions.
+
+### @zeltzer2020 and @agha2022ms
+These papers each speak to physician agency and referrals. @agha2022ms considers the consequences of different referral network structures for PCPs, and @zeltzer2020 considers the creation of referral networks themselves with implications for how these networks are shaped by physician agency. 

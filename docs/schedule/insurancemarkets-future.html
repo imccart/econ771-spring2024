@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -154,13 +173,27 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Here are some key questions that I view as important and await further research in the area of health insurance markets. These questions are not exhaustive, but they provide a starting point for understanding the current state of research in health insurance and identifying gaps in the literature.</p>
 <ol type="1">
-<li><p><strong>Policies for Expanding Health Insurance Access and Affordability</strong>: In light of the debates around healthcare reform, there’s a pressing need to evaluate which policies are most effective in expanding access to and affordability of health insurance. Understanding the welfare consequences of these policies helps inform decisions that could impact millions of lives. We’ll discuss <span class="citation" data-cites="geddes2023">(<a href="#ref-geddes2023" role="doc-biblioref"><strong>geddes2023?</strong></a>)</span> and <span class="citation" data-cites="curto2023">(<a href="#ref-curto2023" role="doc-biblioref"><strong>curto2023?</strong></a>)</span> as examples of this type of ongoing research.</p></li>
-<li><p><strong>Public vs Private Health Insurance</strong> There is growing interest concerning the effects of privatizing an otherwise public health insurance program. This is particularly important as we continue to consider the increasing privatization in public insurance such as Medicaid Managed Care and Medicare Advantage. We’ll discuss <span class="citation" data-cites="layton2019">(<a href="#ref-layton2019" role="doc-biblioref"><strong>layton2019?</strong></a>)</span> and <span class="citation" data-cites="macambira2023">(<a href="#ref-macambira2023" role="doc-biblioref"><strong>macambira2023?</strong></a>)</span> as examples of this area of study.</p></li>
+<li><p><strong>Policies for Expanding Health Insurance Access and Affordability</strong>: In light of the debates around healthcare reform, there’s a pressing need to evaluate which policies are most effective in expanding access to and affordability of health insurance. Understanding the welfare consequences of these policies helps inform decisions that could impact millions of lives. We’ll discuss <span class="citation" data-cites="geddes2023">Geddes and Schnell (<a href="#ref-geddes2023" role="doc-biblioref">2023</a>)</span> and <span class="citation" data-cites="curto2023">Curto (<a href="#ref-curto2023" role="doc-biblioref">2023</a>)</span> as examples of this type of ongoing research.</p></li>
+<li><p><strong>Public vs Private Health Insurance</strong> There is growing interest concerning the effects of privatizing an otherwise public health insurance program. This is particularly important as we continue to consider the increasing privatization in public insurance such as Medicaid Managed Care and Medicare Advantage. We’ll discuss <span class="citation" data-cites="layton2019">Layton et al. (<a href="#ref-layton2019" role="doc-biblioref">2019</a>)</span> and <span class="citation" data-cites="macambira2023">Macambira et al. (<a href="#ref-macambira2023" role="doc-biblioref">2022</a>)</span> as examples of this area of study.</p></li>
 </ol>
 
 
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-curto2023" class="csl-entry" role="listitem">
+Curto, Vilsa E. 2023. <span>“Pricing Regulations in Individual Health Insurance: <span>Evidence</span> from <span>Medigap</span>.”</span> <em>Journal of Health Economics</em> 91 (September): 102785. <a href="https://doi.org/10.1016/j.jhealeco.2023.102785">https://doi.org/10.1016/j.jhealeco.2023.102785</a>.
+</div>
+<div id="ref-geddes2023" class="csl-entry" role="listitem">
+Geddes, Eilidh, and Molly Schnell. 2023. <span>“The <span>Expansionary</span> and <span>Contractionary</span> <span>Supply</span>-<span>Side</span> <span>Effects</span> of <span>Health</span> <span>Insurance</span>.”</span> Working {Paper}. Working <span>Paper</span> <span>Series</span>. National Bureau of Economic Research. <a href="https://doi.org/10.3386/w31483">https://doi.org/10.3386/w31483</a>.
+</div>
+<div id="ref-layton2019" class="csl-entry" role="listitem">
+Layton, Timothy J., Nicole Maestas, Daniel Prinz, and Boris Vabson. 2019. <span>“Private Vs. <span>Public</span> <span>Provision</span> of <span>Social</span> <span>Insurance</span>: <span>Evidence</span> from <span>Medicaid</span>.”</span> Working {Paper}. Working <span>Paper</span> <span>Series</span>. National Bureau of Economic Research. <a href="https://doi.org/10.3386/w26042">https://doi.org/10.3386/w26042</a>.
+</div>
+<div id="ref-macambira2023" class="csl-entry" role="listitem">
+Macambira, Danil Agafiev, Michael Geruso, Anthony Lollo, Chima D. Ndumele, and Jacob Wallace. 2022. <span>“The <span>Private</span> <span>Provision</span> of <span>Public</span> <span>Services</span>: <span>Evidence</span> from <span>Random</span> <span>Assignment</span> in <span>Medicaid</span>.”</span> w30390. National Bureau of Economic Research. <a href="https://doi.org/10.3386/w30390">https://doi.org/10.3386/w30390</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
