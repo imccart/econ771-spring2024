@@ -57,6 +57,10 @@ website:
       background: dark
       contents:
         - assignments/index.qmd
+        - assignments/research-proposals.qmd
+        - assignments/research-plans.qmd
+        - assignments/presentations.qmd
+        - assignments/replications.qmd
 
     - title: "Empty"
       style: "docked"
