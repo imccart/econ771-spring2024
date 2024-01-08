@@ -369,5 +369,12 @@
     "title": "Healthcare Variation and Physician Agency",
     "section": "Physician Agency",
     "text": "Physician Agency\nFor theoretical background on principal-agent problems more generally, take a look at Grossman and Hart (1983).\n\n    List of Key Papers (click to expand)"
+  },
+  {
+    "objectID": "schedule/introduction.html",
+    "href": "schedule/introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Welcome to the course! Today we’ll spend some time talking about the structure of the class, the assignments, grading, etc. But before we do that, I want to spend some time motivating the area of health economics and why I think this is a critical area of study for economists.\nWe’ll discuss more details in class, but the basic idea is:\n\nHealthcare is an extremely complicated market, particularly in the U.S., and the sources of complexity reflect a unique combination of common economic issues. Some of they key issues (highlighted 60 years ago in Arrow (1963)!) include uncertainty in need for medical care, the “experience” nature of the good that makes it difficult to ascertain quality and price in advance, information asymmetry (between patients and physicians, and between patients and insurers), the distortionary effects of insurance, licensing and regulation, as well as professional norms and non-standard objective functions.\nDue to its complexity, healthcare is extremely expensive (this is true almost everywhere, but again, especially in the U.S.) and constitutes a large share of GDP\nBecause of its expense and complexity, healthcare plays a major role in public finance, labor markets, and inequality\n\n\n\n\n\nReferences\n\nArrow, Kenneth J. 1963. “Uncertainty and the Welfare Economics of Medical Care.” The American Economics Review 53 (5). https://www.aeaweb.org/aer/top20/53.5.941-973.pdf."
   }
 ]
