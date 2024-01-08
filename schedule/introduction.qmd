@@ -2,7 +2,7 @@
 title: "Introduction"
 ---
 
-Welcome to the course! Today we'll spend some time talking about the structure of the class, the assignments, grading, etc. But before we do that, I want to spend some time motivating the area of health economics and why I think this is a critical area of study for economists. 
+Welcome to the course! Today we'll spend some time talking about the structure of the class, the assignments, grading, etc. We'll also navigate the website for a bit just to make sure we can get around and understand where different information is. But before we do that, I want to spend some time motivating the area of health economics and why I think this is a critical area of study for economists. 
 
 We'll discuss more details in class, but the basic idea is:
 

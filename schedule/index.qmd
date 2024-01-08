@@ -48,16 +48,16 @@ In general, I've split each topic into three parts: 1) what we know; 2) what we'
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
-## Module 3: Pricing and competition
+## Module 3: [Pricing and competition](litreview-competition.qmd)
 
 | Class | Dates       | Topic                                      | Details | Slides | Assignment |
 |:-----:|-------------|--------------------------------------------|:-------:|:------:|:----------:|
-|  18   | 2/26        | Background                                 | [{{< fa magnifying-glass >}}](/schedule/class-18.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | |
-|  19   | 2/28        | Pricing and competition, Part I            | [{{< fa magnifying-glass >}}](/schedule/class-19.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  20   | 3/1         | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-20.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
-|  21   | 3/4         | Pricing and competition, Part II           | [{{< fa magnifying-glass >}}](/schedule/class-21.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  22   | 3/6         | Pricing and competition, Part III          | [{{< fa magnifying-glass >}}](/schedule/class-22.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
-|  23   | 3/8         | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/class-23.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
+|  18   | 2/26        | Background                                 | [{{< fa magnifying-glass >}}](/schedule/competition-background.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | |
+|  19   | 2/28        | Pricing and competition, Part I            | [{{< fa magnifying-glass >}}](/schedule/competition-past.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  20   | 3/1         | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/proposals6.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
+|  21   | 3/4         | Pricing and competition, Part II           | [{{< fa magnifying-glass >}}](/schedule/competition-present.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  22   | 3/6         | Pricing and competition, Part III          | [{{< fa magnifying-glass >}}](/schedule/competition-future.html) | [{{< fa person-chalkboard >}}](https://imccart.github.io/...) | | 
+|  23   | 3/8         | **Research proposals**                     | [{{< fa magnifying-glass >}}](/schedule/proposals6.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 

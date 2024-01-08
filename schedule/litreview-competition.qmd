@@ -1,0 +1,12 @@
+---
+title: "Pricing and Competition"
+---
+
+Module 3 covers pricing and competition. Most of this work focuses on hospitals but not exclusively. Below is a drop-down list of papers relevant for this module.
+
+```{=html}
+<details>
+    <summary>List of Key Papers (click to expand)</summary>
+    <iframe src="competition-bib.html" width="100%" height="600px"></iframe>
+</details>
+```
