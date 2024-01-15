@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -166,12 +185,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="overuse-and-low-value-care" class="level3">
 <h3 class="anchored" data-anchor-id="overuse-and-low-value-care">Overuse and Low-value Care</h3>
-<p><span class="citation" data-cites="doyle2017">(<a href="#ref-doyle2017" role="doc-biblioref"><strong>doyle2017?</strong></a>)</span> is a great example of a more formal analysis of overuse and low-value care in healthcare. The paper examines inefficiencies in the U.S. healthcare system by exploiting ambulance referral practices, highlighting how ambulances often transport patients to emergency departments for non-emergent conditions, leading to unnecessary and costly care. This study contributes to understanding healthcare waste by revealing the misalignment between medical needs and the use of high-cost emergency services.</p>
+<p><span class="citation" data-cites="doyle2017">Doyle, Graves, and Gruber (<a href="#ref-doyle2017" role="doc-biblioref">2017</a>)</span> is a great example of a more formal analysis of overuse and low-value care in healthcare. The paper examines inefficiencies in the U.S. healthcare system by exploiting ambulance referral practices, highlighting how ambulances often transport patients to emergency departments for non-emergent conditions, leading to unnecessary and costly care. This study contributes to understanding healthcare waste by revealing the misalignment between medical needs and the use of high-cost emergency services.</p>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-doyle2017" class="csl-entry" role="listitem">
+Doyle, Joseph J., John A. Graves, and Jonathan Gruber. 2017. <span>“Uncovering Waste in <span>US</span> Healthcare: <span>Evidence</span> from Ambulance Referral Patterns.”</span> <em>Journal of Health Economics</em> 54 (July): 25–39. <a href="https://doi.org/10.1016/j.jhealeco.2017.03.005">https://doi.org/10.1016/j.jhealeco.2017.03.005</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
