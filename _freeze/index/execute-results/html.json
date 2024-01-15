@@ -1,0 +1,14 @@
+{
+  "hash": "c8944f90ca24e8fed314c5fa60aa4b87",
+  "result": {
+    "markdown": "---\npagetitle: \"Health Economics II\"\ndetails: \" \"\npage-layout: custom\nsidebar: false\ntoc: false\n---\n\n\n\n::: {.cell layout-align=\"center\"}\n<style type=\"text/css\">\n.content-block {\n  padding-top: 20px;\n  padding-bottom: 10px;\n  margin-left: 30px;\n  margin-right: 30px;\n}\n\n@media(min-width: 900px) {\n  .content-block {\n    margin-left: 50px;\n    margin-right: 50px;\n  }\n}\n\n@media(min-width: 1200px) {\n  .content-block {\n    max-width: 1100px;\n    margin: 0 auto;\n  }\n}\n\n</style>\n:::\n\n\n::: {.content-block}\n\n# Health Economics II\n\n::: {.text-secondary .fs-4}\n\n:::: {.columns}\n\n::: {.column width=20%}\n![](/files/econ771-logo.png)\n:::\n\n::: {.column width=5%}\n\n:::\n\n::: {.column width=75%}\n\nAn economics PhD course exploring the industrial organization of healthcare markets in the U.S., focusing on health insurance, physician agency, healthcare pricing and competition, information disclosure, physician learning, and waste.\n\nSpring 2024<br>\nDepartment of Economics<br>\nEmory University<br>\n**Follow us!** [{{< fa brands twitter >}}](https://twitter.com/emoryeconomics), [{{< fa brands linkedin >}}](https://www.linkedin.com/company/emory-university-department-of-economics), [{{< fa brands facebook >}}](https://www.facebook.com/EmoryEcon/), and [{{< fa brands instagram >}}](https://www.instagram.com/econemory/)\n\n:::\n\n::::\n\n:::\n\n\n---\n\n::: {.grid}\n\n::: {.g-col-6}\n\n\n## Instructor\n\n{{< fa user >}} [Ian McCarthy](https://www.ianmccarthyecon.com)<br>\n{{< fa university >}} R. Rollins, R432<br>\n{{< fa envelope >}} [ian.mccarthy@emory.edu](mailto:ian.mccarthy@emory.edu)<br>\n{{< fa brands twitter >}} [\\@ianhealthecon](https://twitter.com/ianhealthecon)<br>\n{{< fa calendar-check >}} [Schedule an appointment](https://mccarthy-meetings.youcanbook.me/)\n\n:::\n\n::: {.g-col-6}\n\n\n## Course Details\n\n{{< fa calendar-alt >}} 1-17-2024 to 4-29-2024<br>\n{{< fa calendar >}} Monday, Wednesday, Friday<br>\n{{< fa clock >}} 11:30am to 12:45pm M/W<br>\n{{< fa clock >}} 11:30am to 12:20pm Friday<br>\n{{< fa university >}} Woodruff Library 874\n\n:::\n\n:::\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
