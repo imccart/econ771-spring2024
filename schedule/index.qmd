@@ -87,23 +87,23 @@ In general, I've split each general topic into three days, and for each day, we'
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
-## Module 6: Waste and fraud
+## Module 6: [Waste and fraud](6-literature.qmd)
 
 | Class | Dates | Topic                             | Details | Slides | Assignment |
-|:-----:|-------------|--------------------------------------------|:-------:|:------:|:----------:|
-|  36   | 4/15  | Background                        | [{{< fa magnifying-glass >}}](/schedule/6-0.html) | [{{< fa person-chalkboard >}}](/slides/class36.html) | |
-|  37   | 4/17  | Sources of Waste                  | [{{< fa magnifying-glass >}}](/schedule/6-1.html) | [{{< fa person-chalkboard >}}](/slides/class37.html) | | 
-|  38   | 4/19  | **Research proposals**            | [{{< fa magnifying-glass >}}](/schedule/proposals12.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
-|  39   | 4/22  | Fraud and Overuse                  | [{{< fa magnifying-glass >}}](/schedule/6-2.html) | [{{< fa person-chalkboard >}}](/slides/class39.html) | | 
-|  40   | 4/24  | Strategies to Avoid Fraud         | [{{< fa magnifying-glass >}}](/schedule/6-3.html) | [{{< fa person-chalkboard >}}](/slides/class40.html) | | 
-|  41   | 4/26  | **Research proposals**            | [{{< fa magnifying-glass >}}](/schedule/proposals13.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
-|       |       | **Empirical exercises**           |                                                        | | [{{< fa pen  >}}](/assignments/empirical-exercises.html) |
+|:-----:|-------|-----------------------------------|:-------:|:------:|:----------:|
+|  36   | 4/15  | Background                        | [{{< fa magnifying-glass >}}](/schedule/6-0.html)         |   [{{< fa person-chalkboard >}}](/slides/class36.html)     | |
+|  37   | 4/17  | Sources of Waste                  | [{{< fa magnifying-glass >}}](/schedule/6-1.html)         |   [{{< fa person-chalkboard >}}](/slides/class37.html)     | | 
+|  38   | 4/19  | **Research proposals**            | [{{< fa magnifying-glass >}}](/schedule/proposals12.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html)  |
+|  39   | 4/22  | Fraud and Overuse                 | [{{< fa magnifying-glass >}}](/schedule/6-2.html)         |   [{{< fa person-chalkboard >}}](/slides/class39.html)     | | 
+|  40   | 4/24  | Strategies to Avoid Fraud         | [{{< fa magnifying-glass >}}](/schedule/6-3.html)         |   [{{< fa person-chalkboard >}}](/slides/class40.html)     | | 
+|  41   | 4/26  | **Research proposals**            | [{{< fa magnifying-glass >}}](/schedule/proposals13.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html)  |
+|       |       | **Empirical exercises**           |                                                           | | [{{< fa pen  >}}](/assignments/empirical-exercises.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
 
 
 ## Final Research Plans
 
-| Class | Dates       | Topic                                      | Details | Slides | Assignment |
-|:-----:|-------------|--------------------------------------------|:-------:|:------:|:----------:|
-|  42   | 4/29        | **Research plans**                         | [{{< fa magnifying-glass >}}](/schedule/class-42.html) | | [{{< fa pen  >}}](/assignments/research-plans.html) |
+| Class | Dates | Topic                             | Details | Slides | Assignment |
+|:-----:|-------|-----------------------------------|:-------:|:------:|:----------:|
+|  42   | 4/29  | **Research plans**                | [{{< fa magnifying-glass >}}](/schedule/proposals14.html) | | [{{< fa pen  >}}](/assignments/research-plans.html)      |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
