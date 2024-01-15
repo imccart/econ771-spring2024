@@ -1,0 +1,15 @@
+---
+title: "Different Outcomes and Settings"
+---
+
+The goal for today's class is to consider other outcomes where competition may play a role (not just price) and some specific settings where competition may work differently. We'll focus on the following areas and papers for today's class.
+
+### Competition and Quality
+While most studies focus on the relationship between competition and price, there is a growing literature on the relationship between competition and quality. We'll discuss @gaynor2013 and @barker2022 as examples of work in this area. 
+
+### Competition and Other Outcomess
+In addition to prices and quality, competition can influence hospitals in many different ways. @eliason2020 studies mergers in the context of dialysis (effectively this is a study of market power and quality, they look at specific treatment decisions that happen to be negatively correlated with quality). @craig2021 studies the effect of mergers on bargaining power for high-price inputs (medicald devices, in this case).
+
+### Competition in Rural Settings
+In the U.S., rural hospitals have struggled in recent years, with many hospitals closing. Understanding the effects of such closures and what we might want to do about it is an active area of policy interest. We'll discuss @carroll2023 as a review of this clinical setting, and @fischer2024 as a recent paper in this area.
+

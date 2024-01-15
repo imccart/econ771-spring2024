@@ -1,0 +1,14 @@
+---
+title: "Learning by Doing"
+---
+
+Physician "learning by doing" specifically refers to the acquisition of expertise and improvement in clinical skills that occur through direct patient care. This contrasts with other forms of physician learning covered previously, as it involves a process of personal skill development and decision-making refinement that occurs over time as a result of repeated practice and exposure to a variety of clinical situations. We'll discuss the following topics and papers for today's class:
+
+### Bias and Priors
+@comin2022 examines the role of perceived versus actual skill in the adoption of new medical technologies, specifically implantable cardiac defibrillators (ICDs). It introduces a Bayesian framework that contrasts the use of technology based on perceived skill against the outcomes dependent on actual skill. This model is applied to study variations in ICD adoption across hospitals from 2002 to 2013, finding that perception bias accounts for a significant portion of the adoption rate differences. Importantly, the study highlights how learning about this bias in perception can accurately predict declines in technology use, suggesting that overconfidence in perceived skill plays a crucial role in technology adoption decisions in healthcare​.
+
+### Skill Accumulation
+@gong2018 combines two important dimensions of learning: Bayesian learning, in which the physician updates beliefs about treatment effectiveness for different patients, and learning by doing, which enhances surgical skills. A dynamic structural model is developed and estimated, focusing on the context of brain aneurysm treamtent. The paper contributes to the learning literature by quantifying how "learning by doing" and Bayesian updating shape treatment choices, offering insights into how these learning mechanisms affect the diffusion of new medical technologies and treatment success​.
+
+### Learning Failures
+Of course, there is no guarantee that physicians learn much from experience. @singh2021 considers this in the context of negative outcomes following childbirth. She finds that, instead of making each delivery decision based on evidence and individual patient circumstances, doctors are influenced by the outcomes of their immediately preceding cases. This reliance on heuristics, particularly following complications in a prior delivery, represents a deviation from evidence-based decision-making.

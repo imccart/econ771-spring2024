@@ -1,0 +1,11 @@
+---
+title: "Disclosure of What and to Whom?"
+---
+
+The goal for today's class is to consider heterogeneities in information disclosure depending on who gets the information and what information is disclosed. Focus areas and selected papers for this class are listed below.
+
+### Information for Whom?
+Given our understanding of physician agency and the role of physicians (or experts in general) on patient decisions, then it might matter if we provide information to patients versus physicians. We'll discuss @dickstein2024 as a good example of this work. The authors find that when physicians have better information about patients' costs, they are more likely to recommend cost-effective treatments, leading to a reduction in overall healthcare spending. This highlights the importance of improving information flow to physicians (instead of patients) as a potential strategy for enhancing healthcare efficiency and reducing patient costs.
+
+### Disclosure in Bargaining
+Another interesting aspect of disclosure is that it can change the bargaining position of different entities. @grennan2020 study this in the context of hospital negotiations over prices for medical devices. They find that increased transparency leads to more competitive prices, benefiting hospitals through lower costs for supplies.

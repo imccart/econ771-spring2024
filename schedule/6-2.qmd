@@ -1,0 +1,14 @@
+---
+title: "Fraud and Overuse"
+---
+
+For today's class, we're going to talk more specifically about fraud and overuse. While we tend to think of "fraud" as outright illegal activity, such as billing for services that were never provided, there are many other ways that providers can "game" the system to increase their revenue. These are also often classified as fraud, even though they may not be illegal. We'll cover the following areas and papers in this class.
+
+### Upcoding from Providers
+@dafny2005 explores the reactions of hospitals to varying price structures in the healthcare market, particularly the extent to which hospitals adjust service volume, quality, and variety in response to changes in reimbursement rates. The study is an excellent example of how hospitals can adjust their behavior to maximize revenue, even when they are not engaging in outright fraud.
+
+### Upcoding from Insurers
+@geruso2020 investigates the phenomenon of upcoding in Medicare Advantage, examining how Medicare's risk adjustment process may inadvertently incentivize this behavior. Again, this is an excellent example of overuse (or perhaps more accurately, overspending) that is not necessarily illegal but nonetheless a big driver of inefficiency.
+
+### Learning about Fraud
+@omalley2021

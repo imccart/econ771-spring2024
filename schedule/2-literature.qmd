@@ -1,0 +1,29 @@
+---
+title: "Healthcare Variation and Physician Agency"
+---
+
+Module 2 covers geographic (both across and within) variation in healthcare utilization and expenditures. We'll discuss the causes of such variation, focusing first on demand vs. supply-side explanations. We'll then discuss the role of physician agency as one critical supply-side factor.
+
+## Healthcare Variation
+
+
+```{=html}
+<details>
+    <summary>List of Key Papers (click to expand)</summary>
+    <iframe src="variation-bib.html" width="100%" height="600px"></iframe>
+</details>
+```
+
+## Physician Agency
+
+For theoretical background on principal-agent problems more generally, take a look at @grossman1983.
+
+```{=html}
+<details>
+    <summary>List of Key Papers (click to expand)</summary>
+    <iframe src="agency-bib.html" width="100%" height="600px"></iframe>
+</details>
+```
+
+
+## Supplemental References

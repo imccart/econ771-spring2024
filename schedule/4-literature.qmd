@@ -1,0 +1,12 @@
+---
+title: "Information Disclosure"
+---
+
+Module 4 covers information disclosure, both in terms of quality and prices. A broad list of relevant papers is in the drop-down list below.
+
+```{=html}
+<details>
+    <summary>List of Key Papers (click to expand)</summary>
+    <iframe src="information-bib.html" width="100%" height="600px"></iframe>
+</details>
+```

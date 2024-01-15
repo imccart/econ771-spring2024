@@ -1,0 +1,15 @@
+---
+title: "Different Dimensions of Agency"
+---
+
+The goal for today's class is to consider where the research on physician agency might be headed and discuss some papers in those directions. As always, this is just my prediction on topic areas for the future. It's far from exhaustive and might be way off! Focus areas and selected papers for this class are listed below.
+
+### Agency and Referrals
+We are increasingly learning that the group (or network) of physicians involved in patient care matters for their outcomes, perhaps more than any single physician in isolation. We'll discuss @zeltzer2020 and @agha2022ms as examples of papers in this area. @agha2022ms considers the consequences of different referral network structures for PCPs, and @zeltzer2020 considers the creation of referral networks themselves with implications for how these networks are shaped by physician agency. 
+
+### Agency in Hospital Choice
+Physicians can also influence where patients receive care or what subsuquent physicians a patient visits. As an example of this work, we'll discuss @gaynor2016. The authors examing the role of physicians in hospital choice, focusing on plausibly exogenous changes to the set of hospitals from which a physician could select. The paper is also a good example of recent work on consideration sets in discrete choice analysis.
+
+### Agency in Other Healthcare Settings  
+As healthcare delivery changes, so do the opportunities for healthcare providers to exercise agency. We'll discuss @eliason2020 and @gruber2023 as examples of this work. @eliason2020 consider the role of agency in the context of long-term acute care. This is a setting where patients are often transferred to a different facility for care, and the authors examine how providers might discharge patients to long-term acute care facilities based on their financial incentives. @gruber2023 examines agency in the context of emergency department wait times.
+

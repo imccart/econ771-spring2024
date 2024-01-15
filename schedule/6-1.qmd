@@ -1,0 +1,11 @@
+---
+title: "Sources of Waste"
+---
+
+Today we're going to focus on the sources of waste in U.S. healthcare. Most of the papers in this literature are essentially careful accounting exercises, decomposing spending into various categories. Such papers often aren't econometrically rigorous and don't have a clear causal identification strategy. However, they are still important because they help us understand the sources of waste in the U.S. healthcare system. Focus areas and papers are listed below.
+
+### Inefficiency in U.S. Healthcare
+We'll start class with general papers in the area of waste in U.S. healthcare, @garber2008 and @cutler2012. @garber2008 discusses different aspects of waste such as administrative costs, prices, and the use of healthcare services. It contrasts these factors with other countries to determine whether the inefficiency in the U.S. system is unique. @cutler2012 is a "perspectives" paper focusing specifically on administrative waste. This paper discusses high administrative costs as a significant component of healthcare spending and considers strategies to reduce these costs while maintaining or improving healthcare quality.
+
+### Overuse and Low-value Care
+@doyle2017 is a great example of a more formal analysis of overuse and low-value care in healthcare. The paper examines inefficiencies in the U.S. healthcare system by exploiting ambulance referral practices, highlighting how ambulances often transport patients to emergency departments for non-emergent conditions, leading to unnecessary and costly care. This study contributes to understanding healthcare waste by revealing the misalignment between medical needs and the use of high-cost emergency services.

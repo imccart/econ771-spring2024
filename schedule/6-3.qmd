@@ -1,0 +1,15 @@
+---
+title: "Strategies to Avoid Fraud"
+---
+
+While we can often identify fraud after-the-fact, it can be challenging to devise policies that prevent fraud in a cost-effective way. We'll talk about some of these things in today's class, focusing on the following areas and papers.
+
+### Detection
+@shekar2023 considers how to identify overbilling in the U.S. healthcare system. The authors employ large-scale Medicare claims data to detect patterns indicative of fraud or overbilling, notably in an unsupervised manner that does not rely on pre-labeled training data. This approach provides a significant advancement in fraud detection, offering both high accuracy and explainability, which is crucial for understanding and acting upon the findings. 
+
+### Private Enforcement
+One way to avoid fraud is to rely on individuals to report fraud after it has occurred, and other way is to impose sufficient safegaurds so that fraud is either extremely hard to commit or detected immediately via regulatory audit. @leder-luis2023 offers an anaylsis of the first approach, considering the role of whistleblower-initiated lawsuits in uncovering fraudulent activities and their impact on reducing financial misappropriations in public healthcare spending. Such whistleblower-initiated lawsuits are a key component of the U.S. False Claims Act, which allows private citizens to sue on behalf of the government and receive a portion of the recovered funds. 
+
+### Regulatory Enforcement
+As examples of papers that consider more official regulatatory enforcement (e.g., a more proactive effort to avoid or identify fraud while it's happening), we will discuss @shi2023 and @eliason2023. @shi2023 examines the role and efficacy of Medicare audits in identifying and reducing wasteful spending in the healthcare system. The paper analyzes how these audits target and impact various areas of expenditure, assessing their effectiveness in curbing unnecessary costs. @eliason2023 examines how specific regulations and litigation practices influence fraudulent activities in this sector. It offers a critical analysis of the effectiveness of current measures in preventing fraud and suggests potential improvements.
+

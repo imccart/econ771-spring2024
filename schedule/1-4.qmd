@@ -1,0 +1,15 @@
+---
+title: "Adverse Selection"
+---
+
+The goal for today's class is to understand the role of adverse selection in health insurance markets. Again, there is a lot of work in this space, and we can't talk about everything! Focus areas and selected papers for this class are listed below.
+
+### Pricing and Adverse Selection
+One of the fundamental barriers to an efficient health insurance market is adverse selection. Adverse selection occurs when consumers with different risk profiles purchase different insurance plans. This can lead to a situation where the average cost of care for a given plan is higher than the average premium, which is not sustainable for insurers. This is a problem because it can lead to a situation where no insurer is willing to offer a plan at a price that consumers are willing to pay. We'll discuss @bundorf2012 and @einav2010qje as examples of research inthis area. These papers discuss and implement some of the standard tools and current results in the study of health insurance premiums and adverse selection. 
+
+### Mitigating Adverse Selection
+While the prior papers discuss the role of adverse selection on pricing, they don't necessarily offer any explicit solutions to the adverse selection problem. We'll discuss @handel2013, @handel2015, and @handel2019 as examples of papers that consider adverse selection and potential unintended consequences of policy interventions. The papers demonstrate that while adverse selection is a fundamental challenge in health insurance markets, its manifestations and solutions are diverse and complex. 
+
+### Adverse Selection and Insurance Networks
+Again on the area of adverse selection, we'll discuss @shepard2022 in class. This paper considers the interplay between hospital network competition and adverse selection, focusing on the Massachusetts health insurance exchange. The authors advance the literature on health insurance markets by introducing the concept of hospital network competition into the discussion of adverse selection. Traditionally, studies have focused on premiums, plan benefits, and individual consumer attributes in analyzing adverse selection. This paper broadens this perspective by showing that the networks of hospitals associated with insurance plans are also crucial in shaping consumer behavior and the overall dynamics of adverse selection in the market. This novel approach enriches the understanding of the multifaceted nature of health insurance markets and highlights the importance of considering a broader range of factors in studying these markets.
+

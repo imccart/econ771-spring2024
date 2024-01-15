@@ -1,0 +1,9 @@
+---
+title: "Pricing and Competition"
+---
+
+In explaining why we spend so much money on healthcare in the U.S., Uwe Reinhardt famously said, "It's the prices, stupid." The spirit of his comment is that, while people will try to cite lots of reasons for high healthcare spending (such as physician salaries, profit incentives, poorer health of U.S. population relative to other countries, overuse of healthcare, fraud, etc.), these things really aren't big factors relative to price differences. Essentially, if we want to really address healthcare spending, we need to place downward pressure on prices. With that in mind, Module 3 covers pricing and competition in healthcare.
+
+The observation that prices in healthcare care are high is not new. It's been a problem for decades. Some good surveys of this problem and suggestions to improve competitiveness in healthcare include: @dranove2000, @gaynor2000, @gaynor2003, @gaynor2012, @gaynor2012rwjf, @gaynor2015jel, @gaynor2017brookings, @handel2021. Our slides for today reflect a lot of the general insights from these types of surveys.
+
+One important background point in the study of competition is the role of market definition and the different measures of market power. @everson2019 and @dranove2016 provide good reviews of these points, respectively. We'll discuss these issues as part of our introduction to this module.

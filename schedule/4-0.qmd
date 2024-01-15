@@ -1,0 +1,7 @@
+---
+title: "Background on Information Disclosure"
+---
+
+Given the prevalence of information problems in healthcare and health insurance, it seems natural to ask how the disclosure of more information might change the behavior of patients and providers. Module 4 covers this issue. We'll spend today discussing some of the relevant policy issues related to disclosure, in particular the publication of health insurance plan information, hospital and physician quality information, and hospital price information. 
+
+For an excellent background on quality disclosure, please see @dranove2010. There's also a literature on the unintended consequences of price disclosure where price disclosure might actually increase prices. See @albaek1997 and more recently @luco2019 as some examples of that research.

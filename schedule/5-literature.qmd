@@ -1,0 +1,12 @@
+---
+title: "Physician Learning"
+---
+
+Module 5 covers physician learning. I've attempted to split this area into three general topics, one that considers learning in a more myopic setting, another that considers learning with experimentation, and another area that considers learning by doing or skill accumulation. A broad list of relevant papers is in the drop-down list below.
+
+```{=html}
+<details>
+    <summary>List of Key Papers (click to expand)</summary>
+    <iframe src="learning-bib.html" width="100%" height="600px"></iframe>
+</details>
+```

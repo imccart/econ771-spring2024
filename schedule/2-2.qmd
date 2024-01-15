@@ -1,0 +1,15 @@
+---
+title: "Different Mechanisms of Agency"
+---
+
+The goal for today's class is to consider other sources of physician agency (i.e., underlying mechanisms that generate different incentives between physicians and patients). Focus areas and papers are listed below:
+
+### Physician Agency and Incentive Alignment
+The final paper we'll discuss today is @afendulis2007, which examines the role of physician agency in the the context of the scope of a physician's practice. This is kind of a precursor for more recent work related to agency and vertical integration.
+
+### Physician Agency and Organization Structure
+Physicians are increasingly employed by hospitals rather than private practice. In the presence of physician agency, this raises important questions in terms of the effects of such organizational structure on healthcare decisions. We'll discuss @whaley2021 and @richards2022 as examples of research in this area. 
+
+### Physician Agency and Insurers
+Just as how much physicians are paid can affect their behaviors, how they are paid might also matter. We'll discuss @ho2014 as an example of research in this area, which examines the role of physician agency in the context of capitated versus fee-for-service payment models. 
+

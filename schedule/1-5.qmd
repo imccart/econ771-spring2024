@@ -1,0 +1,12 @@
+---
+title: "Competition in Insurance Markets"
+---
+
+The goal for today is to examine the role of competition in health insurance, including "managed competition". Focus areas and selected papers are listed below.
+
+
+### Competition and Health Insurance Premiums
+As in just about any market, increased competition will tend to reduce prices. But examining this question empirically is challenging in health insurance, and there are reasons that this typical relationship may reverse in health insurance. We'll discuss @dafny2012 and @ho2017 as an exellent examples of research in this area. 
+
+### Managed Competition
+The U.S. health insurance model increasingly relies on private insurance even for government-sponsored programs like Medicare and Medicaid. This model is based on the idea of "managed competition", which relies on market forces to improve the efficiency of health insurance markets. We'll discuss @cabral2018 and @curto2021 as examples of papers in this area. @cabral2018 cautions against the assumption that increased subsidies will directly benefit consumers, emphasizing the need for careful design and regulation of subsidy mechanisms, and @curto2021 examines the potential for competition to improve consumer outcomes in these markets. Both papers underscore the importance of balancing market forces with effective regulation to achieve the goals of managed competition in government-sponsored health insurance programs.

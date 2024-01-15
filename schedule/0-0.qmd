@@ -1,0 +1,14 @@
+---
+title: "Introduction"
+---
+
+Welcome to the course! Today we'll spend some time talking about the structure of the class, the assignments, grading, etc. We'll also navigate the website for a bit just to make sure we can get around and understand where different information is. But before we do that, I want to spend some time motivating the area of health economics and why I think this is a critical area of study for economists. 
+
+We'll discuss more details in class, but the basic idea is:
+
+1. Healthcare is an extremely complicated market, particularly in the U.S., and the sources of complexity reflect a unique combination of common economic issues. Some of they key issues (highlighted 60 years ago in @arrow1963!) include uncertainty in need for medical care, the "experience" nature of the good that makes it difficult to ascertain quality and price in advance, information asymmetry (between patients and physicians, and between patients and insurers), the distortionary effects of insurance, licensing and regulation, as well as professional norms and non-standard objective functions.
+2. Due to its complexity, healthcare is extremely expensive (this is true almost everywhere, but again, especially in the U.S.) and constitutes a large share of GDP
+3. Because of its expense and complexity, healthcare plays a major role in public finance, labor markets, and inequality
+
+
+

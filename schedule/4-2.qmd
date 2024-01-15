@@ -1,0 +1,14 @@
+---
+title: "Information and Provider Response"
+---
+
+We often think of the effects of information on patient choice, but information can also affect provider behavior. In the context of quality information, we can think of two channels through which information can affect provider behavior. First, information can affect the behavior of providers in the market in which the information is released. Second, information can affect the behavior of providers in markets to which patients are referred. More generally, there are general equilibrium effects from information disclosure. We'll discuss these areas in today's class.
+
+### Response from Providers in Own-Quality
+@kolstad2013 considers how public reporting of individual surgeon performance impacts their work quality, focusing on intrinsic motivation factors. The study finds that while public reporting does not significantly alter overall performance, it leads to a modest improvement in the performance of surgeons at the lower end of the quality spectrum. This suggests that the intrinsic motivation to maintain reputation and self-esteem, rather than external incentives, plays a key role in how surgeons respond to public performance data.
+
+### Response from Providers in Referrals
+@epstein2010 examines the impact of publicly available surgeon report cards on the referral behavior of cardiologists. The authors find that cardiologists tend to refer patients to surgeons with better performance scores, indicating a significant influence of report cards on referral decisions. This shift in referral patterns underscores the role of report cards in guiding professional decision-making and potentially influencing the quality of patient care.
+
+### Equilibrium Response
+@brown2019 explores how the availability of price information in healthcare affects market equilibrium. The study finds that increased transparency in healthcare pricing leads to lower prices and higher quality of care, as providers compete on both price and quality dimensions. This suggests that price transparency can effectively influence healthcare market dynamics, benefiting consumers through more competitive and efficient healthcare options.

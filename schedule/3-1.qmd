@@ -1,0 +1,16 @@
+---
+title: "Horizontal Integration"
+---
+
+The goal for today's class is to understand the literature on hospital pricing and different ways to estimate the effects of competition on prices. We'll focus our discussion on the following topics and papers.
+
+### Pricing in 'Structure-Conduct-Performance' Studies
+Much of the early work in empirical IO can be classified as "structure-conduct-performance" studies. Such studies typically consider a summary measure of market structure (like HHI) and then estimate a relationship between that measure and prices. The literature has since moved beyond these types of studies, as discussed in @miller2022, but we need to know this literature exists before we move on. We'll discuss @kessler2000 as an example of this type of work in healthcare, and we'll dicuss @miller2022 as a general critique of the "structure-conduct-performance" approach.
+
+### Effects of Mergers and Closures
+Rather than attempting to measure competition, we can simply identify markets exposed to changes in competitiveness (e.g., mergers or closures) and try to estimate the effects of such changes. We'll discuss @dafny2009 as an example of this line of work.
+
+### Pricing and Bargaining
+There are several papers that collectively develop structural models of bargaining that have become the standard in the literature at this point. We'll focus on @gowrisankaran2015 as an example of this type of work. We've already covered @ho2017 in our discussion of inusrance markets, which extends @gowrisankaran2015 to include bargaining between employers and insurers. We'll also discuss @clemens2017, which doesn't estimate a bargaining model but has implications for the potential role of bargaining to drive prices relative to other forces.
+
+

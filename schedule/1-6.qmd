@@ -1,0 +1,11 @@
+---
+title: "New Directions in Health Insurance Markets"
+---
+
+Today we'll discuss some areas that I view as important and await further research in the study of health insurance markets. These are not exhaustive, but they provide a starting point for understanding the current state of research in health insurance markets and identifying gaps in the literature.
+
+### Expanding Health Insurance Access and Affordability 
+In light of the debates around healthcare reform, there's a pressing need to evaluate which policies are most effective in expanding access to and affordability of health insurance. Understanding the welfare consequences of these policies helps inform decisions that could impact millions of lives. We'll discuss @geddes2023 and @curto2023 as examples of this type of ongoing research.
+
+### Public vs Private Health Insurance
+There is growing interest concerning the effects of privatizing an otherwise public health insurance program. This is particularly important as we continue to consider the increasing privatization in public insurance such as Medicaid Managed Care and Medicare Advantage. We'll discuss @layton2019 and @macambira2023 as examples of this area of study.

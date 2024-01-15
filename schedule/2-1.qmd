@@ -1,0 +1,12 @@
+---
+title: "Variation and Physician Agency"
+---
+
+The goal for today's class is to understand the literature on geographic variation in healthcare spending/utilization and some of the key papers in physician agency. Focus areas and selected papers are listed below:
+
+### Supply-side Variation
+While there is substantial research documenting variation in healthcare spending and utilization, there is less consensus on the source of this variation. The first group of papers we'll discuss today attempt to decompose variation in healthcare spending between demand and supply-side factors. We'll focus on @finkelstein2016 and @badinski2023 specifically. While these are relatively recent papers, the build on a much older literature studying variation in spending.
+
+### Physician Agency and Financial Incentives
+While there are many papers studying this topic, we'll discuss @iizuka2012 and @clemens2014 in class. @iizuka2012 considers prescribing behaviors in a unique setting where physicians can profit directly from different prescriptiond rugs. @clemens2014 examines the impact of an exogenous change in Medicare reimbursement rates on physician behavior.
+

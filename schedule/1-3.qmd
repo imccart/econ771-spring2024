@@ -1,0 +1,14 @@
+---
+title: "New Directions in Health Insurance Demand"
+---
+
+The goal for today's class is to consider where the research on health insurance might be headed and discuss some papers in those directions. For these classes, I'm trying to select topics with significant policy interest and room for additional research. There are many areas of active research in the study of health insurance, so this is far from exhaustive. Focus areas and selected papers for this class are listed below.
+
+### Health Insurance Design and Consumer Behavior
+The design of health insurance plans (like copayments, deductibles, and coverage decisions) directly affects consumer choices and healthcare utilization. This area is crucial for policy design, ensuring that insurance structures meet both economic efficiency and equity goals. We'll discuss @brown2023 and @ho2020 as an example of this line of current/future research.
+
+### Innovation/Technology Adoption and Health Insurance
+In affecting how services are paid for, insurance can also affect the adoption of new technologies and innovations in healthcare. We'll discuss @garthwaite2012 and @agha2022aeri as examples of this line of work.
+
+### Health Insurance Networks
+The structure of health insurance networks can affect the quality of care that patients receive. We'll briefly discuss @gruber2016 as an example of this line of work, even though it is a little bit older for "current/future" research, and we'll discuss @kreider2022 as a more recent example in this space.

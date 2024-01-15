@@ -1,0 +1,30 @@
+---
+title: "Health Insurance"
+---
+
+Module 1 covers health insurance. We'll start by examining the purpose and effects of health insurance (as well as how people pick health insurance plans), and then we'll move into the study of health insurance markets. 
+
+## What does health insurance do?
+
+The most basic function of health insurance is to protect against the financial risk of health shocks. But health insurance also provides access to health care services, which can improve health outcomes. Health insurance might also encourage overuse by shielding patients from the financial implications of their health and health care decisions (i.e., ex ante and ex post moral hazard). And naturally, the extent to which health insurance succeeds in these areas for a given patient will depend on how well that patient's needs match the plan (i.e., the choice of their health insurance plan, which is a difficult choice to make). Some of the key papers in this literature are listed below. This is not an exhaustive list, but rather a list of papers that I have found useful in my own research. I've excluded papers focusing on the long-term effects of health insurance (e.g., on education, future labor market outcomes, or intergenerational health). If you're intersted in that space, you might start with @miller2018 and @east2023. There's also a large literature on the effects of health insurance on labor force participation and mobility, which we won't cover here. For a review of that literature, you might start with @gruber2002.
+
+```{=html}
+<details>
+    <summary>List of Key Papers (click to expand)</summary>
+    <iframe src="healthinsurance-bib.html" width="100%" height="600px"></iframe>
+</details>
+```
+
+## Health insurance markets
+
+One of the key features of health insurance markets is the presence of adverse selection. Adverse selection occurs when individuals with different health risks have different preferences for health insurance. For example, individuals with high health risks may be more likely to purchase health insurance than individuals with low health risks. This can lead to a market failure in which health insurance is not offered at a price that is affordable to low-risk individuals. The consequences of adverse selection have been known for a very long time - for an initial treatment of this topic, see @ackerloff1970 and @rothschild1976. 
+
+```{=html}
+<details>
+    <summary>List of Key Papers (click to expand)</summary>
+    <iframe src="insurancemarkets-bib.html" width="100%" height="600px"></iframe>
+</details>
+```
+
+
+## Supplemental References
