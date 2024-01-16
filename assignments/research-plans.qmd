@@ -1,5 +1,7 @@
 ---
 title: "Research Plans"
+# format:
+#   pdf: default
 ---
 
 Your research plan consists of a three-page report addressing the following five points:

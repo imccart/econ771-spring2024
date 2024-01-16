@@ -1,6 +1,8 @@
 ---
 title: "Syllabus"
 page-layout: full
+#format:
+#  pdf: default
 ---
   
 ## Course description

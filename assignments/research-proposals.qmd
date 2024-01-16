@@ -1,5 +1,7 @@
 ---
 title: "Research Proposals"
+# format:
+#   pdf: default
 ---
 
 The research proposal is a starting point for a research project. It’s a basic structure that can help you think through specific aspects of a new project and begin to assess its viability and its potential contribution. For our purposes, a research proposal should consist of a two-page report and a 10-15 minute presentation addressing the following four points:

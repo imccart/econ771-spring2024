@@ -1,5 +1,7 @@
 ---
 title: "Presentations"
+# format:
+#  pdf: default
 ---
 
 Please review the [class schedule](../schedule/) and select four papers (or groups of papers) from the list of topics in each class, excluding any "background" classes. Your selections must also be on different dates. Once you've identified your papers, note your paper(s) title, authors, your name, and the date of your presentation on the **Presentations** tab of the Google Sheet [here](https://docs.google.com/spreadsheets/d/19LovendEZg3Qk_5Wgy-we_9owO8sPnseU5blbik86MI/edit?usp=sharing) no later than **Friday, January 26**.
