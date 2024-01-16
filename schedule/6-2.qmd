@@ -11,4 +11,4 @@ For today's class, we're going to talk more specifically about fraud and overuse
 @geruso2020 investigates the phenomenon of upcoding in Medicare Advantage, examining how Medicare's risk adjustment process may inadvertently incentivize this behavior. Again, this is an excellent example of overuse (or perhaps more accurately, overspending) that is not necessarily illegal but nonetheless a big driver of inefficiency.
 
 ### Learning about Fraud
-@omalley2021
+@omalley2021 examines the spread of fraudulent Medicare home health care billing in the U.S. from 2002-2016, focusing on the role of patient-sharing networks among healthcare agencies in propagating these fraudulent practices. Utilizing a novel bipartite mixture network index, the study finds a significant relationship between these networks and the diffusion of healthcare fraud. This research contributes to health economics by offering a deeper understanding of the structural aspects influencing healthcare fraud, highlighting the need for more targeted policy interventions.

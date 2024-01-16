@@ -60,7 +60,7 @@ website:
         - assignments/research-proposals.qmd
         - assignments/research-plans.qmd
         - assignments/presentations.qmd
-        - assignments/exercises.qmd
+        - assignments/empirical-exercises.qmd
 
     - title: "Empty"
       style: "docked"

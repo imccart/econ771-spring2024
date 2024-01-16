@@ -7,8 +7,7 @@ format:
 ---
 
 Below is a breakdown of topics for each class day this semester. Assignments are also listed according to their due dates. The associated links take you to additional information relevant for that day or for that assignment. The **Details** link provides specific readings for that class and any supplemental materials; the **Slides** link takes you to the relevant slides for that day; and the **Assignment** link takes you to the relevant details for each assignment. Each heading is also linked to a broader literature review for that topic, containing many more papers than we will cover in class. For those of you interested in learning more about a particular topic, this is a good place to start.
-
-In general, I've split each general topic into three days, and for each day, we'll cover 2-3 papers or groups of papers relating to a narrow sub-topic. The goal in arranging each topic in this way is to focus on a couple of key papers that capture the general state of knowlege in that area and a couple of papers that are pushing the frontier of knowledge in that area. The last day of every topic is intended to discuss more recent work. When discussing frontier topics, we'll try to focus on working papers whenever possible.
+  
 
 ## Welcome to the class!
 

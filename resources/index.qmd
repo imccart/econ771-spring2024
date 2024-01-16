@@ -6,7 +6,7 @@ format:
     page-layout: full
 ---
 
-Here are a few additional resources that you may find helpful throughout the semester. I'll add to these as we go.
+Here are a few additional resources that you may find helpful throughout the semester. I'll try to add to these as we go.
 
 - Some resources for honing your data analysis skills in `R`:
   - [R for Data Science](https://r4ds.had.co.nz/) by Hadley Wickham and Garrett Grolemund. This is the go-to resource for starting to work with `R`. Highly recommended, free, and informative.

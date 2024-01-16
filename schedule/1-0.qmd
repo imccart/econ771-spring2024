@@ -7,7 +7,6 @@ Module 1 covers health insurance. We'll start by examining the purpose and effec
 ## Health insurance
 We'll start by introducing some basic health insurance terminology, how insurance is intended to function, and how it functions in practice. We'll briefly discuss health insurance premiums in the context of financial risk and some of the key theoretical drivers of willingness to pay for health insurance in this context. We'll also discuss some of the history of health insurance in the U.S., how it has evolved over time, and how it is structured today, including background on how people get health insurance (Employer Sponsored Health Insurance, Medicare, Medicare Advantage, Medicaid, and the Health Insurance Exchanges).
 
-
 ## Health insurance markets
 We'll focus on the key role of adverse selection in health insurance markets. We'll also discuss some basic health insurance policy issues, including "managed care", the Affordable Care Act (ACA), and the introduction of the health insurance exchanges.
 
