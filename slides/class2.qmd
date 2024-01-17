@@ -33,3 +33,633 @@ Why do people buy health insurance? What are they "insuring"?
 - Effects on education, labor markets, etc.
 :::
 
+---
+
+## How does health insurance work?
+
+- Enrollees pay the insurer
+    - Fixed amount per month (premium)
+    - Some amount for care provided (cost-sharing)
+- Insurer pays provider
+    - Negotiated prices
+    - Pays share of bill depending on cost-sharing terms
+
+---
+
+## Terminology
+
+- Managed care
+- Insurance network
+- Premium
+- Deductible
+- Copayment
+- Coinsurance
+
+---
+
+### Managed care
+
+- Health insurance product that encompasses some attempt to manage utilization of health care among its enrollees, often via assigning providers (physicians, hospitals, etc.) into tiers separated based on pricing
+- Insurers "manage" care through the use of insurance "networks"
+
+---
+
+### Insurance networks
+
+Set of providers for which the insurer has agreed to pay some amount of care received at those providers, conditional on other cost-sharing terms of the insurance contract
+  
+  - Preferred Provider Organizations (PPOs): tiered network structure, where patients will be responsible for less of the total cost of care when going to a higher tiered provider
+  - Health Maintenance Organizations (HMOs): more discrete network structure, with some providers in-network and other providers out-of-network
+
+---
+
+### Premiums
+
+What enrollees pay every month regardless of whether they use any health care
+
+---
+
+![](/files/figures/kff-premiums.webp){fig-align="center"}
+
+---
+
+### Cost-sharing
+
+Generally refers to the amount of health care expenses that must be paid directly by the patient (as opposed to their insurance plan)
+
+- Dictates how much a patient must pay out-of-pocket for any care received
+- Encompasses a **deductible**, **co-insurance**, and **co-payment**
+
+
+---
+
+### Deductible
+
+The amount of money that a patient must pay out-of-pocket before the insurance company will pay **anything**
+
+---
+
+![](/files/figures/kff-deductibles.png){fig-align="center"}
+
+---
+
+### Copayment
+
+A fixed dollar amount for which the patient is responsible **after meeting their deductible.** 
+
+- More common for low-cost, predictable health care services like physician office visits
+- Example: \$20 co-pay for office visits, which means patients must pay \$20 for the visit and the insurance company will pay the rest (after the deductible is met)
+
+
+---
+
+### Coinsurance
+
+A percentage of costs for which the patient is responsible **after meeting their deductible.** 
+
+- Example: assume you have a 20% co-insurance rate (and you've met your deductible)
+- Hospital visit with a \$5,000 bill
+- Patient would pay \$1,000 (20% of \$5,000) to the hospital as co-insurance
+- Insurer pays the remaining 80%
+- Co-insurance is common for more complicated or less predictable services, like hospital stays or emergency department visits
+
+---
+
+## Cost-sharing over time
+
+![](/files/figures/kff-cost-sharing.png){fig-align="center"}
+
+
+
+# How People Get Health Insurance
+
+---
+
+## Early history
+
+- 1929: "Hospital insurance" for schoolteachers to receive care from Baylor University Hospital in Dallas, TX
+- Essentially pre-paid medical care for about 1,500 schoolteachers in the area
+- Annual fee (or "premium") of \$6 per year, \$104 in 2023 dollars, for up to 21 days of hospital care
+- Subscription model offered regular cash flow for hospitals
+
+---
+
+- Popular revenue model for hospitals
+- Network of hospitals grew to be Blue Cross, first established in Sacramento, CA in 1932
+- Structure introduces a few distortions:
+    - Care concentrated in hospitals, even if other settings could provide care at lower cost
+    - No price competition
+- Blue Cross plans grew in the 1930s
+    - Operated as a not-for-profit
+    - Exempt from typical regulations on insurance markets
+
+---
+
+- Expansion into prepaid physician services (Blue Shield), combined to be Blue Cross and Blue Shield
+- By 1940, half of all health insurance plans were Blue Cross and Blue Shield plans
+- Hospitals paid on a cost-plus basis (more on this later)
+- Any competing insurance plans had to offer the same structure
+
+---
+
+## Sources of health insurance
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, janitor, plotly, here)
+
+ins.dat <- read_delim(here("files/data/acs/acs_insurance.txt"))
+
+ins.dat <- ins.dat %>%
+  mutate(perc_private = (ins_employer + ins_direct)/adult_pop,
+         perc_public = (ins_medicare + ins_medicaid)/adult_pop,
+         perc_ins = (adult_pop - uninsured)/adult_pop,
+         perc_unins = uninsured/adult_pop,
+         perc_employer = ins_employer/adult_pop,
+         perc_medicaid = ins_medicaid/adult_pop,
+         perc_medicare = ins_medicare/adult_pop,
+         perc_direct = ins_direct/adult_pop)
+```
+
+```{r}
+#| echo: false
+#| fig.cap: "Source of Health Insurance (2012)"
+#| label: fig-insurance-type
+ins.dat %>%
+  filter(year==2012) %>% pivot_longer(c("perc_employer","perc_direct","perc_medicaid", "perc_unins")) %>%
+  select(State, name, value) %>%
+  group_by(name) %>% summarize(mean=mean(value)) %>%
+  ggplot(aes(x=name, y=mean)) +
+  geom_col() + ylim(0,0.65) + 
+  labs(
+    x=" ",
+    y="Percent",
+    caption="Data from the American Community Survey, adults under age 65",
+    title=" "
+  ) + theme_bw() + scale_x_discrete(labels=c('perc_direct'='Direct Purchase',
+                                             'perc_employer'='Employer-provided',
+                                             'perc_medicaid'='Medicaid',
+                                             'perc_unins'='Uninsured'))
+```
+
+
+---
+
+## Reliance on ESI
+
+- Stabalization act of 1942 (wages frozen but not benefits)
+- Tax exemption for insurance expenditures (1954)
+
+---
+
+### How does ESI work?
+
+- Employer pays large share of premium
+- Employee pays smaller share "pre-tax"
+- Often only a few plan options
+- Many large employers are "self-funded"
+  - Employer actually pays for the health care
+  - Insurer is an administrator and negotiator
+  - Avoids state mandated benefits and state premium taxes (ERISA laws)
+  - Maybe useful for employers across state lines
+
+---
+
+### ESI, Small Employers
+
+- Small employers select an insurance plan(s)
+- Employees choose from available set of plans
+- "Buyer" of the insurance product is the employer
+- Insurer sells to employer with some expectation of the risk profile and health care needs of its employees
+
+---
+
+### ESI, Large Employers
+
+- Large employers typically "self-insure"
+- Insurance plan is more administrative, facilitating claims processing and network structure
+- Employer actually pays out all costs of health care
+- Risk profile less important to insurer (more important to employer)
+
+
+---
+
+## Non-group coverage
+
+- Health insurance plans purchased by individuals directly from insurers, rather than being obtained through employers or government programs
+- Possibly more choices, depending on where you live
+- Premiums vary based on factors such as age, location, and (historically) pre-existing conditions
+- Significant changes with the implementation of the Affordable Care Act (ACA) in the United States, which introduced marketplaces where individuals can compare and purchase health insurance plans, along with subsidies to help lower-income individuals afford coverage
+
+---
+
+## Big changes in non-group options from the ACA
+
+- [Health insurance marketplaces](https://www.healthcare.gov/)
+- Essential health benefits
+- Pre-existing condition protections
+- Subsidies and financial assistance
+- Coverage requirements and individual mandate
+  - Mandate challenged in Supreme Court and upheld at first
+  - Effectively removed in 2019 when penalty was set to \$0
+
+---
+
+## Medicare
+
+- Created by the Social Security Act in 1965
+- Originally health insurance to those 65 years of age and older
+- Expanded to include certain disabilities (20% now below age 65)
+
+---
+
+Medicare consists of four parts:
+
+  - Part A: Hospital Insurance
+  - Part B: "Medical" Insurance (physician visits and outpatient care)
+  - Part C: Private supplemental care (Medicare plus Choice, now Medicare Advantage)
+  - Part D: Prescription Drug Coverage
+
+---
+
+### Medicare Part A
+
+- Automatic enrollment for anyone 65 and older who worked over their lifetime
+- Financed with combination of payroll tax (current workers) and cost-sharing (deductibles, etc.)
+- Funds exist as part of "Federal Hospital Insurance Trust Fund"...can't finance through debt
+
+---
+
+Part A benefit structure:
+
+  - Very good for short inpatient stays
+  - Very bad for major problems with long stays
+  - Doesn't cover nursing home care beyond 30 days
+
+---
+
+### Medicare Part B
+
+- Voluntary, but almost everyone enrolls
+- Requires monthly premium ($144 in 2020)
+- Small deductible and 20% co-insurance
+
+
+---
+
+### Medicare Part C
+
+- Private insurance provision of Medicare benefits
+- Formally created under Balanced Budget Act in 1997 (existed informally before)
+- Heavily revised in Medicare Modernization Act in 2003
+- Medicare pays insurers a risk-adjusted amount to enroll a given beneficiary
+- Broader benefits than Part A and B, often with $0 additional premiums, but restrictive networks
+
+---
+
+### Medicare Part D
+
+- Created under the Medicare Modernization Act in 2003
+- Private insurance for prescription drugs
+- Insurers receive payments from Medicare to enroll a given beneificiary (much like Part C)
+- Many insurers offer a combined Part C+D plan
+
+---
+
+### Privatization of Medicare
+
+- Medicare Advantage (both Parts C and D) has been well-received and generally thought to be a success story for Medicare benefits
+- Accounts for nearly **half** of total Medicare enrollees
+- Some early difficulties with adverse selection and risk-adjustment
+- Still slightly sicker people staying in traditional Medicare
+- Could be a **big** part of any future "Medicare-for-all" type program
+
+---
+
+### Medicare payments for inpatient services
+
+- Prospective payment system
+- Begin with two "base" rates:
+  - Operating base payment rates, \$5,797 in 2020
+  - Capital base payment rates, \$462 in 2020
+- Adjustments:
+  - Diagnosis Related Group (higher adjustments for more complicated things)
+  - Academic Medical Center
+  - Disproportionate Share
+
+---
+
+More recently:
+
+- Introduction of quality incentives through...
+  - Value Based Purchasing (VBP)
+  - Hospital Readmission Reduction Program (HRRP)
+  - Quality Payment Program for physicians (choose between merit based payment system or advanced alternative payment models)
+- Introduction of capitated payments through...
+  - Bundled Payments
+  - Accountable Care Organizations
+
+---
+
+## Medicaid
+
+- Also created by the Social Security Act in 1965
+- Originally provided health insurance to people receiving "Aid to Families with Dependent Children", mainly extremely poor families
+- Expanded over time with different rules by state
+- Huge program: about 40% of births are covered by Medicaid/CHIP
+
+---
+
+### ACA and Medicaid Expansion
+
+- Big part of ACA was Medicaid expansion
+- Originally mandatory but made voluntary by Supreme Court
+- Expansion covers all adults (with or without children) below age 65 and with incomes below 138% of the federal poverty line ($35,535 for family of 4 in 2020)
+  
+---
+
+### Medicaid Funding
+
+- Paid for by states and federal funding
+- State funding is matched by federal funds, and the match amount depends on the state's per capita income
+- Incentivizes services to be provided by Medicaid that historically may not be
+
+---
+
+### Medicaid Benefits
+
+- Pretty generous coverage
+- Low to no copayments, deductibles, co-insurance
+- Usually covers dental, vision, hospitals, and physician services
+- Covers long term care (unlike Medicare), with about 40% of all long term care paid for by Medicaid
+
+---
+
+### Medicaid Payments
+
+- Works similarly to Medicare with a base rate plus adjustments
+- Base rates vary by state Medicaid agencies
+- Adjustments (or supplemental payments) consist of:
+  - Disproportionate share adjustments 
+  - Other (non-DSH) adjustments
+  - Account for a little less than half of total Medicaid payments on average
+
+---
+
+### Privatization in Medicaid
+
+- Increasing reliance on Medicaid managed care (80% of Medicaid enrollees)
+- States outsource Medicaid benefits to private insurers, with oversight
+
+---
+
+## Veterans Administration
+
+- "Integrated" healthcare provider and insurer
+- Comprehensive medical services without out-of-pocket payments or insurance claims
+- Operates its own healthcare facilities and employs healthcare providers directly, covering the costs of care provided to veterans
+- Funding for VA healthcare comes from the federal government's budget allocated to the VA, which covers staffing, facilities, equipment, medications, and other necessary resources for delivering healthcare services to veterans
+
+
+
+# What does Health Insurance Do?
+
+---
+
+## Increases utilization
+
+In shielding enrollees from the costs of care, health insurance increases utilization of healthcare (i.e., 'moral hazard' or 'ex post moral hazard'):
+- @aron-dine2013 summary of RAND HI
+- @finkelstein2012 summary of Oregon Medicaid lottery
+
+---
+
+## Protects against financial risk
+
+Seems like an obvious area, but surprisingly few good studies on this topic:
+
+- @gross2011 finds that health insurance reduces probability of bankruptcy
+- @hu2018 finds that health insurance reduces probability of default
+
+
+---
+
+## Improves health
+
+Very recent work in this area, as it's been difficult to identify causal effects of health insurance on health:
+- @miller2021 finds that Medicaid expansion reduced mortality
+- @goldin2021 reaches similar qualitative conclusions in a non-Medicaid setting
+
+
+
+# Health Insurance Markets
+
+---
+
+## Adverse selection
+
+- In practice, people know more about their health than insurers. This is a form of **asymmetric information**.
+- Adverse selection is one of the core issues in health insurance markets
+
+::: {.fragment}
+Here's a good example, [Costs during special enrollment periods](https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2019.01155).
+:::
+
+
+---
+
+```{tikz}
+#| echo: false
+#| fig.cap: "Textbook depiction of adverse selection"
+
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\begin{tikzpicture}[scale=1, every node/.style={transform shape}]
+\draw[thick,->] (0,0) -- (0,6) node[anchor=north west] {$p$};
+\draw[thick,->] (0,0) -- (8,0) node[anchor=south east] {$q$};
+\draw (0,5) node[anchor=north east]{Demand} -- (6,1);
+\draw (0,3) node[anchor=south west]{AC} -- (6,2);
+\draw (0,3) -- (6,0.5) node[anchor=east]{MC};
+\draw (6,0) -- (6,6);
+\draw (6,-.5) node[anchor=south] {$\bar{q}$};
+\end{tikzpicture}
+```
+
+
+
+---
+
+- Demand (willingness to pay) for health insurance
+- Average cost (AC): average healthcare costs incurred by all enrollees
+- Marginal cost (MC): additional healthcare costs incurred by one more enrollee
+- Downward sloping because healthier individuals (lower cost) are willing to pay less for health insurance
+
+::: {.fragment}
+- $D>MC$ because willingness to pay is expected costs plus risk premium
+- Relationship between demand and AC reflects problems due to adverse selection
+:::
+
+---
+
+### Assumed equilibrium
+
+- Key assumptions:
+  - Simplifying assumption that insurers earn 0 profit (at least approximately)
+  - Individuals select plans based on health needs (which is private information)
+  - Common price to all enrollees of a given plan (community rating)
+- Possible outcomes:
+  - Full insurance (Demand always above AC)
+  - Partial unravelling (Demand intersects with AC somewhere)
+  - Full unravelling (Demand always below AC)
+ 
+
+---
+
+To think about unravelling, we need to think of this graph in stages or periods.
+
+- In the initial period, insurers set prices, unsure about who will enroll because healthcare needs are private information
+- Upon setting premiums, insurers will know who enrolled and they will know the costs they incurred by the end of the year
+- Insurers can then update their premiums if needed (we will again assume zero profits to keep things simple)
+
+---
+
+### Important implications for costs
+
+::: {layout-ncol=2}
+
+![spend](/files/figures/meps-expenditure.png){}
+
+![visits](/files/figures/meps-visits.png){}
+
+:::
+
+---
+
+![spend](/files/figures/aca-premiums.png){align="center"}
+
+::: {.aside}
+[https://www.kff.org/health-costs/issue-brief/how-aca-marketplace-premiums-are-changing-by-county-in-2020](Kaiser Family Foundation)
+:::
+
+
+---
+
+### 'Solutions' to adverse selection
+
+- The "easy" way: let insurers set prices individually, but this is not good for equity or access
+- How else? Managed competition employs **risk adjustment**, essentially introducing a wedge between prices paid by enrollees versus fees received by insurers
+- Example: Medicare Advantage, where enrollees pay uniform premiums but CMS pays insurers different amounts based on enrollee characteristics
+- Other solutions: plan lock-in and open enrollment periods, subsidies, mandates
+
+---
+
+### Risk adjustment in Medicare Advantage
+
+- Medicare FFS historically had much less healthy enrollees than MA
+  - Pre-2000: MA enrollees used 60% as much care as traditional Medicare
+  - Pre-2000: "Switchers" into traditional Medicare used 160% more care than average beneficiary
+- New risk-adjustment system implemented from 2003-2006
+  - Health differences declined to less than 5%
+  - [New Risk-Adjustment System Was Associated With Reduced Favorable Selection in Medicare Advantage](https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2011.1344)
+
+
+---
+
+### Challenge of risk adjustment
+
+- Hard to predict who will need the most care
+- MA risk-adjustment predicts less than 15% of observed variation in health care utilization
+- Mean predictions are pretty close though
+- Other barriers: should be interpretable and relatively difficult to manipulate by insurers
+- Goal: reduce incentive to disproportionately target healthy individuals without encouraging insurers to manipulate the risk score of their enrollees
+
+
+---
+
+## Managed Competition
+
+Examples of "managed competition" in health insurance include:
+
+- Fully private insurers in exchanges
+- Fully private insurers replacing Medicaid (i.e., Medicaid managed care)
+- Private insurers alongside public insurers in Medicare Advantage
+- All operate with significant federal and state regulations
+
+
+---
+
+### Need for "managing" competition
+
+- Insurance markets typically highly concentrated
+- Demand for insurance is relatively price-inelastic
+- Little pressure for more efficient, higher quality "products"
+
+---
+
+### Reasons for market power
+
+In MA, almost all markets are dominated ($\geq$ 95% market share) by no more than 3 insurers. Why?
+
+- High fixed costs of entry (network structure, price negotiations, regulatory requirements)
+- Network restrictions from CMS necessitate some network structure
+
+---
+
+### Market power and pricing in MA
+
+Basic structure:
+
+- Plan sets "bid", $b$
+- CMS sets a risk adjusted benchmark rate, $B$, based on Medicare FFS costs
+- If $b<B$, plan receives $b$ plus some percentage of $B-b$ from CMS as a rebate
+- If $b>B$, plan receives $B$ from CMS and $b-B$ is premium
+
+---
+
+Putting profit function in terms of risk units, the plan's problem is:
+
+$$\max_{p_{j}} \left(p_{j} + B - c_{j} \right) Q_{j}(p_{j}, p_{-j}),$$
+
+where $p_{j}$ is the plan's price, $c_{j}$ is their cost per enrollee, and $Q_{j}$ is plan j's quantity (in risk units)
+
+---
+
+$$\begin{align}
+\frac{d \pi}{d p_{j}} = Q_{j}(p_{j}, p_{-j}) + \frac{d Q_{j}}{d p_{j}} ( p_{j} + B - c_{j}) &= 0 \\
+  p_{j} + B - c_{j} = \frac{ - Q_{j} }{ \frac{d Q_{j}}{d p_{j}}} &= \left(\frac{d \ln Q_{j}}{d p_{j}}\right)^{-1} \\
+  p_{j}  &= c_{j} - B + \left(\frac{d \ln Q_{j}}{d p_{j}}\right)^{-1} \\
+  b_{j}  &= c_{j} + \left(\frac{d \ln Q_{j}}{d p_{j}}\right)^{-1} \\
+\end{align}$$
+
+---
+
+### Interpretation
+
+- Price/bid depends on sensitivity of enrollment to benefits
+- More competitive means larger response to changes in plan benefits
+- Empirical evidence of price elasticity show 10% increase in enrollment from \$10 reduction in bid
+- Suggest markups of 10-25% over costs
+
+---
+
+### And?
+
+Curto et al. (2021) study this in great detail...some key findings:
+
+- MA plans provide care at lower cost than traditional Medicare FFS
+- But, bids are above what Medicare would otherwise have paid in FFS
+- Nearly 15% more expensive to taxpayer
+- 40% of "excess" payments go to enrollees in the form of additional consumer surplus
+- 60% go to insurers
+
+---
+
+## Over the next six classes
+
+1. Health insurance choice and effects on healthcare utilization
+2. Financial, health, and general welfare effects of health insurance
+3. Recent work on health insurance design (cost-sharing, networks, etc.) and role of health insurance on technology adoption
+4. Adverse selection
+5. Facilitating managed competition
+6. Strategies to expand health insurance coverage and improve health insurance markets

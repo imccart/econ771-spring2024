@@ -530,5 +530,124 @@
     "title": "Schedule",
     "section": "Final Research Plans",
     "text": "Final Research Plans\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n42\n4/29\nResearch plans"
+  },
+  {
+    "objectID": "slides/class2.html#how-does-health-insurance-work",
+    "href": "slides/class2.html#how-does-health-insurance-work",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "How does health insurance work?",
+    "text": "How does health insurance work?\n\nEnrollees pay the insurer\n\nFixed amount per month (premium)\nSome amount for care provided (cost-sharing)\n\nInsurer pays provider\n\nNegotiated prices\nPays share of bill depending on cost-sharing terms"
+  },
+  {
+    "objectID": "slides/class2.html#terminology",
+    "href": "slides/class2.html#terminology",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Terminology",
+    "text": "Terminology\n\nManaged care\nInsurance network\nPremium\nDeductible\nCopayment\nCoinsurance"
+  },
+  {
+    "objectID": "slides/class2.html#cost-sharing-over-time",
+    "href": "slides/class2.html#cost-sharing-over-time",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Cost-sharing over time",
+    "text": "Cost-sharing over time"
+  },
+  {
+    "objectID": "slides/class2.html#early-history",
+    "href": "slides/class2.html#early-history",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Early history",
+    "text": "Early history\n\n1929: “Hospital insurance” for schoolteachers to receive care from Baylor University Hospital in Dallas, TX\nEssentially pre-paid medical care for about 1,500 schoolteachers in the area\nAnnual fee (or “premium”) of $6 per year, $104 in 2023 dollars, for up to 21 days of hospital care\nSubscription model offered regular cash flow for hospitals"
+  },
+  {
+    "objectID": "slides/class2.html#sources-of-health-insurance",
+    "href": "slides/class2.html#sources-of-health-insurance",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Sources of health insurance",
+    "text": "Sources of health insurance\n\nFigure 1: Source of Health Insurance (2012)"
+  },
+  {
+    "objectID": "slides/class2.html#reliance-on-esi",
+    "href": "slides/class2.html#reliance-on-esi",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Reliance on ESI",
+    "text": "Reliance on ESI\n\nStabalization act of 1942 (wages frozen but not benefits)\nTax exemption for insurance expenditures (1954)"
+  },
+  {
+    "objectID": "slides/class2.html#non-group-coverage",
+    "href": "slides/class2.html#non-group-coverage",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Non-group coverage",
+    "text": "Non-group coverage\n\nHealth insurance plans purchased by individuals directly from insurers, rather than being obtained through employers or government programs\nPossibly more choices, depending on where you live\nPremiums vary based on factors such as age, location, and (historically) pre-existing conditions\nSignificant changes with the implementation of the Affordable Care Act (ACA) in the United States, which introduced marketplaces where individuals can compare and purchase health insurance plans, along with subsidies to help lower-income individuals afford coverage"
+  },
+  {
+    "objectID": "slides/class2.html#big-changes-in-non-group-options-from-the-aca",
+    "href": "slides/class2.html#big-changes-in-non-group-options-from-the-aca",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Big changes in non-group options from the ACA",
+    "text": "Big changes in non-group options from the ACA\n\nHealth insurance marketplaces\nEssential health benefits\nPre-existing condition protections\nSubsidies and financial assistance\nCoverage requirements and individual mandate\n\nMandate challenged in Supreme Court and upheld at first\nEffectively removed in 2019 when penalty was set to $0"
+  },
+  {
+    "objectID": "slides/class2.html#medicare",
+    "href": "slides/class2.html#medicare",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Medicare",
+    "text": "Medicare\n\nCreated by the Social Security Act in 1965\nOriginally health insurance to those 65 years of age and older\nExpanded to include certain disabilities (20% now below age 65)"
+  },
+  {
+    "objectID": "slides/class2.html#medicaid",
+    "href": "slides/class2.html#medicaid",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Medicaid",
+    "text": "Medicaid\n\nAlso created by the Social Security Act in 1965\nOriginally provided health insurance to people receiving “Aid to Families with Dependent Children”, mainly extremely poor families\nExpanded over time with different rules by state\nHuge program: about 40% of births are covered by Medicaid/CHIP"
+  },
+  {
+    "objectID": "slides/class2.html#veterans-administration",
+    "href": "slides/class2.html#veterans-administration",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Veterans Administration",
+    "text": "Veterans Administration\n\n“Integrated” healthcare provider and insurer\nComprehensive medical services without out-of-pocket payments or insurance claims\nOperates its own healthcare facilities and employs healthcare providers directly, covering the costs of care provided to veterans\nFunding for VA healthcare comes from the federal government’s budget allocated to the VA, which covers staffing, facilities, equipment, medications, and other necessary resources for delivering healthcare services to veterans"
+  },
+  {
+    "objectID": "slides/class2.html#increases-utilization",
+    "href": "slides/class2.html#increases-utilization",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Increases utilization",
+    "text": "Increases utilization\nIn shielding enrollees from the costs of care, health insurance increases utilization of healthcare (i.e., ‘moral hazard’ or ‘ex post moral hazard’): - Aron-Dine, Einav, and Finkelstein (2013) summary of RAND HI - Finkelstein et al. (2012) summary of Oregon Medicaid lottery"
+  },
+  {
+    "objectID": "slides/class2.html#protects-against-financial-risk",
+    "href": "slides/class2.html#protects-against-financial-risk",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Protects against financial risk",
+    "text": "Protects against financial risk\nSeems like an obvious area, but surprisingly few good studies on this topic:\n\nGross and Notowidigdo (2011) finds that health insurance reduces probability of bankruptcy\nHu et al. (2018) finds that health insurance reduces probability of default"
+  },
+  {
+    "objectID": "slides/class2.html#improves-health",
+    "href": "slides/class2.html#improves-health",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Improves health",
+    "text": "Improves health\nVery recent work in this area, as it’s been difficult to identify causal effects of health insurance on health: - Miller, Johnson, and Wherry (2021) finds that Medicaid expansion reduced mortality - Goldin, Lurie, and McCubbin (2021) reaches similar qualitative conclusions in a non-Medicaid setting"
+  },
+  {
+    "objectID": "slides/class2.html#adverse-selection",
+    "href": "slides/class2.html#adverse-selection",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Adverse selection",
+    "text": "Adverse selection\n\nIn practice, people know more about their health than insurers. This is a form of asymmetric information.\nAdverse selection is one of the core issues in health insurance markets\n\n\nHere’s a good example, Costs during special enrollment periods."
+  },
+  {
+    "objectID": "slides/class2.html#managed-competition",
+    "href": "slides/class2.html#managed-competition",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Managed Competition",
+    "text": "Managed Competition\nExamples of “managed competition” in health insurance include:\n\nFully private insurers in exchanges\nFully private insurers replacing Medicaid (i.e., Medicaid managed care)\nPrivate insurers alongside public insurers in Medicare Advantage\nAll operate with significant federal and state regulations"
+  },
+  {
+    "objectID": "slides/class2.html#over-the-next-six-classes",
+    "href": "slides/class2.html#over-the-next-six-classes",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Over the next six classes",
+    "text": "Over the next six classes\n\nHealth insurance choice and effects on healthcare utilization\nFinancial, health, and general welfare effects of health insurance\nRecent work on health insurance design (cost-sharing, networks, etc.) and role of health insurance on technology adoption\nAdverse selection\nFacilitating managed competition\nStrategies to expand health insurance coverage and improve health insurance markets\n\n\n\n\n\n\n\nAron-Dine, Aviva, Liran Einav, and Amy Finkelstein. 2013. “The RAND Health Insurance Experiment, Three Decades Later.” Journal of Economic Perspectives 27 (1): 197–222.\n\n\nFinkelstein, Amy, Sarah Taubman, Bill Wright, Mira Bernstein, Jonathan Gruber, Joseph P Newhouse, Heidi Allen, Katherine Baicker, et al. 2012. “The Oregon Health Insurance Experiment: Evidence from the First Year.” Quarterly Journal of Economics 127 (3): 1057–1106.\n\n\nGoldin, Jacob, Ithai Z Lurie, and Janet McCubbin. 2021. “Health Insurance and Mortality: Experimental Evidence from Taxpayer Outreach.” The Quarterly Journal of Economics 136 (1): 1–49. https://doi.org/10.1093/qje/qjaa029.\n\n\nGross, Tal, and Matthew J. Notowidigdo. 2011. “Health Insurance and the Consumer Bankruptcy Decision: Evidence from Expansions of Medicaid.” Journal of Public Economics 95 (7): 767–78. https://doi.org/10.1016/j.jpubeco.2011.01.012.\n\n\nHu, Luojia, Robert Kaestner, Bhashkar Mazumder, Sarah Miller, and Ashley Wong. 2018. “The Effect of the Affordable Care Act Medicaid Expansions on Financial Wellbeing.” Journal of Public Economics 163 (July): 99–112. https://doi.org/10.1016/j.jpubeco.2018.04.009.\n\n\nMiller, Sarah, Norman Johnson, and Laura R Wherry. 2021. “Medicaid and Mortality: New Evidence From Linked Survey and Administrative Data.” The Quarterly Journal of Economics 136 (3): 1783–1829. https://doi.org/10.1093/qje/qjab004."
   }
 ]
