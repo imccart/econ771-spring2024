@@ -2,7 +2,7 @@
 title: "Effects of Health Insurance"
 ---
 
-The goal of today's class is to study the effects of health insurance. In this general area, one topic that has been very well studied but that we won't discuss is the role of moral hazard in health insurance. For more details on that, see @einav2018. Moral hazard is central to the design and evaluation of health insurance policies, but we just don't have enough time to talk about everything! Focus areas and selected papers for this class are listed below.
+The goal of today's class is to study the effects of health insurance. In this general area, one topic that has been very well studied but that we won't discuss much is the role of moral hazard in health insurance. This was part of our discussion in the last class, but for more details on that, see @einav2018jeea. Focus areas and selected papers for this class are listed below.
 
 ### Financial Effects of Health Insurance
 In reducing the financial burden of healthcare costs, health insurance should relax a household's budget constraint and reduce the probability of default on other financial obligations. This is an important consideration for policymakers, as it speaks to the broader economic impacts of health insurance. You'd think that this would be a more settled area of literature, but it has had surprisingly littler work done in this space.

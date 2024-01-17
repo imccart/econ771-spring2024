@@ -1,0 +1,35 @@
+---
+title: "Health Insurance and Healthcare Markets"
+author: "Ian McCarthy | Emory University"
+format: 
+  revealjs:
+    theme: [moon]
+    preview-links: auto
+#    chalkboard:
+#      boardmarker-width: 5
+    slide-number: true
+    width: 1600
+    height: 900    
+    embed-resources: true
+from: markdown+emoji
+execute: 
+  echo: true
+---
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, lubridate, gapminder, scales,
+               hrbrthemes, gganimate, OECD)
+```
+
+# The Very Basics
+
+Why do people buy health insurance? What are they "insuring"?
+
+::: {.fragment}
+- Health insurance is a financial product that protects against the risk of incurring medical expenses among individuals
+- May also improve health by facilitating access to care (affordability and availability)
+- Effects on education, labor markets, etc.
+:::
+

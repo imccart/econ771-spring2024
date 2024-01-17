@@ -1,0 +1,18 @@
+{
+  "hash": "963429c568f817c7056d08090450fe44",
+  "result": {
+    "markdown": "---\ntitle: \"Health Insurance and Healthcare Markets\"\nauthor: \"Ian McCarthy | Emory University\"\nformat: \n  revealjs:\n    theme: [moon]\n    preview-links: auto\n#    chalkboard:\n#      boardmarker-width: 5\n    slide-number: true\n    width: 1600\n    height: 900    \n    embed-resources: true\nfrom: markdown+emoji\nexecute: \n  echo: true\n---\n\n\n\n\n# The Very Basics\n\nWhy do people buy health insurance? What are they \"insuring\"?\n\n::: {.fragment}\n- Health insurance is a financial product that protects against the risk of incurring medical expenses among individuals\n- May also improve health by facilitating access to care (affordability and availability)\n- Effects on education, labor markets, etc.\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\r\n<script>\r\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\r\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\r\n  // slide changes (different for each slide format).\r\n  (function () {\r\n    // dispatch for htmlwidgets\r\n    function fireSlideEnter() {\r\n      const event = window.document.createEvent(\"Event\");\r\n      event.initEvent(\"slideenter\", true, true);\r\n      window.document.dispatchEvent(event);\r\n    }\r\n\r\n    function fireSlideChanged(previousSlide, currentSlide) {\r\n      fireSlideEnter();\r\n\r\n      // dispatch for shiny\r\n      if (window.jQuery) {\r\n        if (previousSlide) {\r\n          window.jQuery(previousSlide).trigger(\"hidden\");\r\n        }\r\n        if (currentSlide) {\r\n          window.jQuery(currentSlide).trigger(\"shown\");\r\n        }\r\n      }\r\n    }\r\n\r\n    // hookup for slidy\r\n    if (window.w3c_slidy) {\r\n      window.w3c_slidy.add_observer(function (slide_num) {\r\n        // slide_num starts at position 1\r\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\r\n      });\r\n    }\r\n\r\n  })();\r\n</script>\r\n\r\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

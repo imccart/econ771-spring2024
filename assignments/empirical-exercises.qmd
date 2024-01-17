@@ -11,7 +11,7 @@ You must choose one of four empirical exercises to complete this semester. The e
 - [Exercise 3: Regression Discontinuity](exercise3.qmd)
 - [Exercise 4: Hospital markets + demand estimation](exercise1.qmd)
 
-Please submit your answers as PDF on GradeScope (via Canvas) no later than **11:59pm on April 26**. In your PDF, please include a link to your GitHub repository. Be sure to also include in your repository all of your supporting documentation, including your code files (Stata, R, Python, SAS, etc.), all figures/tables, and some instructions (e.g., as part of your ReadMe file) that introduce the reader to your data and the sequence in which your code should be run. Practice writing good code and showing me only what I would need to recreate your results.
+Please submit your answers as a PDF on Canvas no later than **11:59pm on April 26**. In your PDF, please include a link to your GitHub repository. Be sure to also include in your repository all of your supporting documentation, including your code files (Stata, R, Python, SAS, etc.), all figures/tables, and some instructions (e.g., as part of your ReadMe file) that introduce the reader to your data and the sequence in which your code should be run. Practice writing good code and showing me only what I would need to recreate your results.
 
 The exercise is worth 30 points toward your final grade, with 20 points allocated to the accuracy of your work (2 points for each of 10 questions) and 10 points allocated to the replicability of your work (i.e., can I easily recreate your answers from your repository?)
 

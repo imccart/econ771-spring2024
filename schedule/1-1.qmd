@@ -1,10 +1,10 @@
 ---
-title: "Demand for Health Insurance"
+title: "Health Insurance and Healthcare"
 ---
 
-The goal for today's class is to understand the demand for health insurance and the complexities of health insurance choice. Focus areas and selected papers for this class are listed below. 
+The goal for today's class is to understand the demand for healthcare and health insurance, as well as the complexities of health insurance choice. Focus areas and selected papers for this class are listed below. 
 
-### Demand for Health Insurance: The RAND and Oregon Experiments
+### Demand for Healthcare and Health Insurance: The RAND and Oregon Experiments
 The RAND Health Insurance Experiment (HIE) was conducted between 1974 and 1982 and was one of the largest and most comprehensive studies of its time, randomly assigning families to different health insurance plans with varying levels of cost-sharing to assess the impact on healthcare utilization and outcomes. In a more recent experiment, a limited number of Medicaid slots were allocated through a lottery to low-income adults in Oregon. This lottery system essentially created a randomized controlled experiment, allowing the researchers to compare outcomes between those who received Medicaid coverage and those who did not. We'll discuss the RAND HI via @aron-dine2013, and we'll discuss the Oregon Medicaid experiment with @finkelstein2012. 
 
 ### Complexities of Health Insurance Choice
