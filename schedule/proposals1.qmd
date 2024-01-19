@@ -1,0 +1,40 @@
+---
+title: "Proposal Demonstration"
+---
+
+Today I'll try to demonstrate a research proposal. Remember that the research proposal should be a new idea that you aren't sure will actually work, but you have a general sense of what you'd like to do and why. Below is the text for my proposal, with slides available [here](/slides/proposal-demo.qmd).
+
+## Research question
+My research question is: how does decision assistance affect health care utilization and ultimately health outcomes? More specifically, I want to test whether decision assistance (e.g., availability of spouse/partner, nearby children or other family, close friends) reduces medical errors or otherwise changes the way individuals access health care, and I want to estimate the health effects of any such changes. A related question is if cognitive decline affects health care utilization, and whether decision assistance can mitigate these effects. 
+
+## What is the hook?
+In many settings, individuals rely on expert agents to make decisions on their behalf. This is particularly true in healthcare, where patients often rely on physicians to make decisions about their care. However, alignment between a physician's treatment decisions and patient preferences may be limited by the physician's knowledge, biases, or financial incentives. For example, physicians may be more likely to recommend treatments that are more profitable for them or their organization, more likely to recommend treatments for which they are more familiar, or more likely to discount certain symptoms or side-effects based on their biases. All such factors tend to drive a wedge between a patient's preferences for care and the actual treatment decisions recommended by the physician. This proposal focuses on the role of decision assistance in reducing this wedge (i.e., reducing the role of non-clinical factors such as physician bias, financial incentives, or decision heuristics).
+
+## Economic model
+As a starting point, consider the model of physician agency in @cutler2019. In their model, patient $i$ maximizes their utility over healthcare, $V=V(p, Y, h, \eta)$, where $p$ denotes healthcare prices, $Y$ denotes income, $h$ denotes health, and $\eta$ generally captures preferences for care. A simplified example is to consider patient's utility given by $V(x) = B_{D}(x) - px$, where $B_{D}(x)$ captures the patient's perceived benefits of care, $x$, and $p$ denotes the patient's out-of-pocket price. The patient's optimum amount of care from maximizing this utility is denoted, $x^{D}$.
+
+Physician $j$'s utility when treating patient $i$ is then given by
+
+$$
+u_{ij} = \alpha B_{S}(x_{i}; \theta_{i}) + \beta \pi(x_{i}; \theta_{i}),
+$$ {#eq-physician-utility}
+
+where $B_{S}(x_{i}; \theta_{i})$ captures the physician's perceived benefits of care, $\alpha$ denotes the weight that a physician places on perceived benefits (i.e., physician's altruism), $\pi(x_{i}; \theta_{i})$ denotes the physician's profit from providing care, and $\beta$ denotes the weight assigned to profit in the physician's utility. 
+
+In @eq-physician-utility, $\theta_{i}$ captures the "accuracy" of a physician's assessment of the patient's needs. Denoting the true health benefits of care by $B(x)$, and normalizing $\theta_{i}$ such that $\theta_{i} \in [0,1]$, then $B_{S}(x_{i}; \theta_{i}) \rightarrow_{\theta_{i} \rightarrow 1} B(x_{i})$. But as reflected in $\pi(x_{i}; \theta_{i})$, increasing $\theta_{i}$ is costly to the physician. For example, this may require the physician to spend more time with the patient, or to consult with other physicians. 
+
+For the purposes of this proposal, the key is that $\theta_{i}$ is patient specific, so that it may be easier for a physician to assess the needs of some patients than others. Patients with more support from family or friends may be easier to assess, as such support can relay important information to the physician or advocate more strongly for certain tests, and thus $\theta_{i}$ may be higher for these patients. In maximizing @eq-physician-utility, the physician will select some amount of care, $x^{*}(\theta_{i})$, which may increase or decrease in $\theta_{i}$ depending on other elements of the model.
+
+### Other frameworks
+The model above is a starting point, but there are other frameworks that could be used to model the role of decision assistance. For example,
+
+1. Decision assistance as a productivity shifter: @culter2019 consider a similar mechanism in the form of physician productivity shifters, where they denote perceived health benefits by $g(x)=\alpha_{j} + s(x)$. In their setup, $s(x)$ is the true health benefit of care $x$, and $\alpha_{j}$ denotes physician productivity, which the authors suggest could vary across patients due to professional uncertainty. 
+
+2. Decision assistance and learning: Another possible modeling framework could come from the physician learning literature wherein physicians select treatment based on the perceived match value between the patient and the treatment (as in @crawford2005). This match value is a function of the physician's knowledge of the patient, and the physician's knowledge of the treatment. In this framework, decision assistance could be modeled as increasing the physician's knowledge of the patient, and thus increasing the match value between the patient and the treatment and facilitating faster learning.
+
+
+## Empirical strategy
+Identifying the effect of decision assistance on healthcare utilization requires some exogenous shift in availability of decision assistance. Possible sources of such variation include the sudden loss or gain of a spouse or partner, loss or gain of nearby children or other family. I propose the Health and Retirement Study (HRS), linked to Medicare claims data, to identify such variation and its effects on health outcomes and utilization. The HRS is a longitudinal survey of individuals over the age of 50, and includes detailed information on health, healthcare utilization, and decision assistance.
+
+Similar to the patient movers literature initiated by @finkelstein2016, I propose to use the HRS to identify individuals who experience a sudden change in decision assistance due to the unexpected death of a spouse or partner, the move of close family (e.g., children moving away from or closer to parents), or an individual's own move toward or away from family. I will then use Medicare claims data to identify changes in healthcare utilization and health outcomes following these changes in decision assistance.
+

@@ -1,0 +1,30 @@
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+
+#title-slide {
+  text-align: left;
+}
+
+#title-slide .institute {
+  font-style: italic;
+  font-size: 80%;
+}
+
+#title-slide .author {
+  color: $body-color;
+}
+
+#title-slide p.author::before {
+  content: "";
+  display: block;
+  border: none;
+  background-color: $body-color;
+  color: $body-color;
+  height: 3px;
+  margin-bottom: 1em;
+}
+
+#title-slide p, #title-slide a {
+  color: #7F7F7F;
+}

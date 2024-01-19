@@ -1,0 +1,61 @@
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+
+#title-slide {
+  text-align: left;
+  
+  .quarto-title-authors {
+    justify-content: left;
+  }
+  
+  .quarto-title-institute {
+    justify-content: left;
+  }
+}
+
+#title-slide .title{
+    font-size: 200%;
+}
+
+#title-slide .institute {
+  font-style: italic;
+  font-size: 80%;
+  text-align: left;
+}
+
+#title-slide .author {
+  color: $body-color;
+  text-align: left;
+}
+
+#title-slide p.author::before {
+  content: "";
+  display: block;
+  border: none;
+  background-color: $body-color;
+  color: $body-color;
+  height: 3px;
+  margin-bottom: 1em;
+}
+
+#title-slide p, #title-slide a {
+  color: #7F7F7F;
+}
+
+.section-divider {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-divider h2 {
+  font-size: 200%;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.reveal .slides .footer {
+  text-align: left;
+}

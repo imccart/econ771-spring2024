@@ -1,0 +1,126 @@
+---
+title: "Decision Assistance and Healthcare Utilization"
+author: "Ian McCarthy, Emory University and NBER"
+institute: "Emory University, 2024"
+format: 
+  revealjs:
+    theme: [simple, quarto-styles.scss]
+    preview-links: auto
+#    chalkboard:
+#      boardmarker-width: 5
+    slide-number: true
+    width: 1600
+    height: 900
+#    embed-resources: true
+from: markdown+emoji
+execute: 
+  echo: false
+bibliography: ../files/bib/references.bib  
+---
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2)
+```
+
+
+## Research question
+
+I want to test whether decision assistance (e.g., availability of spouse/partner, nearby children or other family, close friends) reduces medical errors or otherwise changes the way individuals access health care, and I want to estimate the health effects of any such changes
+
+- How does decision assistance affect health care utilization and ultimately health outcomes? 
+
+
+---
+
+## The Hook
+
+- Common reliance on expert agents to make decisions on their behalf, particularly in healthcare
+- Alignment between a physician's treatment decisions and patient preferences may be limited by:
+  - physician's knowledge
+  - biases
+  - financial incentives
+  - organizational factors (peer effects, institutional forces of hospital, etc.) 
+
+---
+
+Physicians more likely to recommend treatments based on:
+
+  - profitability for them or their organization
+  - familiarity from past experience 
+  - biases that discount certain symptoms for certain types of patients
+
+
+::: {.fragment}
+All such factors tend to drive a wedge between a patient's preferences for care and the actual treatment decisions recommended by the physician. This proposal focuses on the role of decision assistance in reducing this wedge (i.e., reducing the role of non-clinical factors such as physician bias, financial incentives, or decision heuristics).
+:::
+
+---
+
+## Economic model
+
+Consider the model of physician agency in @cutler2019:
+
+- Patient $i$ maximizes their utility over healthcare, $V=V(p, Y, h, \eta)$, where $p$ denotes healthcare prices, $Y$ denotes income, $h$ denotes health, and $\eta$ generally captures preferences for care
+- Simple example: patient's utility given by $V(x) = B_{D}(x) - px$, where $B_{D}(x)$ captures the patient's perceived benefits of care, $x$, and $p$ denotes the patient's out-of-pocket price. 
+- Maximization yields the patient's optimum amount of care, $x^{D}$.
+
+---
+
+Physician $j$'s utility when treating patient $i$ is then given by
+
+$$
+u_{ij} = \alpha B_{S}(x_{i}; \theta_{i}) + \beta \pi(x_{i}; \theta_{i}),
+$$
+
+where $B_{S}(x_{i}; \theta_{i})$ captures the physician's perceived benefits of care, $\alpha$ denotes the weight that a physician places on perceived benefits (i.e., physician's altruism), $\pi(x_{i}; \theta_{i})$ denotes the physician's profit from providing care, and $\beta$ denotes the weight assigned to profit in the physician's utility. 
+
+---
+
+$$
+u_{ij} = \alpha B_{S}(x_{i}; \theta_{i}) + \beta \pi(x_{i}; \theta_{i}),
+$$
+
+- $\theta_{i}$ captures the "accuracy" of a physician's assessment of the patient's needs
+- Increasing $\theta_{i}$ improves the health benefit of treatment but may also come at some cost (e.g., more time with patient, consult with other physicians)
+
+---
+
+- Physician selects some amount of care, $x^{*}(\theta_{i})$, which may increase or decrease in $\theta_{i}$ depending on other elements of the model
+- $\theta_{i}$ is patient specific, so that it may be easier for a physician to assess the needs of some patients than others
+- Patients with more support from family or friends may be easier to assess, as such support can relay important information to the physician or advocate more strongly for certain tests, and thus $\theta_{i}$ may be higher for these patients 
+
+---
+
+## Other possible frameworks
+
+1. Decision assistance as a productivity shifter: @cutler2019 considers variation with perceived health benefits by $g(x)=\alpha_{j} + s(x)$, where $s(x)$ is the true health benefit of care $x$, and $\alpha_{j}$ denotes physician productivity, which the authors suggest could vary across patients due to professional uncertainty. 
+
+2. Decision assistance and learning: Along the lines of @crawford2005, the match value between treament and patient can be thought of as a function of the physician's knowledge of the patient, and the physician's knowledge of the treatment. Decision assistance may increase physician's knowledge of the patient, and thus increase the match value, facilitating faster learning
+
+---
+
+## Empirical strategy
+
+- Need plausibly exogenous change in decision assistance, along with measures of healthcare utilization and health outcomes
+- Sources of variation: 
+  - loss or gain of a spouse or partner
+  - loss or gain of nearby children or other family
+
+---
+
+## Data
+
+I propose the Health and Retirement Study (HRS), linked to Medicare claims data, to identify such variation and its effects on health outcomes and utilization.
+
+- HRS is a longitudinal survey of individuals over the age of 50, and includes detailed information on health, healthcare utilization, and decision assistance
+- Following patient movers literature initiated by @finkelstein2016, identify individuals with
+  - unexpected death of a spouse or partner;
+  - the move of close family (e.g., children moving away from or closer to parents); or
+  - an individual's own move toward or away from family
+- Use linked Medicare claims data to identify changes in healthcare utilization and health outcomes following these changes in decision assistance
+
+---
+
+## References
