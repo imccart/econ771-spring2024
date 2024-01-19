@@ -38,3 +38,4 @@ Identifying the effect of decision assistance on healthcare utilization requires
 
 Similar to the patient movers literature initiated by @finkelstein2016, I propose to use the HRS to identify individuals who experience a sudden change in decision assistance due to the unexpected death of a spouse or partner, the move of close family (e.g., children moving away from or closer to parents), or an individual's own move toward or away from family. I will then use Medicare claims data to identify changes in healthcare utilization and health outcomes following these changes in decision assistance.
 
+

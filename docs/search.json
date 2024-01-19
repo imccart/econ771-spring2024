@@ -564,7 +564,7 @@
     "href": "slides/class2.html#sources-of-health-insurance",
     "title": "Health Insurance and Healthcare Markets",
     "section": "Sources of health insurance",
-    "text": "Sources of health insurance\n\nFigure 1: Source of Health Insurance (2012)"
+    "text": "Sources of health insurance\n\nSource of Health Insurance (2012)"
   },
   {
     "objectID": "slides/class2.html#reliance-on-esi",
@@ -613,7 +613,7 @@
     "href": "slides/class2.html#increases-utilization",
     "title": "Health Insurance and Healthcare Markets",
     "section": "Increases utilization",
-    "text": "Increases utilization\nIn shielding enrollees from the costs of care, health insurance increases utilization of healthcare (i.e., ‘moral hazard’ or ‘ex post moral hazard’): - Aron-Dine, Einav, and Finkelstein (2013) summary of RAND HI - Finkelstein et al. (2012) summary of Oregon Medicaid lottery"
+    "text": "Increases utilization\nIn shielding enrollees from the costs of care, health insurance increases utilization of healthcare (i.e., ‘moral hazard’ or ‘ex post moral hazard’):\n\nAron-Dine, Einav, and Finkelstein (2013) summary of RAND HI\nFinkelstein et al. (2012) summary of Oregon Medicaid lottery"
   },
   {
     "objectID": "slides/class2.html#protects-against-financial-risk",
@@ -627,7 +627,7 @@
     "href": "slides/class2.html#improves-health",
     "title": "Health Insurance and Healthcare Markets",
     "section": "Improves health",
-    "text": "Improves health\nVery recent work in this area, as it’s been difficult to identify causal effects of health insurance on health: - Miller, Johnson, and Wherry (2021) finds that Medicaid expansion reduced mortality - Goldin, Lurie, and McCubbin (2021) reaches similar qualitative conclusions in a non-Medicaid setting"
+    "text": "Improves health\nVery recent work in this area, as it’s been difficult to identify causal effects of health insurance on health:\n\nMiller, Johnson, and Wherry (2021) finds that Medicaid expansion reduced mortality\nGoldin, Lurie, and McCubbin (2021) reaches similar qualitative conclusions in a non-Medicaid setting"
   },
   {
     "objectID": "slides/class2.html#adverse-selection",
@@ -648,7 +648,7 @@
     "href": "slides/class2.html#over-the-next-six-classes",
     "title": "Health Insurance and Healthcare Markets",
     "section": "Over the next six classes",
-    "text": "Over the next six classes\n\nHealth insurance choice and effects on healthcare utilization\nFinancial, health, and general welfare effects of health insurance\nRecent work on health insurance design (cost-sharing, networks, etc.) and role of health insurance on technology adoption\nAdverse selection\nFacilitating managed competition\nStrategies to expand health insurance coverage and improve health insurance markets\n\n\n\n\n\n\n\nAron-Dine, Aviva, Liran Einav, and Amy Finkelstein. 2013. “The RAND Health Insurance Experiment, Three Decades Later.” Journal of Economic Perspectives 27 (1): 197–222.\n\n\nFinkelstein, Amy, Sarah Taubman, Bill Wright, Mira Bernstein, Jonathan Gruber, Joseph P Newhouse, Heidi Allen, Katherine Baicker, et al. 2012. “The Oregon Health Insurance Experiment: Evidence from the First Year.” Quarterly Journal of Economics 127 (3): 1057–1106.\n\n\nGoldin, Jacob, Ithai Z Lurie, and Janet McCubbin. 2021. “Health Insurance and Mortality: Experimental Evidence from Taxpayer Outreach.” The Quarterly Journal of Economics 136 (1): 1–49. https://doi.org/10.1093/qje/qjaa029.\n\n\nGross, Tal, and Matthew J. Notowidigdo. 2011. “Health Insurance and the Consumer Bankruptcy Decision: Evidence from Expansions of Medicaid.” Journal of Public Economics 95 (7): 767–78. https://doi.org/10.1016/j.jpubeco.2011.01.012.\n\n\nHu, Luojia, Robert Kaestner, Bhashkar Mazumder, Sarah Miller, and Ashley Wong. 2018. “The Effect of the Affordable Care Act Medicaid Expansions on Financial Wellbeing.” Journal of Public Economics 163 (July): 99–112. https://doi.org/10.1016/j.jpubeco.2018.04.009.\n\n\nMiller, Sarah, Norman Johnson, and Laura R Wherry. 2021. “Medicaid and Mortality: New Evidence From Linked Survey and Administrative Data.” The Quarterly Journal of Economics 136 (3): 1783–1829. https://doi.org/10.1093/qje/qjab004."
+    "text": "Over the next six classes\n\nHealth insurance choice and effects on healthcare utilization\nFinancial, health, and general welfare effects of health insurance\nRecent work on health insurance design (cost-sharing, networks, etc.) and role of health insurance on technology adoption\nAdverse selection\nFacilitating managed competition\nStrategies to expand health insurance coverage and improve health insurance markets"
   },
   {
     "objectID": "schedule/proposals1.html",
@@ -740,5 +740,19 @@
     "title": "Decision Assistance and Healthcare Utilization",
     "section": "Data",
     "text": "Data\nI propose the Health and Retirement Study (HRS), linked to Medicare claims data, to identify such variation and its effects on health outcomes and utilization.\n\nHRS is a longitudinal survey of individuals over the age of 50, and includes detailed information on health, healthcare utilization, and decision assistance\nFollowing patient movers literature initiated by Finkelstein, Gentzkow, and Williams (2016), identify individuals with\n\nunexpected death of a spouse or partner;\nthe move of close family (e.g., children moving away from or closer to parents); or\nan individual’s own move toward or away from family\n\nUse linked Medicare claims data to identify changes in healthcare utilization and health outcomes following these changes in decision assistance"
+  },
+  {
+    "objectID": "slides/class2.html#toy-example",
+    "href": "slides/class2.html#toy-example",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Toy example",
+    "text": "Toy example"
+  },
+  {
+    "objectID": "slides/class2.html#references",
+    "href": "slides/class2.html#references",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nAron-Dine, Aviva, Liran Einav, and Amy Finkelstein. 2013. “The RAND Health Insurance Experiment, Three Decades Later.” Journal of Economic Perspectives 27 (1): 197–222.\n\n\nFinkelstein, Amy, Sarah Taubman, Bill Wright, Mira Bernstein, Jonathan Gruber, Joseph P Newhouse, Heidi Allen, Katherine Baicker, et al. 2012. “The Oregon Health Insurance Experiment: Evidence from the First Year.” Quarterly Journal of Economics 127 (3): 1057–1106.\n\n\nGoldin, Jacob, Ithai Z Lurie, and Janet McCubbin. 2021. “Health Insurance and Mortality: Experimental Evidence from Taxpayer Outreach.” The Quarterly Journal of Economics 136 (1): 1–49. https://doi.org/10.1093/qje/qjaa029.\n\n\nGross, Tal, and Matthew J. Notowidigdo. 2011. “Health Insurance and the Consumer Bankruptcy Decision: Evidence from Expansions of Medicaid.” Journal of Public Economics 95 (7): 767–78. https://doi.org/10.1016/j.jpubeco.2011.01.012.\n\n\nHu, Luojia, Robert Kaestner, Bhashkar Mazumder, Sarah Miller, and Ashley Wong. 2018. “The Effect of the Affordable Care Act Medicaid Expansions on Financial Wellbeing.” Journal of Public Economics 163 (July): 99–112. https://doi.org/10.1016/j.jpubeco.2018.04.009.\n\n\nMiller, Sarah, Norman Johnson, and Laura R Wherry. 2021. “Medicaid and Mortality: New Evidence From Linked Survey and Administrative Data.” The Quarterly Journal of Economics 136 (3): 1783–1829. https://doi.org/10.1093/qje/qjab004."
   }
 ]

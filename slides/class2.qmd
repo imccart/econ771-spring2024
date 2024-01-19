@@ -185,7 +185,6 @@ ins.dat <- ins.dat %>%
 ```{r}
 #| echo: false
 #| fig.cap: "Source of Health Insurance (2012)"
-#| label: fig-insurance-type
 ins.dat %>%
   filter(year==2012) %>% pivot_longer(c("perc_employer","perc_direct","perc_medicaid", "perc_unins")) %>%
   select(State, name, value) %>%
@@ -288,11 +287,7 @@ Medicare consists of four parts:
 - Automatic enrollment for anyone 65 and older who worked over their lifetime
 - Financed with combination of payroll tax (current workers) and cost-sharing (deductibles, etc.)
 - Funds exist as part of "Federal Hospital Insurance Trust Fund"...can't finance through debt
-
----
-
-Part A benefit structure:
-
+- Part A benefit structure:
   - Very good for short inpatient stays
   - Very bad for major problems with long stays
   - Doesn't cover nursing home care beyond 30 days
@@ -350,13 +345,13 @@ Part A benefit structure:
 
 ---
 
-More recently:
+### More recently...
 
-- Introduction of quality incentives through...
+- Introduction of quality incentives through:
   - Value Based Purchasing (VBP)
   - Hospital Readmission Reduction Program (HRRP)
   - Quality Payment Program for physicians (choose between merit based payment system or advanced alternative payment models)
-- Introduction of capitated payments through...
+- Introduction of capitated payments through:
   - Bundled Payments
   - Accountable Care Organizations
 
@@ -430,6 +425,7 @@ More recently:
 ## Increases utilization
 
 In shielding enrollees from the costs of care, health insurance increases utilization of healthcare (i.e., 'moral hazard' or 'ex post moral hazard'):
+
 - @aron-dine2013 summary of RAND HI
 - @finkelstein2012 summary of Oregon Medicaid lottery
 
@@ -448,6 +444,7 @@ Seems like an obvious area, but surprisingly few good studies on this topic:
 ## Improves health
 
 Very recent work in this area, as it's been difficult to identify causal effects of health insurance on health:
+
 - @miller2021 finds that Medicaid expansion reduced mortality
 - @goldin2021 reaches similar qualitative conclusions in a non-Medicaid setting
 
@@ -465,6 +462,10 @@ Very recent work in this area, as it's been difficult to identify causal effects
 ::: {.fragment}
 Here's a good example, [Costs during special enrollment periods](https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2019.01155).
 :::
+
+---
+
+## Toy example
 
 
 ---
@@ -528,18 +529,18 @@ To think about unravelling, we need to think of this graph in stages or periods.
 
 ::: {layout-ncol=2}
 
-![spend](/files/figures/meps-expenditure.png){}
+![](/files/figures/meps-expenditure.png){}
 
-![visits](/files/figures/meps-visits.png){}
+![](/files/figures/meps-visits.png){}
 
 :::
 
 ---
 
-![spend](/files/figures/aca-premiums.png){align="center"}
+![](/files/figures/aca-premiums.png){align="center"}
 
 ::: {.aside}
-[https://www.kff.org/health-costs/issue-brief/how-aca-marketplace-premiums-are-changing-by-county-in-2020](Kaiser Family Foundation)
+[Kaiser Family Foundation](https://www.kff.org/health-costs/issue-brief/how-aca-marketplace-premiums-are-changing-by-county-in-2020)
 :::
 
 
@@ -663,3 +664,7 @@ Curto et al. (2021) study this in great detail...some key findings:
 4. Adverse selection
 5. Facilitating managed competition
 6. Strategies to expand health insurance coverage and improve health insurance markets
+
+---
+
+## References
