@@ -1,0 +1,14 @@
+{
+  "hash": "b07a6d53207a652451729088781c162d",
+  "result": {
+    "markdown": "---\ntitle: \"Health Insurance and Overall Welfare\"\nauthor: \"Ian McCarthy, Emory University and NBER\"\ninstitute: \"Emory University, 2024\"\nformat: \n  revealjs:\n    theme: [simple, quarto-styles.scss]\n    preview-links: auto\n#    chalkboard:\n#      boardmarker-width: 5\n    slide-number: true\n    width: 1600\n    height: 900\n#    embed-resources: true\nfrom: markdown+emoji\nexecute: \n  echo: false\nbibliography: ../files/bib/references.bib  \n---\n\n\n\n\n\n\n## Overview\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
