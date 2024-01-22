@@ -1,0 +1,9 @@
+---
+title: "Health Insurance and Healthcare Demand"
+---
+
+Slides for today, separately by subtopic, are available below:
+
+1. [Demand for Healthcare and Health Insurance](/slides/class3-1.qmd)
+2. [Complexities of Health Insurance Choice](/slides/class3-2.qmd)
+3. [Improving Health Insurance Choice](/slides/class3-3.qmd)

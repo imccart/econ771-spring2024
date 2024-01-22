@@ -1,0 +1,237 @@
+---
+title: "Complexities of Health Insurance Choice"
+author: "Ian McCarthy, Emory University and NBER"
+institute: "Emory University, 2024"
+format: 
+  revealjs:
+    theme: [simple, quarto-styles.scss]
+    preview-links: auto
+#    chalkboard:
+#      boardmarker-width: 5
+    slide-number: true
+    width: 1600
+    height: 900
+#    embed-resources: true
+from: markdown+emoji
+execute: 
+  echo: false
+bibliography: ../files/bib/references.bib  
+---
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2)
+```
+
+
+## Overview
+
+- Health insurance is a complex product, and selecting a plan is a difficult task for enrollees
+- Do people make 'good' health insurance choices?
+
+
+::: {.fragment}
+We'll discuss this through the lens of four papers:
+
+- @abaluck2011
+- @ketcham2012
+- @ketcham2016
+- @abaluck2016
+:::
+
+# Abaluck and Gruber (2011), "Choice Inconsistencies Among the Elderly..."
+
+---
+
+## Background and Motivation
+
+![](/files/figures/abaluck2011-fig1.png){}
+
+
+---
+
+## Background and Motivation
+
+![](/files/figures/abaluck2011-fig2.png){}
+
+
+---
+
+## Research Question
+
+- Significant cost differentials across many plan choices in Medicare Part D
+- 'Quality' of choice has potentially large welfare implications for enrollees
+
+::: {.fragment}
+**Research question:** What factors to Part D enrollees consider when choosing a plan?
+:::
+
+---
+
+## Model
+
+- CARA utility: $$U(C) = -exp( -\gamma (W-C)),$$ with $C \sim N(\mu, \sigma^2)$
+- Indirect utility: $$u(\mu, \sigma^{2}) = E[U(C)] = -\alpha exp (\gamma \mu + \frac{1}{2} \gamma^2 \sigma^2),$$ where $\alpha = -exp (\gamma W)$
+- First-order taylor approximation around $(\mu', \sigma^{2'})$ yields: $$u(\mu, \sigma^{2}) \approx u(\mu', \sigma^{2'}) -\alpha \gamma (\mu - \mu') - \frac{1}{2} \alpha \gamma^2 u(\mu', \sigma^{2'})(\sigma^2 - \sigma^{2'})$$
+
+::: {.aside}
+Note: $\mu'$ and $\sigma^{2'}$ are fixed in this setup (conceptually the mean and variance of the 'average' or 'reference' plan)
+:::
+
+---
+
+## Model
+
+- Total costs, $C$, composed of a fixed premium, $\pi$, and variable out of pocket cost, $OOP$
+- Implies $\sigma^{2} = var(C) = var( \pi + OOP) = var(OOP)$ and $\mu = E[C] = E[\pi + OOP] = \pi + \mu^{*}$
+- Dropping constant terms and adding an error term: $$u = -\alpha \gamma u(\mu', \sigma^{2'})(\pi + \mu^{*}) - \frac{1}{2} \alpha \gamma^2 u(\mu', \sigma^{2'}) \sigma^2 + \varepsilon$$
+
+---
+
+## Estimating equation
+
+$$\begin{align*}
+u &=& -\alpha \gamma u(\mu', \sigma^{2'})(\pi + \mu^{*}) & - \frac{1}{2} \alpha \gamma^2 u(\mu', \sigma^{2'}) \sigma^2 & + \varepsilon \\
+  &=& \beta_{0} \pi_{j} + \beta_{1} \mu_{ij}^{*}                          & + \beta_{2} \sigma^{2} & + \lambda x_{j} + \delta q_{b(j)} + \varepsilon_{ij}
+\end{align*}$$
+
+- CARA risk aversion coefficient, $\gamma = 2 \times \frac{\beta_{2}}{\beta_{1}}$
+- $x$ captures other financial plan characteristics (e.g., deductible)
+- $q$ captures plan ratings and other non-financial attributes (constant across plans within an insurer, or 'brand' in the paper)
+
+---
+
+## Data and estimation
+
+- Data from 2006 Medicare Part D enrollment and drug utilization (private data)
+- Plan characteristics (public)
+- Multinomial logit discrete choice model, estimated via MLE
+- Estimate $\mu$ from observed drug expenditures
+- Estimate $\sigma^{2}$ from observed drug expenditures among 'similar' individuals
+
+
+---
+
+## Main results
+
+![](/files/figures/abaluck2011-fig3.png){}
+
+---
+
+## Key findings
+
+$$\beta_{0} \pi_{j} + \beta_{1} \mu_{ij}^{*} + \beta_{2} \sigma^{2} + \lambda x_{j} + \delta q_{b(j)} + \varepsilon_{ij}$$
+
+1. $\beta_{0}=\beta_{1}$. Should trade-off one dollar in premium and one dollar in out of pocket costs, but results suggest $\beta_{0} > \beta_{1}$
+2. $\lambda=0$. Shouldn't care about other financial aspects conditional on OOP costs and premiums, but $\lambda \neq 0$ in general
+3. $\beta_{2} < 0$. Should prefer plans with lower variance in OOP costs, but $\beta_{2}$ often very small
+
+::: {.fragment}
+**Main takeaway:** Enrollees far overweight premiums
+
+- 27% increase in consumer welfare if enrollees picked the cost-minimizing plan (partial equilibrium)
+:::
+
+
+# Ketcham et al. (2012), "Sinking, Swiming, or Learning to Swim in Medicare Part D"
+
+---
+
+## Motivation
+
+While enrollees may make bad Part D decisions, they may learn over time
+
+![](/files/figures/ketcham-quote.png){}
+
+---
+
+![](/files/figures/ketcham2012-fig1.png){}
+
+
+---
+
+## Model, data, and estimation
+
+$$\Delta o_{i} = \alpha + \gamma \Delta h_{i} + \Delta \varepsilon_{i}$$
+
+- $\Delta$ denotes changes from 2006 to 2007
+- $o_{i}$ is overspending, measured as difference between observed costs and those under the lowest cost plan
+- $h_{i}$ is health status
+- Data from CMS and CVS Caremark
+- Estimate via OLS
+
+---
+
+## Main results
+
+![](/files/figures/ketcham2012-tab1.png){}
+
+
+---
+
+## Key findings
+
+- Large reductions in overspending from 2006 to 2007, unexplained by changes in health
+- Reductions appear to be driven by switching plans
+- Switchers were more likely to experience more overspending in 2006
+- Good evidence that individuals are learning in this market and evolving their plan choices accordingly
+
+
+# The Debate 
+
+---
+
+## Ketcham et al. (2016), "Choice Inconsistencies among the Elderly...: Comment"
+
+![](/files/figures/ketcham2016-quote.png){}
+
+---
+
+## Key point of contention
+
+- Are choices consistent with maximization of **some** utility function?
+- Or, are choices consistent with maximization of **a specific** utility function?
+
+::: {.fragment}
+@ketcham2016 argue that the former is sufficient and that deviations from the latter are not necessarily evidence of poor decision making
+:::
+
+
+---
+
+## Specific concerns raised
+
+- Imperfect assignment of individuals to plans in @abaluck2011
+- Failure to consider quality in notions of 'good' choice (e.g., formulary restrictions, prior authorization, customer service, mail order options, etc.)
+
+---
+
+## Abaluck and Gruber (2016), "Choice Inconsistencies among the Elderly...: Reply"
+
+![](/files/figures/abaluck2016-quote.png){}
+
+---
+
+## Main response
+
+- Searching for plans dominated in all dimensions, with increasing number of quality measures, is unreasonable and has little power
+- @ketcham2016 allow flexible brand preferences, which implies that dominated choices can only be made among plans from the same brand
+- Speaks to the definition of the 'efficient frontier' of choices
+
+---
+
+## Summary of the debate
+
+- Extent of choice inconsistencies differs based on normative assumptions
+- Can we find other dimensions of plans that may rationalize observed choices? Not fully, but yes
+- Should we engage in such an exercise?
+
+::: {.fragment}
+Significant survey evidence that Medicare enrollees are confused:
+
+- 73% of seniors (91% of pharmacists and 90% of doctors) say prescription drug plans are too complicated
+- 60% of seniors say "Medicare should select a handful of plans that meet certain standards so seniors have an easier time choosing"
+:::
+
+## References

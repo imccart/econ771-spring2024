@@ -754,5 +754,292 @@
     "title": "Health Insurance and Healthcare Markets",
     "section": "References",
     "text": "References\n\n\n\n\n\n\nAron-Dine, Aviva, Liran Einav, and Amy Finkelstein. 2013. “The RAND Health Insurance Experiment, Three Decades Later.” Journal of Economic Perspectives 27 (1): 197–222.\n\n\nFinkelstein, Amy, Sarah Taubman, Bill Wright, Mira Bernstein, Jonathan Gruber, Joseph P Newhouse, Heidi Allen, Katherine Baicker, et al. 2012. “The Oregon Health Insurance Experiment: Evidence from the First Year.” Quarterly Journal of Economics 127 (3): 1057–1106.\n\n\nGoldin, Jacob, Ithai Z Lurie, and Janet McCubbin. 2021. “Health Insurance and Mortality: Experimental Evidence from Taxpayer Outreach.” The Quarterly Journal of Economics 136 (1): 1–49. https://doi.org/10.1093/qje/qjaa029.\n\n\nGross, Tal, and Matthew J. Notowidigdo. 2011. “Health Insurance and the Consumer Bankruptcy Decision: Evidence from Expansions of Medicaid.” Journal of Public Economics 95 (7): 767–78. https://doi.org/10.1016/j.jpubeco.2011.01.012.\n\n\nHu, Luojia, Robert Kaestner, Bhashkar Mazumder, Sarah Miller, and Ashley Wong. 2018. “The Effect of the Affordable Care Act Medicaid Expansions on Financial Wellbeing.” Journal of Public Economics 163 (July): 99–112. https://doi.org/10.1016/j.jpubeco.2018.04.009.\n\n\nMiller, Sarah, Norman Johnson, and Laura R Wherry. 2021. “Medicaid and Mortality: New Evidence From Linked Survey and Administrative Data.” The Quarterly Journal of Economics 136 (3): 1783–1829. https://doi.org/10.1093/qje/qjab004."
+  },
+  {
+    "objectID": "slides/class3-1.html#overview",
+    "href": "slides/class3-1.html#overview",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Overview",
+    "text": "Overview\n\nOne of the central health economics questions: what does health insurance do?\nEarly literature focused on effects of health insurance on healthcare utilization (ex post moral hazard)\nAnother way to phrase the question: How much should people have to pay for healthcare?\nTo answer this, we need to know the effects of different forms of insurance on healthcare utilization"
+  },
+  {
+    "objectID": "slides/class3-1.html#setup",
+    "href": "slides/class3-1.html#setup",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Setup",
+    "text": "Setup\n\nPartnership with RAND corporation and team of health economists in 1970s\nKey question: If people pay more for healthcare, will they use less?\nRandomized 2,000 households into groups:\n\nfree-care plan\nhigh-deductible (up to $5,500 in 2023 dollars) with full-insurance afterward (really an out-of-pocket maximum)\ndifferent co-insurance rates in between (95, 50, 25, mixed)"
+  },
+  {
+    "objectID": "slides/class3-1.html#setup-1",
+    "href": "slides/class3-1.html#setup-1",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Setup",
+    "text": "Setup\n\nExperiment ran from 1974-1981, cost of $410 million (in 2023 dollars)\nRAND was insurer, collected all data on healthcare used\nPhysical exam at the end of the experiment\nAll data available now for researchers"
+  },
+  {
+    "objectID": "slides/class3-1.html#analysis",
+    "href": "slides/class3-1.html#analysis",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Analysis",
+    "text": "Analysis\n\\[y_{it} = \\lambda_{p} + \\tau_{t} + \\alpha_{lm} + \\varepsilon_{it}\\]\n\n\\(i\\) denotes individual and \\(t\\) denotes year\n\\(\\lambda_{p}\\): plan fixed effects (main coefficients of interest)\n\\(\\tau_{t}\\): year fixed effects\n\\(\\alpha_{lm}\\): location, start-month fixed effects (randomization was by start month)"
+  },
+  {
+    "objectID": "slides/class3-1.html#results-how-much-healthcare",
+    "href": "slides/class3-1.html#results-how-much-healthcare",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Results: How Much Healthcare?",
+    "text": "Results: How Much Healthcare?\n\nFree care plan families used $2,000 (in 2021 dollars) in care\nHigh-deductible plan families used $1,600 in care\n20% increase in healthcare utilization for free care plan\nCommonly cited -0.2 price elasticity of demand for healthcare"
+  },
+  {
+    "objectID": "slides/class3-1.html#results-what-type-of-healthcare",
+    "href": "slides/class3-1.html#results-what-type-of-healthcare",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Results: What Type of Healthcare?",
+    "text": "Results: What Type of Healthcare?\n\nProvided medical documentation to panel of physicians\nAssiged care as highly effective versus rarely effective\nHigh-deductible plan families:\n\n30% less highly effective care\n30% less rarely effective care\n\nConclusion: higher prices lead to less care across the board"
+  },
+  {
+    "objectID": "slides/class3-1.html#results-health-outcomes",
+    "href": "slides/class3-1.html#results-health-outcomes",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Results: Health Outcomes",
+    "text": "Results: Health Outcomes\n\nNo significant differences in health outcomes on average\nPatients with chronic conditions were worse off in high-deductible plan"
+  },
+  {
+    "objectID": "slides/class3-1.html#threats-to-validity",
+    "href": "slides/class3-1.html#threats-to-validity",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Threats to validity",
+    "text": "Threats to validity\n\nValid randomization (not really an issue)\nAdverse selection in participation (could be a problem)\nReporting of claims (some minor concern)"
+  },
+  {
+    "objectID": "slides/class3-1.html#results-with-adjustments",
+    "href": "slides/class3-1.html#results-with-adjustments",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Results with adjustments",
+    "text": "Results with adjustments\n\nAron-Dine, Einav, and Finkelstein (2013)"
+  },
+  {
+    "objectID": "slides/class3-1.html#elasticity-estimates",
+    "href": "slides/class3-1.html#elasticity-estimates",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Elasticity estimates",
+    "text": "Elasticity estimates\nCommonly cited -0.2 price elasticity of demand for healthcare comes from:\n\nStep 1: intensive vs extensive\n\nGroup care into defined “episodes”\nFind no relationship between price and utilization within episode\nFocus on extensive margin (presence of an episode)"
+  },
+  {
+    "objectID": "slides/class3-1.html#elasticity-estimates-1",
+    "href": "slides/class3-1.html#elasticity-estimates-1",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Elasticity estimates",
+    "text": "Elasticity estimates\nCommonly cited -0.2 price elasticity of demand for healthcare comes from:\n\nStep 2: spot vs future price\n\nCompare episode rates among those close to hitting OOP max versus those already over\nNo difference in episode rates\nConclude that spot price matters"
+  },
+  {
+    "objectID": "slides/class3-1.html#elasticity-estimates-2",
+    "href": "slides/class3-1.html#elasticity-estimates-2",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Elasticity estimates",
+    "text": "Elasticity estimates\nCommonly cited -0.2 price elasticity of demand for healthcare comes from:\n\nStep 3: calculating elasticity\n\nLimit sample to part of year where people are far from OOP max (around $500)\nCalculate arc elasticities for each care setting and for different plan types\nMany estimates ‘around’ -0.2"
+  },
+  {
+    "objectID": "slides/class3-1.html#problems-with-elasticity-applications",
+    "href": "slides/class3-1.html#problems-with-elasticity-applications",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Problems with elasticity applications",
+    "text": "Problems with elasticity applications\nHow should we predict the response to price changes in a nonlinear pricing environment when we only have a single price elasticity estimate?"
+  },
+  {
+    "objectID": "slides/class3-1.html#problems-with-elasticity-applications-1",
+    "href": "slides/class3-1.html#problems-with-elasticity-applications-1",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Problems with elasticity applications",
+    "text": "Problems with elasticity applications\n\nAron-Dine, Einav, and Finkelstein (2013)"
+  },
+  {
+    "objectID": "slides/class3-1.html#key-takeaways",
+    "href": "slides/class3-1.html#key-takeaways",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Key takeaways",
+    "text": "Key takeaways\n\nConfident that price matters in healthcare (i.e., people respond to higher prices by reducing healthcare)\nLess confident in the magnitude of the response\nDifficult to apply single elasticity estimates to nonlinear pricing contracts"
+  },
+  {
+    "objectID": "slides/class3-1.html#setup-2",
+    "href": "slides/class3-1.html#setup-2",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Setup",
+    "text": "Setup\n\nOregon expanded Medicaid in 2008\n90,000 people applied for 10,000 slots\nRandomized lottery for slots\nNearly 36,000 selected for lottery, 30% enrolled"
+  },
+  {
+    "objectID": "slides/class3-1.html#analysis-1",
+    "href": "slides/class3-1.html#analysis-1",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Analysis",
+    "text": "Analysis\n\nCompare outcomes of those with insurance to those without\nUse lottery selection as an instrument for insurance coverage"
+  },
+  {
+    "objectID": "slides/class3-1.html#analysis-2",
+    "href": "slides/class3-1.html#analysis-2",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Analysis",
+    "text": "Analysis\n\\[\\begin{align}\ny_{ihj} &= \\pi_{0} + \\pi_{1}Ins_{ih} + \\pi_{2}x_{ih} + \\pi_{c}V_{ih} + \\nu_{ihj} \\\\\nIns_{ih} &= \\delta_{0} + \\delta_{1}Lottery_{h} + \\delta_{2}x_{ih} + \\delta_{3}V_{ih} + \\mu_{ihj}\n\\end{align}\\]\n\nindividual \\(i\\) in household \\(h\\) for outcome \\(j\\)\n\\(x_{ih}\\) are covariates that are correlated with lottery sign up\n\\(V_{ih}\\) are other covariates thought to be correlated with outcomes (for increases in precision)"
+  },
+  {
+    "objectID": "slides/class3-1.html#main-results",
+    "href": "slides/class3-1.html#main-results",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Main results",
+    "text": "Main results\n\n2.1 percentage point (30%) increase in the probability hospital admission\n8.8 percentage point (15%) increase in the probability of taking any prescription drugs\n21 percentage point (35%) increase in the probability of having an outpatient visit\nNo change (but wide confidence intervals) in ED visits\n0.3 standard deviation increase in reported compliance with recommended preventive care (e.g., mammograms and cholesterol monitoring)\n6.4 percentage point (25%) decline in the probability of having an unpaid medical bill sent to a collections agency\n20 percentage point (35%) decline in having any out-of-pocket medical expenditures\nimprovements in self-reported physical and mental health, overall well-being, access to, and quality of are"
+  },
+  {
+    "objectID": "slides/class3-1.html#references",
+    "href": "slides/class3-1.html#references",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nAron-Dine, Aviva, Liran Einav, and Amy Finkelstein. 2013. “The RAND Health Insurance Experiment, Three Decades Later.” Journal of Economic Perspectives 27 (1): 197–222.\n\n\nFinkelstein, Amy, Sarah Taubman, Bill Wright, Mira Bernstein, Jonathan Gruber, Joseph P Newhouse, Heidi Allen, Katherine Baicker, et al. 2012. “The Oregon Health Insurance Experiment: Evidence from the First Year.” Quarterly Journal of Economics 127 (3): 1057–1106."
+  },
+  {
+    "objectID": "slides/class3-2.html#overview",
+    "href": "slides/class3-2.html#overview",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Overview",
+    "text": "Overview\n\nHealth insurance is a complex product, and selecting a plan is a difficult task for enrollees\nDo people make ‘good’ health insurance choices?\n\n\nWe’ll discuss this through the lens of four papers:\n\nAbaluck and Gruber (2011)\nJonathan D. Ketcham et al. (2012)\nJonathan D. Ketcham, Kuminoff, and Powers (2016)\nAbaluck and Gruber (2016)"
+  },
+  {
+    "objectID": "slides/class3-2.html#background-and-motivation",
+    "href": "slides/class3-2.html#background-and-motivation",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Background and Motivation",
+    "text": "Background and Motivation"
+  },
+  {
+    "objectID": "slides/class3-2.html#research-question",
+    "href": "slides/class3-2.html#research-question",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Research Question",
+    "text": "Research Question\n\nSignificant cost differentials across many plan choices in Medicare Part D\n‘Quality’ of choice has potentially large welfare implications for enrollees\n\n\nResearch question: What factors to Part D enrollees consider when choosing a plan?"
+  },
+  {
+    "objectID": "slides/class3-2.html#model",
+    "href": "slides/class3-2.html#model",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Model",
+    "text": "Model\n\nCARA utility: \\[U(C) = -exp( -\\gamma (W-C)),\\] with \\(C \\sim N(\\mu, \\sigma^2)\\)\nIndirect utility: \\[u(\\mu, \\sigma^{2}) = E[U(C)] = -\\alpha exp (\\gamma \\mu + \\frac{1}{2} \\gamma^2 \\sigma^2),\\] where \\(\\alpha = -exp (\\gamma W)\\)\nFirst-order taylor approximation around \\((\\mu', \\sigma^{2'})\\) yields: \\[u(\\mu, \\sigma^{2}) \\approx u(\\mu', \\sigma^{2'}) -\\alpha \\gamma (\\mu - \\mu') - \\frac{1}{2} \\alpha \\gamma^2 u(\\mu', \\sigma^{2'})(\\sigma^2 - \\sigma^{2'})\\]\n\n\n\nNote: \\(\\mu'\\) and \\(\\sigma^{2'}\\) are fixed in this setup (conceptually the mean and variance of the ‘average’ or ‘reference’ plan)"
+  },
+  {
+    "objectID": "slides/class3-2.html#model-1",
+    "href": "slides/class3-2.html#model-1",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Model",
+    "text": "Model\n\nTotal costs, \\(C\\), composed of a fixed premium, \\(\\pi\\), and variable out of pocket cost, \\(OOP\\)\nImplies \\(\\sigma^{2} = var(C) = var( \\pi + OOP) = var(OOP)\\) and \\(\\mu = E[C] = E[\\pi + OOP] = \\pi + \\mu^{*}\\)\nDropping constant terms and adding an error term: \\[u = -\\alpha \\gamma u(\\mu', \\sigma^{2'})(\\pi + \\mu^{*}) - \\frac{1}{2} \\alpha \\gamma^2 u(\\mu', \\sigma^{2'}) \\sigma^2 + \\varepsilon\\]"
+  },
+  {
+    "objectID": "slides/class3-2.html#estimating-equation",
+    "href": "slides/class3-2.html#estimating-equation",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Estimating equation",
+    "text": "Estimating equation\n\\[\\begin{align*}\nu &=& -\\alpha \\gamma u(\\mu', \\sigma^{2'})(\\pi + \\mu^{*}) & - \\frac{1}{2} \\alpha \\gamma^2 u(\\mu', \\sigma^{2'}) \\sigma^2 & + \\varepsilon \\\\\n  &=& \\beta_{0} \\pi_{j} + \\beta_{1} \\mu_{ij}^{*}                          & + \\beta_{2} \\sigma^{2} & + \\lambda x_{j} + \\delta q_{b(j)} + \\varepsilon_{ij}\n\\end{align*}\\]\n\nCARA risk aversion coefficient, \\(\\gamma = 2 \\times \\frac{\\beta_{2}}{\\beta_{1}}\\)\n\\(x\\) captures other financial plan characteristics (e.g., deductible)\n\\(q\\) captures plan ratings and other non-financial attributes (constant across plans within an insurer, or ‘brand’ in the paper)"
+  },
+  {
+    "objectID": "slides/class3-2.html#data-and-estimation",
+    "href": "slides/class3-2.html#data-and-estimation",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Data and estimation",
+    "text": "Data and estimation\n\nData from 2006 Medicare Part D enrollment and drug utilization (private data)\nPlan characteristics (public)\nMultinomial logit discrete choice model, estimated via MLE\nEstimate \\(\\mu\\) from observed drug expenditures\nEstimate \\(\\sigma^{2}\\) from observed drug expenditures among ‘similar’ individuals"
+  },
+  {
+    "objectID": "slides/class3-2.html#main-results",
+    "href": "slides/class3-2.html#main-results",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Main results",
+    "text": "Main results"
+  },
+  {
+    "objectID": "slides/class3-2.html#key-findings",
+    "href": "slides/class3-2.html#key-findings",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Key findings",
+    "text": "Key findings\n\\[\\beta_{0} \\pi_{j} + \\beta_{1} \\mu_{ij}^{*} + \\beta_{2} \\sigma^{2} + \\lambda x_{j} + \\delta q_{b(j)} + \\varepsilon_{ij}\\]\n\n\\(\\beta_{0}=\\beta_{1}\\). Should trade-off one dollar in premium and one dollar in out of pocket costs, but results suggest \\(\\beta_{0} &gt; \\beta_{1}\\)\n\\(\\lambda=0\\). Shouldn’t care about other financial aspects conditional on OOP costs and premiums, but \\(\\lambda \\neq 0\\) in general\n\\(\\beta_{2} &lt; 0\\). Should prefer plans with lower variance in OOP costs, but \\(\\beta_{2}\\) often very small\n\n\nMain takeaway: Enrollees far overweight premiums\n\n27% increase in consumer welfare if enrollees picked the cost-minimizing plan (partial equilibrium)"
+  },
+  {
+    "objectID": "slides/class3-2.html#motivation",
+    "href": "slides/class3-2.html#motivation",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Motivation",
+    "text": "Motivation\nWhile enrollees may make bad Part D decisions, they may learn over time"
+  },
+  {
+    "objectID": "slides/class3-2.html#model-data-and-estimation",
+    "href": "slides/class3-2.html#model-data-and-estimation",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Model, data, and estimation",
+    "text": "Model, data, and estimation\n\\[\\Delta o_{i} = \\alpha + \\gamma \\Delta h_{i} + \\Delta \\varepsilon_{i}\\]\n\n\\(\\Delta\\) denotes changes from 2006 to 2007\n\\(o_{i}\\) is overspending, measured as difference between observed costs and those under the lowest cost plan\n\\(h_{i}\\) is health status\nData from CMS and CVS Caremark\nEstimate via OLS"
+  },
+  {
+    "objectID": "slides/class3-2.html#main-results-1",
+    "href": "slides/class3-2.html#main-results-1",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Main results",
+    "text": "Main results"
+  },
+  {
+    "objectID": "slides/class3-2.html#key-findings-1",
+    "href": "slides/class3-2.html#key-findings-1",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Key findings",
+    "text": "Key findings\n\nLarge reductions in overspending from 2006 to 2007, unexplained by changes in health\nReductions appear to be driven by switching plans\nSwitchers were more likely to experience more overspending in 2006\nGood evidence that individuals are learning in this market and evolving their plan choices accordingly"
+  },
+  {
+    "objectID": "slides/class3-2.html#ketcham-et-al.-2016-choice-inconsistencies-among-the-elderly-comment",
+    "href": "slides/class3-2.html#ketcham-et-al.-2016-choice-inconsistencies-among-the-elderly-comment",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Ketcham et al. (2016), “Choice Inconsistencies among the Elderly…: Comment”",
+    "text": "Ketcham et al. (2016), “Choice Inconsistencies among the Elderly…: Comment”"
+  },
+  {
+    "objectID": "slides/class3-2.html#key-point-of-contention",
+    "href": "slides/class3-2.html#key-point-of-contention",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Key point of contention",
+    "text": "Key point of contention\n\nAre choices consistent with maximization of some utility function?\nOr, are choices consistent with maximization of a specific utility function?\n\n\nJonathan D. Ketcham, Kuminoff, and Powers (2016) argue that the former is sufficient and that deviations from the latter are not necessarily evidence of poor decision making"
+  },
+  {
+    "objectID": "slides/class3-2.html#specific-concerns-raised",
+    "href": "slides/class3-2.html#specific-concerns-raised",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Specific concerns raised",
+    "text": "Specific concerns raised\n\nImperfect assignment of individuals to plans in Abaluck and Gruber (2011)\nFailure to consider quality in notions of ‘good’ choice (e.g., formulary restrictions, prior authorization, customer service, mail order options, etc.)"
+  },
+  {
+    "objectID": "slides/class3-2.html#abaluck-and-gruber-2016-choice-inconsistencies-among-the-elderly-reply",
+    "href": "slides/class3-2.html#abaluck-and-gruber-2016-choice-inconsistencies-among-the-elderly-reply",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Abaluck and Gruber (2016), “Choice Inconsistencies among the Elderly…: Reply”",
+    "text": "Abaluck and Gruber (2016), “Choice Inconsistencies among the Elderly…: Reply”"
+  },
+  {
+    "objectID": "slides/class3-2.html#main-response",
+    "href": "slides/class3-2.html#main-response",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Main response",
+    "text": "Main response\n\nSearching for plans dominated in all dimensions, with increasing number of quality measures, is unreasonable and has little power\nJonathan D. Ketcham, Kuminoff, and Powers (2016) allow flexible brand preferences, which implies that dominated choices can only be made among plans from the same brand\nSpeaks to the definition of the ‘efficient frontier’ of choices"
+  },
+  {
+    "objectID": "slides/class3-2.html#summary-of-the-debate",
+    "href": "slides/class3-2.html#summary-of-the-debate",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Summary of the debate",
+    "text": "Summary of the debate\n\nExtent of choice inconsistencies differs based on normative assumptions\nCan we find other dimensions of plans that may rationalize observed choices? Not fully, but yes\nShould we engage in such an exercise?\n\n\nSignificant survey evidence that Medicare enrollees are confused:\n\n73% of seniors (91% of pharmacists and 90% of doctors) say prescription drug plans are too complicated\n60% of seniors say “Medicare should select a handful of plans that meet certain standards so seniors have an easier time choosing”"
+  },
+  {
+    "objectID": "slides/class3-2.html#references",
+    "href": "slides/class3-2.html#references",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nAbaluck, Jason, and Jonathan Gruber. 2011. “Choice Inconsistencies Among the Elderly: Evidence from Plan Choice in the Medicare Part D Program.” American Economic Review 101 (4): 1180–210. https://doi.org/10.1257/aer.101.4.1180.\n\n\n———. 2016. “Choice Inconsistencies Among the Elderly: Evidence from Plan Choice in the Medicare Part D Program: Reply.” American Economic Review 106 (12): 3962–87. https://doi.org/10.1257/aer.20151318.\n\n\nKetcham, Jonathan D., Nicolai V. Kuminoff, and Christopher A. Powers. 2016. “Choice Inconsistencies Among the Elderly: Evidence from Plan Choice in the Medicare Part D Program: Comment.” American Economic Review 106 (12): 3932–61. https://doi.org/10.1257/aer.20131048.\n\n\nKetcham, Jonathan D, Claudio Lucarelli, Eugenio J Miravete, and M Christopher Roebuck. 2012. “Sinking, Swimming, or Learning to Swim in Medicare Part D.” American Economic Review 102 (6): 2639–73."
+  },
+  {
+    "objectID": "slides/class3-2.html#background-and-motivation-1",
+    "href": "slides/class3-2.html#background-and-motivation-1",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Background and Motivation",
+    "text": "Background and Motivation"
   }
 ]
