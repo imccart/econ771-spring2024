@@ -5,5 +5,5 @@ title: "Effects of Health Insurance"
 Slides for today, separately by subtopic, are available below:
 
 1. [Financial Effects of Health Insurance](/slides/class4-1.pdf)
-2. [Health Effects of Health Insurance](/slides/class4-2.[df])
+2. [Health Effects of Health Insurance](/slides/class4-2.pdf)
 3. Overall Welfare Effects of Health Insurance. No slides for this today so that we can spend more time on the other two topics.
