@@ -1,0 +1,9 @@
+---
+title: "New Research in Health Insurance Demand"
+---
+
+Slides for today, separately by subtopic, are available below:
+
+1. [Health Insurance Design and Consumer Behavior](/slides/class6-1.pdf)
+2. [Technology Adoption and Health Insurance](/slides/class6-2.pdf)
+3. Health Insurance Networks. No slides for this today so that we can spend more time on the other two topics.

@@ -49,6 +49,286 @@
     "text": "Final grades\n\n50% for research proposals (10% for each proposal and 10% for the research plan)\n30% for empirical exercises\n20% for presentations of selected papers (5% each)\n\nLetter grades will be assigned at the end of the course based on total score achieved: (A = 100-93%, A- = 92.99-90%, B+ = 89.99-87%, B = 86.99-83%, B- = 82.99-80%, C+ = 79.99-77%, C = 76.99-73%, C- = 72.99-70%, D+ = 69.99-67%, D = 66.99-60%, F = 60% or less)"
   },
   {
+    "objectID": "slides/class6-1.html#overview",
+    "href": "slides/class6-1.html#overview",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Overview",
+    "text": "Overview\n\nOne of the central health economics questions: what does health insurance do?\nEarly literature focused on effects of health insurance on healthcare utilization (ex post moral hazard)\nAnother way to phrase the question: How much should people have to pay for healthcare?\nTo answer this, we need to know the effects of different forms of insurance on healthcare utilization"
+  },
+  {
+    "objectID": "slides/class6-1.html#setup",
+    "href": "slides/class6-1.html#setup",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Setup",
+    "text": "Setup\n\nPartnership with RAND corporation and team of health economists in 1970s\nKey question: If people pay more for healthcare, will they use less?\nRandomized 2,000 households into groups:\n\nfree-care plan\nhigh-deductible (up to $5,500 in 2023 dollars) with full-insurance afterward (really an out-of-pocket maximum)\ndifferent co-insurance rates in between (95, 50, 25, mixed)"
+  },
+  {
+    "objectID": "slides/class6-1.html#setup-1",
+    "href": "slides/class6-1.html#setup-1",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Setup",
+    "text": "Setup\n\nExperiment ran from 1974-1981, cost of $410 million (in 2023 dollars)\nRAND was insurer, collected all data on healthcare used\nPhysical exam at the end of the experiment\nAll data available now for researchers"
+  },
+  {
+    "objectID": "slides/class6-1.html#analysis",
+    "href": "slides/class6-1.html#analysis",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Analysis",
+    "text": "Analysis\n\\[y_{it} = \\lambda_{p} + \\tau_{t} + \\alpha_{lm} + \\varepsilon_{it}\\]\n\n\\(i\\) denotes individual and \\(t\\) denotes year\n\\(\\lambda_{p}\\): plan fixed effects (main coefficients of interest)\n\\(\\tau_{t}\\): year fixed effects\n\\(\\alpha_{lm}\\): location, start-month fixed effects (randomization was by start month)"
+  },
+  {
+    "objectID": "slides/class6-1.html#results-how-much-healthcare",
+    "href": "slides/class6-1.html#results-how-much-healthcare",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Results: How Much Healthcare?",
+    "text": "Results: How Much Healthcare?\n\nFree care plan families used $2,000 (in 2021 dollars) in care\nHigh-deductible plan families used $1,600 in care\n20% increase in healthcare utilization for free care plan\nCommonly cited -0.2 price elasticity of demand for healthcare"
+  },
+  {
+    "objectID": "slides/class6-1.html#results-what-type-of-healthcare",
+    "href": "slides/class6-1.html#results-what-type-of-healthcare",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Results: What Type of Healthcare?",
+    "text": "Results: What Type of Healthcare?\n\nProvided medical documentation to panel of physicians\nAssiged care as highly effective versus rarely effective\nHigh-deductible plan families:\n\n30% less highly effective care\n30% less rarely effective care\n\nConclusion: higher prices lead to less care across the board"
+  },
+  {
+    "objectID": "slides/class6-1.html#results-health-outcomes",
+    "href": "slides/class6-1.html#results-health-outcomes",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Results: Health Outcomes",
+    "text": "Results: Health Outcomes\n\nNo significant differences in health outcomes on average\nPatients with chronic conditions were worse off in high-deductible plan"
+  },
+  {
+    "objectID": "slides/class6-1.html#threats-to-validity",
+    "href": "slides/class6-1.html#threats-to-validity",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Threats to validity",
+    "text": "Threats to validity\n\nValid randomization (not really an issue)\nAdverse selection in participation (could be a problem)\nReporting of claims (some minor concern)"
+  },
+  {
+    "objectID": "slides/class6-1.html#results-with-adjustments",
+    "href": "slides/class6-1.html#results-with-adjustments",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Results with adjustments",
+    "text": "Results with adjustments\n\nAron-Dine, Einav, and Finkelstein (2013)"
+  },
+  {
+    "objectID": "slides/class6-1.html#elasticity-estimates",
+    "href": "slides/class6-1.html#elasticity-estimates",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Elasticity estimates",
+    "text": "Elasticity estimates\nCommonly cited -0.2 price elasticity of demand for healthcare comes from:\n\nStep 1: intensive vs extensive\n\nGroup care into defined “episodes”\nFind no relationship between price and utilization within episode\nFocus on extensive margin (presence of an episode)"
+  },
+  {
+    "objectID": "slides/class6-1.html#elasticity-estimates-1",
+    "href": "slides/class6-1.html#elasticity-estimates-1",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Elasticity estimates",
+    "text": "Elasticity estimates\nCommonly cited -0.2 price elasticity of demand for healthcare comes from:\n\nStep 2: spot vs future price\n\nCompare episode rates among those close to hitting OOP max versus those already over\nNo difference in episode rates\nConclude that spot price matters"
+  },
+  {
+    "objectID": "slides/class6-1.html#elasticity-estimates-2",
+    "href": "slides/class6-1.html#elasticity-estimates-2",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Elasticity estimates",
+    "text": "Elasticity estimates\nCommonly cited -0.2 price elasticity of demand for healthcare comes from:\n\nStep 3: calculating elasticity\n\nLimit sample to part of year where people are far from OOP max (around $500)\nCalculate arc elasticities for each care setting and for different plan types\nMany estimates ‘around’ -0.2"
+  },
+  {
+    "objectID": "slides/class6-1.html#problems-with-elasticity-applications",
+    "href": "slides/class6-1.html#problems-with-elasticity-applications",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Problems with elasticity applications",
+    "text": "Problems with elasticity applications\nHow should we predict the response to price changes in a nonlinear pricing environment when we only have a single price elasticity estimate?"
+  },
+  {
+    "objectID": "slides/class6-1.html#problems-with-elasticity-applications-1",
+    "href": "slides/class6-1.html#problems-with-elasticity-applications-1",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Problems with elasticity applications",
+    "text": "Problems with elasticity applications\n\nAron-Dine, Einav, and Finkelstein (2013)"
+  },
+  {
+    "objectID": "slides/class6-1.html#key-takeaways",
+    "href": "slides/class6-1.html#key-takeaways",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Key takeaways",
+    "text": "Key takeaways\n\nConfident that price matters in healthcare (i.e., people respond to higher prices by reducing healthcare)\nLess confident in the magnitude of the response\nDifficult to apply single elasticity estimates to nonlinear pricing contracts"
+  },
+  {
+    "objectID": "slides/class6-1.html#setup-2",
+    "href": "slides/class6-1.html#setup-2",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Setup",
+    "text": "Setup\n\nOregon expanded Medicaid in 2008\n90,000 people applied for 10,000 slots\nRandomized lottery for slots\nNearly 36,000 selected for lottery, 30% enrolled"
+  },
+  {
+    "objectID": "slides/class6-1.html#analysis-1",
+    "href": "slides/class6-1.html#analysis-1",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Analysis",
+    "text": "Analysis\n\nCompare outcomes of those with insurance to those without\nUse lottery selection as an instrument for insurance coverage"
+  },
+  {
+    "objectID": "slides/class6-1.html#analysis-2",
+    "href": "slides/class6-1.html#analysis-2",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Analysis",
+    "text": "Analysis\n\\[\\begin{align}\ny_{ihj} &= \\pi_{0} + \\pi_{1}Ins_{ih} + \\pi_{2}x_{ih} + \\pi_{c}V_{ih} + \\nu_{ihj} \\\\\nIns_{ih} &= \\delta_{0} + \\delta_{1}Lottery_{h} + \\delta_{2}x_{ih} + \\delta_{3}V_{ih} + \\mu_{ihj}\n\\end{align}\\]\n\nindividual \\(i\\) in household \\(h\\) for outcome \\(j\\)\n\\(x_{ih}\\) are covariates that are correlated with lottery sign up\n\\(V_{ih}\\) are other covariates thought to be correlated with outcomes (for increases in precision)"
+  },
+  {
+    "objectID": "slides/class6-1.html#main-results",
+    "href": "slides/class6-1.html#main-results",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Main results",
+    "text": "Main results\n\n2.1 percentage point (30%) increase in the probability hospital admission\n8.8 percentage point (15%) increase in the probability of taking any prescription drugs\n21 percentage point (35%) increase in the probability of having an outpatient visit\nNo change (but wide confidence intervals) in ED visits\n0.3 standard deviation increase in reported compliance with recommended preventive care (e.g., mammograms and cholesterol monitoring)\n6.4 percentage point (25%) decline in the probability of having an unpaid medical bill sent to a collections agency\n20 percentage point (35%) decline in having any out-of-pocket medical expenditures\nimprovements in self-reported physical and mental health, overall well-being, access to, and quality of are"
+  },
+  {
+    "objectID": "slides/class6-1.html#references",
+    "href": "slides/class6-1.html#references",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nAron-Dine, Aviva, Liran Einav, and Amy Finkelstein. 2013. “The RAND Health Insurance Experiment, Three Decades Later.” Journal of Economic Perspectives 27 (1): 197–222.\n\n\nFinkelstein, Amy, Sarah Taubman, Bill Wright, Mira Bernstein, Jonathan Gruber, Joseph P Newhouse, Heidi Allen, Katherine Baicker, et al. 2012. “The Oregon Health Insurance Experiment: Evidence from the First Year.” Quarterly Journal of Economics 127 (3): 1057–1106."
+  },
+  {
+    "objectID": "slides/class3-1.html#overview",
+    "href": "slides/class3-1.html#overview",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Overview",
+    "text": "Overview\n\nOne of the central health economics questions: what does health insurance do?\nEarly literature focused on effects of health insurance on healthcare utilization (ex post moral hazard)\nAnother way to phrase the question: How much should people have to pay for healthcare?\nTo answer this, we need to know the effects of different forms of insurance on healthcare utilization"
+  },
+  {
+    "objectID": "slides/class3-1.html#setup",
+    "href": "slides/class3-1.html#setup",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Setup",
+    "text": "Setup\n\nPartnership with RAND corporation and team of health economists in 1970s\nKey question: If people pay more for healthcare, will they use less?\nRandomized 2,000 households into groups:\n\nfree-care plan\nhigh-deductible (up to $5,500 in 2023 dollars) with full-insurance afterward (really an out-of-pocket maximum)\ndifferent co-insurance rates in between (95, 50, 25, mixed)"
+  },
+  {
+    "objectID": "slides/class3-1.html#setup-1",
+    "href": "slides/class3-1.html#setup-1",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Setup",
+    "text": "Setup\n\nExperiment ran from 1974-1981, cost of $410 million (in 2023 dollars)\nRAND was insurer, collected all data on healthcare used\nPhysical exam at the end of the experiment\nAll data available now for researchers"
+  },
+  {
+    "objectID": "slides/class3-1.html#analysis",
+    "href": "slides/class3-1.html#analysis",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Analysis",
+    "text": "Analysis\n\\[y_{it} = \\lambda_{p} + \\tau_{t} + \\alpha_{lm} + \\varepsilon_{it}\\]\n\n\\(i\\) denotes individual and \\(t\\) denotes year\n\\(\\lambda_{p}\\): plan fixed effects (main coefficients of interest)\n\\(\\tau_{t}\\): year fixed effects\n\\(\\alpha_{lm}\\): location, start-month fixed effects (randomization was by start month)"
+  },
+  {
+    "objectID": "slides/class3-1.html#results-how-much-healthcare",
+    "href": "slides/class3-1.html#results-how-much-healthcare",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Results: How Much Healthcare?",
+    "text": "Results: How Much Healthcare?\n\nFree care plan families used $2,000 (in 2021 dollars) in care\nHigh-deductible plan families used $1,600 in care\n20% increase in healthcare utilization for free care plan\nCommonly cited -0.2 price elasticity of demand for healthcare"
+  },
+  {
+    "objectID": "slides/class3-1.html#results-what-type-of-healthcare",
+    "href": "slides/class3-1.html#results-what-type-of-healthcare",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Results: What Type of Healthcare?",
+    "text": "Results: What Type of Healthcare?\n\nProvided medical documentation to panel of physicians\nAssiged care as highly effective versus rarely effective\nHigh-deductible plan families:\n\n30% less highly effective care\n30% less rarely effective care\n\nConclusion: higher prices lead to less care across the board"
+  },
+  {
+    "objectID": "slides/class3-1.html#results-health-outcomes",
+    "href": "slides/class3-1.html#results-health-outcomes",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Results: Health Outcomes",
+    "text": "Results: Health Outcomes\n\nNo significant differences in health outcomes on average\nPatients with chronic conditions were worse off in high-deductible plan"
+  },
+  {
+    "objectID": "slides/class3-1.html#threats-to-validity",
+    "href": "slides/class3-1.html#threats-to-validity",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Threats to validity",
+    "text": "Threats to validity\n\nValid randomization (not really an issue)\nAdverse selection in participation (could be a problem)\nReporting of claims (some minor concern)"
+  },
+  {
+    "objectID": "slides/class3-1.html#results-with-adjustments",
+    "href": "slides/class3-1.html#results-with-adjustments",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Results with adjustments",
+    "text": "Results with adjustments\n\nAron-Dine, Einav, and Finkelstein (2013)"
+  },
+  {
+    "objectID": "slides/class3-1.html#elasticity-estimates",
+    "href": "slides/class3-1.html#elasticity-estimates",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Elasticity estimates",
+    "text": "Elasticity estimates\nCommonly cited -0.2 price elasticity of demand for healthcare comes from:\n\nStep 1: intensive vs extensive\n\nGroup care into defined “episodes”\nFind no relationship between price and utilization within episode\nFocus on extensive margin (presence of an episode)"
+  },
+  {
+    "objectID": "slides/class3-1.html#elasticity-estimates-1",
+    "href": "slides/class3-1.html#elasticity-estimates-1",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Elasticity estimates",
+    "text": "Elasticity estimates\nCommonly cited -0.2 price elasticity of demand for healthcare comes from:\n\nStep 2: spot vs future price\n\nCompare episode rates among those close to hitting OOP max versus those already over\nNo difference in episode rates\nConclude that spot price matters"
+  },
+  {
+    "objectID": "slides/class3-1.html#elasticity-estimates-2",
+    "href": "slides/class3-1.html#elasticity-estimates-2",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Elasticity estimates",
+    "text": "Elasticity estimates\nCommonly cited -0.2 price elasticity of demand for healthcare comes from:\n\nStep 3: calculating elasticity\n\nLimit sample to part of year where people are far from OOP max (around $500)\nCalculate arc elasticities for each care setting and for different plan types\nMany estimates ‘around’ -0.2"
+  },
+  {
+    "objectID": "slides/class3-1.html#problems-with-elasticity-applications",
+    "href": "slides/class3-1.html#problems-with-elasticity-applications",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Problems with elasticity applications",
+    "text": "Problems with elasticity applications\nHow should we predict the response to price changes in a nonlinear pricing environment when we only have a single price elasticity estimate?"
+  },
+  {
+    "objectID": "slides/class3-1.html#problems-with-elasticity-applications-1",
+    "href": "slides/class3-1.html#problems-with-elasticity-applications-1",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Problems with elasticity applications",
+    "text": "Problems with elasticity applications\n\nAron-Dine, Einav, and Finkelstein (2013)"
+  },
+  {
+    "objectID": "slides/class3-1.html#key-takeaways",
+    "href": "slides/class3-1.html#key-takeaways",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Key takeaways",
+    "text": "Key takeaways\n\nConfident that price matters in healthcare (i.e., people respond to higher prices by reducing healthcare)\nLess confident in the magnitude of the response\nDifficult to apply single elasticity estimates to nonlinear pricing contracts"
+  },
+  {
+    "objectID": "slides/class3-1.html#setup-2",
+    "href": "slides/class3-1.html#setup-2",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Setup",
+    "text": "Setup\n\nOregon expanded Medicaid in 2008\n90,000 people applied for 10,000 slots\nRandomized lottery for slots\nNearly 36,000 selected for lottery, 30% enrolled"
+  },
+  {
+    "objectID": "slides/class3-1.html#analysis-1",
+    "href": "slides/class3-1.html#analysis-1",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Analysis",
+    "text": "Analysis\n\nCompare outcomes of those with insurance to those without\nUse lottery selection as an instrument for insurance coverage"
+  },
+  {
+    "objectID": "slides/class3-1.html#analysis-2",
+    "href": "slides/class3-1.html#analysis-2",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Analysis",
+    "text": "Analysis\n\\[\\begin{align}\ny_{ihj} &= \\pi_{0} + \\pi_{1}Ins_{ih} + \\pi_{2}x_{ih} + \\pi_{c}V_{ih} + \\nu_{ihj} \\\\\nIns_{ih} &= \\delta_{0} + \\delta_{1}Lottery_{h} + \\delta_{2}x_{ih} + \\delta_{3}V_{ih} + \\mu_{ihj}\n\\end{align}\\]\n\nindividual \\(i\\) in household \\(h\\) for outcome \\(j\\)\n\\(x_{ih}\\) are covariates that are correlated with lottery sign up\n\\(V_{ih}\\) are other covariates thought to be correlated with outcomes (for increases in precision)"
+  },
+  {
+    "objectID": "slides/class3-1.html#main-results",
+    "href": "slides/class3-1.html#main-results",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "Main results",
+    "text": "Main results\n\n2.1 percentage point (30%) increase in the probability hospital admission\n8.8 percentage point (15%) increase in the probability of taking any prescription drugs\n21 percentage point (35%) increase in the probability of having an outpatient visit\nNo change (but wide confidence intervals) in ED visits\n0.3 standard deviation increase in reported compliance with recommended preventive care (e.g., mammograms and cholesterol monitoring)\n6.4 percentage point (25%) decline in the probability of having an unpaid medical bill sent to a collections agency\n20 percentage point (35%) decline in having any out-of-pocket medical expenditures\nimprovements in self-reported physical and mental health, overall well-being, access to, and quality of are"
+  },
+  {
+    "objectID": "slides/class3-1.html#references",
+    "href": "slides/class3-1.html#references",
+    "title": "Demand for Healthcare and Health Insurance",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nAron-Dine, Aviva, Liran Einav, and Amy Finkelstein. 2013. “The RAND Health Insurance Experiment, Three Decades Later.” Journal of Economic Perspectives 27 (1): 197–222.\n\n\nFinkelstein, Amy, Sarah Taubman, Bill Wright, Mira Bernstein, Jonathan Gruber, Joseph P Newhouse, Heidi Allen, Katherine Baicker, et al. 2012. “The Oregon Health Insurance Experiment: Evidence from the First Year.” Quarterly Journal of Economics 127 (3): 1057–1106."
+  },
+  {
     "objectID": "slides/class1.html#but-the-u.s.-is-unique",
     "href": "slides/class1.html#but-the-u.s.-is-unique",
     "title": "Introduction: Why Supply-side Health?",
@@ -61,6 +341,76 @@
     "title": "Introduction: Why Supply-side Health?",
     "section": "What does that mean?",
     "text": "What does that mean?\n\nAre we just woefully inefficient?\nYes, but the complete answer is more complicated\n\nU.S. very good in some areas (breast cancer treatment, interventional cardiology)\nLet’s look at some more graphs from the Commonwealth Fund"
+  },
+  {
+    "objectID": "schedule/index.html",
+    "href": "schedule/index.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Below is a breakdown of topics for each class day this semester. Assignments are also listed according to their due dates. The associated links take you to additional information relevant for that day or for that assignment. The Details link provides specific readings for that class and any supplemental materials; the Slides link takes you to the relevant slides for that day; and the Assignment link takes you to the relevant details for each assignment. Each heading is also linked to a broader literature review for that topic, containing many more papers than we will cover in class. For those of you interested in learning more about a particular topic, this is a good place to start."
+  },
+  {
+    "objectID": "schedule/index.html#welcome-to-the-class",
+    "href": "schedule/index.html#welcome-to-the-class",
+    "title": "Schedule",
+    "section": "Welcome to the class!",
+    "text": "Welcome to the class!\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n1\n1/17\nEconomics of healthcare"
+  },
+  {
+    "objectID": "schedule/index.html#module-1-health-insurance",
+    "href": "schedule/index.html#module-1-health-insurance",
+    "title": "Schedule",
+    "section": "Module 1: Health insurance",
+    "text": "Module 1: Health insurance\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n2\n1/19\nBackground\n\n\n\n\n\n3\n1/22\nDemand for Healthcare and Health Insurance\n\n\n\n\n\n4\n1/24\nEffects of Health Insurance\n\n\n\n\n\n5\n1/26\nResearch proposals (demo)\n\n\n\n\n\n6\n1/29\nNew Research in HI Demand\n\n\n\n\n\n7\n1/31\nAdverse Selection\n\n\n\n\n\n8\n2/2\nResearch proposals\n\n\n\n\n\n9\n2/5\nCompetition in Health Insurance\n\n\n\n\n\n10\n2/7\nNew Research in HI Markets\n\n\n\n\n\n11\n2/9\nResearch proposals"
+  },
+  {
+    "objectID": "schedule/index.html#module-2-healthcare-variation-and-physician-agency",
+    "href": "schedule/index.html#module-2-healthcare-variation-and-physician-agency",
+    "title": "Schedule",
+    "section": "Module 2: Healthcare variation and physician agency",
+    "text": "Module 2: Healthcare variation and physician agency\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n12\n2/12\nBackground\n\n\n\n\n\n13\n2/14\nVariation and Agency\n\n\n\n\n\n14\n2/16\nResearch proposals\n\n\n\n\n\n15\n2/19\nDifferent Mechanisms of Agency\n\n\n\n\n\n16\n2/21\nDifferent Dimensions of Agency\n\n\n\n\n\n17\n2/23\nResearch proposals"
+  },
+  {
+    "objectID": "schedule/index.html#module-3-pricing-and-competition",
+    "href": "schedule/index.html#module-3-pricing-and-competition",
+    "title": "Schedule",
+    "section": "Module 3: Pricing and competition",
+    "text": "Module 3: Pricing and competition\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n18\n2/26\nBackground\n\n\n\n\n\n19\n2/28\nHorizontal Integration\n\n\n\n\n\n20\n3/1\nResearch proposals\n\n\n\n\n\n21\n3/4\nDifferent Forms of Integration\n\n\n\n\n\n22\n3/6\nDifferent Outcomes and Settings\n\n\n\n\n\n23\n3/8\nResearch proposals"
+  },
+  {
+    "objectID": "schedule/index.html#module-4-information-disclosure",
+    "href": "schedule/index.html#module-4-information-disclosure",
+    "title": "Schedule",
+    "section": "Module 4: Information disclosure",
+    "text": "Module 4: Information disclosure\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n24\n3/18\nBackground\n\n\n\n\n\n25\n3/20\nDisclosure and Patient Choice\n\n\n\n\n\n26\n3/22\nResearch proposals\n\n\n\n\n\n27\n3/25\nDisclosure and Provider Response\n\n\n\n\n\n28\n3/27\nDisclosure of What and to Whom?\n\n\n\n\n\n29\n3/29\nResearch proposals"
+  },
+  {
+    "objectID": "schedule/index.html#module-5-physician-learning-and-technology-adoption",
+    "href": "schedule/index.html#module-5-physician-learning-and-technology-adoption",
+    "title": "Schedule",
+    "section": "Module 5: Physician learning and technology adoption",
+    "text": "Module 5: Physician learning and technology adoption\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n30\n4/1\nBackground\n\n\n\n\n\n31\n4/3\nMyopic Learning\n\n\n\n\n\n32\n4/5\nResearch proposals\n\n\n\n\n\n33\n4/8\nForward-looking Learning\n\n\n\n\n\n34\n4/10\nLearning and Technology Adoption\n\n\n\n\n\n35\n4/12\nResearch proposals"
+  },
+  {
+    "objectID": "schedule/index.html#module-6-waste-and-fraud",
+    "href": "schedule/index.html#module-6-waste-and-fraud",
+    "title": "Schedule",
+    "section": "Module 6: Waste and fraud",
+    "text": "Module 6: Waste and fraud\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n36\n4/15\nBackground\n\n\n\n\n\n37\n4/17\nSources of Waste\n\n\n\n\n\n38\n4/19\nResearch proposals\n\n\n\n\n\n39\n4/22\nFraud and Overuse\n\n\n\n\n\n40\n4/24\nStrategies to Avoid Fraud\n\n\n\n\n\n41\n4/26\nResearch proposals\n\n\n\n\n\n\n\nEmpirical exercises"
+  },
+  {
+    "objectID": "schedule/index.html#final-research-plans",
+    "href": "schedule/index.html#final-research-plans",
+    "title": "Schedule",
+    "section": "Final Research Plans",
+    "text": "Final Research Plans\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n42\n4/29\nResearch plans"
+  },
+  {
+    "objectID": "schedule/class4.html",
+    "href": "schedule/class4.html",
+    "title": "Effects of Health Insurance",
+    "section": "",
+    "text": "Slides for today, separately by subtopic, are available below:\n\nFinancial Effects of Health Insurance\nHealth Effects of Health Insurance\nOverall Welfare Effects of Health Insurance. No slides for this today so that we can spend more time on the other two topics."
   },
   {
     "objectID": "schedule/6-literature.html",
@@ -354,7 +704,7 @@
     "href": "schedule/1-3.html",
     "title": "New Directions in Health Insurance Demand",
     "section": "",
-    "text": "The goal for today’s class is to consider where the research on health insurance might be headed and discuss some papers in those directions. For these classes, I’m trying to select topics with significant policy interest and room for additional research. There are many areas of active research in the study of health insurance, so this is far from exhaustive. Focus areas and selected papers for this class are listed below.\n\nHealth Insurance Design and Consumer Behavior\nThe design of health insurance plans (like copayments, deductibles, and coverage decisions) directly affects consumer choices and healthcare utilization. This area is crucial for policy design, ensuring that insurance structures meet both economic efficiency and equity goals. We’ll discuss Brown et al. (2023) and Ho and Lee (2020) as an example of this line of current/future research.\n\n\nInnovation/Technology Adoption and Health Insurance\nIn affecting how services are paid for, insurance can also affect the adoption of new technologies and innovations in healthcare. We’ll discuss Garthwaite (2012) and Agha, Kim, and Li (2022) as examples of this line of work.\n\n\nHealth Insurance Networks\nThe structure of health insurance networks can affect the quality of care that patients receive. We’ll briefly discuss Gruber and McKnight (2016) as an example of this line of work, even though it is a little bit older for “current/future” research, and we’ll discuss Kreider et al. (2022) as a more recent example in this space.\n\n\n\n\n\nReferences\n\nAgha, Leila, Soomi Kim, and Danielle Li. 2022. “Insurance Design and Pharmaceutical Innovation.” American Economic Review: Insights 4 (2): 191–208. https://doi.org/10.1257/aeri.20210063.\n\n\nBrown, Zach Y., Christopher Hansman, Jordan Keener, and Andre F. Veiga. 2023. “Information and Disparities in Health Care Quality: Evidence from GP Choice in England.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w31033.\n\n\nGarthwaite, Craig L. 2012. “The Doctor Might See You Now: The Supply Side Effects of Public Health Insurance Expansions.” American Economic Journal: Economic Policy 4 (3): 190–215. https://doi.org/10.1257/pol.4.3.190.\n\n\nGruber, Jonathan, and Robin McKnight. 2016. “Controlling Health Care Costs Through Limited Network Insurance Plans: Evidence from Massachusetts State Employees.” American Economic Journal: Economic Policy 8 (2): 219–50. https://doi.org/10.1257/pol.20140335.\n\n\nHo, Kate, and Robin S. Lee. 2020. “Health Insurance Menu Design for Large Employers.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w27868.\n\n\nKreider, Amanda R., Timothy J. Layton, Mark Shepard, and Jacob Wallace. 2022. “Adverse Selection and Network Design Under Regulated Plan Prices: Evidence from Medicaid.” w30719. National Bureau of Economic Research. https://doi.org/10.3386/w30719."
+    "text": "The goal for today’s class is to consider where the research on health insurance might be headed and discuss some papers in those directions. For these classes, I’m trying to select topics with significant policy interest and room for additional research. There are many areas of active research in the study of health insurance, so this is far from exhaustive. Focus areas and selected papers for this class are listed below.\n\nHealth Insurance Design and Consumer Behavior\nThe design of health insurance plans (like copayments, deductibles, and coverage decisions) directly affects consumer choices and healthcare utilization. This area is crucial for policy design, ensuring that insurance structures meet both economic efficiency and equity goals. We’ll discuss Brown and Jeon (2023) and Ho and Lee (2020) as an example of this line of current/future research.\n\n\nInnovation/Technology Adoption and Health Insurance\nIn affecting how services are paid for, insurance can also affect the adoption of new technologies and innovations in healthcare. We’ll discuss Garthwaite (2012) and Agha, Kim, and Li (2022) as examples of this line of work.\n\n\nHealth Insurance Networks\nThe structure of health insurance networks can affect the quality of care that patients receive. We’ll briefly discuss Gruber and McKnight (2016) as an example of this line of work, even though it is a little bit older for “current/future” research, and we’ll discuss Kreider et al. (2022) as a more recent example in this space.\n\n\n\n\n\nReferences\n\nAgha, Leila, Soomi Kim, and Danielle Li. 2022. “Insurance Design and Pharmaceutical Innovation.” American Economic Review: Insights 4 (2): 191–208. https://doi.org/10.1257/aeri.20210063.\n\n\nBrown, Zach Y, and Jihye Jeon. 2023. “Endogenous Information and Simplifying Insurance Choice.” https://public-websites-umich-edu.proxy.library.emory.edu/~zachb/brown_jeon_endo_info.pdf.\n\n\nGarthwaite, Craig L. 2012. “The Doctor Might See You Now: The Supply Side Effects of Public Health Insurance Expansions.” American Economic Journal: Economic Policy 4 (3): 190–215. https://doi.org/10.1257/pol.4.3.190.\n\n\nGruber, Jonathan, and Robin McKnight. 2016. “Controlling Health Care Costs Through Limited Network Insurance Plans: Evidence from Massachusetts State Employees.” American Economic Journal: Economic Policy 8 (2): 219–50. https://doi.org/10.1257/pol.20140335.\n\n\nHo, Kate, and Robin S. Lee. 2020. “Health Insurance Menu Design for Large Employers.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w27868.\n\n\nKreider, Amanda R., Timothy J. Layton, Mark Shepard, and Jacob Wallace. 2022. “Adverse Selection and Network Design Under Regulated Plan Prices: Evidence from Medicaid.” w30719. National Bureau of Economic Research. https://doi.org/10.3386/w30719."
   },
   {
     "objectID": "schedule/1-5.html",
@@ -389,7 +739,7 @@
     "href": "schedule/2-1.html",
     "title": "Variation and Physician Agency",
     "section": "",
-    "text": "The goal for today’s class is to understand the literature on geographic variation in healthcare spending/utilization and some of the key papers in physician agency. Focus areas and selected papers are listed below:\n\nSupply-side Variation\nWhile there is substantial research documenting variation in healthcare spending and utilization, there is less consensus on the source of this variation. The first group of papers we’ll discuss today attempt to decompose variation in healthcare spending between demand and supply-side factors. We’ll focus on Finkelstein, Gentzkow, and Williams (2016) and Badinski et al. (2023) specifically. While these are relatively recent papers, the build on a much older literature studying variation in spending.\n\n\nPhysician Agency and Financial Incentives\nWhile there are many papers studying this topic, we’ll discuss Iizuka (2012) and Clemens and Gottlieb (2014) in class. Iizuka (2012) considers prescribing behaviors in a unique setting where physicians can profit directly from different prescriptiond rugs. Clemens and Gottlieb (2014) examines the impact of an exogenous change in Medicare reimbursement rates on physician behavior.\n\n\n\n\n\nReferences\n\nBadinski, Ivan, Amy Finkelstein, Matthew Gentzkow, and Peter Hull. 2023. “Geographic Variation in Healthcare Utilization: The Role of Physicians.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w31749.\n\n\nClemens, Jeffrey, and Joshua D Gottlieb. 2014. “Do Physicians’ Financial Incentives Affect Medical Treatment and Patient Health?” American Economic Review 104 (4): 1320–49.\n\n\nFinkelstein, Amy, Matthew Gentzkow, and Heidi Williams. 2016. “Sources of Geographic Variation in Health Care: Evidence From PatientMigration.” The Quarterly Journal of Economics 131 (4): 1681–1726. https://ideas.repec.org//a/oup/qjecon/v131y2016i4p1681-1726..html.\n\n\nIizuka, Toshiaki. 2012. “Physician Agency and Adoption of Generic Pharmaceuticals.” American Economic Review 102 (6): 2826–58."
+    "text": "The goal for today’s class is to understand the literature on geographic variation in healthcare spending/utilization and some of the key papers in physician agency. Focus areas and selected papers are listed below:\n\nSupply-side Variation\nWhile there is substantial research documenting variation in healthcare spending and utilization, there is less consensus on the source of this variation. The first group of papers we’ll discuss today attempt to decompose variation in healthcare spending between demand and supply-side factors. We’ll focus on Finkelstein, Gentzkow, and Williams (2016) and Badinski et al. (2023) specifically. While these are relatively recent papers, the build on a much older literature studying variation in spending.\n\n\nPhysician Agency and Financial Incentives\nWhile there are many papers studying this topic, we’ll discuss Iizuka (2012) and Clemens and Gottlieb (2014) in class. Iizuka (2012) considers prescribing behaviors in a unique setting where physicians can profit directly from different prescriptiond rugs. Clemens and Gottlieb (2014) examines the impact of an exogenous change in Medicare reimbursement rates on physician behavior.\n\n\n\n\n\nReferences\n\nBadinski, Ivan, Amy Finkelstein, Matthew Gentzkow, and Peter Hull. 2023. “Geographic Variation in Healthcare Utilization: The Role of Physicians.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w31749.\n\n\nClemens, Jeffrey, and Joshua D Gottlieb. 2014. “Do Physicians’ Financial Incentives Affect Medical Treatment and Patient Health?” American Economic Review 104 (4): 1320–49.\n\n\nFinkelstein, Amy, Matthew Gentzkow, and Heidi Williams. 2016. “Sources of Geographic Variation in Health Care: Evidence From Patient Migration.” The Quarterly Journal of Economics 131 (4): 1681–1726. https://ideas.repec.org//a/oup/qjecon/v131y2016i4p1681-1726..html.\n\n\nIizuka, Toshiaki. 2012. “Physician Agency and Adoption of Generic Pharmaceuticals.” American Economic Review 102 (6): 2826–58."
   },
   {
     "objectID": "schedule/2-3.html",
@@ -469,67 +819,53 @@
     "text": "While we can often identify fraud after-the-fact, it can be challenging to devise policies that prevent fraud in a cost-effective way. We’ll talk about some of these things in today’s class, focusing on the following areas and papers.\n\nDetection\n(shekar2023?) considers how to identify overbilling in the U.S. healthcare system. The authors employ large-scale Medicare claims data to detect patterns indicative of fraud or overbilling, notably in an unsupervised manner that does not rely on pre-labeled training data. This approach provides a significant advancement in fraud detection, offering both high accuracy and explainability, which is crucial for understanding and acting upon the findings.\n\n\nPrivate Enforcement\nOne way to avoid fraud is to rely on individuals to report fraud after it has occurred, and other way is to impose sufficient safegaurds so that fraud is either extremely hard to commit or detected immediately via regulatory audit. Leder-Luis (2023) offers an anaylsis of the first approach, considering the role of whistleblower-initiated lawsuits in uncovering fraudulent activities and their impact on reducing financial misappropriations in public healthcare spending. Such whistleblower-initiated lawsuits are a key component of the U.S. False Claims Act, which allows private citizens to sue on behalf of the government and receive a portion of the recovered funds.\n\n\nRegulatory Enforcement\nAs examples of papers that consider more official regulatatory enforcement (e.g., a more proactive effort to avoid or identify fraud while it’s happening), we will discuss Shi (2023) and Eliason et al. (2021). Shi (2023) examines the role and efficacy of Medicare audits in identifying and reducing wasteful spending in the healthcare system. The paper analyzes how these audits target and impact various areas of expenditure, assessing their effectiveness in curbing unnecessary costs. Eliason et al. (2021) examines how specific regulations and litigation practices influence fraudulent activities in this sector. It offers a critical analysis of the effectiveness of current measures in preventing fraud and suggests potential improvements.\n\n\n\n\n\nReferences\n\nEliason, Paul J., Riley J. League, Jetson Leder-Luis, Ryan C. McDevitt, and James W. Roberts. 2021. “Ambulance Taxis: The Impact of Regulation and Litigation on Health Care Fraud.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w29491.\n\n\nLeder-Luis, Jetson. 2023. “Can Whistleblowers Root Out Public Expenditure Fraud? Evidence from Medicare.” The Review of Economics and Statistics, May, 1–49. https://doi.org/10.1162/rest_a_01339.\n\n\nShi, Maggie. 2023. “Monitoring for Waste: Evidence from Medicare Audits*.” The Quarterly Journal of Economics, September, qjad049. https://doi.org/10.1093/qje/qjad049."
   },
   {
-    "objectID": "schedule/index.html",
-    "href": "schedule/index.html",
-    "title": "Schedule",
+    "objectID": "schedule/class3.html",
+    "href": "schedule/class3.html",
+    "title": "Health Insurance and Healthcare Demand",
     "section": "",
-    "text": "Below is a breakdown of topics for each class day this semester. Assignments are also listed according to their due dates. The associated links take you to additional information relevant for that day or for that assignment. The Details link provides specific readings for that class and any supplemental materials; the Slides link takes you to the relevant slides for that day; and the Assignment link takes you to the relevant details for each assignment. Each heading is also linked to a broader literature review for that topic, containing many more papers than we will cover in class. For those of you interested in learning more about a particular topic, this is a good place to start."
+    "text": "Slides for today, separately by subtopic, are available below:\n\nDemand for Healthcare and Health Insurance\nComplexities of Health Insurance Choice\nImproving Health Insurance Choice"
   },
   {
-    "objectID": "schedule/index.html#welcome-to-the-class",
-    "href": "schedule/index.html#welcome-to-the-class",
-    "title": "Schedule",
-    "section": "Welcome to the class!",
-    "text": "Welcome to the class!\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n1\n1/17\nEconomics of healthcare"
+    "objectID": "schedule/class6.html",
+    "href": "schedule/class6.html",
+    "title": "New Research in Health Insurance Demand",
+    "section": "",
+    "text": "Slides for today, separately by subtopic, are available below:\n\nHealth Insurance Design and Consumer Behavior\nTechnology Adoption and Health Insurance\nHealth Insurance Networks. No slides for this today so that we can spend more time on the other two topics."
   },
   {
-    "objectID": "schedule/index.html#module-1-health-insurance",
-    "href": "schedule/index.html#module-1-health-insurance",
-    "title": "Schedule",
-    "section": "Module 1: Health insurance",
-    "text": "Module 1: Health insurance\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n2\n1/19\nBackground\n\n\n\n\n\n3\n1/22\nDemand for Healthcare and Health Insurance\n\n\n\n\n\n4\n1/24\nEffects of Health Insurance\n\n\n\n\n\n5\n1/26\nResearch proposals (demo)\n\n\n\n\n\n6\n1/29\nNew Research in HI Demand\n\n\n\n\n\n7\n1/31\nAdverse Selection\n\n\n\n\n\n8\n2/2\nResearch proposals\n\n\n\n\n\n9\n2/5\nCompetition in Health Insurance\n\n\n\n\n\n10\n2/7\nNew Research in HI Markets\n\n\n\n\n\n11\n2/9\nResearch proposals"
+    "objectID": "schedule/proposals1.html",
+    "href": "schedule/proposals1.html",
+    "title": "Proposal Demonstration",
+    "section": "",
+    "text": "Today I’ll try to demonstrate a research proposal. Remember that the research proposal should be a new idea that you aren’t sure will actually work, but you have a general sense of what you’d like to do and why. Below is the text for my proposal, with slides available here."
   },
   {
-    "objectID": "schedule/index.html#module-2-healthcare-variation-and-physician-agency",
-    "href": "schedule/index.html#module-2-healthcare-variation-and-physician-agency",
-    "title": "Schedule",
-    "section": "Module 2: Healthcare variation and physician agency",
-    "text": "Module 2: Healthcare variation and physician agency\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n12\n2/12\nBackground\n\n\n\n\n\n13\n2/14\nVariation and Agency\n\n\n\n\n\n14\n2/16\nResearch proposals\n\n\n\n\n\n15\n2/19\nDifferent Mechanisms of Agency\n\n\n\n\n\n16\n2/21\nDifferent Dimensions of Agency\n\n\n\n\n\n17\n2/23\nResearch proposals"
+    "objectID": "schedule/proposals1.html#research-question",
+    "href": "schedule/proposals1.html#research-question",
+    "title": "Proposal Demonstration",
+    "section": "Research question",
+    "text": "Research question\nMy research question is: how does decision assistance affect health care utilization and ultimately health outcomes? More specifically, I want to test whether decision assistance (e.g., availability of spouse/partner, nearby children or other family, close friends) reduces medical errors or otherwise changes the way individuals access health care, and I want to estimate the health effects of any such changes. A related question is if cognitive decline affects health care utilization, and whether decision assistance can mitigate these effects."
   },
   {
-    "objectID": "schedule/index.html#module-3-pricing-and-competition",
-    "href": "schedule/index.html#module-3-pricing-and-competition",
-    "title": "Schedule",
-    "section": "Module 3: Pricing and competition",
-    "text": "Module 3: Pricing and competition\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n18\n2/26\nBackground\n\n\n\n\n\n19\n2/28\nHorizontal Integration\n\n\n\n\n\n20\n3/1\nResearch proposals\n\n\n\n\n\n21\n3/4\nDifferent Forms of Integration\n\n\n\n\n\n22\n3/6\nDifferent Outcomes and Settings\n\n\n\n\n\n23\n3/8\nResearch proposals"
+    "objectID": "schedule/proposals1.html#what-is-the-hook",
+    "href": "schedule/proposals1.html#what-is-the-hook",
+    "title": "Proposal Demonstration",
+    "section": "What is the hook?",
+    "text": "What is the hook?\nIn many settings, individuals rely on expert agents to make decisions on their behalf. This is particularly true in healthcare, where patients often rely on physicians to make decisions about their care. However, alignment between a physician’s treatment decisions and patient preferences may be limited by the physician’s knowledge, biases, or financial incentives. For example, physicians may be more likely to recommend treatments that are more profitable for them or their organization, more likely to recommend treatments for which they are more familiar, or more likely to discount certain symptoms or side-effects based on their biases. All such factors tend to drive a wedge between a patient’s preferences for care and the actual treatment decisions recommended by the physician. This proposal focuses on the role of decision assistance in reducing this wedge (i.e., reducing the role of non-clinical factors such as physician bias, financial incentives, or decision heuristics)."
   },
   {
-    "objectID": "schedule/index.html#module-4-information-disclosure",
-    "href": "schedule/index.html#module-4-information-disclosure",
-    "title": "Schedule",
-    "section": "Module 4: Information disclosure",
-    "text": "Module 4: Information disclosure\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n24\n3/18\nBackground\n\n\n\n\n\n25\n3/20\nDisclosure and Patient Choice\n\n\n\n\n\n26\n3/22\nResearch proposals\n\n\n\n\n\n27\n3/25\nDisclosure and Provider Response\n\n\n\n\n\n28\n3/27\nDisclosure of What and to Whom?\n\n\n\n\n\n29\n3/29\nResearch proposals"
+    "objectID": "schedule/proposals1.html#economic-model",
+    "href": "schedule/proposals1.html#economic-model",
+    "title": "Proposal Demonstration",
+    "section": "Economic model",
+    "text": "Economic model\nAs a starting point, consider the model of physician agency in Cutler et al. (2019). In their model, patient \\(i\\) maximizes their utility over healthcare, \\(V=V(p, Y, h, \\eta)\\), where \\(p\\) denotes healthcare prices, \\(Y\\) denotes income, \\(h\\) denotes health, and \\(\\eta\\) generally captures preferences for care. A simplified example is to consider patient’s utility given by \\(V(x) = B_{D}(x) - px\\), where \\(B_{D}(x)\\) captures the patient’s perceived benefits of care, \\(x\\), and \\(p\\) denotes the patient’s out-of-pocket price. The patient’s optimum amount of care from maximizing this utility is denoted, \\(x^{D}\\).\nPhysician \\(j\\)’s utility when treating patient \\(i\\) is then given by\n\\[\nu_{ij} = \\alpha B_{S}(x_{i}; \\theta_{i}) + \\beta \\pi(x_{i}; \\theta_{i}),\n\\tag{1}\\]\nwhere \\(B_{S}(x_{i}; \\theta_{i})\\) captures the physician’s perceived benefits of care, \\(\\alpha\\) denotes the weight that a physician places on perceived benefits (i.e., physician’s altruism), \\(\\pi(x_{i}; \\theta_{i})\\) denotes the physician’s profit from providing care, and \\(\\beta\\) denotes the weight assigned to profit in the physician’s utility.\nIn Equation 1, \\(\\theta_{i}\\) captures the “accuracy” of a physician’s assessment of the patient’s needs. Denoting the true health benefits of care by \\(B(x)\\), and normalizing \\(\\theta_{i}\\) such that \\(\\theta_{i} \\in [0,1]\\), then \\(B_{S}(x_{i}; \\theta_{i}) \\rightarrow_{\\theta_{i} \\rightarrow 1} B(x_{i})\\). But as reflected in \\(\\pi(x_{i}; \\theta_{i})\\), increasing \\(\\theta_{i}\\) is costly to the physician. For example, this may require the physician to spend more time with the patient, or to consult with other physicians.\nFor the purposes of this proposal, the key is that \\(\\theta_{i}\\) is patient specific, so that it may be easier for a physician to assess the needs of some patients than others. Patients with more support from family or friends may be easier to assess, as such support can relay important information to the physician or advocate more strongly for certain tests, and thus \\(\\theta_{i}\\) may be higher for these patients. In maximizing Equation 1, the physician will select some amount of care, \\(x^{*}(\\theta_{i})\\), which may increase or decrease in \\(\\theta_{i}\\) depending on other elements of the model.\n\nOther frameworks\nThe model above is a starting point, but there are other frameworks that could be used to model the role of decision assistance. For example,\n\nDecision assistance as a productivity shifter: Cutler et al. (2019) consider a similar mechanism in the form of physician productivity shifters, where they denote perceived health benefits by \\(g(x)=\\alpha_{j} + s(x)\\). In their setup, \\(s(x)\\) is the true health benefit of care \\(x\\), and \\(\\alpha_{j}\\) denotes physician productivity, which the authors suggest could vary across patients due to professional uncertainty.\nDecision assistance and learning: Another possible modeling framework could come from the physician learning literature wherein physicians select treatment based on the perceived match value between the patient and the treatment (as in Crawford and Shum (2005)). This match value is a function of the physician’s knowledge of the patient, and the physician’s knowledge of the treatment. In this framework, decision assistance could be modeled as increasing the physician’s knowledge of the patient, and thus increasing the match value between the patient and the treatment and facilitating faster learning."
   },
   {
-    "objectID": "schedule/index.html#module-5-physician-learning-and-technology-adoption",
-    "href": "schedule/index.html#module-5-physician-learning-and-technology-adoption",
-    "title": "Schedule",
-    "section": "Module 5: Physician learning and technology adoption",
-    "text": "Module 5: Physician learning and technology adoption\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n30\n4/1\nBackground\n\n\n\n\n\n31\n4/3\nMyopic Learning\n\n\n\n\n\n32\n4/5\nResearch proposals\n\n\n\n\n\n33\n4/8\nForward-looking Learning\n\n\n\n\n\n34\n4/10\nLearning and Technology Adoption\n\n\n\n\n\n35\n4/12\nResearch proposals"
-  },
-  {
-    "objectID": "schedule/index.html#module-6-waste-and-fraud",
-    "href": "schedule/index.html#module-6-waste-and-fraud",
-    "title": "Schedule",
-    "section": "Module 6: Waste and fraud",
-    "text": "Module 6: Waste and fraud\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n36\n4/15\nBackground\n\n\n\n\n\n37\n4/17\nSources of Waste\n\n\n\n\n\n38\n4/19\nResearch proposals\n\n\n\n\n\n39\n4/22\nFraud and Overuse\n\n\n\n\n\n40\n4/24\nStrategies to Avoid Fraud\n\n\n\n\n\n41\n4/26\nResearch proposals\n\n\n\n\n\n\n\nEmpirical exercises"
-  },
-  {
-    "objectID": "schedule/index.html#final-research-plans",
-    "href": "schedule/index.html#final-research-plans",
-    "title": "Schedule",
-    "section": "Final Research Plans",
-    "text": "Final Research Plans\n\n\n\n\n\n\n\n\n\n\n\nClass\nDates\nTopic\nDetails\nSlides\nAssignment\n\n\n\n\n42\n4/29\nResearch plans"
+    "objectID": "schedule/proposals1.html#empirical-strategy",
+    "href": "schedule/proposals1.html#empirical-strategy",
+    "title": "Proposal Demonstration",
+    "section": "Empirical strategy",
+    "text": "Empirical strategy\nIdentifying the effect of decision assistance on healthcare utilization requires some exogenous shift in availability of decision assistance. Possible sources of such variation include the sudden loss or gain of a spouse or partner, loss or gain of nearby children or other family. I propose the Health and Retirement Study (HRS), linked to Medicare claims data, to identify such variation and its effects on health outcomes and utilization. The HRS is a longitudinal survey of individuals over the age of 50, and includes detailed information on health, healthcare utilization, and decision assistance.\nSimilar to the patient movers literature initiated by Finkelstein, Gentzkow, and Williams (2016), I propose to use the HRS to identify individuals who experience a sudden change in decision assistance due to the unexpected death of a spouse or partner, the move of close family (e.g., children moving away from or closer to parents), or an individual’s own move toward or away from family. I will then use Medicare claims data to identify changes in healthcare utilization and health outcomes following these changes in decision assistance."
   },
   {
     "objectID": "slides/class2.html#how-does-health-insurance-work",
@@ -637,6 +973,13 @@
     "text": "Adverse selection\n\nIn practice, people know more about their health than insurers. This is a form of asymmetric information.\nAdverse selection is one of the core issues in health insurance markets\n\n\nHere’s a good example, Costs during special enrollment periods."
   },
   {
+    "objectID": "slides/class2.html#toy-example",
+    "href": "slides/class2.html#toy-example",
+    "title": "Health Insurance and Healthcare Markets",
+    "section": "Toy example",
+    "text": "Toy example"
+  },
+  {
     "objectID": "slides/class2.html#managed-competition",
     "href": "slides/class2.html#managed-competition",
     "title": "Health Insurance and Healthcare Markets",
@@ -651,249 +994,11 @@
     "text": "Over the next six classes\n\nHealth insurance choice and effects on healthcare utilization\nFinancial, health, and general welfare effects of health insurance\nRecent work on health insurance design (cost-sharing, networks, etc.) and role of health insurance on technology adoption\nAdverse selection\nFacilitating managed competition\nStrategies to expand health insurance coverage and improve health insurance markets"
   },
   {
-    "objectID": "schedule/proposals1.html",
-    "href": "schedule/proposals1.html",
-    "title": "Proposal Demonstration",
-    "section": "",
-    "text": "Today I’ll try to demonstrate a research proposal. Remember that the research proposal should be a new idea that you aren’t sure will actually work, but you have a general sense of what you’d like to do and why. Below is the text for my proposal, with slides available here."
-  },
-  {
-    "objectID": "schedule/proposals1.html#research-question",
-    "href": "schedule/proposals1.html#research-question",
-    "title": "Proposal Demonstration",
-    "section": "Research question",
-    "text": "Research question\nMy research question is: how does decision assistance affect health care utilization and ultimately health outcomes? More specifically, I want to test whether decision assistance (e.g., availability of spouse/partner, nearby children or other family, close friends) reduces medical errors or otherwise changes the way individuals access health care, and I want to estimate the health effects of any such changes. A related question is if cognitive decline affects health care utilization, and whether decision assistance can mitigate these effects."
-  },
-  {
-    "objectID": "schedule/proposals1.html#what-is-the-hook",
-    "href": "schedule/proposals1.html#what-is-the-hook",
-    "title": "Proposal Demonstration",
-    "section": "What is the hook?",
-    "text": "What is the hook?\nIn many settings, individuals rely on expert agents to make decisions on their behalf. This is particularly true in healthcare, where patients often rely on physicians to make decisions about their care. However, alignment between a physician’s treatment decisions and patient preferences may be limited by the physician’s knowledge, biases, or financial incentives. For example, physicians may be more likely to recommend treatments that are more profitable for them or their organization, more likely to recommend treatments for which they are more familiar, or more likely to discount certain symptoms or side-effects based on their biases. All such factors tend to drive a wedge between a patient’s preferences for care and the actual treatment decisions recommended by the physician. This proposal focuses on the role of decision assistance in reducing this wedge (i.e., reducing the role of non-clinical factors such as physician bias, financial incentives, or decision heuristics)."
-  },
-  {
-    "objectID": "schedule/proposals1.html#economic-model",
-    "href": "schedule/proposals1.html#economic-model",
-    "title": "Proposal Demonstration",
-    "section": "Economic model",
-    "text": "Economic model\nAs a starting point, consider the model of physician agency in Cutler et al. (2019). In their model, patient \\(i\\) maximizes their utility over healthcare, \\(V=V(p, Y, h, \\eta)\\), where \\(p\\) denotes healthcare prices, \\(Y\\) denotes income, \\(h\\) denotes health, and \\(\\eta\\) generally captures preferences for care. A simplified example is to consider patient’s utility given by \\(V(x) = B_{D}(x) - px\\), where \\(B_{D}(x)\\) captures the patient’s perceived benefits of care, \\(x\\), and \\(p\\) denotes the patient’s out-of-pocket price. The patient’s optimum amount of care from maximizing this utility is denoted, \\(x^{D}\\).\nPhysician \\(j\\)’s utility when treating patient \\(i\\) is then given by\n\\[\nu_{ij} = \\alpha B_{S}(x_{i}; \\theta_{i}) + \\beta \\pi(x_{i}; \\theta_{i}),\n\\tag{1}\\]\nwhere \\(B_{S}(x_{i}; \\theta_{i})\\) captures the physician’s perceived benefits of care, \\(\\alpha\\) denotes the weight that a physician places on perceived benefits (i.e., physician’s altruism), \\(\\pi(x_{i}; \\theta_{i})\\) denotes the physician’s profit from providing care, and \\(\\beta\\) denotes the weight assigned to profit in the physician’s utility.\nIn Equation 1, \\(\\theta_{i}\\) captures the “accuracy” of a physician’s assessment of the patient’s needs. Denoting the true health benefits of care by \\(B(x)\\), and normalizing \\(\\theta_{i}\\) such that \\(\\theta_{i} \\in [0,1]\\), then \\(B_{S}(x_{i}; \\theta_{i}) \\rightarrow_{\\theta_{i} \\rightarrow 1} B(x_{i})\\). But as reflected in \\(\\pi(x_{i}; \\theta_{i})\\), increasing \\(\\theta_{i}\\) is costly to the physician. For example, this may require the physician to spend more time with the patient, or to consult with other physicians.\nFor the purposes of this proposal, the key is that \\(\\theta_{i}\\) is patient specific, so that it may be easier for a physician to assess the needs of some patients than others. Patients with more support from family or friends may be easier to assess, as such support can relay important information to the physician or advocate more strongly for certain tests, and thus \\(\\theta_{i}\\) may be higher for these patients. In maximizing Equation 1, the physician will select some amount of care, \\(x^{*}(\\theta_{i})\\), which may increase or decrease in \\(\\theta_{i}\\) depending on other elements of the model.\n\nOther frameworks\nThe model above is a starting point, but there are other frameworks that could be used to model the role of decision assistance. For example,\n\nDecision assistance as a productivity shifter: Cutler et al. (2019) consider a similar mechanism in the form of physician productivity shifters, where they denote perceived health benefits by \\(g(x)=\\alpha_{j} + s(x)\\). In their setup, \\(s(x)\\) is the true health benefit of care \\(x\\), and \\(\\alpha_{j}\\) denotes physician productivity, which the authors suggest could vary across patients due to professional uncertainty.\nDecision assistance and learning: Another possible modeling framework could come from the physician learning literature wherein physicians select treatment based on the perceived match value between the patient and the treatment (as in Crawford and Shum (2005)). This match value is a function of the physician’s knowledge of the patient, and the physician’s knowledge of the treatment. In this framework, decision assistance could be modeled as increasing the physician’s knowledge of the patient, and thus increasing the match value between the patient and the treatment and facilitating faster learning."
-  },
-  {
-    "objectID": "schedule/proposals1.html#empirical-strategy",
-    "href": "schedule/proposals1.html#empirical-strategy",
-    "title": "Proposal Demonstration",
-    "section": "Empirical strategy",
-    "text": "Empirical strategy\nIdentifying the effect of decision assistance on healthcare utilization requires some exogenous shift in availability of decision assistance. Possible sources of such variation include the sudden loss or gain of a spouse or partner, loss or gain of nearby children or other family. I propose the Health and Retirement Study (HRS), linked to Medicare claims data, to identify such variation and its effects on health outcomes and utilization. The HRS is a longitudinal survey of individuals over the age of 50, and includes detailed information on health, healthcare utilization, and decision assistance.\nSimilar to the patient movers literature initiated by Finkelstein, Gentzkow, and Williams (2016), I propose to use the HRS to identify individuals who experience a sudden change in decision assistance due to the unexpected death of a spouse or partner, the move of close family (e.g., children moving away from or closer to parents), or an individual’s own move toward or away from family. I will then use Medicare claims data to identify changes in healthcare utilization and health outcomes following these changes in decision assistance."
-  },
-  {
-    "objectID": "slides/proposal-demo.html",
-    "href": "slides/proposal-demo.html",
-    "title": "Decision Assistance and Healthcare Utilization",
-    "section": "",
-    "text": "I want to test whether decision assistance (e.g., availability of spouse/partner, nearby children or other family, close friends) reduces medical errors or otherwise changes the way individuals access health care, and I want to estimate the health effects of any such changes\n\nHow does decision assistance affect health care utilization and ultimately health outcomes?"
-  },
-  {
-    "objectID": "slides/proposal-demo.html#research-question",
-    "href": "slides/proposal-demo.html#research-question",
-    "title": "Decision Assistance and Healthcare Utilization",
-    "section": "",
-    "text": "I want to test whether decision assistance (e.g., availability of spouse/partner, nearby children or other family, close friends) reduces medical errors or otherwise changes the way individuals access health care, and I want to estimate the health effects of any such changes\n\nHow does decision assistance affect health care utilization and ultimately health outcomes?"
-  },
-  {
-    "objectID": "slides/proposal-demo.html#the-hook",
-    "href": "slides/proposal-demo.html#the-hook",
-    "title": "Decision Assistance and Healthcare Utilization",
-    "section": "The Hook",
-    "text": "The Hook\n\nCommon reliance on expert agents to make decisions on their behalf, particularly in healthcare\nAlignment between a physician’s treatment decisions and patient preferences may be limited by:\n\nphysician’s knowledge\nbiases\nfinancial incentives\norganizational factors (peer effects, institutional forces of hospital, etc.)\n\n\n\nPhysicians more likely to recommend treatments based on:\n\nprofitability for them or their organization\nfamiliarity from past experience\nbiases that discount certain symptoms for certain types of patients\n\n\nAll such factors tend to drive a wedge between a patient’s preferences for care and the actual treatment decisions recommended by the physician. This proposal focuses on the role of decision assistance in reducing this wedge (i.e., reducing the role of non-clinical factors such as physician bias, financial incentives, or decision heuristics)."
-  },
-  {
-    "objectID": "slides/proposal-demo.html#economic-model",
-    "href": "slides/proposal-demo.html#economic-model",
-    "title": "Decision Assistance and Healthcare Utilization",
-    "section": "Economic model",
-    "text": "Economic model\nConsider the model of physician agency in Cutler et al. (2019):\n\nPatient \\(i\\) maximizes their utility over healthcare, \\(V=V(p, Y, h, \\eta)\\), where \\(p\\) denotes healthcare prices, \\(Y\\) denotes income, \\(h\\) denotes health, and \\(\\eta\\) generally captures preferences for care\nSimple example: patient’s utility given by \\(V(x) = B_{D}(x) - px\\), where \\(B_{D}(x)\\) captures the patient’s perceived benefits of care, \\(x\\), and \\(p\\) denotes the patient’s out-of-pocket price.\nMaximization yields the patient’s optimum amount of care, \\(x^{D}\\).\n\n\nPhysician \\(j\\)’s utility when treating patient \\(i\\) is then given by\n\\[\nu_{ij} = \\alpha B_{S}(x_{i}; \\theta_{i}) + \\beta \\pi(x_{i}; \\theta_{i}),\n\\]\nwhere \\(B_{S}(x_{i}; \\theta_{i})\\) captures the physician’s perceived benefits of care, \\(\\alpha\\) denotes the weight that a physician places on perceived benefits (i.e., physician’s altruism), \\(\\pi(x_{i}; \\theta_{i})\\) denotes the physician’s profit from providing care, and \\(\\beta\\) denotes the weight assigned to profit in the physician’s utility.\n\n\\[\nu_{ij} = \\alpha B_{S}(x_{i}; \\theta_{i}) + \\beta \\pi(x_{i}; \\theta_{i}),\n\\]\n\n\\(\\theta_{i}\\) captures the “accuracy” of a physician’s assessment of the patient’s needs\nIncreasing \\(\\theta_{i}\\) improves the health benefit of treatment but may also come at some cost (e.g., more time with patient, consult with other physicians)\n\n\n\nPhysician selects some amount of care, \\(x^{*}(\\theta_{i})\\), which may increase or decrease in \\(\\theta_{i}\\) depending on other elements of the model\n\\(\\theta_{i}\\) is patient specific, so that it may be easier for a physician to assess the needs of some patients than others\nPatients with more support from family or friends may be easier to assess, as such support can relay important information to the physician or advocate more strongly for certain tests, and thus \\(\\theta_{i}\\) may be higher for these patients"
-  },
-  {
-    "objectID": "slides/proposal-demo.html#other-possible-frameworks",
-    "href": "slides/proposal-demo.html#other-possible-frameworks",
-    "title": "Decision Assistance and Healthcare Utilization",
-    "section": "Other possible frameworks",
-    "text": "Other possible frameworks\n\nDecision assistance as a productivity shifter: Cutler et al. (2019) considers variation with perceived health benefits by \\(g(x)=\\alpha_{j} + s(x)\\), where \\(s(x)\\) is the true health benefit of care \\(x\\), and \\(\\alpha_{j}\\) denotes physician productivity, which the authors suggest could vary across patients due to professional uncertainty.\nDecision assistance and learning: Along the lines of Crawford and Shum (2005), the match value between treament and patient can be thought of as a function of the physician’s knowledge of the patient, and the physician’s knowledge of the treatment. Decision assistance may increase physician’s knowledge of the patient, and thus increase the match value, facilitating faster learning"
-  },
-  {
-    "objectID": "slides/proposal-demo.html#empirical-strategy",
-    "href": "slides/proposal-demo.html#empirical-strategy",
-    "title": "Decision Assistance and Healthcare Utilization",
-    "section": "Empirical strategy",
-    "text": "Empirical strategy\n\nNeed plausibly exogenous change in decision assistance, along with measures of healthcare utilization and health outcomes\nSources of variation:\n\nloss or gain of a spouse or partner\nloss or gain of nearby children or other family"
-  },
-  {
-    "objectID": "slides/proposal-demo.html#references",
-    "href": "slides/proposal-demo.html#references",
-    "title": "Decision Assistance and Healthcare Utilization",
-    "section": "References",
-    "text": "References\n\n\n\n\n\n\nCrawford, Gregory S, and Matthew Shum. 2005. “Uncertainty and Learning in Pharmaceutical Demand.” Econometrica 73 (4): 1137–73.\n\n\nCutler, David, Jonathan S. Skinner, Ariel Dora Stern, and David Wennberg. 2019. “Physician Beliefs and Patient Preferences: A New Look at Regional Variation in Health Care Spending.” American Economic Journal: Economic Policy 11 (1): 192–221. https://doi.org/10.1257/pol.20150421.\n\n\nFinkelstein, Amy, Matthew Gentzkow, and Heidi Williams. 2016. “Sources of Geographic Variation in Health Care: Evidence From Patient Migration.” The Quarterly Journal of Economics 131 (4): 1681–1726. https://ideas.repec.org//a/oup/qjecon/v131y2016i4p1681-1726..html."
-  },
-  {
-    "objectID": "slides/proposal-demo.html#data",
-    "href": "slides/proposal-demo.html#data",
-    "title": "Decision Assistance and Healthcare Utilization",
-    "section": "Data",
-    "text": "Data\nI propose the Health and Retirement Study (HRS), linked to Medicare claims data, to identify such variation and its effects on health outcomes and utilization.\n\nHRS is a longitudinal survey of individuals over the age of 50, and includes detailed information on health, healthcare utilization, and decision assistance\nFollowing patient movers literature initiated by Finkelstein, Gentzkow, and Williams (2016), identify individuals with\n\nunexpected death of a spouse or partner;\nthe move of close family (e.g., children moving away from or closer to parents); or\nan individual’s own move toward or away from family\n\nUse linked Medicare claims data to identify changes in healthcare utilization and health outcomes following these changes in decision assistance"
-  },
-  {
-    "objectID": "slides/class2.html#toy-example",
-    "href": "slides/class2.html#toy-example",
-    "title": "Health Insurance and Healthcare Markets",
-    "section": "Toy example",
-    "text": "Toy example"
-  },
-  {
     "objectID": "slides/class2.html#references",
     "href": "slides/class2.html#references",
     "title": "Health Insurance and Healthcare Markets",
     "section": "References",
     "text": "References\n\n\n\n\n\n\nAron-Dine, Aviva, Liran Einav, and Amy Finkelstein. 2013. “The RAND Health Insurance Experiment, Three Decades Later.” Journal of Economic Perspectives 27 (1): 197–222.\n\n\nFinkelstein, Amy, Sarah Taubman, Bill Wright, Mira Bernstein, Jonathan Gruber, Joseph P Newhouse, Heidi Allen, Katherine Baicker, et al. 2012. “The Oregon Health Insurance Experiment: Evidence from the First Year.” Quarterly Journal of Economics 127 (3): 1057–1106.\n\n\nGoldin, Jacob, Ithai Z Lurie, and Janet McCubbin. 2021. “Health Insurance and Mortality: Experimental Evidence from Taxpayer Outreach.” The Quarterly Journal of Economics 136 (1): 1–49. https://doi.org/10.1093/qje/qjaa029.\n\n\nGross, Tal, and Matthew J. Notowidigdo. 2011. “Health Insurance and the Consumer Bankruptcy Decision: Evidence from Expansions of Medicaid.” Journal of Public Economics 95 (7): 767–78. https://doi.org/10.1016/j.jpubeco.2011.01.012.\n\n\nHu, Luojia, Robert Kaestner, Bhashkar Mazumder, Sarah Miller, and Ashley Wong. 2018. “The Effect of the Affordable Care Act Medicaid Expansions on Financial Wellbeing.” Journal of Public Economics 163 (July): 99–112. https://doi.org/10.1016/j.jpubeco.2018.04.009.\n\n\nMiller, Sarah, Norman Johnson, and Laura R Wherry. 2021. “Medicaid and Mortality: New Evidence From Linked Survey and Administrative Data.” The Quarterly Journal of Economics 136 (3): 1783–1829. https://doi.org/10.1093/qje/qjab004."
-  },
-  {
-    "objectID": "slides/class3-1.html#overview",
-    "href": "slides/class3-1.html#overview",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Overview",
-    "text": "Overview\n\nOne of the central health economics questions: what does health insurance do?\nEarly literature focused on effects of health insurance on healthcare utilization (ex post moral hazard)\nAnother way to phrase the question: How much should people have to pay for healthcare?\nTo answer this, we need to know the effects of different forms of insurance on healthcare utilization"
-  },
-  {
-    "objectID": "slides/class3-1.html#setup",
-    "href": "slides/class3-1.html#setup",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Setup",
-    "text": "Setup\n\nPartnership with RAND corporation and team of health economists in 1970s\nKey question: If people pay more for healthcare, will they use less?\nRandomized 2,000 households into groups:\n\nfree-care plan\nhigh-deductible (up to $5,500 in 2023 dollars) with full-insurance afterward (really an out-of-pocket maximum)\ndifferent co-insurance rates in between (95, 50, 25, mixed)"
-  },
-  {
-    "objectID": "slides/class3-1.html#setup-1",
-    "href": "slides/class3-1.html#setup-1",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Setup",
-    "text": "Setup\n\nExperiment ran from 1974-1981, cost of $410 million (in 2023 dollars)\nRAND was insurer, collected all data on healthcare used\nPhysical exam at the end of the experiment\nAll data available now for researchers"
-  },
-  {
-    "objectID": "slides/class3-1.html#analysis",
-    "href": "slides/class3-1.html#analysis",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Analysis",
-    "text": "Analysis\n\\[y_{it} = \\lambda_{p} + \\tau_{t} + \\alpha_{lm} + \\varepsilon_{it}\\]\n\n\\(i\\) denotes individual and \\(t\\) denotes year\n\\(\\lambda_{p}\\): plan fixed effects (main coefficients of interest)\n\\(\\tau_{t}\\): year fixed effects\n\\(\\alpha_{lm}\\): location, start-month fixed effects (randomization was by start month)"
-  },
-  {
-    "objectID": "slides/class3-1.html#results-how-much-healthcare",
-    "href": "slides/class3-1.html#results-how-much-healthcare",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Results: How Much Healthcare?",
-    "text": "Results: How Much Healthcare?\n\nFree care plan families used $2,000 (in 2021 dollars) in care\nHigh-deductible plan families used $1,600 in care\n20% increase in healthcare utilization for free care plan\nCommonly cited -0.2 price elasticity of demand for healthcare"
-  },
-  {
-    "objectID": "slides/class3-1.html#results-what-type-of-healthcare",
-    "href": "slides/class3-1.html#results-what-type-of-healthcare",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Results: What Type of Healthcare?",
-    "text": "Results: What Type of Healthcare?\n\nProvided medical documentation to panel of physicians\nAssiged care as highly effective versus rarely effective\nHigh-deductible plan families:\n\n30% less highly effective care\n30% less rarely effective care\n\nConclusion: higher prices lead to less care across the board"
-  },
-  {
-    "objectID": "slides/class3-1.html#results-health-outcomes",
-    "href": "slides/class3-1.html#results-health-outcomes",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Results: Health Outcomes",
-    "text": "Results: Health Outcomes\n\nNo significant differences in health outcomes on average\nPatients with chronic conditions were worse off in high-deductible plan"
-  },
-  {
-    "objectID": "slides/class3-1.html#threats-to-validity",
-    "href": "slides/class3-1.html#threats-to-validity",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Threats to validity",
-    "text": "Threats to validity\n\nValid randomization (not really an issue)\nAdverse selection in participation (could be a problem)\nReporting of claims (some minor concern)"
-  },
-  {
-    "objectID": "slides/class3-1.html#results-with-adjustments",
-    "href": "slides/class3-1.html#results-with-adjustments",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Results with adjustments",
-    "text": "Results with adjustments\n\nAron-Dine, Einav, and Finkelstein (2013)"
-  },
-  {
-    "objectID": "slides/class3-1.html#elasticity-estimates",
-    "href": "slides/class3-1.html#elasticity-estimates",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Elasticity estimates",
-    "text": "Elasticity estimates\nCommonly cited -0.2 price elasticity of demand for healthcare comes from:\n\nStep 1: intensive vs extensive\n\nGroup care into defined “episodes”\nFind no relationship between price and utilization within episode\nFocus on extensive margin (presence of an episode)"
-  },
-  {
-    "objectID": "slides/class3-1.html#elasticity-estimates-1",
-    "href": "slides/class3-1.html#elasticity-estimates-1",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Elasticity estimates",
-    "text": "Elasticity estimates\nCommonly cited -0.2 price elasticity of demand for healthcare comes from:\n\nStep 2: spot vs future price\n\nCompare episode rates among those close to hitting OOP max versus those already over\nNo difference in episode rates\nConclude that spot price matters"
-  },
-  {
-    "objectID": "slides/class3-1.html#elasticity-estimates-2",
-    "href": "slides/class3-1.html#elasticity-estimates-2",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Elasticity estimates",
-    "text": "Elasticity estimates\nCommonly cited -0.2 price elasticity of demand for healthcare comes from:\n\nStep 3: calculating elasticity\n\nLimit sample to part of year where people are far from OOP max (around $500)\nCalculate arc elasticities for each care setting and for different plan types\nMany estimates ‘around’ -0.2"
-  },
-  {
-    "objectID": "slides/class3-1.html#problems-with-elasticity-applications",
-    "href": "slides/class3-1.html#problems-with-elasticity-applications",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Problems with elasticity applications",
-    "text": "Problems with elasticity applications\nHow should we predict the response to price changes in a nonlinear pricing environment when we only have a single price elasticity estimate?"
-  },
-  {
-    "objectID": "slides/class3-1.html#problems-with-elasticity-applications-1",
-    "href": "slides/class3-1.html#problems-with-elasticity-applications-1",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Problems with elasticity applications",
-    "text": "Problems with elasticity applications\n\nAron-Dine, Einav, and Finkelstein (2013)"
-  },
-  {
-    "objectID": "slides/class3-1.html#key-takeaways",
-    "href": "slides/class3-1.html#key-takeaways",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Key takeaways",
-    "text": "Key takeaways\n\nConfident that price matters in healthcare (i.e., people respond to higher prices by reducing healthcare)\nLess confident in the magnitude of the response\nDifficult to apply single elasticity estimates to nonlinear pricing contracts"
-  },
-  {
-    "objectID": "slides/class3-1.html#setup-2",
-    "href": "slides/class3-1.html#setup-2",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Setup",
-    "text": "Setup\n\nOregon expanded Medicaid in 2008\n90,000 people applied for 10,000 slots\nRandomized lottery for slots\nNearly 36,000 selected for lottery, 30% enrolled"
-  },
-  {
-    "objectID": "slides/class3-1.html#analysis-1",
-    "href": "slides/class3-1.html#analysis-1",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Analysis",
-    "text": "Analysis\n\nCompare outcomes of those with insurance to those without\nUse lottery selection as an instrument for insurance coverage"
-  },
-  {
-    "objectID": "slides/class3-1.html#analysis-2",
-    "href": "slides/class3-1.html#analysis-2",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Analysis",
-    "text": "Analysis\n\\[\\begin{align}\ny_{ihj} &= \\pi_{0} + \\pi_{1}Ins_{ih} + \\pi_{2}x_{ih} + \\pi_{c}V_{ih} + \\nu_{ihj} \\\\\nIns_{ih} &= \\delta_{0} + \\delta_{1}Lottery_{h} + \\delta_{2}x_{ih} + \\delta_{3}V_{ih} + \\mu_{ihj}\n\\end{align}\\]\n\nindividual \\(i\\) in household \\(h\\) for outcome \\(j\\)\n\\(x_{ih}\\) are covariates that are correlated with lottery sign up\n\\(V_{ih}\\) are other covariates thought to be correlated with outcomes (for increases in precision)"
-  },
-  {
-    "objectID": "slides/class3-1.html#main-results",
-    "href": "slides/class3-1.html#main-results",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "Main results",
-    "text": "Main results\n\n2.1 percentage point (30%) increase in the probability hospital admission\n8.8 percentage point (15%) increase in the probability of taking any prescription drugs\n21 percentage point (35%) increase in the probability of having an outpatient visit\nNo change (but wide confidence intervals) in ED visits\n0.3 standard deviation increase in reported compliance with recommended preventive care (e.g., mammograms and cholesterol monitoring)\n6.4 percentage point (25%) decline in the probability of having an unpaid medical bill sent to a collections agency\n20 percentage point (35%) decline in having any out-of-pocket medical expenditures\nimprovements in self-reported physical and mental health, overall well-being, access to, and quality of are"
-  },
-  {
-    "objectID": "slides/class3-1.html#references",
-    "href": "slides/class3-1.html#references",
-    "title": "Demand for Healthcare and Health Insurance",
-    "section": "References",
-    "text": "References\n\n\n\n\n\n\nAron-Dine, Aviva, Liran Einav, and Amy Finkelstein. 2013. “The RAND Health Insurance Experiment, Three Decades Later.” Journal of Economic Perspectives 27 (1): 197–222.\n\n\nFinkelstein, Amy, Sarah Taubman, Bill Wright, Mira Bernstein, Jonathan Gruber, Joseph P Newhouse, Heidi Allen, Katherine Baicker, et al. 2012. “The Oregon Health Insurance Experiment: Evidence from the First Year.” Quarterly Journal of Economics 127 (3): 1057–1106."
   },
   {
     "objectID": "slides/class3-2.html#overview",
@@ -905,6 +1010,13 @@
   {
     "objectID": "slides/class3-2.html#background-and-motivation",
     "href": "slides/class3-2.html#background-and-motivation",
+    "title": "Complexities of Health Insurance Choice",
+    "section": "Background and Motivation",
+    "text": "Background and Motivation"
+  },
+  {
+    "objectID": "slides/class3-2.html#background-and-motivation-1",
+    "href": "slides/class3-2.html#background-and-motivation-1",
     "title": "Complexities of Health Insurance Choice",
     "section": "Background and Motivation",
     "text": "Background and Motivation"
@@ -1036,24 +1148,52 @@
     "text": "References\n\n\n\n\n\n\nAbaluck, Jason, and Jonathan Gruber. 2011. “Choice Inconsistencies Among the Elderly: Evidence from Plan Choice in the Medicare Part D Program.” American Economic Review 101 (4): 1180–210. https://doi.org/10.1257/aer.101.4.1180.\n\n\n———. 2016. “Choice Inconsistencies Among the Elderly: Evidence from Plan Choice in the Medicare Part D Program: Reply.” American Economic Review 106 (12): 3962–87. https://doi.org/10.1257/aer.20151318.\n\n\nKetcham, Jonathan D., Nicolai V. Kuminoff, and Christopher A. Powers. 2016. “Choice Inconsistencies Among the Elderly: Evidence from Plan Choice in the Medicare Part D Program: Comment.” American Economic Review 106 (12): 3932–61. https://doi.org/10.1257/aer.20131048.\n\n\nKetcham, Jonathan D, Claudio Lucarelli, Eugenio J Miravete, and M Christopher Roebuck. 2012. “Sinking, Swimming, or Learning to Swim in Medicare Part D.” American Economic Review 102 (6): 2639–73."
   },
   {
-    "objectID": "slides/class3-2.html#background-and-motivation-1",
-    "href": "slides/class3-2.html#background-and-motivation-1",
-    "title": "Complexities of Health Insurance Choice",
-    "section": "Background and Motivation",
-    "text": "Background and Motivation"
+    "objectID": "slides/proposal-demo.html#research-question",
+    "href": "slides/proposal-demo.html#research-question",
+    "title": "Decision Assistance and Healthcare Utilization",
+    "section": "Research question",
+    "text": "Research question\nI want to test whether decision assistance (e.g., availability of spouse/partner, nearby children or other family, close friends) reduces medical errors or otherwise changes the way individuals access health care, and I want to estimate the health effects of any such changes\n\nHow does decision assistance affect health care utilization and ultimately health outcomes?"
   },
   {
-    "objectID": "schedule/class3.html",
-    "href": "schedule/class3.html",
-    "title": "Health Insurance and Healthcare Demand",
-    "section": "",
-    "text": "Slides for today, separately by subtopic, are available below:\n\nDemand for Healthcare and Health Insurance\nComplexities of Health Insurance Choice\nImproving Health Insurance Choice"
+    "objectID": "slides/proposal-demo.html#the-hook",
+    "href": "slides/proposal-demo.html#the-hook",
+    "title": "Decision Assistance and Healthcare Utilization",
+    "section": "The Hook",
+    "text": "The Hook\n\nCommon reliance on expert agents to make decisions on their behalf, particularly in healthcare\nAlignment between a physician’s treatment decisions and patient preferences may be limited by:\n\nphysician’s knowledge\nbiases\nfinancial incentives\norganizational factors (peer effects, institutional forces of hospital, etc.)"
   },
   {
-    "objectID": "schedule/class4.html",
-    "href": "schedule/class4.html",
-    "title": "Effects of Health Insurance",
-    "section": "",
-    "text": "Slides for today, separately by subtopic, are available below:\n\nFinancial Effects of Health Insurance\nHealth Effects of Health Insurance\nOverall Welfare Effects of Health Insurance. No slides for this today so that we can spend more time on the other two topics."
+    "objectID": "slides/proposal-demo.html#economic-model",
+    "href": "slides/proposal-demo.html#economic-model",
+    "title": "Decision Assistance and Healthcare Utilization",
+    "section": "Economic model",
+    "text": "Economic model\nConsider the model of physician agency in Cutler et al. (2019):\n\nPatient \\(i\\) maximizes their utility over healthcare, \\(V=V(p, Y, h, \\eta)\\), where \\(p\\) denotes healthcare prices, \\(Y\\) denotes income, \\(h\\) denotes health, and \\(\\eta\\) generally captures preferences for care\nSimple example: patient’s utility given by \\(V(x) = B_{D}(x) - px\\), where \\(B_{D}(x)\\) captures the patient’s perceived benefits of care, \\(x\\), and \\(p\\) denotes the patient’s out-of-pocket price.\nMaximization yields the patient’s optimum amount of care, \\(x^{D}\\)."
+  },
+  {
+    "objectID": "slides/proposal-demo.html#other-possible-frameworks",
+    "href": "slides/proposal-demo.html#other-possible-frameworks",
+    "title": "Decision Assistance and Healthcare Utilization",
+    "section": "Other possible frameworks",
+    "text": "Other possible frameworks\n\nDecision assistance as a productivity shifter: Cutler et al. (2019) considers variation with perceived health benefits by \\(g(x)=\\alpha_{j} + s(x)\\), where \\(s(x)\\) is the true health benefit of care \\(x\\), and \\(\\alpha_{j}\\) denotes physician productivity, which the authors suggest could vary across patients due to professional uncertainty.\nDecision assistance and learning: Along the lines of Crawford and Shum (2005), the match value between treament and patient can be thought of as a function of the physician’s knowledge of the patient, and the physician’s knowledge of the treatment. Decision assistance may increase physician’s knowledge of the patient, and thus increase the match value, facilitating faster learning"
+  },
+  {
+    "objectID": "slides/proposal-demo.html#empirical-strategy",
+    "href": "slides/proposal-demo.html#empirical-strategy",
+    "title": "Decision Assistance and Healthcare Utilization",
+    "section": "Empirical strategy",
+    "text": "Empirical strategy\n\nNeed plausibly exogenous change in decision assistance, along with measures of healthcare utilization and health outcomes\nSources of variation:\n\nloss or gain of a spouse or partner\nloss or gain of nearby children or other family"
+  },
+  {
+    "objectID": "slides/proposal-demo.html#data",
+    "href": "slides/proposal-demo.html#data",
+    "title": "Decision Assistance and Healthcare Utilization",
+    "section": "Data",
+    "text": "Data\nI propose the Health and Retirement Study (HRS), linked to Medicare claims data, to identify such variation and its effects on health outcomes and utilization.\n\nHRS is a longitudinal survey of individuals over the age of 50, and includes detailed information on health, healthcare utilization, and decision assistance\nFollowing patient movers literature initiated by Finkelstein, Gentzkow, and Williams (2016), identify individuals with\n\nunexpected death of a spouse or partner;\nthe move of close family (e.g., children moving away from or closer to parents); or\nan individual’s own move toward or away from family\n\nUse linked Medicare claims data to identify changes in healthcare utilization and health outcomes following these changes in decision assistance"
+  },
+  {
+    "objectID": "slides/proposal-demo.html#references",
+    "href": "slides/proposal-demo.html#references",
+    "title": "Decision Assistance and Healthcare Utilization",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nCrawford, Gregory S, and Matthew Shum. 2005. “Uncertainty and Learning in Pharmaceutical Demand.” Econometrica 73 (4): 1137–73.\n\n\nCutler, David, Jonathan S. Skinner, Ariel Dora Stern, and David Wennberg. 2019. “Physician Beliefs and Patient Preferences: A New Look at Regional Variation in Health Care Spending.” American Economic Journal: Economic Policy 11 (1): 192–221. https://doi.org/10.1257/pol.20150421.\n\n\nFinkelstein, Amy, Matthew Gentzkow, and Heidi Williams. 2016. “Sources of Geographic Variation in Health Care: Evidence From Patient Migration.” The Quarterly Journal of Economics 131 (4): 1681–1726. https://ideas.repec.org//a/oup/qjecon/v131y2016i4p1681-1726..html."
   }
 ]
