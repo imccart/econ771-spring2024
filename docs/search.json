@@ -51,9 +51,9 @@
   {
     "objectID": "slides/class6-1.html#overview",
     "href": "slides/class6-1.html#overview",
-    "title": "Demand for Healthcare and Health Insurance",
+    "title": "Health Insurance Design and Consumer Behavior",
     "section": "Overview",
-    "text": "Overview\n\nOne of the central health economics questions: what does health insurance do?\nEarly literature focused on effects of health insurance on healthcare utilization (ex post moral hazard)\nAnother way to phrase the question: How much should people have to pay for healthcare?\nTo answer this, we need to know the effects of different forms of insurance on healthcare utilization"
+    "text": "Overview\nSo far, we’ve established that health insurance:\n\nimproves financial stability and reduces financial risks of medical spending\nimproves health, particularly for those with chronic conditions"
   },
   {
     "objectID": "slides/class6-1.html#setup",
@@ -184,9 +184,9 @@
   {
     "objectID": "slides/class6-1.html#references",
     "href": "slides/class6-1.html#references",
-    "title": "Demand for Healthcare and Health Insurance",
+    "title": "Health Insurance Design and Consumer Behavior",
     "section": "References",
-    "text": "References\n\n\n\n\n\n\nAron-Dine, Aviva, Liran Einav, and Amy Finkelstein. 2013. “The RAND Health Insurance Experiment, Three Decades Later.” Journal of Economic Perspectives 27 (1): 197–222.\n\n\nFinkelstein, Amy, Sarah Taubman, Bill Wright, Mira Bernstein, Jonathan Gruber, Joseph P Newhouse, Heidi Allen, Katherine Baicker, et al. 2012. “The Oregon Health Insurance Experiment: Evidence from the First Year.” Quarterly Journal of Economics 127 (3): 1057–1106."
+    "text": "References\n\n\n\n\n\n\nBrot-Goldberg, Zarek, Timothy Layton, Boris Vabson, and Adelina Yanyue Wang. 2023. “The Behavioral Foundations of Default Effects: Theory and Evidence from Medicare Part D.” American Economic Review 113 (10): 2718–58. https://doi.org/10.1257/aer.20210013.\n\n\nMatějka, Filip, and Alisdair McKay. 2015. “Rational Inattention to Discrete Choices: A New Foundation for the Multinomial Logit Model.” American Economic Review 105 (1): 272–98. https://doi.org/10.1257/aer.20130047."
   },
   {
     "objectID": "slides/class3-1.html#overview",
@@ -704,7 +704,7 @@
     "href": "schedule/1-3.html",
     "title": "New Directions in Health Insurance Demand",
     "section": "",
-    "text": "The goal for today’s class is to consider where the research on health insurance might be headed and discuss some papers in those directions. For these classes, I’m trying to select topics with significant policy interest and room for additional research. There are many areas of active research in the study of health insurance, so this is far from exhaustive. Focus areas and selected papers for this class are listed below.\n\nHealth Insurance Design and Consumer Behavior\nThe design of health insurance plans (like copayments, deductibles, and coverage decisions) directly affects consumer choices and healthcare utilization. This area is crucial for policy design, ensuring that insurance structures meet both economic efficiency and equity goals. We’ll discuss Brown and Jeon (2023) and Ho and Lee (2020) as an example of this line of current/future research.\n\n\nInnovation/Technology Adoption and Health Insurance\nIn affecting how services are paid for, insurance can also affect the adoption of new technologies and innovations in healthcare. We’ll discuss Garthwaite (2012) and Agha, Kim, and Li (2022) as examples of this line of work.\n\n\nHealth Insurance Networks\nThe structure of health insurance networks can affect the quality of care that patients receive. We’ll briefly discuss Gruber and McKnight (2016) as an example of this line of work, even though it is a little bit older for “current/future” research, and we’ll discuss Kreider et al. (2022) as a more recent example in this space.\n\n\n\n\n\nReferences\n\nAgha, Leila, Soomi Kim, and Danielle Li. 2022. “Insurance Design and Pharmaceutical Innovation.” American Economic Review: Insights 4 (2): 191–208. https://doi.org/10.1257/aeri.20210063.\n\n\nBrown, Zach Y, and Jihye Jeon. 2023. “Endogenous Information and Simplifying Insurance Choice.” https://public-websites-umich-edu.proxy.library.emory.edu/~zachb/brown_jeon_endo_info.pdf.\n\n\nGarthwaite, Craig L. 2012. “The Doctor Might See You Now: The Supply Side Effects of Public Health Insurance Expansions.” American Economic Journal: Economic Policy 4 (3): 190–215. https://doi.org/10.1257/pol.4.3.190.\n\n\nGruber, Jonathan, and Robin McKnight. 2016. “Controlling Health Care Costs Through Limited Network Insurance Plans: Evidence from Massachusetts State Employees.” American Economic Journal: Economic Policy 8 (2): 219–50. https://doi.org/10.1257/pol.20140335.\n\n\nHo, Kate, and Robin S. Lee. 2020. “Health Insurance Menu Design for Large Employers.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w27868.\n\n\nKreider, Amanda R., Timothy J. Layton, Mark Shepard, and Jacob Wallace. 2022. “Adverse Selection and Network Design Under Regulated Plan Prices: Evidence from Medicaid.” w30719. National Bureau of Economic Research. https://doi.org/10.3386/w30719."
+    "text": "The goal for today’s class is to consider where the research on health insurance might be headed and discuss some papers in those directions. For these classes, I’m trying to select topics with significant policy interest and room for additional research. There are many areas of active research in the study of health insurance, so this is far from exhaustive. Focus areas and selected papers for this class are listed below.\n\nHealth Insurance Design and Consumer Behavior\nThe design of health insurance plans (like copayments, deductibles, and coverage decisions) directly affects consumer choices and healthcare utilization. This area is crucial for policy design, ensuring that insurance structures meet both economic efficiency and equity goals. We’ll discuss Brown and Jeon (2023) and Ho and Lee (2020) as an example of this line of current/future research.\n\n\nInnovation/Technology Adoption and Health Insurance\nIn affecting how services are paid for, insurance can also affect the adoption of new technologies and innovations in healthcare. We’ll discuss Garthwaite (2012) and Agha, Kim, and Li (2022) as examples of this line of work.\n\n\nHealth Insurance Networks\nThe structure of health insurance networks can affect the quality of care that patients receive. We’ll briefly discuss Gruber and McKnight (2016) as an example of this line of work, even though it is a little bit older for “current/future” research, and we’ll discuss Kreider et al. (2022) as a more recent example in this space.\n\n\n\n\n\nReferences\n\nAgha, Leila, Soomi Kim, and Danielle Li. 2022. “Insurance Design and Pharmaceutical Innovation.” American Economic Review: Insights 4 (2): 191–208. https://doi.org/10.1257/aeri.20210063.\n\n\nBrown, Zach Y, and Jihye Jeon. 2023. “Endogenous Information and Simplifying Insurance Choice,” August. https://public-websites-umich-edu.proxy.library.emory.edu/~zachb/brown_jeon_endo_info.pdf.\n\n\nGarthwaite, Craig L. 2012. “The Doctor Might See You Now: The Supply Side Effects of Public Health Insurance Expansions.” American Economic Journal: Economic Policy 4 (3): 190–215. https://doi.org/10.1257/pol.4.3.190.\n\n\nGruber, Jonathan, and Robin McKnight. 2016. “Controlling Health Care Costs Through Limited Network Insurance Plans: Evidence from Massachusetts State Employees.” American Economic Journal: Economic Policy 8 (2): 219–50. https://doi.org/10.1257/pol.20140335.\n\n\nHo, Kate, and Robin S. Lee. 2020. “Health Insurance Menu Design for Large Employers,” Working Paper Series, September. https://doi.org/10.3386/w27868.\n\n\nKreider, Amanda R., Timothy J. Layton, Mark Shepard, and Jacob Wallace. 2022. “Adverse Selection and Network Design Under Regulated Plan Prices: Evidence from Medicaid.” w30719. National Bureau of Economic Research. https://doi.org/10.3386/w30719."
   },
   {
     "objectID": "schedule/1-5.html",
@@ -1195,5 +1195,96 @@
     "title": "Decision Assistance and Healthcare Utilization",
     "section": "References",
     "text": "References\n\n\n\n\n\n\nCrawford, Gregory S, and Matthew Shum. 2005. “Uncertainty and Learning in Pharmaceutical Demand.” Econometrica 73 (4): 1137–73.\n\n\nCutler, David, Jonathan S. Skinner, Ariel Dora Stern, and David Wennberg. 2019. “Physician Beliefs and Patient Preferences: A New Look at Regional Variation in Health Care Spending.” American Economic Journal: Economic Policy 11 (1): 192–221. https://doi.org/10.1257/pol.20150421.\n\n\nFinkelstein, Amy, Matthew Gentzkow, and Heidi Williams. 2016. “Sources of Geographic Variation in Health Care: Evidence From Patient Migration.” The Quarterly Journal of Economics 131 (4): 1681–1726. https://ideas.repec.org//a/oup/qjecon/v131y2016i4p1681-1726..html."
+  },
+  {
+    "objectID": "slides/class6-1.html#overview-1",
+    "href": "slides/class6-1.html#overview-1",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "Overview",
+    "text": "Overview\nBut health insurance is also a complex product that is difficult to understand and evaluate. How can we expand access and adoption of health insurance?\n\nAdjust default enrollment for specific programs, as studied in Brot-Goldberg et al. (2023) (heavily paternalistic)\nReduce choice burden, as studied in 1\nAdjust design of health insurance plans, as studied in 2"
+  },
+  {
+    "objectID": "slides/class6-1.html#empirical-motivation",
+    "href": "slides/class6-1.html#empirical-motivation",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "Empirical motivation",
+    "text": "Empirical motivation\n\nIndividuals acquire more information when there are higher costs of a poor choice\nInvesitgate with Medicare Part D, which has a large number of plans and a complex choice environment"
+  },
+  {
+    "objectID": "slides/class6-1.html#economic-model",
+    "href": "slides/class6-1.html#economic-model",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "Economic model",
+    "text": "Economic model\n\nStructural model of health insurance choice with endogenous information acquisition\nBuilds on framework of rational inattention in discrete choice\nOften computationally intractible, but authors offer a tractible approximation with feasible estimation"
+  },
+  {
+    "objectID": "slides/class6-1.html#an-aside-on-entropy",
+    "href": "slides/class6-1.html#an-aside-on-entropy",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "An aside on Entropy",
+    "text": "An aside on Entropy\n\nMeasure of uncertainty\nMore informative than variance as entropy is sensitive to the shape of the distribution, not just its spread\nUniform distirubtion has maximum entropy, while a point mass has minimum entropy"
+  },
+  {
+    "objectID": "slides/class6-1.html#matejka2015",
+    "href": "slides/class6-1.html#matejka2015",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "Matějka and McKay (2015)",
+    "text": "Matějka and McKay (2015)\nIn this setup, individuals act as if maximizing \\(\\tilde{u}_{ij}\\), where\n\\[\\tilde{u}_{ij} = u_{ij} + \\lambda log P_{ij}^{0} + \\lambda \\varepsilon_{ij}\\]\n\n\\(u_{ij}\\) is true utility\n\\(P_{ij}^{0}\\) is expected choice probability based only on priors, \\(G\\)\n\\(\\varepsilon_{ij}\\) captures error in beliefs\n1 derive closed form expression for choice probabilities with stronger assumptions on \\(G_{i}(\\xi_{ij})\\)$ and distribution of original error, \\(M(\\epsilon_{ij})\\)"
+  },
+  {
+    "objectID": "slides/class6-1.html#preliminary-evidence",
+    "href": "slides/class6-1.html#preliminary-evidence",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "Preliminary evidence",
+    "text": "Preliminary evidence\n\n\n\n1\n\n\n\n\n‘stakes’ measured as expeced out of pocket costs, \\(v_{ij}\\)"
+  },
+  {
+    "objectID": "slides/class6-1.html#main-finding",
+    "href": "slides/class6-1.html#main-finding",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "Main finding",
+    "text": "Main finding\n\n1"
+  },
+  {
+    "objectID": "slides/class6-1.html#motivation",
+    "href": "slides/class6-1.html#motivation",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "Motivation",
+    "text": "Motivation\n\nFor a single insurance plan, how much cost sharing is optimal?\nHow much can then be gained by introducing a menu of plan options?\nHow sensitive is this to how enrollee selection across plans is managed?\nCan introducing plan differentiation along nonfinancial dimensions improve outcomes?"
+  },
+  {
+    "objectID": "slides/class6-1.html#setting-and-data",
+    "href": "slides/class6-1.html#setting-and-data",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "Setting and data",
+    "text": "Setting and data\n\nHarvard Health Insurance Plans, 2014-2016\nIntroduced cost-sharing in 2015 for all nonunion employees\nRe-introduced zero-deductible and zero-coinsurance plan in 2016\nExamine plan changes among uninon and nonunion employees as these choice sets changed"
+  },
+  {
+    "objectID": "slides/class6-1.html#model-and-estimation",
+    "href": "slides/class6-1.html#model-and-estimation",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "Model and estimation",
+    "text": "Model and estimation\n\nTwo-stage model of plan choice and healthcare utilization\nModel allows for adverse selection in plan choice and moral hazard in utilization"
+  },
+  {
+    "objectID": "slides/class6-1.html#results-1-optimal-cost-sharing",
+    "href": "slides/class6-1.html#results-1-optimal-cost-sharing",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "Results 1: Optimal cost sharing",
+    "text": "Results 1: Optimal cost sharing\n\n\n\n2\n\n\n\n\n\nOptimal cost sharing of 29% with zero deductible\nLarge initial gains with even small cost sharing"
+  },
+  {
+    "objectID": "slides/class6-1.html#results-2-multiple-plan-options",
+    "href": "slides/class6-1.html#results-2-multiple-plan-options",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "Results 2: Multiple plan options",
+    "text": "Results 2: Multiple plan options\n\nMeaningful consumer surplus gains in two-plan environment (with optimal plan design) under plan assignment\nGains erased when employees can self-select\nNonfinancial differentiation can be more effective"
+  },
+  {
+    "objectID": "slides/class6-1.html#future-research",
+    "href": "slides/class6-1.html#future-research",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "Future research",
+    "text": "Future research\n“We conclude by identifying two promising avenues for future research.”\n\nThere may be benefits from developing more finely tuned cost-sharing schemes, where OOP costs can vary depending on the individual’s diagnosis\nThere is an open question of how many insurance carriers (as opposed to plans) an employer should offer as options to its employees.\n\nInduce more competition on premiums and fees\nProtect an employer from hold-up in future negotiations with insurers, particularly if there are large switching costs\nDownside: may limit insurers’ bargaining leverage with medical providers, making it harder for them to negotiate favorable medical rates"
   }
 ]

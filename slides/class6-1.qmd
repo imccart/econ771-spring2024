@@ -1,5 +1,5 @@
 ---
-title: "Demand for Healthcare and Health Insurance"
+title: "Health Insurance Design and Consumer Behavior"
 author: "Ian McCarthy, Emory University and NBER"
 institute: "Emory University, 2024"
 format: 
@@ -11,7 +11,7 @@ format:
     slide-number: true
     width: 1600
     height: 900
-#    embed-resources: true
+    embed-resources: true
 from: markdown+emoji
 execute: 
   echo: false
@@ -27,193 +27,163 @@ pacman::p_load(tidyverse, ggplot2)
 
 ## Overview
 
-- One of the central health economics questions: what does health insurance do?
-- Early literature focused on effects of health insurance on healthcare utilization (ex post moral hazard)
-- Another way to phrase the question: **How much should people have to pay for healthcare?**
-- To answer this, we need to know the effects of different forms of insurance on healthcare utilization
+So far, we've established that health insurance:
 
-
-# The RAND Health Insurance Experiment
-
-(see @aron-dine2013 for a review)
+1. improves financial stability and reduces financial risks of medical spending
+2. improves health, particularly for those with chronic conditions
 
 ---
 
-## Setup
+## Overview
 
-- Partnership with RAND corporation and team of health economists in 1970s
-- Key question: If people pay more for healthcare, will they use less?
-- Randomized 2,000 households into groups:
-  - free-care plan
-  - high-deductible (up to \$5,500 in 2023 dollars) with full-insurance afterward (really an out-of-pocket maximum)
-  - different co-insurance rates in between (95, 50, 25, mixed)
+But health insurance is also a complex product that is difficult to understand and evaluate. How can we expand access and adoption of health insurance?
 
----
+- Adjust default enrollment for specific programs, as studied in @brot-goldberg2023 (heavily paternalistic)
+- Reduce choice burden, as studied in @brown2023wp
+- Adjust design of health insurance plans, as studied in @ho2020
 
-## Setup
 
-- Experiment ran from 1974-1981, cost of \$410 million (in 2023 dollars)
-- RAND was insurer, collected all data on healthcare used
-- Physical exam at the end of the experiment
-- All data available now for researchers
+# Endogenous Information and Simplifying Insurance Choice
+
+(@brown2023wp)
 
 ---
 
-## Analysis
+## Empirical motivation
 
-$$y_{it} = \lambda_{p} + \tau_{t} + \alpha_{lm} + \varepsilon_{it}$$
-
-- $i$ denotes individual and $t$ denotes year
-- $\lambda_{p}$: plan fixed effects (main coefficients of interest)
-- $\tau_{t}$: year fixed effects
-- $\alpha_{lm}$: location, start-month fixed effects (randomization was by start month)
+- Individuals acquire more information when there are higher costs of a poor choice
+- Invesitgate with Medicare Part D, which has a large number of plans and a complex choice environment
 
 ---
 
-## Results: How Much Healthcare?
+## Economic model
 
-- Free care plan families used \$2,000 (in 2021 dollars) in care
-- High-deductible plan families used \$1,600 in care
-- 20% increase in healthcare utilization for free care plan
-- Commonly cited -0.2 price elasticity of demand for healthcare
-
----
-
-## Results: What Type of Healthcare?
-
-- Provided medical documentation to panel of physicians
-- Assiged care as highly effective versus rarely effective
-- High-deductible plan families:
-  - 30% less highly effective care
-  - 30% less rarely effective care
-- Conclusion: higher prices lead to less care across the board
+- Structural model of health insurance choice with endogenous information acquisition
+- Builds on framework of rational inattention in discrete choice
+- Often computationally intractible, but authors offer a tractible approximation with feasible estimation
 
 ---
 
-## Results: Health Outcomes
+$$\begin{align*}
+u_{ij} &= \alpha v_{ij} + \beta x_{j}^{u} & + \alpha p_{j} + \theta x_{j}^{k} + \epsilon_{ij} \\
+       &= \xi_{ij} & + \alpha p_{j} + \theta x_{j}^{k} + \epsilon_{ij}
+\end{align*}$$
 
-- No significant differences in health outcomes on average
-- Patients with chronic conditions were worse off in high-deductible plan
-
----
-
-## Threats to validity
-
-1. Valid randomization (not really an issue)
-2. Adverse selection in participation (could be a problem)
-3. Reporting of claims (some minor concern)
+- Person $i$ chooses among plans $j \in J$
+- Plan $j$ has known characteristics: price $p_{j}$ and other things $x_{j}^{k}$
+- Plan $j$j has (initially) unknown characteristics: price $v_{ij}$ and other things $x_{j}^{u}$
+- $\xi_{ij}$ comes from multivariate CDF $G_{i}(\xi_{i})$
+- Two-stage choice process: first choose how much information to acquire (denoted by signal, $s_{i}$), then choose plan
 
 ---
 
-## Results with adjustments
+- Entropy-based cost function for information acquisition
+- Constant marginal cost, $\lambda$, with total costs: 
+  
+$$\lambda (H(G_{i}) - E_{s_{i}}[ H(F_{i}(\xi_{i} | s_{i}))]),$$
 
-![@aron-dine2013](/files/figures/aron-dine-tab1.png){}
-
-
----
-
-## Elasticity estimates
-
-Commonly cited -0.2 price elasticity of demand for healthcare comes from:
-
-- Step 1: intensive vs extensive
-  - Group care into defined "episodes"
-  - Find no relationship between price and utilization *within* episode
-  - Focus on extensive margin (presence of an episode)
+- $F_{i}(\cdot)$ is the posterior belief of $\xi_{i}$ after acquiring signal $s_{i}$
+- $H(G)$ is entropy of prior belief $G$ and $H(F)$ is the entropy of posterior belief $F$
+- Intuition: costs are proportional to reduction in entropy (or uncertainty) as measured by the relative information gained from the signals
 
 ---
 
-## Elasticity estimates
+## An aside on Entropy
 
-Commonly cited -0.2 price elasticity of demand for healthcare comes from:
+- Measure of uncertainty
+- More informative than variance as entropy is sensitive to the shape of the distribution, not just its spread
+- Uniform distirubtion has maximum entropy, while a point mass has minimum entropy
 
-- Step 2: spot vs future price
-  - Compare episode rates among those close to hitting OOP max versus those already over
-  - No difference in episode rates
-  - Conclude that spot price matters
+---
+
+## @matejka2015
+
+In this setup, individuals act as if maximizing $\tilde{u}_{ij}$, where
+
+$$\tilde{u}_{ij} = u_{ij} + \lambda log P_{ij}^{0} + \lambda \varepsilon_{ij}$$
+
+- $u_{ij}$ is *true* utility
+- $P_{ij}^{0}$ is expected choice probability based only on priors, $G$
+- $\varepsilon_{ij}$ captures error in beliefs
+- @brown2023wp derive closed form expression for choice probabilities with stronger assumptions on $G_{i}(\xi_{ij})$$ and distribution of original error, $M(\epsilon_{ij})$
 
 
 ---
 
-## Elasticity estimates
+## Preliminary evidence
 
-Commonly cited -0.2 price elasticity of demand for healthcare comes from:
+![@brown2023wp](/files/figures/brown-fig1.png){}
 
-- Step 3: calculating elasticity
-  - Limit sample to part of year where people are far from OOP max (around \$500)
-  - Calculate arc elasticities for each care setting and for different plan types
-  - Many estimates 'around' -0.2
-
----
-
-## Problems with elasticity applications
-
-How should we predict the response to price changes in a nonlinear pricing environment when we only have a single price elasticity estimate?
+::: {.aside}
+'stakes' measured as expeced out of pocket costs, $v_{ij}$
+:::
 
 ---
 
-## Problems with elasticity applications
+## Main finding
 
-![@aron-dine2013](/files/figures/aron-dine-fig1.png){width=150%}
-
----
-
-- Budget neutral in that each contract has same costs to insurer for same distribution of healthcare utilization
-- Different assumptions on how to reduce plans to a single average price yield very different predictions (factor of 2)
-
----
-
-## Key takeaways
-
-- Confident that price matters in healthcare (i.e., people respond to higher prices by reducing healthcare)
-- Less confident in the magnitude of the response
-- Difficult to apply single elasticity estimates to nonlinear pricing contracts
+![@brown2023wp](/files/figures/brown-fig2.png){}
 
 
-# The Oregon Health Insurance Experiment
+# Health Insurance Design and Consumer Behavior
 
-(see @finkelstein2012 for a review)
+(@ho2020)
 
 ---
 
-## Setup
+## Motivation
 
-- Oregon expanded Medicaid in 2008
-- 90,000 people applied for 10,000 slots
-- Randomized lottery for slots
-- Nearly 36,000 selected for lottery, 30\% enrolled
-
----
-
-## Analysis
-
-- Compare outcomes of those with insurance to those without
-- Use lottery selection as an instrument for insurance coverage
+- For a single insurance plan, how much cost sharing is optimal? 
+- How much can then be gained by introducing a menu of plan options?
+- How sensitive is this to how enrollee selection across plans is managed? 
+- Can introducing plan differentiation along nonfinancial dimensions improve outcomes? 
 
 ---
 
-## Analysis
+## Setting and data
 
-$$\begin{align}
-y_{ihj} &= \pi_{0} + \pi_{1}Ins_{ih} + \pi_{2}x_{ih} + \pi_{c}V_{ih} + \nu_{ihj} \\
-Ins_{ih} &= \delta_{0} + \delta_{1}Lottery_{h} + \delta_{2}x_{ih} + \delta_{3}V_{ih} + \mu_{ihj}
-\end{align}$$
-
-- individual $i$ in household $h$ for outcome $j$
-- $x_{ih}$ are covariates that are correlated with lottery sign up
-- $V_{ih}$ are other covariates thought to be correlated with outcomes (for increases in precision)
+- Harvard Health Insurance Plans, 2014-2016
+- Introduced cost-sharing in 2015 for all nonunion employees
+- Re-introduced zero-deductible and zero-coinsurance plan in 2016
+- Examine plan changes among uninon and nonunion employees as these choice sets changed
 
 ---
 
-## Main results
+## Model and estimation
 
-- 2.1 percentage point (30%) increase in the probability hospital admission
-- 8.8 percentage point (15%) increase in the probability of taking any prescription drugs
-- 21 percentage point (35%) increase in the probability of having an outpatient visit
-- No change (but wide confidence intervals) in ED visits 
-- 0.3 standard deviation increase in reported compliance with recommended preventive care (e.g., mammograms and cholesterol monitoring)
-- 6.4 percentage point (25%) decline in the probability of having an unpaid medical bill sent to a collections agency
-- 20 percentage point (35%) decline in having any out-of-pocket medical expenditures
-- improvements in self-reported physical and mental health, overall well-being, access to, and quality of are
+- Two-stage model of plan choice and healthcare utilization
+- Model allows for adverse selection in plan choice and moral hazard in utilization
+
+---
+
+## Results 1: Optimal cost sharing
+
+![@ho2020](/files/figures/ho-fig1.jpeg){}
+
+::: {.aside}
+- Optimal cost sharing of 29% with zero deductible
+- Large initial gains with even small cost sharing
+:::
+
+---
+
+## Results 2: Multiple plan options
+
+- Meaningful consumer surplus gains in two-plan environment (with optimal plan design) under plan assignment
+- Gains erased when employees can self-select
+- Nonfinancial differentiation can be more effective
+
+---
+
+## Future research
+
+"We conclude by identifying two promising avenues for future research."
+
+1. There may be benefits from developing more finely tuned cost-sharing schemes, where OOP costs can vary depending on the individual's diagnosis
+2. There is an open question of how many insurance carriers (as opposed to plans) an employer should offer as options to its employees. 
+   - Induce more competition on premiums and fees
+   - Protect an employer from hold-up in future negotiations with insurers, particularly if there are large switching costs
+   - Downside: may limit insurers' bargaining leverage with medical providers, making it harder for them to negotiate favorable medical rates
+
 
 ## References
