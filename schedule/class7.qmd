@@ -1,0 +1,9 @@
+---
+title: "Adverse Selection"
+---
+
+Slides for today, separately by subtopic, are available below:
+
+1. [Pricing and Adverse Selection](/slides/class7-1.qmd)
+2. Mitigating Adverse Selection. No slides for this today so that we can spend more time on the other two topics.
+3. [Adverse Selection and Insurance Networks](/slides/class7-3.pptx)

@@ -52,8 +52,8 @@
     "objectID": "slides/class6-1.html#overview",
     "href": "slides/class6-1.html#overview",
     "title": "Health Insurance Design and Consumer Behavior",
-    "section": "Overview",
-    "text": "Overview\nSo far, we’ve established that health insurance:\n\nimproves financial stability and reduces financial risks of medical spending\nimproves health, particularly for those with chronic conditions"
+    "section": "",
+    "text": "So far, we’ve established that health insurance:\n\nimproves financial stability and reduces financial risks of medical spending\nimproves health, particularly for those with chronic conditions"
   },
   {
     "objectID": "slides/class6-1.html#setup",
@@ -186,7 +186,7 @@
     "href": "slides/class6-1.html#references",
     "title": "Health Insurance Design and Consumer Behavior",
     "section": "References",
-    "text": "References\n\n\n\n\n\n\nBrot-Goldberg, Zarek, Timothy Layton, Boris Vabson, and Adelina Yanyue Wang. 2023. “The Behavioral Foundations of Default Effects: Theory and Evidence from Medicare Part D.” American Economic Review 113 (10): 2718–58. https://doi.org/10.1257/aer.20210013.\n\n\nMatějka, Filip, and Alisdair McKay. 2015. “Rational Inattention to Discrete Choices: A New Foundation for the Multinomial Logit Model.” American Economic Review 105 (1): 272–98. https://doi.org/10.1257/aer.20130047."
+    "text": "References\n\n\n\n\n\n\nBrot-Goldberg, Zarek, Timothy Layton, Boris Vabson, and Adelina Yanyue Wang. 2023. “The Behavioral Foundations of Default Effects: Theory and Evidence from Medicare Part D.” American Economic Review 113 (10): 2718–58. https://doi.org/10.1257/aer.20210013.\n\n\nBrown, Zach Y, and Jihye Jeon. 2023. “Endogenous Information and Simplifying Insurance Choice,” August. https://public-websites-umich-edu.proxy.library.emory.edu/~zachb/brown_jeon_endo_info.pdf.\n\n\nHo, Kate, and Robin S. Lee. 2020. “Health Insurance Menu Design for Large Employers,” Working Paper Series, September. https://doi.org/10.3386/w27868.\n\n\nMatějka, Filip, and Alisdair McKay. 2015. “Rational Inattention to Discrete Choices: A New Foundation for the Multinomial Logit Model.” American Economic Review 105 (1): 272–98. https://doi.org/10.1257/aer.20130047."
   },
   {
     "objectID": "slides/class3-1.html#overview",
@@ -1201,7 +1201,7 @@
     "href": "slides/class6-1.html#overview-1",
     "title": "Health Insurance Design and Consumer Behavior",
     "section": "Overview",
-    "text": "Overview\nBut health insurance is also a complex product that is difficult to understand and evaluate. How can we expand access and adoption of health insurance?\n\nAdjust default enrollment for specific programs, as studied in Brot-Goldberg et al. (2023) (heavily paternalistic)\nReduce choice burden, as studied in 1\nAdjust design of health insurance plans, as studied in 2"
+    "text": "Overview\nBut health insurance is also a complex product that is difficult to understand and evaluate. How can we expand access and adoption of health insurance?\n\nAdjust default enrollment for specific programs, as studied in Brot-Goldberg et al. (2023) (heavily paternalistic)\nReduce choice burden, as studied in Brown and Jeon (2023)\nAdjust design of health insurance plans, as studied in Ho and Lee (2020)"
   },
   {
     "objectID": "slides/class6-1.html#empirical-motivation",
@@ -1215,7 +1215,7 @@
     "href": "slides/class6-1.html#economic-model",
     "title": "Health Insurance Design and Consumer Behavior",
     "section": "Economic model",
-    "text": "Economic model\n\nStructural model of health insurance choice with endogenous information acquisition\nBuilds on framework of rational inattention in discrete choice\nOften computationally intractible, but authors offer a tractible approximation with feasible estimation"
+    "text": "Economic model\n\nStructural model of health insurance choice with endogenous information acquisition\nBuilds on framework of rational inattention in discrete choice\nOften computationally intractible, but authors offer a tractible approximation with feasible estimation\n\n\n\\[\\begin{align*}\nu_{ij} &= \\alpha v_{ij} + \\beta x_{j}^{u} & + \\alpha p_{j} + \\theta x_{j}^{k} + \\epsilon_{ij} \\\\\n       &= \\xi_{ij} & + \\alpha p_{j} + \\theta x_{j}^{k} + \\epsilon_{ij}\n\\end{align*}\\]\n\nPerson \\(i\\) chooses among plans \\(j \\in J\\)\nPlan \\(j\\) has known characteristics: price \\(p_{j}\\) and other things \\(x_{j}^{k}\\)\nPlan \\(j\\)j has (initially) unknown characteristics: price \\(v_{ij}\\) and other things \\(x_{j}^{u}\\)\n\\(\\xi_{ij}\\) comes from multivariate CDF \\(G_{i}(\\xi_{i})\\)\nTwo-stage choice process: first choose how much information to acquire (denoted by signal, \\(s_{i}\\)), then choose plan\n\n\n\nEntropy-based cost function for information acquisition\nConstant marginal cost, \\(\\lambda\\), with total costs:\n\n\\[\\lambda (H(G_{i}) - E_{s_{i}}[ H(F_{i}(\\xi_{i} | s_{i}))]),\\]\n\n\\(F_{i}(\\cdot)\\) is the posterior belief of \\(\\xi_{i}\\) after acquiring signal \\(s_{i}\\)\n\\(H(G)\\) is entropy of prior belief \\(G\\) and \\(H(F)\\) is the entropy of posterior belief \\(F\\)\nIntuition: costs are proportional to reduction in entropy (or uncertainty) as measured by the relative information gained from the signals"
   },
   {
     "objectID": "slides/class6-1.html#an-aside-on-entropy",
@@ -1229,21 +1229,21 @@
     "href": "slides/class6-1.html#matejka2015",
     "title": "Health Insurance Design and Consumer Behavior",
     "section": "Matějka and McKay (2015)",
-    "text": "Matějka and McKay (2015)\nIn this setup, individuals act as if maximizing \\(\\tilde{u}_{ij}\\), where\n\\[\\tilde{u}_{ij} = u_{ij} + \\lambda log P_{ij}^{0} + \\lambda \\varepsilon_{ij}\\]\n\n\\(u_{ij}\\) is true utility\n\\(P_{ij}^{0}\\) is expected choice probability based only on priors, \\(G\\)\n\\(\\varepsilon_{ij}\\) captures error in beliefs\n1 derive closed form expression for choice probabilities with stronger assumptions on \\(G_{i}(\\xi_{ij})\\)$ and distribution of original error, \\(M(\\epsilon_{ij})\\)"
+    "text": "Matějka and McKay (2015)\nIn this setup, individuals act as if maximizing \\(\\tilde{u}_{ij}\\), where\n\\[\\tilde{u}_{ij} = u_{ij} + \\lambda log P_{ij}^{0} + \\lambda \\varepsilon_{ij}\\]\n\n\\(u_{ij}\\) is true utility\n\\(P_{ij}^{0}\\) is expected choice probability based only on priors, \\(G\\)\n\\(\\varepsilon_{ij}\\) captures error in beliefs\nBrown and Jeon (2023) derive closed form expression for choice probabilities with stronger assumptions on \\(G_{i}(\\xi_{ij})\\)$ and distribution of original error, \\(M(\\epsilon_{ij})\\)"
   },
   {
     "objectID": "slides/class6-1.html#preliminary-evidence",
     "href": "slides/class6-1.html#preliminary-evidence",
     "title": "Health Insurance Design and Consumer Behavior",
     "section": "Preliminary evidence",
-    "text": "Preliminary evidence\n\n\n\n1\n\n\n\n\n‘stakes’ measured as expeced out of pocket costs, \\(v_{ij}\\)"
+    "text": "Preliminary evidence\n\n\nBrown and Jeon (2023)\n‘stakes’ measured as expeced out of pocket costs, \\(v_{ij}\\)"
   },
   {
     "objectID": "slides/class6-1.html#main-finding",
     "href": "slides/class6-1.html#main-finding",
     "title": "Health Insurance Design and Consumer Behavior",
     "section": "Main finding",
-    "text": "Main finding\n\n1"
+    "text": "Main finding\n\n\n\nBrown and Jeon (2023)"
   },
   {
     "objectID": "slides/class6-1.html#motivation",
@@ -1271,7 +1271,7 @@
     "href": "slides/class6-1.html#results-1-optimal-cost-sharing",
     "title": "Health Insurance Design and Consumer Behavior",
     "section": "Results 1: Optimal cost sharing",
-    "text": "Results 1: Optimal cost sharing\n\n\n\n2\n\n\n\n\n\nOptimal cost sharing of 29% with zero deductible\nLarge initial gains with even small cost sharing"
+    "text": "Results 1: Optimal cost sharing\n\n\n\nHo and Lee (2020)\n\n\n\nOptimal cost sharing of 29% with zero deductible\nLarge initial gains with even small cost sharing"
   },
   {
     "objectID": "slides/class6-1.html#results-2-multiple-plan-options",
@@ -1286,5 +1286,355 @@
     "title": "Health Insurance Design and Consumer Behavior",
     "section": "Future research",
     "text": "Future research\n“We conclude by identifying two promising avenues for future research.”\n\nThere may be benefits from developing more finely tuned cost-sharing schemes, where OOP costs can vary depending on the individual’s diagnosis\nThere is an open question of how many insurance carriers (as opposed to plans) an employer should offer as options to its employees.\n\nInduce more competition on premiums and fees\nProtect an employer from hold-up in future negotiations with insurers, particularly if there are large switching costs\nDownside: may limit insurers’ bargaining leverage with medical providers, making it harder for them to negotiate favorable medical rates"
+  },
+  {
+    "objectID": "slides/class8-1.html#overview",
+    "href": "slides/class8-1.html#overview",
+    "title": "Pricing and Adverse Selection",
+    "section": "Overview",
+    "text": "Overview\nSo far, we’ve focused on health insurance from more of an individual perspective:\n\nthings health insurance does for individuals\nways to improve health insurance choice or the matching between plans and individuals\n\n\nBut if we want people to have health insurance, and if we care about using a market to allocate health insurance, then we need to take a broader perspective"
+  },
+  {
+    "objectID": "slides/class8-1.html#health-insurance-markets",
+    "href": "slides/class8-1.html#health-insurance-markets",
+    "title": "Pricing and Adverse Selection",
+    "section": "Health Insurance Markets",
+    "text": "Health Insurance Markets\nCentral barrier to efficient health insurance markets is adverse selection\n\nTextbook depiction of adverse selection"
+  },
+  {
+    "objectID": "slides/class8-1.html#assumed-equilibrium",
+    "href": "slides/class8-1.html#assumed-equilibrium",
+    "title": "Pricing and Adverse Selection",
+    "section": "Assumed equilibrium",
+    "text": "Assumed equilibrium\n\nKey assumptions:\n\nSimplifying assumption that insurers earn 0 profit (at least approximately)\nIndividuals select plans based on health needs (which is private information)\nCommon price to all enrollees of a given plan (community rating)\n\nPossible outcomes:\n\nFull insurance (Demand always above AC)\nPartial unravelling (Demand intersects with AC somewhere)\nFull unravelling (Demand always below AC)"
+  },
+  {
+    "objectID": "slides/class8-1.html#motivation",
+    "href": "slides/class8-1.html#motivation",
+    "title": "Pricing and Adverse Selection",
+    "section": "Motivation",
+    "text": "Motivation\n\nAdverse selection is a central concern in health insurance markets\nBut very little empirical work in this space (until 2010 or so)\n\n\nThis presumably reflects not a lack of interest in this important topic, but rather the considerable challenges posed by empirical welfare analysis in markets with hidden information."
+  },
+  {
+    "objectID": "slides/class8-1.html#basic-model",
+    "href": "slides/class8-1.html#basic-model",
+    "title": "Pricing and Adverse Selection",
+    "section": "Basic Model",
+    "text": "Basic Model\n\nUnique feature of adverse selection: demand affects firm costs\nComplicates welfare analysis because we need to know demand curve (how demand varies with price) but also how price changes affect costs"
+  },
+  {
+    "objectID": "slides/class8-1.html#limitations",
+    "href": "slides/class8-1.html#limitations",
+    "title": "Pricing and Adverse Selection",
+    "section": "Limitations",
+    "text": "Limitations\n\nOnly applies to existing contracts\nCannot speak to entry or exit decisions"
+  },
+  {
+    "objectID": "slides/class8-1.html#references",
+    "href": "slides/class8-1.html#references",
+    "title": "Pricing and Adverse Selection",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nBundorf, M Kate, Jonathan Levin, and Neale Mahoney. 2012. “Pricing and Welfare in Health Plan Choice.” American Economic Review 102 (7): 3214–48.\n\n\nEinav, Liran, Amy Finkelstein, and Mark R. Cullen. 2010. “Estimating Welfare in Insurance Markets Using Variation in Prices.” The Quarterly Journal of Economics 125 (3): 877–921. https://doi.org/10.1162/qjec.2010.125.3.877."
+  },
+  {
+    "objectID": "slides/class8-1.html#setup",
+    "href": "slides/class8-1.html#setup",
+    "title": "Pricing and Adverse Selection",
+    "section": "Setup",
+    "text": "Setup\n\nTwo available contracts: high coverage (\\(H\\)) and low coverage (\\(L\\)), with relative price of \\(H\\) given by \\(p\\)\nConsumer characteristics \\(\\zeta\\) from distribution \\(G(\\zeta)\\)\nUtility denoted by \\(\\nu^{H}(\\zeta_{i}, p)\\) and \\(\\nu^{L}(\\zeta_{i})\\) for plan \\(H\\) and \\(L\\), respectively\n\\(\\nu^{H}(\\zeta_{i}, p)\\) decreasing in \\(p\\), with \\(\\nu^{H}(\\zeta_{i}, p=0)&gt;\\nu^{L}(\\zeta_{i})\\)\nCosts to insurer given by \\(c(\\zeta_{i})\\)"
+  },
+  {
+    "objectID": "slides/class8-1.html#demand",
+    "href": "slides/class8-1.html#demand",
+    "title": "Pricing and Adverse Selection",
+    "section": "Demand",
+    "text": "Demand\n\nIndividual \\(i\\) choose health insurance if \\(\\nu^{H}(\\zeta_{i}, p)&gt;\\nu^{L}(\\zeta_{i})\\)\nDenote highest price at which individual \\(i\\) chooses \\(H\\) as \\(\\pi(\\zeta_{i}) \\equiv \\max \\{p: \\nu^{H}(\\zeta_{i}, p)&gt;\\nu^{L}(\\zeta_{i})\\}\\)\nAggregate demand, \\(D(p) = \\int 1(\\pi(\\zeta) \\geq p) dG(\\zeta) = Pr(\\pi(\\zeta) \\geq p)\\)"
+  },
+  {
+    "objectID": "slides/class8-1.html#supply",
+    "href": "slides/class8-1.html#supply",
+    "title": "Pricing and Adverse Selection",
+    "section": "Supply",
+    "text": "Supply\n\nBertrand competition with many risk-neutral insurers\nFocus on case of perfect competition as benchmark, so that inefficiency derives from selection and not other factors\nCosts to insurer given by \\(c(\\zeta_{i})\\)\nAverage costs are then, \\(AC(p) = \\frac{1}{D(p)} \\int c(\\zeta) 1(\\pi(\\zeta) \\geq p) dG(\\zeta) = E(c(\\zeta) | \\pi(\\zeta) \\geq p)\\)\nMarginal costs, \\(MC(p) = E(c(\\zeta) | \\pi(\\zeta) = p)\\)\nEquilibrium, \\(p^{*} = \\min \\{p : p=AC(p) \\}\\)"
+  },
+  {
+    "objectID": "slides/class8-1.html#welfare",
+    "href": "slides/class8-1.html#welfare",
+    "title": "Pricing and Adverse Selection",
+    "section": "Welfare",
+    "text": "Welfare\nMeasure welfare using certainty equivalent: amount that would make consumer indifferent between obtaining outcome for sure versus obtaining outcome with uncertainty, denoted \\(e^{H}(\\zeta_{i})\\) and \\(e^{L}(\\zeta_{i})\\), so that WTP for health insurance is reflected by \\(\\e^{H}(\\zeta_{i}) - e^{L}(\\zeta_{i})\\)\n\n\\(CS = \\int \\left[ (e^{H}(\\zeta) - p)1(\\pi(\\zeta) \\geq p) + e^{L}(\\zeta) 1(\\pi(\\zeta) &lt; p) \\right] d G(\\zeta)\\)\n\\(PS = \\int \\left[ (p - c(\\eta)) 1(\\pi(\\zeta) \\geq p) \\right] d G(\\zeta)\\)\n\\(TS = CS + PS = \\int \\left[ (e^{H}(\\zeta) - c(\\eta)) 1(\\pi(\\zeta) \\geq p) + e^{L}(\\zeta) 1(\\pi(\\zeta) &lt; p) \\right] d G(\\zeta)\\)\nSocially efficient to purchase health insurance only if \\(\\pi(\\eta_{i}) \\geq c(\\eta_{i})\\)"
+  },
+  {
+    "objectID": "slides/class8-1.html#main-points",
+    "href": "slides/class8-1.html#main-points",
+    "title": "Pricing and Adverse Selection",
+    "section": "Main points",
+    "text": "Main points\n\nKey assumptions:\n\nSimplifying assumption that insurers earn 0 profit (at least approximately)\nIndividuals select plans based on health needs (which is private information)\nCommon price to all enrollees of a given plan (community rating)\n\nPossible outcomes:\n\nFull insurance (Demand always above AC)\nPartial unravelling (Demand intersects with AC somewhere)\nFull unravelling (Demand always below AC)\n\n\n\n\nLimitations\n\nOnly applies to existing contracts\nCannot speak to entry or exit decisions"
+  },
+  {
+    "objectID": "slides/class8-1.html#incorporating-data",
+    "href": "slides/class8-1.html#incorporating-data",
+    "title": "Pricing and Adverse Selection",
+    "section": "Incorporating data",
+    "text": "Incorporating data\n\nGoal is to estimate demand curve, \\(D(p)\\), and average costs, \\(AC(p)\\)\n\\(MC(P)\\) derives from product of \\(D(p)\\) and \\(AC(p)\\)\nNeed data on:\n\nprices and quantities\nexpected costs, such as claims or medical spending\nexogenous shifters in prices"
+  },
+  {
+    "objectID": "slides/class8-1.html#possible-sources-of-variation",
+    "href": "slides/class8-1.html#possible-sources-of-variation",
+    "title": "Pricing and Adverse Selection",
+    "section": "Possible sources of variation",
+    "text": "Possible sources of variation\n\nState regulations introduce variation across people and over time\nTax policies such as health insurance subisides\nField experiments and “idiosyncrasies of firm pricing behavior”\nShifts in administrative costs of handling claims\nCommon demand instruments such as plausibly exogenous changes in market conditions"
+  },
+  {
+    "objectID": "slides/class8-1.html#empirical-application",
+    "href": "slides/class8-1.html#empirical-application",
+    "title": "Pricing and Adverse Selection",
+    "section": "Empirical application",
+    "text": "Empirical application\n\nHealth insurance for Alcoa employees in 2004\n“High” versus “low” coverage PPO plans\nExogenous variation:\n\n7 different pricing menus for same coverage\nFocus on relative difference, \\(p= p_{H} - p_{L}\\)\nPrice menus determined by president of business unit\n40 units in company\n\n\n\n“As a result of this business structure, employees doing the same job in the same location may face different prices for their health insurance benefits due to their business unit affiliation.”"
+  },
+  {
+    "objectID": "slides/class8-1.html#motivation-1",
+    "href": "slides/class8-1.html#motivation-1",
+    "title": "Pricing and Adverse Selection",
+    "section": "Motivation",
+    "text": "Motivation\n\nPrices often not reflective of costs of coverage\nInsurers have incentive to attract specific types of enrollees\nEnrollees have incentive to select specific types of plans\n\n\nResearch question: What are the welfare effects of these forms of selection?"
+  },
+  {
+    "objectID": "slides/class8-1.html#setup-1",
+    "href": "slides/class8-1.html#setup-1",
+    "title": "Pricing and Adverse Selection",
+    "section": "Setup",
+    "text": "Setup\n\n\n“Standard” setup with 2 plans\nAssumes WTP $u $ perfectly correlated with health risk \\(\\theta\\)\nAssumes WTP increasing in \\(\\theta\\) faster than costs (i.e., slope of demand curve steeper than slope of AC curve)"
+  },
+  {
+    "objectID": "slides/class8-1.html#data",
+    "href": "slides/class8-1.html#data",
+    "title": "Pricing and Adverse Selection",
+    "section": "Data",
+    "text": "Data\n\n“Private firm that helps small and mid-sized employers manage health benefits”\n11 employers in one metropolitan area in “western United States” from 2004-2005\nData on 6,603 enrollees (3,683 employees), claims, plan selection, etc."
+  },
+  {
+    "objectID": "slides/class8-1.html#model-demand",
+    "href": "slides/class8-1.html#model-demand",
+    "title": "Pricing and Adverse Selection",
+    "section": "Model: Demand",
+    "text": "Model: Demand\nHousehold utility: \\[u_{hj} = \\alpha_{1} x_{j} + \\alpha_{2} x_{h} + \\psi (r_{h} + \\mu_{h} ; \\alpha_{3}) - p_{j} + \\sigma_{\\varepsilon} \\varepsilon_{hj}\\]\n\n\\(x_{j}\\): plan characteristics\n\\(x_{h}\\): household characteristics\n\\(r_{h}\\): health risk score (based on observable demographics)\n\\(\\mu_{h}\\): unobserved health status"
+  },
+  {
+    "objectID": "slides/class8-1.html#model-costs",
+    "href": "slides/class8-1.html#model-costs",
+    "title": "Pricing and Adverse Selection",
+    "section": "Model: Costs",
+    "text": "Model: Costs\nCosts assumed: \\[c_{ij} = a_{j} + b_{j}(r_{i} + \\mu_{i} -1) + \\eta_{ij}\\]\n\n\\(a_{j}\\): baseline cost for standard enrollee\n\\(b_{j}\\): marginal cost of insuring a higher/lower risk enrollee\nCosts for firm-year \\(f\\) and insurer \\(k\\) are sum of all relevant \\(c_{ij}\\)"
+  },
+  {
+    "objectID": "slides/class8-1.html#model-other-things",
+    "href": "slides/class8-1.html#model-other-things",
+    "title": "Pricing and Adverse Selection",
+    "section": "Model: Other things",
+    "text": "Model: Other things\n\nPlan bids: markup over expected costs\nEmployer contribution: employers pass on share of lowest-cost plan plus fraction of incremental cost for high-cost plans"
+  },
+  {
+    "objectID": "slides/class8-1.html#identification-and-estimation",
+    "href": "slides/class8-1.html#identification-and-estimation",
+    "title": "Pricing and Adverse Selection",
+    "section": "Identification and estimation",
+    "text": "Identification and estimation\n\nNeed variation in prices separate from unobserved household tastes or private health risks \\(\\mu\\)\nInstrument for actual plan contribution using predicted contribution\nEstimate using method of simulated moments (simulation comes from draws of \\(\\mu\\) from normal distribution with mean 0 and variance \\(\\sigma^{2}\\):\n\nConsumer choice: \\(E[q_{hj} - Pr(q_{hj}=1 | x_{h}, \\mu_{j})|z_{h}, \\mu_{h}] = 0\\), with instruments \\(z_{h}\\)\nPlan costs: \\(E[C_{kf} - \\hat{C}_{kf}|x_{kf}, \\mu_{kf}] = 0\\)\nPlan bids: \\(E[B_{if} - \\hat{B}_{if}|x_{f}] = 0\\)"
+  },
+  {
+    "objectID": "slides/class8-1.html#results",
+    "href": "slides/class8-1.html#results",
+    "title": "Pricing and Adverse Selection",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "slides/class8-1.html#takeaways",
+    "href": "slides/class8-1.html#takeaways",
+    "title": "Pricing and Adverse Selection",
+    "section": "Takeaways",
+    "text": "Takeaways\n\nWelfare loss of 2-11% of total cost of coverage under current pricing and contributions\nUniform contribution policy (or community rating) offers modest improvements (1-3%)\nRisk-adjusted premium policy can capture entirety of welfare gains"
+  },
+  {
+    "objectID": "slides/class8-1.html#textbook-adverse-selection",
+    "href": "slides/class8-1.html#textbook-adverse-selection",
+    "title": "Pricing and Adverse Selection",
+    "section": "Textbook Adverse Selection",
+    "text": "Textbook Adverse Selection\n\n\n\\(D&gt;MC\\) because willingness to pay is expected costs plus risk premium\nRelationship between demand and AC reflects problems due to adverse selection"
+  },
+  {
+    "objectID": "schedule/class8.html",
+    "href": "schedule/class8.html",
+    "title": "Adverse Selection",
+    "section": "",
+    "text": "Slides for today, separately by subtopic, are available below:\n\nPricing and Adverse Selection\nMitigating Adverse Selection. No slides for this today so that we can spend more time on the other two topics.\nAdverse Selection and Insurance Networks"
+  },
+  {
+    "objectID": "slides/class6-1.html",
+    "href": "slides/class6-1.html",
+    "title": "Health Insurance Design and Consumer Behavior",
+    "section": "",
+    "text": "So far, we’ve established that health insurance:\n\nimproves financial stability and reduces financial risks of medical spending\nimproves health, particularly for those with chronic conditions"
+  },
+  {
+    "objectID": "slides/class7-1.html#overview",
+    "href": "slides/class7-1.html#overview",
+    "title": "Pricing and Adverse Selection",
+    "section": "Overview",
+    "text": "Overview\nSo far, we’ve focused on health insurance from more of an individual perspective:\n\nthings health insurance does for individuals\nways to improve health insurance choice or the matching between plans and individuals\n\n\nBut if we want people to have health insurance, and if we care about using a market to allocate health insurance, then we need to take a broader perspective"
+  },
+  {
+    "objectID": "slides/class7-1.html#motivation",
+    "href": "slides/class7-1.html#motivation",
+    "title": "Pricing and Adverse Selection",
+    "section": "Motivation",
+    "text": "Motivation\n\nAdverse selection is a central concern in health insurance markets\nBut very little empirical work in this space (until 2010 or so)\n\n\nThis presumably reflects not a lack of interest in this important topic, but rather the considerable challenges posed by empirical welfare analysis in markets with hidden information."
+  },
+  {
+    "objectID": "slides/class7-1.html#basic-model",
+    "href": "slides/class7-1.html#basic-model",
+    "title": "Pricing and Adverse Selection",
+    "section": "Basic Model",
+    "text": "Basic Model\n\nUnique feature of adverse selection: demand affects firm costs\nComplicates welfare analysis because we need to know demand curve (how demand varies with price) but also how price changes affect costs"
+  },
+  {
+    "objectID": "slides/class7-1.html#setup",
+    "href": "slides/class7-1.html#setup",
+    "title": "Pricing and Adverse Selection",
+    "section": "Setup",
+    "text": "Setup\n\nTwo available contracts: high coverage (\\(H\\)) and low coverage (\\(L\\)), with relative price of \\(H\\) given by \\(p\\)\nConsumer characteristics \\(\\zeta\\) from distribution \\(G(\\zeta)\\)\nUtility denoted by \\(\\nu^{H}(\\zeta_{i}, p)\\) and \\(\\nu^{L}(\\zeta_{i})\\) for plan \\(H\\) and \\(L\\), respectively\n\\(\\nu^{H}(\\zeta_{i}, p)\\) decreasing in \\(p\\), with \\(\\nu^{H}(\\zeta_{i}, p=0)&gt;\\nu^{L}(\\zeta_{i})\\)\nCosts to insurer given by \\(c(\\zeta_{i})\\)"
+  },
+  {
+    "objectID": "slides/class7-1.html#demand",
+    "href": "slides/class7-1.html#demand",
+    "title": "Pricing and Adverse Selection",
+    "section": "Demand",
+    "text": "Demand\n\nIndividual \\(i\\) choose health insurance if \\(\\nu^{H}(\\zeta_{i}, p)&gt;\\nu^{L}(\\zeta_{i})\\)\nDenote highest price at which individual \\(i\\) chooses \\(H\\) as \\(\\pi(\\zeta_{i}) \\equiv \\max \\{p: \\nu^{H}(\\zeta_{i}, p)&gt;\\nu^{L}(\\zeta_{i})\\}\\)\nAggregate demand, \\(D(p) = \\int 1(\\pi(\\zeta) \\geq p) dG(\\zeta) = Pr(\\pi(\\zeta) \\geq p)\\)"
+  },
+  {
+    "objectID": "slides/class7-1.html#supply",
+    "href": "slides/class7-1.html#supply",
+    "title": "Pricing and Adverse Selection",
+    "section": "Supply",
+    "text": "Supply\n\nBertrand competition with many risk-neutral insurers\nFocus on case of perfect competition as benchmark, so that inefficiency derives from selection and not other factors\nCosts to insurer given by \\(c(\\zeta_{i})\\)\nAverage costs are then, \\(AC(p) = \\frac{1}{D(p)} \\int c(\\zeta) 1(\\pi(\\zeta) \\geq p) dG(\\zeta) = E(c(\\zeta) | \\pi(\\zeta) \\geq p)\\)\nMarginal costs, \\(MC(p) = E(c(\\zeta) | \\pi(\\zeta) = p)\\)\nEquilibrium, \\(p^{*} = \\min \\{p : p=AC(p) \\}\\)"
+  },
+  {
+    "objectID": "slides/class7-1.html#welfare",
+    "href": "slides/class7-1.html#welfare",
+    "title": "Pricing and Adverse Selection",
+    "section": "Welfare",
+    "text": "Welfare\nMeasure welfare using certainty equivalent: amount that would make consumer indifferent between obtaining outcome for sure versus obtaining outcome with uncertainty, denoted \\(e^{H}(\\zeta_{i})\\) and \\(e^{L}(\\zeta_{i})\\), so that WTP for health insurance is reflected by \\(\\e^{H}(\\zeta_{i}) - e^{L}(\\zeta_{i})\\)\n\n\\(CS = \\int \\left[ (e^{H}(\\zeta) - p)1(\\pi(\\zeta) \\geq p) + e^{L}(\\zeta) 1(\\pi(\\zeta) &lt; p) \\right] d G(\\zeta)\\)\n\\(PS = \\int \\left[ (p - c(\\eta)) 1(\\pi(\\zeta) \\geq p) \\right] d G(\\zeta)\\)\n\\(TS = CS + PS = \\int \\left[ (e^{H}(\\zeta) - c(\\eta)) 1(\\pi(\\zeta) \\geq p) + e^{L}(\\zeta) 1(\\pi(\\zeta) &lt; p) \\right] d G(\\zeta)\\)\nSocially efficient to purchase health insurance only if \\(\\pi(\\eta_{i}) \\geq c(\\eta_{i})\\)"
+  },
+  {
+    "objectID": "slides/class7-1.html#textbook-adverse-selection",
+    "href": "slides/class7-1.html#textbook-adverse-selection",
+    "title": "Pricing and Adverse Selection",
+    "section": "Textbook Adverse Selection",
+    "text": "Textbook Adverse Selection\n\n\n\\(D&gt;MC\\) because willingness to pay is expected costs plus risk premium\nRelationship between demand and AC reflects problems due to adverse selection"
+  },
+  {
+    "objectID": "slides/class7-1.html#main-points",
+    "href": "slides/class7-1.html#main-points",
+    "title": "Pricing and Adverse Selection",
+    "section": "Main points",
+    "text": "Main points\n\nKey assumptions:\n\nSimplifying assumption that insurers earn 0 profit (at least approximately)\nIndividuals select plans based on health needs (which is private information)\nCommon price to all enrollees of a given plan (community rating)\n\nPossible outcomes:\n\nFull insurance (Demand always above AC)\nPartial unravelling (Demand intersects with AC somewhere)\nFull unravelling (Demand always below AC)\n\n\n\n\nLimitations\n\nOnly applies to existing contracts\nCannot speak to entry or exit decisions"
+  },
+  {
+    "objectID": "slides/class7-1.html#incorporating-data",
+    "href": "slides/class7-1.html#incorporating-data",
+    "title": "Pricing and Adverse Selection",
+    "section": "Incorporating data",
+    "text": "Incorporating data\n\nGoal is to estimate demand curve, \\(D(p)\\), and average costs, \\(AC(p)\\)\n\\(MC(P)\\) derives from product of \\(D(p)\\) and \\(AC(p)\\)\nNeed data on:\n\nprices and quantities\nexpected costs, such as claims or medical spending\nexogenous shifters in prices"
+  },
+  {
+    "objectID": "slides/class7-1.html#possible-sources-of-variation",
+    "href": "slides/class7-1.html#possible-sources-of-variation",
+    "title": "Pricing and Adverse Selection",
+    "section": "Possible sources of variation",
+    "text": "Possible sources of variation\n\nState regulations introduce variation across people and over time\nTax policies such as health insurance subisides\nField experiments and “idiosyncrasies of firm pricing behavior”\nShifts in administrative costs of handling claims\nCommon demand instruments such as plausibly exogenous changes in market conditions"
+  },
+  {
+    "objectID": "slides/class7-1.html#empirical-application",
+    "href": "slides/class7-1.html#empirical-application",
+    "title": "Pricing and Adverse Selection",
+    "section": "Empirical application",
+    "text": "Empirical application\n\nHealth insurance for Alcoa employees in 2004\n“High” versus “low” coverage PPO plans\nExogenous variation:\n\n7 different pricing menus for same coverage\nFocus on relative difference, \\(p= p_{H} - p_{L}\\)\nPrice menus determined by president of business unit\n40 units in company\n\n\n\n“As a result of this business structure, employees doing the same job in the same location may face different prices for their health insurance benefits due to their business unit affiliation.”"
+  },
+  {
+    "objectID": "slides/class7-1.html#motivation-1",
+    "href": "slides/class7-1.html#motivation-1",
+    "title": "Pricing and Adverse Selection",
+    "section": "Motivation",
+    "text": "Motivation\n\nPrices often not reflective of costs of coverage\nInsurers have incentive to attract specific types of enrollees\nEnrollees have incentive to select specific types of plans\n\n\nResearch question: What are the welfare effects of these forms of selection?"
+  },
+  {
+    "objectID": "slides/class7-1.html#setup-1",
+    "href": "slides/class7-1.html#setup-1",
+    "title": "Pricing and Adverse Selection",
+    "section": "Setup",
+    "text": "Setup\n\n\n“Standard” setup with 2 plans\nAssumes WTP $u $ perfectly correlated with health risk \\(\\theta\\)\nAssumes WTP increasing in \\(\\theta\\) faster than costs (i.e., slope of demand curve steeper than slope of AC curve)"
+  },
+  {
+    "objectID": "slides/class7-1.html#data",
+    "href": "slides/class7-1.html#data",
+    "title": "Pricing and Adverse Selection",
+    "section": "Data",
+    "text": "Data\n\n“Private firm that helps small and mid-sized employers manage health benefits”\n11 employers in one metropolitan area in “western United States” from 2004-2005\nData on 6,603 enrollees (3,683 employees), claims, plan selection, etc."
+  },
+  {
+    "objectID": "slides/class7-1.html#model-demand",
+    "href": "slides/class7-1.html#model-demand",
+    "title": "Pricing and Adverse Selection",
+    "section": "Model: Demand",
+    "text": "Model: Demand\nHousehold utility: \\[u_{hj} = \\alpha_{1} x_{j} + \\alpha_{2} x_{h} + \\psi (r_{h} + \\mu_{h} ; \\alpha_{3}) - p_{j} + \\sigma_{\\varepsilon} \\varepsilon_{hj}\\]\n\n\\(x_{j}\\): plan characteristics\n\\(x_{h}\\): household characteristics\n\\(r_{h}\\): health risk score (based on observable demographics)\n\\(\\mu_{h}\\): unobserved health status"
+  },
+  {
+    "objectID": "slides/class7-1.html#model-costs",
+    "href": "slides/class7-1.html#model-costs",
+    "title": "Pricing and Adverse Selection",
+    "section": "Model: Costs",
+    "text": "Model: Costs\nCosts assumed: \\[c_{ij} = a_{j} + b_{j}(r_{i} + \\mu_{i} -1) + \\eta_{ij}\\]\n\n\\(a_{j}\\): baseline cost for standard enrollee\n\\(b_{j}\\): marginal cost of insuring a higher/lower risk enrollee\nCosts for firm-year \\(f\\) and insurer \\(k\\) are sum of all relevant \\(c_{ij}\\)"
+  },
+  {
+    "objectID": "slides/class7-1.html#model-other-things",
+    "href": "slides/class7-1.html#model-other-things",
+    "title": "Pricing and Adverse Selection",
+    "section": "Model: Other things",
+    "text": "Model: Other things\n\nPlan bids: markup over expected costs\nEmployer contribution: employers pass on share of lowest-cost plan plus fraction of incremental cost for high-cost plans"
+  },
+  {
+    "objectID": "slides/class7-1.html#identification-and-estimation",
+    "href": "slides/class7-1.html#identification-and-estimation",
+    "title": "Pricing and Adverse Selection",
+    "section": "Identification and estimation",
+    "text": "Identification and estimation\n\nNeed variation in prices separate from unobserved household tastes or private health risks \\(\\mu\\)\nInstrument for actual plan contribution using predicted contribution\nEstimate using method of simulated moments (simulation comes from draws of \\(\\mu\\) from normal distribution with mean 0 and variance \\(\\sigma^{2}\\):\n\nConsumer choice: \\(E[q_{hj} - Pr(q_{hj}=1 | x_{h}, \\mu_{j})|z_{h}, \\mu_{h}] = 0\\), with instruments \\(z_{h}\\)\nPlan costs: \\(E[C_{kf} - \\hat{C}_{kf}|x_{kf}, \\mu_{kf}] = 0\\)\nPlan bids: \\(E[B_{if} - \\hat{B}_{if}|x_{f}] = 0\\)"
+  },
+  {
+    "objectID": "slides/class7-1.html#results",
+    "href": "slides/class7-1.html#results",
+    "title": "Pricing and Adverse Selection",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "slides/class7-1.html#takeaways",
+    "href": "slides/class7-1.html#takeaways",
+    "title": "Pricing and Adverse Selection",
+    "section": "Takeaways",
+    "text": "Takeaways\n\nWelfare loss of 2-11% of total cost of coverage under current pricing and contributions\nUniform contribution policy (or community rating) offers modest improvements (1-3%)\nRisk-adjusted premium policy can capture entirety of welfare gains"
+  },
+  {
+    "objectID": "slides/class7-1.html#references",
+    "href": "slides/class7-1.html#references",
+    "title": "Pricing and Adverse Selection",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nBundorf, M Kate, Jonathan Levin, and Neale Mahoney. 2012. “Pricing and Welfare in Health Plan Choice.” American Economic Review 102 (7): 3214–48.\n\n\nEinav, Liran, Amy Finkelstein, and Mark R. Cullen. 2010. “Estimating Welfare in Insurance Markets Using Variation in Prices.” The Quarterly Journal of Economics 125 (3): 877–921. https://doi.org/10.1162/qjec.2010.125.3.877."
+  },
+  {
+    "objectID": "schedule/class7.html",
+    "href": "schedule/class7.html",
+    "title": "Adverse Selection",
+    "section": "",
+    "text": "Slides for today, separately by subtopic, are available below:\n\nPricing and Adverse Selection\nMitigating Adverse Selection. No slides for this today so that we can spend more time on the other two topics.\nAdverse Selection and Insurance Networks"
   }
 ]

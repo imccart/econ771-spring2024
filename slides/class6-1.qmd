@@ -45,7 +45,7 @@ But health insurance is also a complex product that is difficult to understand a
 
 # Endogenous Information and Simplifying Insurance Choice
 
-(@brown2023wp)
+(see @brown2023wp for details)
 
 ---
 
@@ -112,11 +112,11 @@ $$\tilde{u}_{ij} = u_{ij} + \lambda log P_{ij}^{0} + \lambda \varepsilon_{ij}$$
 
 ## Preliminary evidence
 
-![@brown2023wp](/files/figures/brown-fig1.png){}
+![](/files/figures/brown-fig1.png){}
 
-::: {.aside}
-'stakes' measured as expeced out of pocket costs, $v_{ij}$
-:::
+- @brown2023wp
+- 'stakes' measured as expeced out of pocket costs, $v_{ij}$
+
 
 ---
 
@@ -127,7 +127,7 @@ $$\tilde{u}_{ij} = u_{ij} + \lambda log P_{ij}^{0} + \lambda \varepsilon_{ij}$$
 
 # Health Insurance Design and Consumer Behavior
 
-(@ho2020)
+(see @ho2020 for details)
 
 ---
 
@@ -160,10 +160,9 @@ $$\tilde{u}_{ij} = u_{ij} + \lambda log P_{ij}^{0} + \lambda \varepsilon_{ij}$$
 
 ![@ho2020](/files/figures/ho-fig1.jpeg){}
 
-::: {.aside}
 - Optimal cost sharing of 29% with zero deductible
 - Large initial gains with even small cost sharing
-:::
+
 
 ---
 
