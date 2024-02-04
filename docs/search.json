@@ -1636,5 +1636,726 @@
     "title": "Adverse Selection",
     "section": "",
     "text": "Slides for today, separately by subtopic, are available below:\n\nPricing and Adverse Selection\nMitigating Adverse Selection. No slides for this today so that we can spend more time on the other two topics.\nAdverse Selection and Insurance Networks"
+  },
+  {
+    "objectID": "slides/class9.html#outline",
+    "href": "slides/class9.html#outline",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Outline",
+    "text": "Outline\n\nPanel Data and Fixed Effects\nDifference-in-Differences Yesterday\nDifference-in-Differences Today\nBrief Notes on Empirical Exercise"
+  },
+  {
+    "objectID": "slides/class9.html#basics-of-panel-data",
+    "href": "slides/class9.html#basics-of-panel-data",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Basics of panel data",
+    "text": "Basics of panel data\n\nRepeated observations of the same units over time (balanced vs unbalanced)\nIdentification due to variation within unit\n\n\nNotation\n\nUnit \\(i=1,...,N\\) over several periods \\(t=1,...,T\\), which we denote \\(y_{it}\\)\nTreatment status \\(D_{it}\\)\nRegression model,  \\(y_{it} = \\delta D_{it} + \\gamma_{i} + \\gamma_{t} + \\epsilon_{it}\\) for \\(t=1,...,T\\) and \\(i=1,...,N\\)"
+  },
+  {
+    "objectID": "slides/class9.html#benefits-of-panel-data",
+    "href": "slides/class9.html#benefits-of-panel-data",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Benefits of Panel Data",
+    "text": "Benefits of Panel Data\n\nMay overcome certain forms of omitted variable bias\nAllows for unobserved but time-invariant factor, \\(\\gamma_{i}\\), that affects both treatment and outcomes\n\n\nStill assumes\n\nNo time-varying confounders\nPast outcomes do not directly affect current outcomes\nPast outcomes do not affect treatment (reverse causality)"
+  },
+  {
+    "objectID": "slides/class9.html#some-textbook-settings",
+    "href": "slides/class9.html#some-textbook-settings",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Some textbook settings",
+    "text": "Some textbook settings\n\nUnobserved “ability” when studying schooling and wages\nUnobserved “quality” when studying physicians or hospitals"
+  },
+  {
+    "objectID": "slides/class9.html#fixed-effects-and-regression",
+    "href": "slides/class9.html#fixed-effects-and-regression",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Fixed effects and regression",
+    "text": "Fixed effects and regression\n\\(y_{it} = \\delta D_{it} + \\gamma_{i} + \\gamma_{t} + \\epsilon_{it}\\) for \\(t=1,...,T\\) and \\(i=1,...,N\\)\n\n\nAllows correlation between \\(\\gamma_{i}\\) and \\(D_{it}\\)\nPhysically estimate \\(\\gamma_{i}\\) in some cases via set of dummy variables\nMore generally, “remove” \\(\\gamma_{i}\\) via:\n\n“within” estimator\nfirst-difference estimator"
+  },
+  {
+    "objectID": "slides/class9.html#within-estimator",
+    "href": "slides/class9.html#within-estimator",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Within Estimator",
+    "text": "Within Estimator\n\\(y_{it} = \\delta D_{it} + \\gamma_{i} + \\gamma_{t} + \\epsilon_{it}\\) for \\(t=1,...,T\\) and \\(i=1,...,N\\)\n\n\nMost common approach (default in most statistical software)\nEquivalent to demeaned model: \\[y_{it} - \\bar{y}_{i} = \\delta (D_{it} - \\bar{D}_{i}) + (\\gamma_{i} - \\bar{\\gamma}_{i}) + (\\gamma_{t} - \\bar{\\gamma}_{t}) + (\\epsilon_{it} - \\bar{\\epsilon}_{i})\\]\n\\(\\gamma_{i} - \\bar{\\gamma}_{i} = 0\\) since \\(\\gamma_{i}\\) is time-invariant\nRequires strict exogeneity assumption (error is uncorrelated with \\(D_{it}\\) for all time periods)"
+  },
+  {
+    "objectID": "slides/class9.html#first-difference",
+    "href": "slides/class9.html#first-difference",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "First-difference",
+    "text": "First-difference\n\\(y_{it} = \\delta D_{it} + \\gamma_{i} + \\gamma_{t} + \\epsilon_{it}\\) for \\(t=1,...,T\\) and \\(i=1,...,N\\)\n\n\nInstead of subtracting the mean, subtract the prior period values \\[y_{it} - y_{i,t-1} = \\delta(D_{it} - D_{i,t-1}) + (\\gamma_{i} - \\gamma_{i}) + (\\gamma_{t} - \\gamma_{t-1}) + (\\epsilon_{it} - \\epsilon_{i,t-1})\\]\nRequires exogeneity of \\(\\epsilon_{it}\\) and \\(D_{it}\\) only for time \\(t\\) and \\(t-1\\) (weaker assumption than within estimator)\nSometimes useful to estimate both FE and FD just as a check"
+  },
+  {
+    "objectID": "slides/class9.html#keep-in-mind",
+    "href": "slides/class9.html#keep-in-mind",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Keep in mind…",
+    "text": "Keep in mind…\n\nDiscussion only applies to linear case or very specific nonlinear models\nFixed effects at lower “levels” accommodate fixed effects at higher levels (e.g., FEs for hospital combine to form FEs for zip code, etc.)\nFixed effects can’t solve reverse causality\nFixed effects don’t address unobserved, time-varying confounders\nCan’t estimate effects on time-invariant variables\nMay “absorb” a lot of the variation for variables that don’t change much over time"
+  },
+  {
+    "objectID": "slides/class9.html#within-estimator-default-in-practice",
+    "href": "slides/class9.html#within-estimator-default-in-practice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Within Estimator (Default) in practice",
+    "text": "Within Estimator (Default) in practice\n\n\nStata\n\nssc install causaldata\ncausaldata gapminder.dta, use clear download\ngen lgdp_pc=log(gdppercap)\ntsset country year\nxtreg lifeExp lgdp_pc, fe\n\n\nR\n\nlibrary(fixest)\nlibrary(causaldata)\nreg.dat &lt;- causaldata::gapminder %&gt;%\n  mutate(lgdp_pc=log(gdpPercap))\nfeols(lifeExp~lgdp_pc | country, data=reg.dat)"
+  },
+  {
+    "objectID": "slides/class9.html#within-estimator-default-in-practice-1",
+    "href": "slides/class9.html#within-estimator-default-in-practice-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Within Estimator (Default) in practice",
+    "text": "Within Estimator (Default) in practice\n\n\nR Code\nlibrary(fixest)\nlibrary(modelsummary)\nlibrary(causaldata)\nreg.dat &lt;- causaldata::gapminder %&gt;%\n  mutate(lgdp_pc=log(gdpPercap))\nm1 &lt;- feols(lifeExp ~ lgdp_pc | country, data=reg.dat)\nmodelsummary(list(\"Default FE\"=m1), \n             shape=term + statistic ~ model, \n             gof_map=NA, \n             coef_rename=c(\"lgdp_pc\"=\"Log GDP per Capita\"))\n\n\n\n\n\n\nDefault FE\n\n\n\n\nLog GDP per Capita\n9.769\n\n\n\n(0.702)"
+  },
+  {
+    "objectID": "slides/class9.html#within-estimator-manually-demean-in-practice",
+    "href": "slides/class9.html#within-estimator-manually-demean-in-practice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Within Estimator (Manually Demean) in practice",
+    "text": "Within Estimator (Manually Demean) in practice\n\n\nStata\n\ncausaldata gapminder.dta, use clear download\ngen lgdp_pc=log(gdppercap)\nforeach x of varlist lifeExp lgdp_pc {\n  egen mean_`x'=mean(`x')\n  egen demean_`x'=`x'-mean_`x'\n}\nreg demean_lifeExp demean_lgdp_pc\n\n\nR\n\nlibrary(causaldata)\nreg.dat &lt;- causaldata::gapminder %&gt;%\n  mutate(lgdp_pc=log(gdpPercap)) %&gt;%\n  group_by(country) %&gt;%\n  mutate(demean_lifeexp=lifeExp - mean(lifeExp, na.rm=TRUE),\n         demean_gdp=lgdp_pc - mean(lgdp_pc, na.rm=TRUE))\nlm(demean_lifeexp~ 0 + demean_gdp, data=reg.dat)"
+  },
+  {
+    "objectID": "slides/class9.html#within-estimator-manually-demean-in-practice-1",
+    "href": "slides/class9.html#within-estimator-manually-demean-in-practice-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Within Estimator (Manually Demean) in practice",
+    "text": "Within Estimator (Manually Demean) in practice\n\n\nR Code\nlibrary(lmtest)\nreg.dat &lt;- causaldata::gapminder %&gt;%\n  group_by(country) %&gt;%\n  mutate(lgdp_pc=log(gdpPercap),\n         lgdp_pc=lgdp_pc - mean(lgdp_pc, na.rm=TRUE),\n         lifeExp=lifeExp - mean(lifeExp, na.rm=TRUE))\n\nm2 &lt;- lm(lifeExp~ 0 + lgdp_pc , data=reg.dat)\nmodelsummary(list(\"Default FE\"=m1, \"Manual FE\"=m2), \n             shape=term + statistic ~ model, \n             gof_map=NA, \n             coef_rename=c(\"lgdp_pc\"=\"Log GDP per Capita\"),\n             vcov = ~country)\n\n\n\n\n\n\nDefault FE\nManual FE\n\n\n\n\nLog GDP per Capita\n9.769\n9.769\n\n\n\n(0.702)\n(0.701)\n\n\n\n\n\n\n\nNote: feols defaults to clustering at level of FE, lm requires our input"
+  },
+  {
+    "objectID": "slides/class9.html#first-differencing-default-in-practice",
+    "href": "slides/class9.html#first-differencing-default-in-practice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "First differencing (default) in practice",
+    "text": "First differencing (default) in practice\n\n\nStata\n\ncausaldata gapminder.dta, use clear download\ngen lgdp_pc=log(gdppercap)\nreg d.lifeExp d.lgdp_pc, noconstant\n\n\nR\n\nlibrary(plm)\nreg.dat &lt;- causaldata::gapminder %&gt;%\n  mutate(lgdp_pc=log(gdpPercap))\n\nplm(lifeExp ~ 0 + lgdp_pc, model=\"fd\", individual=\"country\", index=c(\"country\",\"year\"), data=reg.dat)"
+  },
+  {
+    "objectID": "slides/class9.html#first-differencing-manual-in-practice",
+    "href": "slides/class9.html#first-differencing-manual-in-practice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "First differencing (manual) in practice",
+    "text": "First differencing (manual) in practice\n\n\nR Code\nlibrary(plm)\nreg.dat &lt;- causaldata::gapminder %&gt;%\n  mutate(lgdp_pc=log(gdpPercap))\n\nm3 &lt;- plm(lifeExp ~ 0 + lgdp_pc, model=\"fd\", index=c(\"country\",\"year\"), data=reg.dat)\n\nmodelsummary(list(\"Default FE\"=m1, \"Manual FE\"=m2, \"Default FD\"=m3), \n             shape=term + statistic ~ model, \n             gof_map=NA, \n             coef_rename=c(\"lgdp_pc\"=\"Log GDP per Capita\"))\n\n\n\n\n\n\nDefault FE\nManual FE\nDefault FD\n\n\n\n\nLog GDP per Capita\n9.769\n9.769\n5.290\n\n\n\n(0.702)\n(0.284)\n(0.291)"
+  },
+  {
+    "objectID": "slides/class9.html#first-differencing-manual-in-practice-1",
+    "href": "slides/class9.html#first-differencing-manual-in-practice-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "First differencing (manual) in practice",
+    "text": "First differencing (manual) in practice\n\n\nStata\n\ncausaldata gapminder.dta, use clear download\ngen lgdp_pc=log(gdppercap)\nreg d.lifeExp d.lgdp_pc, noconstant\n\n\nR\n\nreg.dat &lt;- causaldata::gapminder %&gt;%\n  mutate(lgdp_pc=log(gdpPercap)) %&gt;%  \n  group_by(country) %&gt;%\n  arrange(country, year) %&gt;%\n  mutate(fd_lifeexp=lifeExp - lag(lifeExp),\n         lgdp_pc=lgdp_pc - lag(lgdp_pc)) %&gt;%\n  na.omit()\n\nlm(fd_lifeexp~ 0 + lgdp_pc , data=reg.dat)"
+  },
+  {
+    "objectID": "slides/class9.html#first-differencing-manual-in-practice-2",
+    "href": "slides/class9.html#first-differencing-manual-in-practice-2",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "First differencing (manual) in practice",
+    "text": "First differencing (manual) in practice\n\n\nR Code\nreg.dat &lt;- causaldata::gapminder %&gt;%\n  mutate(lgdp_pc=log(gdpPercap)) %&gt;%  \n  group_by(country) %&gt;%\n  arrange(country, year) %&gt;%  \n  mutate(fd_lifeexp=lifeExp - dplyr::lag(lifeExp),\n         lgdp_pc=lgdp_pc - dplyr::lag(lgdp_pc)) %&gt;%\n  na.omit()\n\nm4 &lt;- lm(fd_lifeexp~ 0 + lgdp_pc , data=reg.dat)\nmodelsummary(list(\"Default FE\"=m1, \"Manual FE\"=m2, \"Default FD\"=m3, \"Manual FD\"=m4), \n             shape=term + statistic ~ model, \n             gof_map=NA, \n             coef_rename=c(\"lgdp_pc\"=\"Log GDP per Capita\"))\n\n\n\n\n\n\nDefault FE\nManual FE\nDefault FD\nManual FD\n\n\n\n\nLog GDP per Capita\n9.769\n9.769\n5.290\n5.290\n\n\n\n(0.702)\n(0.284)\n(0.291)\n(0.291)"
+  },
+  {
+    "objectID": "slides/class9.html#fe-and-fd-with-same-time-period",
+    "href": "slides/class9.html#fe-and-fd-with-same-time-period",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "FE and FD with same time period",
+    "text": "FE and FD with same time period\n\n\nR Code\nreg.dat2 &lt;- causaldata::gapminder %&gt;%\n  mutate(lgdp_pc=log(gdpPercap)) %&gt;%\n  inner_join(reg.dat %&gt;% select(country, year), by=c(\"country\",\"year\"))\nm5 &lt;- feols(lifeExp ~ lgdp_pc | country, data=reg.dat2)\nmodelsummary(list(\"Default FE\"=m5, \"Default FD\"=m3, \"Manual FD\"=m4), \n             shape=term + statistic ~ model, \n             gof_map=NA, \n             coef_rename=c(\"lgdp_pc\"=\"Log GDP per Capita\"))\n\n\n\n\n\n\nDefault FE\nDefault FD\nManual FD\n\n\n\n\nLog GDP per Capita\n8.929\n5.290\n5.290\n\n\n\n(0.741)\n(0.291)\n(0.291)\n\n\n\n\n\n\n\nDon’t want to read too much into this, but…\n\nLikely strong serial correlation in this case (almost certainly)\nMispecified model"
+  },
+  {
+    "objectID": "slides/class9.html#basic-2x2-setup",
+    "href": "slides/class9.html#basic-2x2-setup",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Basic 2x2 Setup",
+    "text": "Basic 2x2 Setup\nWant to estimate \\(ATT = E[Y_{1}(1)- Y_{0}(1) | D=1]\\)\n\n\n\n\nPre-Period\nPost-Period\n\n\n\n\nTreatment\n\\(E(Y_{0}(0)|D=1)\\)\n\\(E(Y_{1}(1)|D=1)\\)\n\n\nControl\n\\(E(Y_{0}(0)|D=0)\\)\n\\(E(Y_{0}(1)|D=0)\\)\n\n\n\n\n\nProblem: We don’t see \\(E[Y_{0}(1)|D=1]\\)"
+  },
+  {
+    "objectID": "slides/class9.html#basic-2x2-setup-1",
+    "href": "slides/class9.html#basic-2x2-setup-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Basic 2x2 Setup",
+    "text": "Basic 2x2 Setup\nWant to estimate \\(ATT = E[Y_{1}(1)- Y_{0}(1) | D=1]\\)\n\n\n\n\nPre-Period\nPost-Period\n\n\n\n\nTreatment\n\\(E(Y_{0}(0)|D=1)\\)\n\\(E(Y_{1}(1)|D=1)\\)\n\n\nControl\n\\(E(Y_{0}(0)|D=0)\\)\n\\(E(Y_{0}(1)|D=0)\\)\n\n\n\n\n\nStrategy 1: Estimate \\(E[Y_{0}(1)|D=1]\\) using \\(E[Y_{0}(0)|D=1]\\) (before treatment outcome used to estimate post-treatment)"
+  },
+  {
+    "objectID": "slides/class9.html#basic-2x2-setup-2",
+    "href": "slides/class9.html#basic-2x2-setup-2",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Basic 2x2 Setup",
+    "text": "Basic 2x2 Setup\nWant to estimate \\(ATT = E[Y_{1}(1)- Y_{0}(1) | D=1]\\)\n\n\n\n\nPre-Period\nPost-Period\n\n\n\n\nTreatment\n\\(E(Y_{0}(0)|D=1)\\)\n\\(E(Y_{1}(1)|D=1)\\)\n\n\nControl\n\\(E(Y_{0}(0)|D=0)\\)\n\\(E(Y_{0}(1)|D=0)\\)\n\n\n\n\n\nStrategy 2: Estimate \\(E[Y_{0}(1)|D=1]\\) using \\(E[Y_{0}(1)|D=0]\\) (control group used to predict outcome for treatment)"
+  },
+  {
+    "objectID": "slides/class9.html#basic-2x2-setup-3",
+    "href": "slides/class9.html#basic-2x2-setup-3",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Basic 2x2 Setup",
+    "text": "Basic 2x2 Setup\nWant to estimate \\(ATT = E[Y_{1}(1)- Y_{0}(1) | D=1]\\)\n\n\n\n\nPre-Period\nPost-Period\n\n\n\n\nTreatment\n\\(E(Y_{0}(0)|D=1)\\)\n\\(E(Y_{1}(1)|D=1)\\)\n\n\nControl\n\\(E(Y_{0}(0)|D=0)\\)\n\\(E(Y_{0}(1)|D=0)\\)\n\n\n\n\n\nStrategy 3: DD\n\nEstimate \\(E[Y_{1}(1)|D=1] - E[Y_{0}(1)|D=1]\\) using \\(E[Y_{0}(1)|D=0] - E[Y_{0}(0)|D=0]\\) (pre-post difference in control group used to predict difference for treatment group)"
+  },
+  {
+    "objectID": "slides/class9.html#graphically",
+    "href": "slides/class9.html#graphically",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Graphically",
+    "text": "Graphically\n\nBasic DD Graph"
+  },
+  {
+    "objectID": "slides/class9.html#animations",
+    "href": "slides/class9.html#animations",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Animations",
+    "text": "Animations\n\nBasic DD Graph, Animated"
+  },
+  {
+    "objectID": "slides/class9.html#ate-estimates-with-dd",
+    "href": "slides/class9.html#ate-estimates-with-dd",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "ATE Estimates with DD",
+    "text": "ATE Estimates with DD\nKey identifying assumption is that of parallel trends\n\\[E[Y_{0}(1) - Y_{0}(0)|D=1] = E[Y_{0}(1) - Y_{0}(0)|D=0]\\]"
+  },
+  {
+    "objectID": "slides/class9.html#estimation-sample-means",
+    "href": "slides/class9.html#estimation-sample-means",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Estimation: Sample Means",
+    "text": "Estimation: Sample Means\n\\[\\begin{align}\nE[Y_{1}(1) - Y_{0}(1)|D=1] &=& \\left( E[Y(1)|D=1] - E[Y(1)|D=0] \\right) \\\\\n& & - \\left( E[Y(0)|D=1] - E[Y(0)|D=0]\\right)\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/class9.html#estimation-regression",
+    "href": "slides/class9.html#estimation-regression",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Estimation: Regression",
+    "text": "Estimation: Regression\n\\[y_{it} = \\alpha + \\beta D_{i} + \\lambda \\times Post_{t} + \\delta \\times D_{i} \\times Post_{t} + \\varepsilon_{it}\\]\n\n\n\n\n\n\n\n\n\n\n\nPre\nPost\nPost - Pre\n\n\n\n\nTreatment\n\\(\\alpha + \\beta\\)\n\\(\\alpha + \\beta + \\lambda + \\delta\\)\n\\(\\lambda + \\delta\\)\n\n\nControl\n\\(\\alpha\\)\n\\(\\alpha + \\lambda\\)\n\\(\\lambda\\)\n\n\nDiff\n\\(\\beta\\)\n\\(\\beta + \\delta\\)\n\\(\\delta\\)"
+  },
+  {
+    "objectID": "slides/class9.html#simulated-data",
+    "href": "slides/class9.html#simulated-data",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Simulated data",
+    "text": "Simulated data\n\nN &lt;- 5000\ndd.dat &lt;- tibble(\n  d = (runif(N, 0, 1)&gt;0.5),\n  time_pre = \"pre\",\n  time_post = \"post\"\n)\n\ndd.dat &lt;- pivot_longer(dd.dat, c(\"time_pre\",\"time_post\"), values_to=\"time\") %&gt;%\n  select(d, time) %&gt;%\n  mutate(t=(time==\"post\"),\n         y.out=1.5+3*d + 1.5*t + 6*d*t + rnorm(N*2,0,1))"
+  },
+  {
+    "objectID": "slides/class9.html#mean-differences",
+    "href": "slides/class9.html#mean-differences",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Mean differences",
+    "text": "Mean differences\n\n\nR Code\ndd.means &lt;- dd.dat %&gt;% group_by(d, t) %&gt;% summarize(mean_y = mean(y.out)) %&gt;% mutate(d=ifelse(d==TRUE, \"Treated\", \"Control\"), t=ifelse(t==TRUE, \"Post\", \"Pre\"))\n\nknitr::kable(dd.means, col.names=c(\"Treated\",\"Period\",\"Mean\"), format=\"html\")\n\n\n\n\n\nTreated\nPeriod\nMean\n\n\n\n\nControl\nPre\n1.483339\n\n\nControl\nPost\n2.998502\n\n\nTreated\nPre\n4.515737\n\n\nTreated\nPost\n12.034735"
+  },
+  {
+    "objectID": "slides/class9.html#mean-differences-1",
+    "href": "slides/class9.html#mean-differences-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Mean differences",
+    "text": "Mean differences\nIn this example:\n\n\\(E[Y(1)|D=1] - E[Y(1)|D=0]\\) is 9.0362327\n\\(E[Y(0)|D=1] - E[Y(0)|D=0]\\) is 3.0323975\n\n\nSo the ATT is 6.0038352"
+  },
+  {
+    "objectID": "slides/class9.html#regression-estimator",
+    "href": "slides/class9.html#regression-estimator",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Regression estimator",
+    "text": "Regression estimator\n\n\nR Code\nlibrary(modelsummary)\ndd.est &lt;- lm(y.out ~ d + t + d*t, data=dd.dat)\nmodelsummary(dd.est, gof_map=NA, coef_omit='Intercept')\n\n\n\n\n\n\n (1)\n\n\n\n\ndTRUE\n3.032\n\n\n\n(0.028)\n\n\ntTRUE\n1.515\n\n\n\n(0.028)\n\n\ndTRUE × tTRUE\n6.004\n\n\n\n(0.040)"
+  },
+  {
+    "objectID": "slides/class9.html#application",
+    "href": "slides/class9.html#application",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Application",
+    "text": "Application\n\nTry out some real data on Medicaid expansion following the ACA\nData is small part of DD empirical assignment\nQuestion: Did Medicaid expansion reduce uninsurance?"
+  },
+  {
+    "objectID": "slides/class9.html#step-1-look-at-the-data",
+    "href": "slides/class9.html#step-1-look-at-the-data",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Step 1: Look at the data",
+    "text": "Step 1: Look at the data\n\n\nStata\n\ninsheet using \"data/acs_medicaid.txt\", clear\ngen perc_unins=uninsured/adult_pop\nkeep if expand_year==\"2014\" | expand_year==\"NA\"\ndrop if expand_ever==\"NA\"\ncollapse (mean) perc_unins, by(year expand_ever)\ngraph twoway (connected perc_unins year if expand_ever==\"FALSE\", color(black) lpattern(solid)) ///\n  (connected perc_unins year if expand_ever==\"TRUE\", color(black) lpattern(dash)), ///\n  xline(2013.5) ///\n    ytitle(\"Fraction Uninsured\") xtitle(\"Year\") legend(off) text(0.15 2017 \"Non-expansion\", place(e)) text(0.08 2017 \"Expansion\", place(e))\n\n\nR\n\nlibrary(tidyverse)  \nmcaid.data &lt;- read_tsv(\"../files/data/acs/acs_medicaid.txt\")\nins.plot.dat &lt;- mcaid.data %&gt;% filter(expand_year==2014 | is.na(expand_year), !is.na(expand_ever)) %&gt;%\n  mutate(perc_unins=uninsured/adult_pop) %&gt;%\n  group_by(expand_ever, year) %&gt;% summarize(mean=mean(perc_unins))\n\nins.plot &lt;- ggplot(data=ins.plot.dat, aes(x=year,y=mean,group=expand_ever,linetype=expand_ever)) + \n  geom_line() + geom_point() + theme_bw() +\n  geom_vline(xintercept=2013.5, color=\"red\") +\n  geom_text(data = ins.plot.dat %&gt;% filter(year == 2016), \n            aes(label = c(\"Non-expansion\",\"Expansion\"),\n                x = year + 1,\n                y = mean)) +\n  guides(linetype=\"none\") +\n  labs(\n    x=\"Year\",\n    y=\"Fraction Uninsured\",\n    title=\"Share of Uninsured over Time\"\n  )"
+  },
+  {
+    "objectID": "slides/class9.html#step-2-estimate-effects",
+    "href": "slides/class9.html#step-2-estimate-effects",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Step 2: Estimate effects",
+    "text": "Step 2: Estimate effects\nInterested in \\(\\delta\\) from:\n\\[y_{it} = \\alpha + \\beta \\times Post_{t} + \\lambda \\times Expand_{i} + \\delta \\times Post_{t} \\times Expand_{i} + \\varepsilon_{it}\\]\n\n\nStata\n\ninsheet using \"data/acs_medicaid.txt\", clear\ngen perc_unins=uninsured/adult_pop\nkeep if expand_year==\"2014\" | expand_year==\"NA\"\ndrop if expand_ever==\"NA\"\ngen post=(year&gt;=2014)\ngen treat=(expand_ever==\"TRUE\")\ngen treat_post=(expand==\"TRUE\")\n\nreg perc_unins treat post treat_post\n\n**also try didregress\n\n\nR\n\nlibrary(tidyverse)\nlibrary(modelsummary)\nmcaid.data &lt;- read_tsv(\"../files/data/acs/acs_medicaid.txt\")\nreg.dat &lt;- mcaid.data %&gt;% filter(expand_year==2014 | is.na(expand_year), !is.na(expand_ever)) %&gt;%\n  mutate(perc_unins=uninsured/adult_pop,\n         post = (year&gt;=2014), \n         treat=post*expand_ever)\n\ndd.ins.reg &lt;- lm(perc_unins ~ post + expand_ever + post*expand_ever, data=reg.dat)"
+  },
+  {
+    "objectID": "slides/class9.html#step-2-estimate-effects-1",
+    "href": "slides/class9.html#step-2-estimate-effects-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Step 2: Estimate effects",
+    "text": "Step 2: Estimate effects\n\n\nR Code\nmodelsummary(list(\"DD (2014)\"=dd.ins.reg),\n             shape=term + statistic ~ model, \n             gof_map=NA,\n             coef_omit='Intercept',\n             vcov=~State\n         )\n\n\n\n\n\n\n DD (2014)\n\n\n\n\npostTRUE\n−0.054\n\n\n\n(0.003)\n\n\nexpand_everTRUE\n−0.046\n\n\n\n(0.016)\n\n\npostTRUE × expand_everTRUE\n−0.019\n\n\n\n(0.007)"
+  },
+  {
+    "objectID": "slides/class9.html#final-dd-thoughts",
+    "href": "slides/class9.html#final-dd-thoughts",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Final DD thoughts",
+    "text": "Final DD thoughts\n\nKey identification assumption is parallel trends\nInference: Typically want to cluster at unit-level to allow for correlation over time within units, but problems with small numbers of treated or control groups:\n\nConley-Taber CIs\nWild cluster bootstrap\nRandomization inference\n\n“Extra” things like propensity score weighting and doubly robust estimation"
+  },
+  {
+    "objectID": "slides/class9.html#dd-and-twfe",
+    "href": "slides/class9.html#dd-and-twfe",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "DD and TWFE?",
+    "text": "DD and TWFE?\n\nJust a shorthand for a common regression specification\nFixed effects for each unit and each time period, \\(\\gamma_{i}\\) and \\(\\gamma_{t}\\)\nMore general than 2x2 DD but same result"
+  },
+  {
+    "objectID": "slides/class9.html#what-is-twfe",
+    "href": "slides/class9.html#what-is-twfe",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "What is TWFE?",
+    "text": "What is TWFE?\nWant to estimate \\(\\delta\\):\n\\[y_{it} = \\alpha + \\delta D_{it} + \\gamma_{i} + \\gamma_{t} + \\varepsilon_{it},\\]\nwhere \\(\\gamma_{i}\\) and \\(\\gamma_{t}\\) denote a set of unit \\(i\\) and time period \\(t\\) dummy variables (or fixed effects)."
+  },
+  {
+    "objectID": "slides/class9.html#twfe-in-practice",
+    "href": "slides/class9.html#twfe-in-practice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "TWFE in Practice",
+    "text": "TWFE in Practice\n\n\n2x2 DD\n\nlibrary(tidyverse)\nlibrary(modelsummary)\nmcaid.data &lt;- read_tsv(\"../files/data/acs/acs_medicaid.txt\")\nreg.dat &lt;- mcaid.data %&gt;% filter(expand_year==2014 | is.na(expand_year), !is.na(expand_ever)) %&gt;%\n  mutate(perc_unins=uninsured/adult_pop,\n         post = (year&gt;=2014), \n         treat=post*expand_ever)\nm.dd &lt;- lm(perc_unins ~ post + expand_ever + treat, data=reg.dat)\n\n\nTWFE\n\nlibrary(fixest)\nm.twfe &lt;- feols(perc_unins ~ treat | State + year, data=reg.dat)"
+  },
+  {
+    "objectID": "slides/class9.html#twfe-in-practice-1",
+    "href": "slides/class9.html#twfe-in-practice-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "TWFE in Practice",
+    "text": "TWFE in Practice\n\n\nR Code\nmsummary(list(\"DD\"=m.dd, \"TWFE\"=m.twfe),\n         shape=term + statistic ~ model, \n         gof_map=NA,\n         coef_omit='Intercept',\n         vcov=~State\n         )\n\n\n\n\n\n\nDD\nTWFE\n\n\n\n\npostTRUE\n−0.054\n\n\n\n\n(0.003)\n\n\n\nexpand_everTRUE\n−0.046\n\n\n\n\n(0.016)\n\n\n\ntreat\n−0.019\n−0.019\n\n\n\n(0.007)\n(0.007)"
+  },
+  {
+    "objectID": "slides/class9.html#event-study",
+    "href": "slides/class9.html#event-study",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Event study",
+    "text": "Event study\nEvent study is poorly named:\n\nIn finance, even study is just an interrupted time series\nIn econ and other areas, we usually have a treatment/control group and a break in time"
+  },
+  {
+    "objectID": "slides/class9.html#why-show-an-event-study",
+    "href": "slides/class9.html#why-show-an-event-study",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Why show an event study?",
+    "text": "Why show an event study?\n\nAllows for heterogeneous effects over time (maybe effects phase in over time or dissipate)\nVisually very appealing\nOffers easy evidence against or consistent with parallel trends assumption"
+  },
+  {
+    "objectID": "slides/class9.html#how-to-do-an-event-study",
+    "href": "slides/class9.html#how-to-do-an-event-study",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "How to do an event study?",
+    "text": "How to do an event study?\nEstimate something akin to… \\[y_{it} = \\gamma_{i} + \\gamma_{t} + \\sum_{\\tau = -q}^{-2}\\delta_{\\tau} D_{i \\tau} + \\sum_{\\tau=0}^{m} \\delta_{\\tau}D_{i \\tau} + \\beta x_{it} + \\epsilon_{it},\\]\nwhere \\(q\\) captures the number of periods before the treatment occurs and \\(m\\) captures periods after treatment occurs."
+  },
+  {
+    "objectID": "slides/class9.html#how-to-do-an-event-study-1",
+    "href": "slides/class9.html#how-to-do-an-event-study-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "How to do an event study?",
+    "text": "How to do an event study?\n\nCreate all treatment/year interactions\nRegressions with full set of interactions and group/year FEs\nPlot coefficients and standard errors"
+  },
+  {
+    "objectID": "slides/class9.html#things-to-address",
+    "href": "slides/class9.html#things-to-address",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Things to address",
+    "text": "Things to address\n\n“Event time” vs calendar time\nDefine baseline period\nChoose number of pre-treatment and post-treatment coefficients"
+  },
+  {
+    "objectID": "slides/class9.html#event-time-vs-calendar-time",
+    "href": "slides/class9.html#event-time-vs-calendar-time",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Event time vs calendar time",
+    "text": "Event time vs calendar time\nEssentially two “flavors” of event studies\n\nCommon treatment timing\nDifferential treatment timing"
+  },
+  {
+    "objectID": "slides/class9.html#define-baseline-period",
+    "href": "slides/class9.html#define-baseline-period",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Define baseline period",
+    "text": "Define baseline period\n\nMust choose an “excluded” time period (as in all cases of group dummy variables)\nCommon choice is \\(t=-1\\) (period just before treatment)\nEasy to understand with calendar time\nFor event time…manually set time to \\(t=-1\\) for all untreated units"
+  },
+  {
+    "objectID": "slides/class9.html#number-of-pre-treatment-and-post-treatment-periods",
+    "href": "slides/class9.html#number-of-pre-treatment-and-post-treatment-periods",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Number of pre-treatment and post-treatment periods",
+    "text": "Number of pre-treatment and post-treatment periods\n\nOn event time, sometimes very few observations for large lead or lag values\nMedicaid expansion example: Late adopting states have fewer post-treatment periods\nNorm is to group final lead/lag periods together"
+  },
+  {
+    "objectID": "slides/class9.html#commont-treatment-timing",
+    "href": "slides/class9.html#commont-treatment-timing",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Commont treatment timing",
+    "text": "Commont treatment timing\n\n\nStata\n\nssc install reghdfe\n\ninsheet using \"data/acs_medicaid.txt\", clear\ngen perc_unins=uninsured/adult_pop\nkeep if expand_year==\"2014\" | expand_year==\"NA\"\ndrop if expand_ever==\"NA\"\ngen post=(year&gt;=2014)\ngen treat=(expand_ever==\"TRUE\")\ngen treat_post=(expand==\"TRUE\")\n\nreghdfe perc_unins treat##ib2013.year, absorb(state)\ngen coef = .\ngen se = .\nforvalues i = 2012(1)2018 {\n    replace coef = _b[1.treat#`i'.year] if year == `i'\n    replace se = _se[1.treat#`i'.year] if year == `i'\n}\n\n* Make confidence intervals\ngen ci_top = coef+1.96*se\ngen ci_bottom = coef - 1.96*se\n\n* Limit ourselves to one observation per year\nkeep year coef se ci_*\nduplicates drop\n\n* Create connected scatterplot of coefficients\n* with CIs included with rcap \n* and a line at 0 from function\ntwoway (sc coef year, connect(line)) (rcap ci_top ci_bottom year) ///\n    (function y = 0, range(2012 2018)), xtitle(\"Year\") ///\n    caption(\"Estimates and 95% CI from Event Study\")\n\n\nR\n\nlibrary(tidyverse)\nlibrary(modelsummary)\nlibrary(fixest)\nmcaid.data &lt;- read_tsv(\"../files/data/acs/acs_medicaid.txt\")\nreg.dat &lt;- mcaid.data %&gt;% \n  filter(expand_year==2014 | is.na(expand_year), !is.na(expand_ever)) %&gt;%\n  mutate(perc_unins=uninsured/adult_pop,\n         post = (year&gt;=2014), \n         treat=post*expand_ever)\n\nmod.twfe &lt;- feols(perc_unins~i(year, expand_ever, ref=2013) | State + year,\n                  cluster=~State,\n                  data=reg.dat)"
+  },
+  {
+    "objectID": "slides/class9.html#common-treatment-timing",
+    "href": "slides/class9.html#common-treatment-timing",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Common treatment timing",
+    "text": "Common treatment timing\n\n\nR Code\niplot(mod.twfe, \n      xlab = 'Time to treatment',\n      main = 'Event study')"
+  },
+  {
+    "objectID": "slides/class9.html#differential-treatment-timing",
+    "href": "slides/class9.html#differential-treatment-timing",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Differential treatment timing",
+    "text": "Differential treatment timing\n\nNow let’s work with the full Medicaid expansion data\nIncludes late adopters\nRequires putting observations on “event time”"
+  },
+  {
+    "objectID": "slides/class9.html#differential-treatment-timing-1",
+    "href": "slides/class9.html#differential-treatment-timing-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Differential treatment timing",
+    "text": "Differential treatment timing\n\n\nStata\n\nssc install reghdfe\n\ninsheet using \"data/acs_medicaid.txt\", clear\ngen perc_unins=uninsured/adult_pop\ndrop if expand_ever==\"NA\"\nreplace expand_year=\".\" if expand_year==\"NA\"\ndestring expand_year, replace\ngen event_time=year-expand_year\nreplace event_time=-1 if event_time==.\n\nforvalues l = 0/4 {\n    gen L`l'event = (event_time==`l')\n}\nforvalues l = 1/2 {\n    gen F`l'event = (event_time==-`l')\n}\ngen F3event=(event_time&lt;=-3)\n\nreghdfe perc_unins F3event F2event L0event L1event L2event L3event L4event, absorb(state year) cluster(state)\ngen coef = .\ngen se = .\nforvalues i = 2(1)3 {\n    replace coef = _b[F`i'event] if F`i'event==1\n    replace se = _se[F`i'event] if F`i'event==1\n}\nforvalues i = 0(1)4 {\n    replace coef = _b[L`i'event] if L`i'event==1\n    replace se = _se[L`i'event] if L`i'event==1\n}\nreplace coef = 0 if F1event==1\nreplace se=0 if F1event==1\n\n* Make confidence intervals\ngen ci_top = coef+1.96*se\ngen ci_bottom = coef - 1.96*se\n\n* Limit ourselves to one observation per year\nkeep if event_time&gt;=-3 & event_time&lt;=4\nkeep event_time coef se ci_*\nduplicates drop\n\n* Create connected scatterplot of coefficients\n* with CIs included with rcap \n* and a line at 0 from function\nsort event_time\ntwoway (sc coef event_time, connect(line)) (rcap ci_top ci_bottom event_time) ///\n    (function y = 0, range(-3 4)), xtitle(\"Time\") ///\n    caption(\"Estimates and 95% CI from Event Study\") xlabel(-3(1)4)\n\n\nR\n\nlibrary(tidyverse)\nlibrary(modelsummary)\nlibrary(fixest)\nmcaid.data &lt;- read_tsv(\"../files/data/acs/acs_medicaid.txt\")\nreg.dat &lt;- mcaid.data %&gt;% \n  filter(!is.na(expand_ever)) %&gt;%\n  mutate(perc_unins=uninsured/adult_pop,\n         post = (year&gt;=2014), \n         treat=post*expand_ever,\n         time_to_treat = ifelse(expand_ever==FALSE, 0, year-expand_year),\n         time_to_treat = ifelse(time_to_treat &lt; -3, -3, time_to_treat))\n\nmod.twfe &lt;- feols(perc_unins~i(time_to_treat, expand_ever, ref=-1) | State + year,\n                  cluster=~State,\n                  data=reg.dat)"
+  },
+  {
+    "objectID": "slides/class9.html#differential-treatment-timing-2",
+    "href": "slides/class9.html#differential-treatment-timing-2",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Differential treatment timing",
+    "text": "Differential treatment timing\n\n\nR Code\niplot(mod.twfe, \n      xlab = 'Time to treatment',\n      main = 'Event study')"
+  },
+  {
+    "objectID": "slides/class9.html#problems-with-twfe",
+    "href": "slides/class9.html#problems-with-twfe",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Problems with TWFE",
+    "text": "Problems with TWFE\n\nRecall goal of estimating ATE or ATT\nTWFE and 2x2 DD identical with homogeneous effects and common treatment timing\nOtherwise…TWFE is biased and inconsistent for ATT\n\nConsider standard TWFE specification with a single treatment coefficient, \\[y_{it} = \\alpha + \\delta D_{it} + \\gamma_{i} + \\gamma_{t} + \\varepsilon_{it}.\\] We can decompose \\(\\hat{\\delta}\\) into three things:\n\\[\\hat{\\delta}_{twfe} = \\text{VW} ATT + \\text{VW} PT - \\Delta ATT\\]\n\nA variance-weighted ATT\nViolation of parallel trends\nHeterogeneous effects over time"
+  },
+  {
+    "objectID": "slides/class9.html#intuition",
+    "href": "slides/class9.html#intuition",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Intuition",
+    "text": "Intuition\nProblems come from heterogeneous effects and staggered treatment timing\n\nOLS is a weighted average of all 2x2 DD groups\nWeights are function of size of subsamples, size of treatment/control units, and timing of treatment\nUnits treated in middle of sample receive larger weights\nBest case: Variance-weighted ATT\nPrior-treated units act as controls for late-treated units, so differential timing alone can introduce bias\nHeterogeneity and differential timing introduces “contamination” via negative weights assigned to some underlying 2x2 DDs"
+  },
+  {
+    "objectID": "slides/class9.html#does-it-really-matter",
+    "href": "slides/class9.html#does-it-really-matter",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Does it really matter?",
+    "text": "Does it really matter?\n\nDefinitely! But how much?\nLarge treatment effects for early treated units could reverse the sign of final estimate\nLet’s explore this nice Shiny app from Kyle Butts: Bacon-Decomposition Shiny App."
+  },
+  {
+    "objectID": "slides/class9.html#solution",
+    "href": "slides/class9.html#solution",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Solution",
+    "text": "Solution\nOnly consider “clean” comparisons:\n\nSeparate event study for each treatment group vs never-treated or not-yet-treated\nCallaway and Sant’Anna (2020)\nSun and Abraham (2020)\nde Chaisemartin and D’Haultfoeuille (2020)\nStacking regression: Cengiz et al. (2019)\nImputation: Gardner (2021), and Borusyak et al. (2021)"
+  },
+  {
+    "objectID": "slides/class9.html#changing-mindset-for-estimation",
+    "href": "slides/class9.html#changing-mindset-for-estimation",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Changing mindset for estimation",
+    "text": "Changing mindset for estimation\n\nDefine target parameter (e.g., ATT)…this is pretty new as a starting point\nIdentification\nEstimation\nAggregation\nInference"
+  },
+  {
+    "objectID": "slides/class9.html#incorporating-covariates",
+    "href": "slides/class9.html#incorporating-covariates",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Incorporating covariates",
+    "text": "Incorporating covariates\n\n“Easy” to do in regression setting, but risks of using outcomes as controls\nTwo general ways:\n\nOutcome regression (imputation-based)\nPropensity score"
+  },
+  {
+    "objectID": "slides/class9.html#outcome-regression-heckman-et-al-1997",
+    "href": "slides/class9.html#outcome-regression-heckman-et-al-1997",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Outcome regression (Heckman et al 1997)",
+    "text": "Outcome regression (Heckman et al 1997)\n\\[\\small \\hat{\\delta}^{reg} = E[Y_{t=1}|D=1] - \\left[ E[Y_{t=0}|D=1] + \\frac{1}{n^{T}} \\sum_{i \\in N_{d=1}} \\left(\\hat{\\mu}_{d=0, t=1}(X_{i}) - \\hat{\\mu}_{d=0, t=0}(X_{i})\\right) \\right],\\]\nwhere \\(\\hat{\\mu}_{d,t}\\) is the prediction from a regression among the untreated group using baseline covariates.\n\nHeckman forms prediction as regression of \\(\\Delta Y\\) on \\(X_{i}\\) among untreated group, although could also consider separate regressions on levels\nConceptually…take observed value among treatment group in post-period, subtract pre-period value and the predicted trend"
+  },
+  {
+    "objectID": "slides/class9.html#ipw-abadie-2005",
+    "href": "slides/class9.html#ipw-abadie-2005",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "IPW (Abadie, 2005)",
+    "text": "IPW (Abadie, 2005)\n\\[\\hat{\\delta}^{ipw} = E \\left[\\frac{D - \\hat{p}(D=1|X)}{1-\\hat{p}(D=1|X)} \\frac{Y_{t=1} - Y_{t=0}}{P(D=1)} \\right]\\]\n\n\\(Y_{t=1}\\) is the observed outcome at time \\(t=1\\), and similarly for \\(Y_{t=0}\\)\n\\(\\hat{p}\\) denotes the estimated propensity score from regression of \\(D\\) on \\(X\\) in pre-period\nConceptually…upweight change among treated that look a lot like the control group, downweight change among treated that look different than controls"
+  },
+  {
+    "objectID": "slides/class9.html#dr-santanna-and-zhou",
+    "href": "slides/class9.html#dr-santanna-and-zhou",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "DR (Sant’Anna and Zhou)",
+    "text": "DR (Sant’Anna and Zhou)\n\\[\\scriptsize \\hat{\\delta}^{dr} = E \\left[ \\left(\\frac{D}{P(D=1)} - \\frac{\\frac{\\hat{p}(X)(1-D)}{1-\\hat{p}(X)}}{E\\left[\\frac{\\hat{p}(X)(1-D)}{1-\\hat{p}(X)} \\right]} \\right) \\left(E[Y_{t=1}|D=1] - E[Y_{t=0}|D=1] - \\Delta \\hat{\\mu}_{0}(X)\\right) \\right]\\]\n\nNotice how this combines Heckman’s outcome regression in the second part and Abadie’s IPW in the first part"
+  },
+  {
+    "objectID": "slides/class9.html#the-new-dd",
+    "href": "slides/class9.html#the-new-dd",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "The New DD",
+    "text": "The New DD\nI’ll organize this into three types of estimators:\n\nGroup-time comparisons (GT)\nStacked\nImputation"
+  },
+  {
+    "objectID": "slides/class9.html#gt1-callaway-and-santanna",
+    "href": "slides/class9.html#gt1-callaway-and-santanna",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "GT1: Callaway and Sant’Anna",
+    "text": "GT1: Callaway and Sant’Anna\n\n“Manually” estimate group-specific treatment effects for each period\nEach estimate is propensity-score weighted\nAggregate the treatment effect estimates (by time, group, or both)"
+  },
+  {
+    "objectID": "slides/class9.html#gt1-cs-estimator-more-formally",
+    "href": "slides/class9.html#gt1-cs-estimator-more-formally",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "GT1: CS Estimator (More Formally)",
+    "text": "GT1: CS Estimator (More Formally)\nGroup-specific treatment effects:\n\\[ATT(g,t) = E[Y_{1,t} - Y_{0,t} | G_{g}=1],\\] where \\(G\\) denotes all feasible groups or cohorts (e.g., \\(g=1\\) could mean states expanding in 2014, \\(g=2\\) denotes states expanding in 2015, etc.)"
+  },
+  {
+    "objectID": "slides/class9.html#gt1-cs-estimator-more-formally-1",
+    "href": "slides/class9.html#gt1-cs-estimator-more-formally-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "GT1: CS Estimator (More Formally)",
+    "text": "GT1: CS Estimator (More Formally)\nWith this \\((g,t)\\) notation, CS show:\n\\[\\scriptsize ATT(g,t; \\tau)^{DR} = E \\left[ \\left(\\frac{G_{g}}{P(G_{g}=1)} - \\frac{\\frac{\\hat{p}_{g}(X)C}{1-\\hat{p}_{g}(X)}}{E\\left[\\frac{\\hat{p}_{g}(X)C}{1-\\hat{p}_{g}(X)} \\right]} \\right) \\left(E[Y_{t}|G_{g}=1] - E[Y_{g-\\tau-1}|G_{g}=1] - \\Delta \\hat{\\mu}_{g,t,\\tau}(X)\\right) \\right]\\]\n\n\\(\\tau\\) denotes time from treatment, such that \\(Y_{g - \\tau - 1}\\) denotes the outcome for some reference time period, \\(t=g - \\tau -1\\)\n\\(\\Delta \\hat{\\mu}\\) captures the predicted change from an outcome regression\n\\(\\hat{p}_{g}\\) denotes the predicted probability of being in the treatment cohort \\(g\\)"
+  },
+  {
+    "objectID": "slides/class9.html#gt1-cs-estimator-more-formally-2",
+    "href": "slides/class9.html#gt1-cs-estimator-more-formally-2",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "GT1: CS Estimator (More Formally)",
+    "text": "GT1: CS Estimator (More Formally)\n\nCS show a similar version of their estimator using a “not-yet-treated” control group rather than a never-treated.\nDifferent versions include…\n\n“regression” based: drop the propensity score part\n“IPW”: drop \\(\\Delta \\hat{\\mu}\\)\n\nOnly time-invariant covariates allowed"
+  },
+  {
+    "objectID": "slides/class9.html#gt1-cs-estimator-more-formally-3",
+    "href": "slides/class9.html#gt1-cs-estimator-more-formally-3",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "GT1: CS Estimator (More Formally)",
+    "text": "GT1: CS Estimator (More Formally)\nFinally, aggregate all of the \\((g,t)\\) treatment effects:\n\\[\\hat{\\delta} = \\sum_{g \\in \\mathcal{G}} \\sum_{t=2}^{\\mathcal{T}} w(g,t) \\times ATT(g,t)\\]"
+  },
+  {
+    "objectID": "slides/class9.html#gt1-cs-estimator-in-practice",
+    "href": "slides/class9.html#gt1-cs-estimator-in-practice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "GT1: CS Estimator (in Practice)",
+    "text": "GT1: CS Estimator (in Practice)\n\n\nStata\n\nssc install csdid\nssc install event_plot\nssc install drdid\n\ninsheet using \"data/acs_medicaid.txt\", clear\ngen perc_unins=uninsured/adult_pop\negen stategroup=group(state)\ndrop if expand_ever==\"NA\"\nreplace expand_year=\"0\" if expand_year==\"NA\"\ndestring expand_year, replace\n\ncsdid perc_unins, ivar(stategroup) time(year) gvar(expand_year) notyet\nestat event, estore(cs)\nevent_plot cs, default_look graph_opt(xtitle(\"Periods since the event\") ytitle(\"Average causal effect\") xlabel(-6(1)4) title(\"Callaway and Sant'Anna (2020)\")) stub_lag(T+#) stub_lead(T-#) together\n\n\nR\n\nlibrary(tidyverse)\nlibrary(did)\nlibrary(DRDID)\nmcaid.data &lt;- read_tsv(\"../files/data/acs/acs_medicaid.txt\")\nreg.dat &lt;- mcaid.data %&gt;% \n  filter(!is.na(expand_ever)) %&gt;%\n  mutate(perc_unins=uninsured/adult_pop,\n         post = (year&gt;=2014), \n         treat=post*expand_ever,\n         expand_year=ifelse(is.na(expand_year),0,expand_year)) %&gt;%\n  filter(!is.na(perc_unins)) %&gt;%\n  group_by(State) %&gt;%\n  mutate(stategroup=cur_group_id()) %&gt;% ungroup()\n\nmod.cs &lt;- att_gt(yname=\"perc_unins\", tname=\"year\", idname=\"stategroup\",\n                 gname=\"expand_year\",\n                 data=reg.dat, panel=TRUE, est_method=\"dr\",\n                 allow_unbalanced_panel=TRUE)\nmod.cs.event &lt;- aggte(mod.cs, type=\"dynamic\")"
+  },
+  {
+    "objectID": "slides/class9.html#cs-in-practice",
+    "href": "slides/class9.html#cs-in-practice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "CS in Practice",
+    "text": "CS in Practice\n\n\nR Code\nggdid(mod.cs.event,\n      legend=FALSE)"
+  },
+  {
+    "objectID": "slides/class9.html#gt2-sun-and-abraham",
+    "href": "slides/class9.html#gt2-sun-and-abraham",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "GT2: Sun and Abraham",
+    "text": "GT2: Sun and Abraham\n\nStandard event study problems:\n\ncoefficient estimates are potentially biased due to treatment/control group construction\ni.e., “contamination” of individual \\(\\delta_{\\tau}\\) from other leads/lags\n\nSolution: Estimate fully interacted model\n\n\n\\[y_{it} = \\gamma_{i} + \\gamma_{t} + \\sum_{g} \\sum_{\\tau \\neq -1} \\delta_{g \\tau} \\times \\text{1}(i \\in C_{g}) \\times D_{it}^{\\tau} + \\beta x_{it} + \\epsilon_{it}\\]"
+  },
+  {
+    "objectID": "slides/class9.html#gt2-sun-and-abraham-1",
+    "href": "slides/class9.html#gt2-sun-and-abraham-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "GT2: Sun and Abraham",
+    "text": "GT2: Sun and Abraham\n\\[y_{it} = \\gamma_{i} + \\gamma_{t} + \\sum_{g} \\sum_{\\tau \\neq -1} \\delta_{g \\tau} \\times \\text{1}(i \\in C_{g}) \\times D_{it}^{\\tau} + \\beta x_{it} + \\epsilon_{it}\\]\n\n\n\\(g\\) denotes a group and \\(C_{g}\\) the set of individuals in group \\(g\\)\n\\(\\tau\\) denotes time periods\n\\(D_{it}^{\\tau}\\) denotes a relative time indicator"
+  },
+  {
+    "objectID": "slides/class9.html#gt2-sun-and-abraham-2",
+    "href": "slides/class9.html#gt2-sun-and-abraham-2",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "GT2: Sun and Abraham",
+    "text": "GT2: Sun and Abraham\n\\[y_{it} = \\gamma_{i} + \\gamma_{t} + \\sum_{g} \\sum_{\\tau \\neq -1} \\delta_{g \\tau} \\times \\text{1}(i \\in C_{g}) \\times D_{it}^{\\tau} + \\beta x_{it} + \\epsilon_{it}\\]\n\n\nIntuition: Standard regression with different event study specifications for each treatment group\nAggregate \\(\\delta_{g\\tau}\\) for standard event study coefficients and overall ATT"
+  },
+  {
+    "objectID": "slides/class9.html#gt2-sun-and-abraham-in-practice",
+    "href": "slides/class9.html#gt2-sun-and-abraham-in-practice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "GT2: Sun and Abraham in Practice",
+    "text": "GT2: Sun and Abraham in Practice\n\n\nStata\n\nssc install eventstudyinteract\nssc install avar\nssc install event_plot\n\ninsheet using \"data/acs_medicaid.txt\", clear\ngen perc_unins=uninsured/adult_pop\ndrop if expand_ever==\"NA\"\negen stategroup=group(state)\nreplace expand_year=\".\" if expand_year==\"NA\"\ndestring expand_year, replace\ngen event_time=year-expand_year\ngen nevertreated=(event_time==.)\n\nforvalues l = 0/4 {\n    gen L`l'event = (event_time==`l')\n}\nforvalues l = 1/2 {\n    gen F`l'event = (event_time==-`l')\n}\ngen F3event=(event_time&lt;=-3)\neventstudyinteract perc_unins F3event F2event L0event L1event L2event L3event L4event, vce(cluster stategroup) absorb(stategroup year) cohort(expand_year) control_cohort(nevertreated)\n\nevent_plot e(b_iw)#e(V_iw), default_look graph_opt(xtitle(\"Periods since the event\") ytitle(\"Average causal effect\") xlabel(-3(1)4) title(\"Sun and Abraham (2020)\")) stub_lag(L#event) stub_lead(F#event) plottype(scatter) ciplottype(rcap) together\n\n\nR\n\nlibrary(tidyverse)\nlibrary(modelsummary)\nlibrary(fixest)\nmcaid.data &lt;- read_tsv(\"../files/data/acs/acs_medicaid.txt\")\nreg.dat &lt;- mcaid.data %&gt;% \n  filter(!is.na(expand_ever)) %&gt;%\n  mutate(perc_unins=uninsured/adult_pop,\n         post = (year&gt;=2014), \n         treat=post*expand_ever,\n         expand_year = ifelse(expand_ever==FALSE, 10000, expand_year),\n         time_to_treat = ifelse(expand_ever==FALSE, -1, year-expand_year),\n         time_to_treat = ifelse(time_to_treat &lt; -4, -4, time_to_treat))\n\nmod.sa &lt;- feols(perc_unins~sunab(expand_year, time_to_treat) | State + year,\n                  cluster=~State,\n                  data=reg.dat)"
+  },
+  {
+    "objectID": "slides/class9.html#sun-and-abraham-in-practice",
+    "href": "slides/class9.html#sun-and-abraham-in-practice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Sun and Abraham in Practice",
+    "text": "Sun and Abraham in Practice\n\n\nR Code\niplot(mod.sa,\n      xlab = 'Time to treatment',\n      main = 'SA Event study')"
+  },
+  {
+    "objectID": "slides/class9.html#gt3-de-chaisemartin-and-dhaultfoeuille-ch",
+    "href": "slides/class9.html#gt3-de-chaisemartin-and-dhaultfoeuille-ch",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "GT3: de Chaisemartin and D’Haultfoeuille (CH)",
+    "text": "GT3: de Chaisemartin and D’Haultfoeuille (CH)\n\nMore general than other approaches\nConsiders “fuzzy” treatment (i.e., non-discrete treatment)\nConsiders fixed effects and first-differencing\nAllows treatment to turn on and off (not allowed in CS or SA)\n\n\nNew paper from Callaway, Goodman-Bacon, and Sant’Anna also looks at DD with continuous treatment"
+  },
+  {
+    "objectID": "slides/class9.html#gt3-ch-approach",
+    "href": "slides/class9.html#gt3-ch-approach",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "GT3: CH Approach",
+    "text": "GT3: CH Approach\n\nEssentially a series of 2x2 comparisons\nAggregates up to overall effects"
+  },
+  {
+    "objectID": "slides/class9.html#ch-in-practice",
+    "href": "slides/class9.html#ch-in-practice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "CH in Practice",
+    "text": "CH in Practice\n\n\nStata\n\nssc install did_multiplegt\nssc install event_plot\n\ninsheet using \"data/acs_medicaid.txt\", clear\ngen perc_unins=uninsured/adult_pop\ndrop if expand_ever==\"NA\"\negen stategroup=group(state)\nreplace expand_year=\".\" if expand_year==\"NA\"\ndestring expand_year, replace\ngen event_time=year-expand_year\ngen nevertreated=(event_time==.)\ngen treat=(event_time&gt;=0 & event_time!=.)\n\ndid_multiplegt perc_unins stategroup year treat, robust_dynamic dynamic(4) placebo(3) breps(100) cluster(stategroup) \nevent_plot e(estimates)#e(variances), default_look graph_opt(xtitle(\"Periods since the event\") ytitle(\"Average causal effect\") ///\ntitle(\"de Chaisemartin and D'Haultfoeuille (2020)\") xlabel(-3(1)4)) stub_lag(Effect_#) stub_lead(Placebo_#) together\n\n\nR(not the same as in Stata)\n\nlibrary(DIDmultiplegt)\nmcaid.data &lt;- read_tsv(\"../files/data/acs/acs_medicaid.txt\")\nreg.dat &lt;- mcaid.data %&gt;% \n  filter(!is.na(expand_ever)) %&gt;%\n  mutate(perc_unins=uninsured/adult_pop,\n         treat=case_when(\n           expand_ever==FALSE ~ 0,\n           expand_ever==TRUE & expand_year&lt;year ~ 0,\n           expand_ever==TRUE & expand_year&gt;=year ~ 1))\n\nmod.ch &lt;- did_multiplegt(df=reg.dat, Y=\"perc_unins\", G=\"State\", T=\"year\", D=\"treat\",\n                         placebo=4, dynamic=5, brep=50, cluster='State', covariance=TRUE, \n                         average_effect=\"simple\")"
+  },
+  {
+    "objectID": "slides/class9.html#ch-in-practice-1",
+    "href": "slides/class9.html#ch-in-practice-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "CH in Practice",
+    "text": "CH in Practice\n\n\nR Code\nlibrary(broom)\n# Create a tidier for \"multiplegt\" objects\ntidy.did_multiplegt = function(x, level = 0.95) {\n  ests = x[grepl(\"^placebo_|^effect|^dynamic_\", names(x))]\n  ret = data.frame(\n    term      = names(ests),\n    estimate  = as.numeric(ests),\n    std.error = as.numeric(x[grepl(\"^se_placebo|^se_effect|^se_dynamic\", names(x))]),\n    N         = as.numeric(x[grepl(\"^N_placebo|^N_effect|^N_dynamic\", names(x))])\n    ) |&gt;\n    # For CIs we'll assume standard normal distribution\n    within({\n      conf.low  = estimate - std.error*(qnorm(1-(1-level)/2))\n      conf.high = estimate + std.error*(qnorm(1-(1-level)/2))\n      })\n  return(ret)\n}\n\ntidy.mod.ch &lt;- tidy.did_multiplegt(mod.ch)\n\nlibrary(ggplot2)\ntheme_set(theme_minimal(base_family = \"ArialNarrow\")) # Optional\ntidy.mod.ch |&gt;\n  within({\n    term = gsub(\"^placebo_\", \"-\", term)\n    term = gsub(\"^effect\", \"0\", term)\n    term = gsub(\"^dynamic_\", \"\", term)\n    term = as.integer(term)\n    }) |&gt;\n  ggplot(aes(x = term, y = estimate, ymin = conf.low, ymax = conf.high)) +\n  geom_pointrange() +\n  labs(\n    x = \"Time to treatment\", y = \"Effect size\", title = \"CH Event-study plot\"\n    )"
+  },
+  {
+    "objectID": "slides/class9.html#ch-in-practice-2",
+    "href": "slides/class9.html#ch-in-practice-2",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "CH in practice",
+    "text": "CH in practice\nSome barriers to this estimator in practice (at least, as implemented in R right now)\n\nRelatively slow\nNot user friendly\nOdd results"
+  },
+  {
+    "objectID": "slides/class9.html#cengiz-et-al.-2019-stacked-regression",
+    "href": "slides/class9.html#cengiz-et-al.-2019-stacked-regression",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Cengiz et al. (2019): Stacked regression",
+    "text": "Cengiz et al. (2019): Stacked regression\n\n“Stacked” event studies\nEstimate event study for every treatment group, using never-treated as controls\nAggregate to overall average effects"
+  },
+  {
+    "objectID": "slides/class9.html#cengiz-et-al.-2019",
+    "href": "slides/class9.html#cengiz-et-al.-2019",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Cengiz et al. (2019)",
+    "text": "Cengiz et al. (2019)\n\nDefine event window, \\(t\\in [\\kappa_{a}, \\kappa_{b}]\\) (e.g., 3 pre-periods and 5 post-periods, \\(\\kappa_{a}=3\\) and \\(\\kappa_{b}=5\\))\nSplit the data into \\(g=1,...,G\\) different “groups”, as defined by treatment cohort, each with adoption date denoted by \\(\\omega_{g}\\)\n\nobservations outside of the \\([\\omega_{g} - \\kappa_{a}, \\omega_{g} + \\kappa_{b}]\\) interval are dropped\n\nAppend (i.e., stack) each \\(g\\)th dataset\nRun stacked event study allowing for different set of event study coefficients and fixed effects for every group \\(g\\)\n\n\\[y_{itg} = \\sum_{\\tau=-\\kappa_{a}}^{\\kappa_{b}} \\delta_{\\tau} \\times D_{ig} \\times 1(t-\\omega_{g} = \\tau) + \\gamma_{ig} + \\gamma_{\\tau g} + \\varepsilon_{itg}\\]"
+  },
+  {
+    "objectID": "slides/class9.html#cengiz-et-al.-2019-1",
+    "href": "slides/class9.html#cengiz-et-al.-2019-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Cengiz et al. (2019)",
+    "text": "Cengiz et al. (2019)\n\nIntuitively: run event study on every cohort, \\(g\\)\nControl units (never treated or very late treated) will be duplicated over cohorts\nNeed to cluster at the unit or unit/cohort level (probably unit level otherwise not accounting for duplication)\nAlternative: Among controls included in multiple cohorts, randomly assign them to one cohort"
+  },
+  {
+    "objectID": "slides/class9.html#quick-comparison",
+    "href": "slides/class9.html#quick-comparison",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Quick comparison",
+    "text": "Quick comparison\n\nAllows time-varying covariates\nInference is less clear\nLikely estimating some variance-weighted ATT…not clear what those weights are anymore\nSeemingly stronger parallel trends assumptions for each cohort"
+  },
+  {
+    "objectID": "slides/class9.html#imputation-estimators",
+    "href": "slides/class9.html#imputation-estimators",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Imputation estimators",
+    "text": "Imputation estimators\n\nEstimate group and time fixed effects via first stage regression only among non-treated units\nPredict outcome for all observations and residualize\nRun standard event study specification on residualized outcome variable\n\nNote: Estimate with GMM to account for first-stage prediction"
+  },
+  {
+    "objectID": "slides/class9.html#gardner-2021",
+    "href": "slides/class9.html#gardner-2021",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Gardner (2021)",
+    "text": "Gardner (2021)\n\n\nStata\ndid2s\n\nR\n\nlibrary(did2s)\nmcaid.data &lt;- read_tsv(\"../files/data/acs/acs_medicaid.txt\")\nreg.dat &lt;- mcaid.data %&gt;% \n  filter(!is.na(expand_ever)) %&gt;%\n  mutate(perc_unins=uninsured/adult_pop,\n         post = (year&gt;=2014), \n         treat=post*expand_ever,\n         expand_year = ifelse(expand_ever==FALSE, 10000, expand_year),\n         time_to_treat = ifelse(expand_ever==FALSE, -1, year-expand_year),\n         time_to_treat = ifelse(time_to_treat &lt; -3, -3, time_to_treat))\n\nmod.2s &lt;- did2s(reg.dat, yname=\"perc_unins\", \n                treatment=\"treat\", \n                first_stage = ~ 0 | State + year,\n                second_stage = ~i(time_to_treat, ref=-1),\n                cluster_var=\"State\")"
+  },
+  {
+    "objectID": "slides/class9.html#gardner-2021-in-practice",
+    "href": "slides/class9.html#gardner-2021-in-practice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Gardner (2021) in Practice",
+    "text": "Gardner (2021) in Practice\n\n\nR Code\niplot(mod.2s, main=\"2SDID Event Study\", xlab=\"Event time\")"
+  },
+  {
+    "objectID": "slides/class9.html#borusyak-et-al.-2021",
+    "href": "slides/class9.html#borusyak-et-al.-2021",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Borusyak et al. (2021)",
+    "text": "Borusyak et al. (2021)\n\nEstimate regression only for untreated observations\nPredicted untreated outcome among the treated observations and take the difference\nAggregate differences to form overall weighted average effect"
+  },
+  {
+    "objectID": "slides/class9.html#borusyak-et-al.-in-practice",
+    "href": "slides/class9.html#borusyak-et-al.-in-practice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Borusyak et al. in practice",
+    "text": "Borusyak et al. in practice\n\n\nStata\ndid_imputation\n\nR\n\nlibrary(didimputation)\nmcaid.data &lt;- read_tsv(\"../files/data/acs/acs_medicaid.txt\")\nreg.dat &lt;- mcaid.data %&gt;% \n  filter(!is.na(expand_ever)) %&gt;%\n  mutate(perc_unins=uninsured/adult_pop,\n         post = (year&gt;=2014), \n         treat=post*expand_ever,\n         expand_year = ifelse(expand_ever==FALSE, 0, expand_year))\n\nmod.bea &lt;- did_imputation(reg.dat, yname=\"perc_unins\", \n                gname=\"expand_year\",\n                tname=\"year\",\n                idname=\"State\",\n                first_stage = ~ 0 | State + year,\n                cluster_var=\"State\",\n                horizon=TRUE,\n                pretrends=-3:-1)"
+  },
+  {
+    "objectID": "slides/class9.html#borusyak-et-al.-in-practice-1",
+    "href": "slides/class9.html#borusyak-et-al.-in-practice-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Borusyak et al. in practice",
+    "text": "Borusyak et al. in practice\n\n\nR Code\ncoef.bea &lt;- mod.bea %&gt;%\n    select(rel_year = term, estimate, std.error) %&gt;%\n    mutate(\n        ci_lower = estimate - 1.96 * std.error,\n        ci_upper = estimate + 1.96 * std.error,\n        group = \"Borusyak et al Imputation\",\n        rel_year = as.numeric(rel_year)\n    )\n\nggplot(coef.bea) +\n    geom_hline(yintercept = 0, linetype = \"dashed\") +\n    geom_vline(xintercept = -0.5, linetype = \"dashed\") +\n    geom_linerange(mapping = aes(x = rel_year, ymin = ci_lower, ymax = ci_upper), color = \"grey30\") +\n    geom_point(mapping = aes(x = rel_year, y = estimate, color = group), size = 2) +\n    scale_x_continuous(breaks = -3:5, minor_breaks = NULL) +\n    scale_y_continuous(minor_breaks = NULL) +\n    labs(x = \"Relative Time\", y = \"Estimate\", color = NULL, title = NULL) +\n  theme_bw() + theme(legend.position=\"none\")"
+  },
+  {
+    "objectID": "slides/class9.html#seems-like-lots-of-solutions",
+    "href": "slides/class9.html#seems-like-lots-of-solutions",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Seems like lots of “solutions”",
+    "text": "Seems like lots of “solutions”\n\nCallaway and Sant’Anna (2020)\nSun and Abraham (2020)\nde Chaisemartin and D’Haultfoeuille (2020)\nCengiz et al (2019)\nGardner (2021) and Borusyak et al. (2021)\n\n\nGoodman-Bacon (2021) explores the problems but doesn’t really propose a solution (still very important work though!)"
+  },
+  {
+    "objectID": "slides/class9.html#comparison",
+    "href": "slides/class9.html#comparison",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Comparison",
+    "text": "Comparison\n\n\nR Code\nlibrary(tidyverse)\nlibrary(modelsummary)\nlibrary(fixest)\nmcaid.data &lt;- read_tsv(\"../files/data/acs/acs_medicaid.txt\")\nreg.dat &lt;- mcaid.data %&gt;% \n  filter(!is.na(expand_ever)) %&gt;%\n  mutate(perc_unins=uninsured/adult_pop,\n         post = (year&gt;=2014), \n         treat=post*expand_ever,\n         time_to_treat = ifelse(expand_ever==FALSE, 0, year-expand_year),\n         time_to_treat = ifelse(time_to_treat &lt; -3, -3, time_to_treat))\n\nmod.twfe &lt;- feols(perc_unins~i(time_to_treat, expand_ever, ref=-1) | State + year,\n                  cluster=~State,\n                  data=reg.dat)\n\n\ncoef.twfe &lt;- tidy(mod.twfe) %&gt;%\n  mutate(term=str_replace(term,\"time_to_treat::\",\"\"),\n         term=str_replace(term,\":expand_ever\",\"\")) %&gt;%\n  rename(rel_year=term) %&gt;%\n  select(rel_year, estimate, std.error) %&gt;%\n  bind_rows(tibble(rel_year=\"-1\", estimate=0, std.error=0)) %&gt;%  \n  mutate(\n    ci_lower = estimate - 1.96 * std.error,\n    ci_upper = estimate + 1.96 * std.error,\n    group = \"TWFE\",\n    rel_year = as.numeric(rel_year)\n  ) %&gt;%\n  filter(rel_year&gt;=-3, rel_year&lt;=5)\n\ncoef.2s &lt;- tidy(mod.2s) %&gt;%\n  mutate(term=str_replace(term,\"time_to_treat::\",\"\")) %&gt;%\n  rename(rel_year=term) %&gt;%\n  select(rel_year, estimate, std.error) %&gt;%\n  bind_rows(tibble(rel_year=\"-1\", estimate=0, std.error=0)) %&gt;%  \n  mutate(\n    ci_lower = estimate - 1.96 * std.error,\n    ci_upper = estimate + 1.96 * std.error,\n    group = \"Gardner 2SDiD\",\n    rel_year = as.numeric(rel_year)\n  )\n\ncoef.sa &lt;- tidy(mod.sa) %&gt;%\n  mutate(term=str_replace(term,\"time_to_treat::\",\"\")) %&gt;%\n  rename(rel_year=term) %&gt;%\n  select(rel_year, estimate, std.error) %&gt;%\n  bind_rows(tibble(rel_year=\"-1\", estimate=0, std.error=0)) %&gt;%    \n  mutate(\n    ci_lower = estimate - 1.96 * std.error,\n    ci_upper = estimate + 1.96 * std.error,\n    group = \"Sun and Abraham\",\n    rel_year = as.numeric(rel_year)\n  ) %&gt;%\n  filter(rel_year&gt;=-3, rel_year&lt;=5)\n\n\ncoef.cs &lt;- tidy(mod.cs.event) %&gt;%\n  select(rel_year=event.time, estimate, ci_lower=conf.low, ci_upper=conf.high) %&gt;%\n  mutate(rel_year=as.numeric(rel_year),\n         group = \"Callaway and Sant'Anna\") %&gt;%\n  filter(rel_year&gt;=-3, rel_year&lt;=5)\ncoef.cs &lt;- as_tibble(coef.cs)\n\ncoef.all &lt;- bind_rows(coef.twfe, coef.cs, coef.sa, coef.2s, coef.bea) %&gt;%\n  select(rel_year, estimate, ci_lower, ci_upper, group)\n\nggplot(coef.all, aes(x=rel_year, y=estimate)) + \n  geom_point(aes(color=group), size = 2, position=position_dodge(width=0.7))  +\n  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), position=position_dodge2(width=0.7)) +\n  geom_hline(yintercept = 0, linetype = \"dashed\") +\n  geom_vline(xintercept = -0.5, linetype = \"dashed\") +\n  theme(legend.position=\"bottom\") +\n  guides(color=guide_legend(ncol=2, title=NULL)) +\n  scale_x_continuous(breaks = -3:5, minor_breaks = NULL) +\n  scale_y_continuous(minor_breaks = NULL) +\n  labs(x = \"Relative Time\", y = \"Estimate\", color = NULL, title = NULL)"
+  },
+  {
+    "objectID": "slides/class9.html#comparison-1",
+    "href": "slides/class9.html#comparison-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Comparison",
+    "text": "Comparison\n\n\nSimilarities\n\nFocus on clean treatment/control\nFocus on event study framework (not a single overall effect)\nImpose some form of parallel trends assumption\n\n\nDifferences\n\nIs there a “never treated” group?\nCan treatment turn on and off?\nHow to include covariates?\nHow to do inference?"
+  },
+  {
+    "objectID": "slides/class9.html#general-advice",
+    "href": "slides/class9.html#general-advice",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "General advice",
+    "text": "General advice\n\nDo you have staggered treatment adoption? If so, will need to consider something beyond TWFE event study (even if it doesn’t change results)\nDo you need time-varying covariates? If so, consider Sun and Abraham or stacked regression (2SDD and imputation can only use pre-treatment covariates). But also, why do you need time-varying covariates?\nIs treatment “strict”? If not, CH is only option right now\nDoes treatment turn on and off again? If so, CH or perhaps focus on “clean” treatment adoptions\nInference? Stacked regression is harder here. (see Wing, Freedman, and Hollingsworth (2024) for recent work on this)"
+  },
+  {
+    "objectID": "slides/class9.html#other-topics",
+    "href": "slides/class9.html#other-topics",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Other topics",
+    "text": "Other topics\n\nCan you test for parallel pre-trends?\nRecent work says such tests are underpowered\nConsider potential violations of parallel trends and assess results\n\nIntuitively “easy” to do in manual \\((g,t)\\) or imputation setting, harder in pure regression setting\nSee Rambachan and Roth (2023) and Freyaldenhoven et al. (2021) for recent work on this\nParallel trends sensitive to functional form, see Roth and Sant’Anna (2023)"
+  },
+  {
+    "objectID": "slides/class9.html#the-data",
+    "href": "slides/class9.html#the-data",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "1. The Data",
+    "text": "1. The Data\n\nHCRIS\nPOS\nKFF Medicaid Expansion"
+  },
+  {
+    "objectID": "slides/class9.html#hcris",
+    "href": "slides/class9.html#hcris",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "HCRIS",
+    "text": "HCRIS\n\nComprehensive dataset on hospital financials and other details\nChallenging to get information out of these reports\nVery messy with lots of misreporting\nHospitals identified by “Medicare Provider Number” (also known as CMS Certification Number, or CCN) and “NPI”\nWe’ll work with the provider number in this assignment"
+  },
+  {
+    "objectID": "slides/class9.html#pos",
+    "href": "slides/class9.html#pos",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "POS",
+    "text": "POS\n\n“Cumulative” file listing all Medicare-approved facilities other than clinical labs (those are in separate files)\nDuplicate observations in each year\nClosed hospitals should stay in the data every year, with a termination date filled when closed\nLOTS more facilities than hospitals"
+  },
+  {
+    "objectID": "slides/class9.html#kff-medicaid-expansion",
+    "href": "slides/class9.html#kff-medicaid-expansion",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "KFF Medicaid Expansion",
+    "text": "KFF Medicaid Expansion\n\nList of states and dates in which Medicaid was implemented"
+  },
+  {
+    "objectID": "slides/class9.html#the-analysis",
+    "href": "slides/class9.html#the-analysis",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "2. The analysis",
+    "text": "2. The analysis\n\nSummary statistics and figures\nDD, TWFE, Event Studies\nSun and Abraham\nCallaway and Sant’Anna\nCallaway and Sant’Anna with “Honest” pre-trends"
+  },
+  {
+    "objectID": "slides/class9.html#discussion-and-reflection",
+    "href": "slides/class9.html#discussion-and-reflection",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "3. Discussion and reflection",
+    "text": "3. Discussion and reflection\n\nDiscussion: Looking for overall takeaways here, nothing too formal.\nReflection: Explain something you found surprising. Maybe it was something that you enjoyed learning or implementing. Maybe it was something that you struggled with but that you thought, ex ante, would be easier. Or maybe you were surprised at how awesome you are! Anything goes really…just be genuine."
+  },
+  {
+    "objectID": "slides/class9.html#expectations",
+    "href": "slides/class9.html#expectations",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "4. Expectations",
+    "text": "4. Expectations\n\nPDF should be more like a report than a research notebook (code goes in the repo, not in the report)\nSeparate your analysis from your writing (perhaps by cleaning and then saving your workspace, and importing it into your markdown doc)\nTables and Figures should be near-publication quality, with clean and clear variable names, axes, labels, etc.\nSpend time on good workflow and professional looking products…you can re-use all of this code and workflow for the rest of your career!"
+  },
+  {
+    "objectID": "slides/class9.html#references",
+    "href": "slides/class9.html#references",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nFreyaldenhoven, Simon, Christian Hansen, Jorge Pérez Pérez, and Jesse M. Shapiro. 2021. “Visualization, Identification, and Estimation in the Linear Panel Event-Study Design.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w29170.\n\n\nRambachan, Ashesh, and Jonathan Roth. 2023. “A More Credible Approach to Parallel Trends.” The Review of Economic Studies 90 (5): 2555–91. https://doi.org/10.1093/restud/rdad018.\n\n\nRoth, Jonathan, and Pedro H. C. Sant’Anna. 2023. “When Is Parallel Trends Sensitive to Functional Form?” Econometrica 91 (2): 737–47. https://doi.org/10.3982/ECTA19402.\n\n\nWing, Coady, Seth M. Freedman, and Alex Hollingsworth. 2024. “Stacked Difference-in-Differences.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w32054."
+  },
+  {
+    "objectID": "slides/class9.html#step-1-look-at-the-data-1",
+    "href": "slides/class9.html#step-1-look-at-the-data-1",
+    "title": "A Quick Primer on Diff-in-Diff",
+    "section": "Step 1: Look at the data",
+    "text": "Step 1: Look at the data"
   }
 ]
