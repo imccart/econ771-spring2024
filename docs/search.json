@@ -2357,5 +2357,495 @@
     "title": "A Quick Primer on Diff-in-Diff",
     "section": "Step 1: Look at the data",
     "text": "Step 1: Look at the data"
+  },
+  {
+    "objectID": "slides/class10.html#outline",
+    "href": "slides/class10.html#outline",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Outline",
+    "text": "Outline\n\nAssessing Selection on Unobservables\nBasics of Instrumental Variables\nTesting IV Assumptions\nInterpreting IV Results\nCommon IV Designs Today"
+  },
+  {
+    "objectID": "slides/class10.html#oster2019",
+    "href": "slides/class10.html#oster2019",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Oster (2019)",
+    "text": "Oster (2019)\nKey assumption: Selection on observables is informative about selection on unobservables\n\nWhat is the maximum \\(R^2\\) value we could obtain if we observed \\(x_{2}\\)? Call this \\(R_{\\text{max}}^{2}\\) (naturally bounded above by 1, but likely smaller)\nWhat is the degree of selection on observed variables relative to unobserved variables? Denote the proportional relationship as \\(\\rho\\) such that: \\[\\rho \\times \\frac{Cov(x_{1},D)}{Var(x_{1})} = \\frac{Cov(x_{2},D)}{Var(x_{2})}.\\]"
+  },
+  {
+    "objectID": "slides/class10.html#oster2019-1",
+    "href": "slides/class10.html#oster2019-1",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Oster (2019)",
+    "text": "Oster (2019)\n\nUnder an “equal relative contributions” assumption, we can write:\n\n\\[\\delta^{*} \\approx \\hat{\\delta}_{D,x_{1}} - \\rho \\times \\left[\\hat{\\delta}_{D} - \\hat{\\delta}_{D,x_{1}}\\right] \\times \\frac{R_{\\text{max}}^{2} - R_{D,x_{1}}^{2}}{R_{D,x_{1}}^{2} - R_{x_{1}}^{2}} \\xrightarrow{p} \\delta.\\]\n\nConsider a range of \\(R^{2}_{\\text{max}}\\) and \\(\\rho\\) to bound the estimated treatment effect,\n\n\\[\\left[ \\hat{\\delta}_{D,x_{1}}, \\delta^{*}(\\bar{R}^{2}_{max}, \\rho) \\right]\\]"
+  },
+  {
+    "objectID": "slides/class10.html#augmented-regression-somewhat-out-of-place-here",
+    "href": "slides/class10.html#augmented-regression-somewhat-out-of-place-here",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Augmented regression (somewhat out of place here)",
+    "text": "Augmented regression (somewhat out of place here)\n\nOster (2019) and similar papers can say something about how bad selection on unobservables would need to be\nBut what kind of “improvement” do we really get in practice?"
+  },
+  {
+    "objectID": "slides/class10.html#summary",
+    "href": "slides/class10.html#summary",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Summary",
+    "text": "Summary\n\nDo we have an endogeneity problem?\n\nEffects easily overcome by small selection on unobservables?\nClear reverse causality problem?\n\nWhat can we do about it?\n\nMatching, weighting, regression? Only for selection on observables\nDD, RD, differences in discontinuities? Specific designs and settings\nInstrumental variables?"
+  },
+  {
+    "objectID": "slides/class10.html#what-is-instrumental-variables",
+    "href": "slides/class10.html#what-is-instrumental-variables",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "What is instrumental variables",
+    "text": "What is instrumental variables\nInstrumental Variables (IV) is a way to identify causal effects using variation in treatment particpation that is due to an exogenous variable that is only related to the outcome through treatment.\n\nDAG Selection"
+  },
+  {
+    "objectID": "slides/class10.html#simple-example",
+    "href": "slides/class10.html#simple-example",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Simple example",
+    "text": "Simple example\n\n\\(y = \\beta x + \\varepsilon (x)\\), where \\(\\varepsilon(x)\\) reflects the dependence between our observed variable and the error term.\nSimple OLS will yield \\(\\frac{dy}{dx} = \\beta + \\frac{d\\varepsilon}{dx} \\neq \\beta\\)"
+  },
+  {
+    "objectID": "slides/class10.html#what-does-iv-do",
+    "href": "slides/class10.html#what-does-iv-do",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "What does IV do?",
+    "text": "What does IV do?\n\nThe regression we want to do: \\[y_{i} = \\alpha + \\delta D_{i} + \\gamma A_{i} + \\epsilon_{i},\\] where \\(D_{i}\\) is treatment (think of schooling for now) and \\(A_{i}\\) is something like ability.\n\\(A_{i}\\) is unobserved, so instead we run, \\(y_{i} = \\alpha + \\beta D_{i} + \\epsilon_{i}\\)\nFrom this “short” regression, we don’t actually estimate \\(\\delta\\). Instead, we get an estimate of \\[\\beta = \\delta + \\lambda_{ds}\\gamma \\neq \\delta,\\] where \\(\\lambda_{ds}\\) is the coefficient of a regression of \\(A_{i}\\) on \\(D_{i}\\)."
+  },
+  {
+    "objectID": "slides/class10.html#intuition",
+    "href": "slides/class10.html#intuition",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Intuition",
+    "text": "Intuition\nIV will recover the “long” regression without observing underlying ability\n\nIF our IV satisfies all of the necessary assumptions."
+  },
+  {
+    "objectID": "slides/class10.html#more-formally",
+    "href": "slides/class10.html#more-formally",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "More formally",
+    "text": "More formally\n\nWe want to estimate \\[E[Y_{i} | D_{i}=1] - E[Y_{i} | D_{i}=0]\\]\nWith instrument \\(Z_{i}\\) that satisfies relevant assumptions, we can estimate this as \\[E[Y_{i} | D_{i}=1] - E[Y_{i} | D_{i}=0] = \\frac{E[Y_{i} | Z_{i}=1] - E[Y_{i} | Z_{i}=0]}{E[D_{i} | Z_{i}=1] - E[D_{i} | Z_{i}=0]}\\]\nIn words, this is effect of the instrument on the outcome (“reduced form”) divided by the effect of the instrument on treatment (“first stage”)"
+  },
+  {
+    "objectID": "slides/class10.html#derivation",
+    "href": "slides/class10.html#derivation",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Derivation",
+    "text": "Derivation\nRecall “long” regression: \\(Y=\\alpha + \\delta S + \\gamma A + \\epsilon\\).\n\\[\\begin{align}\nCOV(Y,Z) & = E[YZ] - E[Y] E[Z] \\\\\n         & = E[(\\alpha + \\delta S + \\gamma A + \\epsilon)\\times Z] - E[\\alpha + \\delta S + \\gamma A + \\epsilon)]E[Z] \\\\\n         & = \\alpha E[Z] + \\delta E[SZ] + \\gamma E[AZ] + E[\\epsilon Z] \\\\\n         & \\hspace{.2in} - \\alpha E[Z] - \\delta E[S]E[Z] - \\gamma E[A] E[Z] - E[\\epsilon]E[Z] \\\\\n         & = \\delta (E[SZ] - E[S] E[Z]) + \\gamma (E[AZ] - E[A] E[Z]) \\\\\n         & \\hspace{.2in} + E[\\epsilon Z] - E[\\epsilon] E[Z] \\\\\n         & = \\delta C(S,Z) + \\gamma C(A,Z) + C(\\epsilon, Z)\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/class10.html#derivation-1",
+    "href": "slides/class10.html#derivation-1",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Derivation",
+    "text": "Derivation\nWorking from \\(COV(Y,Z) = \\delta COV(S,Z) + \\gamma COV(A,Z) + COV(\\epsilon,Z)\\), we find\n\\[\\delta = \\frac{COV(Y,Z)}{COV(S,Z)}\\]\nif \\(COV(A,Z)=COV(\\epsilon, Z)=0\\)"
+  },
+  {
+    "objectID": "slides/class10.html#ivs-in-practice",
+    "href": "slides/class10.html#ivs-in-practice",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "IVs in practice",
+    "text": "IVs in practice\nEasy to think of in terms of randomized controlled trial…\n\n\n\n\nMeasure\nOffered Seat\nNot Offered Seat\nDifference\n\n\n\n\nScore\n-0.003\n-0.358\n0.355\n\n\n% Enrolled\n0.787\n0.046\n0.741\n\n\nEffect\n\n\n0.48\n\n\n\nAngrist et al., 2012. “Who Benefits from KIPP?” Journal of Policy Analysis and Management."
+  },
+  {
+    "objectID": "slides/class10.html#what-is-iv-really-doing",
+    "href": "slides/class10.html#what-is-iv-really-doing",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "What is IV really doing",
+    "text": "What is IV really doing\nThink of IV as two-steps:\n\nIsolate variation due to the instrument only (not due to endogenous stuff)\nEstimate effect on outcome using only this source of variation"
+  },
+  {
+    "objectID": "slides/class10.html#in-regression-terms",
+    "href": "slides/class10.html#in-regression-terms",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "In regression terms",
+    "text": "In regression terms\nInterested in estimating \\(\\delta\\) from \\(y_{i} = \\alpha + \\beta x_{i} + \\delta D_{i} + \\varepsilon_{i}\\), but \\(D_{i}\\) is endogenous (no pure “selection on observables”).\n\nStep 1: With instrument \\(Z_{i}\\), we can regress \\(D_{i}\\) on \\(Z_{i}\\) and \\(x_{i}\\), \\[D_{i} = \\lambda + \\theta Z_{i} + \\kappa x_{i} + \\nu,\\] and form prediction \\(\\hat{D}_{i}\\).\nStep 2: Regress \\(y_{i}\\) on \\(x_{i}\\) and \\(\\hat{D}_{i}\\), \\[y_{i} = \\alpha + \\beta x_{i} + \\delta \\hat{D}_{i} + \\xi_{i}\\]"
+  },
+  {
+    "objectID": "slides/class10.html#derivation-2",
+    "href": "slides/class10.html#derivation-2",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Derivation",
+    "text": "Derivation\nRecall \\(\\hat{\\theta}=\\frac{C(Z,S)}{V(Z)}\\), or \\(\\hat{\\theta}V(Z) = C(S,Z)\\). Then:\n\\[\\begin{align}\n\\hat{\\delta}  & = \\frac{COV(Y,Z)}{COV(S,Z)} \\\\\n        & = \\frac{\\hat{\\theta}C(Y,Z)}{\\hat{\\theta}C(S,Z)} = \\frac{\\hat{\\theta}C(Y,Z)}{\\hat{\\theta}^{2}V(Z)} \\\\\n        & = \\frac{C(\\hat{\\theta}Z,Y)}{V(\\hat{\\theta}Z)} = \\frac{C(\\hat{S},Y)}{V(\\hat{S})}\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/class10.html#animation-for-iv",
+    "href": "slides/class10.html#animation-for-iv",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Animation for IV",
+    "text": "Animation for IV\n\n\nR Code\ndf &lt;- data.frame(Z = as.integer(1:200&gt;100),\n                 W = rnorm(200)) %&gt;%\n  mutate(X = .5+2*W +2*Z+ rnorm(200)) %&gt;%\n  mutate(Y = -X + 4*W + 1 + rnorm(200),time=\"1\") %&gt;%\n  group_by(Z) %&gt;%\n  mutate(mean_X=mean(X),mean_Y=mean(Y),YL=NA,XL=NA) %&gt;%\n  ungroup()\n\n#Calculate correlations\nbefore_cor &lt;- paste(\"1. Start with raw data. Correlation between X and Y: \",round(cor(df$X,df$Y),3),sep='')\nafterlab &lt;- '6. Draw a line between the points. The slope is the effect of X on Y.'\n\ndffull &lt;- rbind(\n  #Step 1: Raw data only\n  df %&gt;% mutate(mean_X=NA,mean_Y=NA,time=before_cor),\n  #Step 2: Add x-lines\n  df %&gt;% mutate(mean_Y=NA,time='2. Figure out what differences in X are explained by Z'),\n  #Step 3: X de-meaned \n  df %&gt;% mutate(X = mean_X,mean_Y=NA,time=\"3. Remove everything in X not explained by Z\"),\n  #Step 4: Remove X lines, add Y\n  df %&gt;% mutate(X = mean_X,mean_X=NA,time=\"4. Figure out what differences in Y are explained by Z\"),\n  #Step 5: Y de-meaned\n  df %&gt;% mutate(X = mean_X,Y = mean_Y,mean_X=NA,time=\"5. Remove everything in Y not explained by Z\"),\n  #Step 6: Raw demeaned data only\n  df %&gt;% mutate(X =  mean_X,Y =mean_Y,mean_X=NA,mean_Y=NA,YL=mean_Y,XL=mean_X,time=afterlab))\n\n#Get line segments\nendpts &lt;- df %&gt;%\n  group_by(Z) %&gt;%\n  summarize(mean_X=mean(mean_X),mean_Y=mean(mean_Y))\n\np &lt;- ggplot(dffull,aes(y=Y,x=X,color=as.factor(Z)))+geom_point()+\n  geom_vline(aes(xintercept=mean_X,color=as.factor(Z)))+\n  geom_hline(aes(yintercept=mean_Y,color=as.factor(Z)))+\n  guides(color=guide_legend(title=\"Z\"))+\n  geom_segment(aes(x=ifelse(time==afterlab,endpts$mean_X[1],NA),\n                   y=endpts$mean_Y[1],xend=endpts$mean_X[2],\n                   yend=endpts$mean_Y[2]),size=1,color='blue')+\n  scale_color_colorblind()+\n  labs(title = 'The Relationship between Y and X, With Binary Z as an Instrumental Variable \\n{next_state}')+\n  transition_states(time,transition_length=c(6,16,6,16,6,6),state_length=c(50,22,12,22,12,50),wrap=FALSE)+\n  ease_aes('sine-in-out')+\n  exit_fade()+enter_fade()\n\nanimate(p,nframes=175)"
+  },
+  {
+    "objectID": "slides/class10.html#simulated-data",
+    "href": "slides/class10.html#simulated-data",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Simulated data",
+    "text": "Simulated data\n\nn &lt;- 5000\nb.true &lt;- 5.25\niv.dat &lt;- tibble(\n  z = rnorm(n,0,2),\n  eps = rnorm(n,0,1),\n  d = (z + 1.5*eps + rnorm(n,0,1) &gt;0.25),\n  y = 2.5 + b.true*d + eps + rnorm(n,0,0.5)\n)\n\n\nendogenous eps: affects treatment and outcome\nz is an instrument: affects treatment but no direct effect on outcome"
+  },
+  {
+    "objectID": "slides/class10.html#results-with-simulated-data",
+    "href": "slides/class10.html#results-with-simulated-data",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Results with simulated data",
+    "text": "Results with simulated data\nRecall that the true treatment effect is 5.25\n\n\n\n\n\nCall:\nlm(formula = y ~ d, data = iv.dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-3.7806 -0.7061  0.0029  0.6757  3.9146 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  2.11415    0.01986   106.5   &lt;2e-16 ***\ndTRUE        6.11795    0.02929   208.9   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.032 on 4998 degrees of freedom\nMultiple R-squared:  0.8972,    Adjusted R-squared:  0.8972 \nF-statistic: 4.363e+04 on 1 and 4998 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n\nTSLS estimation, Dep. Var.: y, Endo.: d, Instr.: z\nSecond stage: Dep. Var.: y\nObservations: 5,000 \nStandard-errors: IID \n            Estimate Std. Error t value  Pr(&gt;|t|)    \n(Intercept)  2.51950   0.029146 86.4443 &lt; 2.2e-16 ***\nfit_dTRUE    5.23598   0.053196 98.4273 &lt; 2.2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\nRMSE: 1.12168   Adj. R2: 0.878546\nF-test (1st stage), dTRUE: stat = 2,789.0, p &lt; 2.2e-16, on 1 and 4,998 DoF.\n               Wu-Hausman: stat =   562.8, p &lt; 2.2e-16, on 1 and 4,997 DoF."
+  },
+  {
+    "objectID": "slides/class10.html#two-stage-equivalence",
+    "href": "slides/class10.html#two-stage-equivalence",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Two-stage equivalence",
+    "text": "Two-stage equivalence\n\n\nR Code\nstep1 &lt;- lm(d ~ z, data=iv.dat)\nd.hat &lt;- predict(step1)\nstep2 &lt;- lm(y ~ d.hat, data=iv.dat)\nsummary(step2)\n\n\n\nCall:\nlm(formula = y ~ d.hat, data = iv.dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-9.0706 -2.1654 -0.1271  2.1690  8.6850 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  2.51950    0.07314   34.45   &lt;2e-16 ***\nd.hat        5.23598    0.13349   39.22   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.815 on 4998 degrees of freedom\nMultiple R-squared:  0.2354,    Adjusted R-squared:  0.2352 \nF-statistic:  1539 on 1 and 4998 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "slides/class10.html#key-iv-assumptions",
+    "href": "slides/class10.html#key-iv-assumptions",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Key IV assumptions",
+    "text": "Key IV assumptions\n\nExclusion: Instrument is uncorrelated with the error term\nValidity: Instrument is correlated with the endogenous variable\nMonotonicity: Treatment more (less) likely for those with higher (lower) values of the instrument\n\n\nAssumptions 1 and 2 sometimes grouped into an only through condition."
+  },
+  {
+    "objectID": "slides/class10.html#checking-instrument",
+    "href": "slides/class10.html#checking-instrument",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Checking instrument",
+    "text": "Checking instrument\nBare minimum (probably not even that) is to check first stage and reduced form:\n\n\n\nCheck the ‘first stage’\n\n\n\n\nCall:\nlm(formula = d ~ z, data = iv.dat)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1.13046 -0.32500 -0.03084  0.33044  1.15203 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 0.462073   0.005648   81.81   &lt;2e-16 ***\nz           0.146520   0.002774   52.81   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.3993 on 4998 degrees of freedom\nMultiple R-squared:  0.3582,    Adjusted R-squared:  0.358 \nF-statistic:  2789 on 1 and 4998 DF,  p-value: &lt; 2.2e-16\n\n\n\n\nCheck the ‘reduced form’\n\n\n\n\nCall:\nlm(formula = y ~ z, data = iv.dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-9.0706 -2.1654 -0.1271  2.1690  8.6850 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  4.93891    0.03981  124.05   &lt;2e-16 ***\nz            0.76718    0.01956   39.22   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.815 on 4998 degrees of freedom\nMultiple R-squared:  0.2354,    Adjusted R-squared:  0.2352 \nF-statistic:  1539 on 1 and 4998 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "slides/class10.html#do-we-need-iv",
+    "href": "slides/class10.html#do-we-need-iv",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Do we need IV?",
+    "text": "Do we need IV?\n\nLet’s run an “augmented regression” to see if our OLS results are sufficiently different than IV\n\n\n\nR Code\nd.iv &lt;- lm(d ~ z, data=iv.dat)\nd.resid &lt;- residuals(d.iv)\nhaus.test &lt;- lm(y ~ d + d.resid, data=iv.dat)\nsummary(haus.test)\n\n\n\nCall:\nlm(formula = y ~ d + d.resid, data = iv.dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-3.8854 -0.6626 -0.0009  0.6680  3.5515 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  2.51950    0.02542   99.10   &lt;2e-16 ***\ndTRUE        5.23598    0.04640  112.84   &lt;2e-16 ***\nd.resid      1.37413    0.05792   23.72   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.9786 on 4997 degrees of freedom\nMultiple R-squared:  0.9076,    Adjusted R-squared:  0.9076 \nF-statistic: 2.455e+04 on 2 and 4997 DF,  p-value: &lt; 2.2e-16\n\n\n\nTest for significance of d.resid suggests OLS is inconsistent in this case"
+  },
+  {
+    "objectID": "slides/class10.html#testing-exclusion",
+    "href": "slides/class10.html#testing-exclusion",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Testing exclusion",
+    "text": "Testing exclusion\n\nExclusion restriction says that your instrument does not directly affect your outcome\nPotential testing ideas:\n\n“zero-first-stage” (subsample on which you know the instrument does not affect the endogenous variable)\naugmented regression of reduced-form effect with subset of instruments (overidentified models only)\nSargan or Hansen’s J test (null hypothesis is that instruments are uncorrelated with residuals)"
+  },
+  {
+    "objectID": "slides/class10.html#vankippersluis2018-beyond-plausibly-exogenous",
+    "href": "slides/class10.html#vankippersluis2018-beyond-plausibly-exogenous",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Kippersluis and Rietveld (2018), “Beyond Plausibly Exogenous”",
+    "text": "Kippersluis and Rietveld (2018), “Beyond Plausibly Exogenous”\n\n“zero-first-stage” test\nFocus on subsample for which your instrument is not correlated with the endogenous variable of interest\n\nRegress the outcome on all covariates and the instruments among this subsample\nCoefficient on the instruments captures any potential direct effect of the instruments on the outcome (since the correlation with the endogenous variable is 0 by assumption)."
+  },
+  {
+    "objectID": "slides/class10.html#beckert2020-a-note-on-specification-testing",
+    "href": "slides/class10.html#beckert2020-a-note-on-specification-testing",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Beckert (2020), “A Note on Specification Testing…”",
+    "text": "Beckert (2020), “A Note on Specification Testing…”\n\nWith at least \\(n\\) valid instruments, test if all instruments are valid against the alternative that up to \\(m - n\\) instruments are valid\n\nEstimate the first-stage regressions and save residuals, denoted \\(\\hat{u}\\).\nEstimate the “artificial” regression \\[y=\\beta x + \\delta \\tilde{z} + \\gamma \\hat{u} + \\varepsilon\\] where \\(\\tilde{z}\\) denotes a subset of \\(m-n\\) instruments from the full instrument matrix \\(z\\).\nTest the null that \\(\\delta=0\\) using a standard F-test"
+  },
+  {
+    "objectID": "slides/class10.html#solving-an-exclusion-problem",
+    "href": "slides/class10.html#solving-an-exclusion-problem",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Solving an Exclusion Problem",
+    "text": "Solving an Exclusion Problem\nConley, Hansen, and Rossi (2012) and “plausible exogeneity”, union of confidence intervals approach:\n\nSuppose extent of violation is known in \\(y_{i} = \\beta x_{i} + \\gamma z_{i} + \\varepsilon_{i}\\), so that \\(\\gamma = \\gamma_{0}\\)\nIV/TSLS applied to \\(y_{i} - \\gamma_{0}z_{i} = \\beta x_{i} + \\varepsilon_{i}\\) works\nWith \\(\\gamma_{0}\\) unknown…do this a bunch of times!\n\nPick \\(\\gamma=\\gamma^{b}\\) for \\(b=1,...,B\\)\nObtain \\((1-\\alpha)\\) % confidence interval for \\(\\beta\\), denoted \\(CI^{b}(1-\\alpha)\\)\nCompute final CI as the union of all \\(CI^{b}\\)"
+  },
+  {
+    "objectID": "slides/class10.html#solving-an-exclusion-problem-1",
+    "href": "slides/class10.html#solving-an-exclusion-problem-1",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Solving an Exclusion Problem",
+    "text": "Solving an Exclusion Problem\nNevo and Rosen (2012):\n\\[y_{i} = \\beta x_{i} + \\delta D_{i} + \\varepsilon_{i}\\]\n\nAllow instrument, \\(z\\), to be correlated with \\(\\varepsilon\\), but \\(|\\rho_{x, \\varepsilon}| \\geq |\\rho_{z, \\varepsilon}|\\)\ni.e., IV is better than just using the endogenous variable\nAssume \\(\\rho_{x, \\varepsilon} \\times \\rho_{z, \\varepsilon} &gt;0\\) (same sign of correlation in the error)\nDenote \\(\\lambda = \\frac{\\rho_{z, \\varepsilon}}{\\rho_{x, \\varepsilon}}\\), then valid \\(IV\\) would be \\(V(z) = \\sigma_{x} z - \\lambda \\sigma_{z} x\\)\nCan bound \\(\\beta\\) using range of \\(\\lambda\\)"
+  },
+  {
+    "objectID": "slides/class10.html#instrument-validity",
+    "href": "slides/class10.html#instrument-validity",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Instrument Validity",
+    "text": "Instrument Validity\nJust says that your instrument is correlated with the endogenous variable, but what about the strength of the correlation?"
+  },
+  {
+    "objectID": "slides/class10.html#why-we-care-about-instrument-strength",
+    "href": "slides/class10.html#why-we-care-about-instrument-strength",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Why we care about instrument strength",
+    "text": "Why we care about instrument strength\nRecall our schooling and wages equation, \\[y = \\beta S + \\epsilon.\\] Bias in IV can be represented as:\n\\[Bias_{IV} \\approx \\frac{Cov(S, \\epsilon)}{V(S)} \\frac{1}{F+1} = Bias_{OLS} \\frac{1}{F+1}\\]\n\nBias in IV may be close to OLS, depending on instrument strength\nBigger problem: Bias could be bigger than OLS if exclusion restriction not fully satisfied"
+  },
+  {
+    "objectID": "slides/class10.html#testing-strength-of-instruments",
+    "href": "slides/class10.html#testing-strength-of-instruments",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Testing strength of instruments",
+    "text": "Testing strength of instruments\nTwo things going on simultaneously:\n\nStrength of the first-stage\nInference on coefficient of interest in the structural equation\n\n\nApplied researchers tend to (wrongly) think of these as separate issues."
+  },
+  {
+    "objectID": "slides/class10.html#testing-strength-of-instruments-1",
+    "href": "slides/class10.html#testing-strength-of-instruments-1",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Testing strength of instruments",
+    "text": "Testing strength of instruments\nMany endogenous variables\n\nStock and Yogo (2005) test based on Cragg & Donald statistic (homoskedasticity only)\nKleibergen and Paap (2006) Wald statistic\nSanderson and Windmeijer (2016) extension\nEffective F-statistic from Olea and Pflueger (2013) (as approximation)"
+  },
+  {
+    "objectID": "slides/class10.html#testing-strength-of-instruments-2",
+    "href": "slides/class10.html#testing-strength-of-instruments-2",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Testing strength of instruments",
+    "text": "Testing strength of instruments\nSingle endogenous variable\n\nPartial \\(R^{2}\\) (never see this)\nStock and Yogo (2005) test based on first-stage F-stat (homoskedasticity only)\n\nCritical values in tables, based on number of instruments\nRule-of-thumb of 10 with single instrument (higher with more instruments)\nLee et al. (2021): With first-stage F-stat of 10, standard “95% confidence interval” for second stage is really an 85% confidence interval"
+  },
+  {
+    "objectID": "slides/class10.html#testing-strength-of-instruments-3",
+    "href": "slides/class10.html#testing-strength-of-instruments-3",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Testing strength of instruments",
+    "text": "Testing strength of instruments\nSingle endogenous variable\n\nPartial \\(R^{2}\\) (never see this)\nStock and Yogo (2005) test based on first-stage F-stat (homoskedasticity only)\nKleibergen and Paap (2006) Wald statistic\nEffective F-statistic from Olea and Pflueger (2013)"
+  },
+  {
+    "objectID": "slides/class10.html#testing-strength-of-instruments-4",
+    "href": "slides/class10.html#testing-strength-of-instruments-4",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Testing strength of instruments",
+    "text": "Testing strength of instruments\nSingle endogenous variable\n\nInference with Anderson-Rubin CIs (homoskedastic)\nInference with Lee et al. (2021) tables (allows for more general error structure)"
+  },
+  {
+    "objectID": "slides/class10.html#testing-strength-of-instruments-first-stage",
+    "href": "slides/class10.html#testing-strength-of-instruments-first-stage",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Testing strength of instruments: First-stage",
+    "text": "Testing strength of instruments: First-stage\n\n\nSingle endogenous variable\n\nHomoskedasticity: Stock & Yogo, effective F-stat\nHeteroskedasticity: Effective F-stat\n\n\nMany endogenous variables\n\nHomoskedasticity: Stock & Yogo with Cragg & Donald statistic, Sanderson and Windmeijer (2016), effective F-stat from Olea and Pflueger (2013)\nHeteroskedasticity: Kleibergen & Papp (Kleibergen and Paap (2006)) Wald is robust analog of Cragg & Donald statistic, effective F-stat from Olea and Pflueger (2013)"
+  },
+  {
+    "objectID": "slides/class10.html#testing-strength-of-instruments-inference",
+    "href": "slides/class10.html#testing-strength-of-instruments-inference",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Testing strength of instruments: Inference",
+    "text": "Testing strength of instruments: Inference\n\n\nSingle endogenous variable\n\nHomoskedasticity: Anderson-Rubin CIs, Lee tF, likelihood ratio test from Moreira (2003)\nHeteroskedasticity: Lee tF, Lee et al. (2021)\n\n\nMany endogenous variables\n\nHomoskedasticity: Projection-based confidence sets using the Anderson-Rubin CI (Dufour & Taamouti, 2005) but low power\nHeteroskedasticity: Go figure it out!"
+  },
+  {
+    "objectID": "slides/class10.html#making-sense-of-all-of-this",
+    "href": "slides/class10.html#making-sense-of-all-of-this",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Making sense of all of this…",
+    "text": "Making sense of all of this…\n\nTest first-stage using effective F-stat\nPresent weak-instrument-robust inference using Anderson-Rubin CIs or Lee tF tests\n\n\nMany endogenous variables problematic because strength of instruments for one variable need not imply strength of instruments for others"
+  },
+  {
+    "objectID": "slides/class10.html#heterogenous-tes",
+    "href": "slides/class10.html#heterogenous-tes",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Heterogenous TEs",
+    "text": "Heterogenous TEs\n\nIn constant treatment effects, \\(Y_{i}(1) - Y_{i}(0) = \\delta_{i} = \\delta, \\text{ } \\forall i\\)\nHeterogeneous effects, \\(\\delta_{i} \\neq \\delta\\)\nWith IV, what parameter did we just estimate? Need monotonicity assumption to answer this"
+  },
+  {
+    "objectID": "slides/class10.html#monotonicity",
+    "href": "slides/class10.html#monotonicity",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Monotonicity",
+    "text": "Monotonicity\nAssumption: Denote the effect of our instrument on treatment by \\(\\pi_{1i}\\). Monotonicity states that \\(\\pi_{1i} \\geq 0\\) or \\(\\pi_{1i} \\leq 0, \\text{ } \\forall i\\).\n\nAllows for \\(\\pi_{1i}=0\\) (no effect on treatment for some people)\nAll those affected by the instrument are affected in the same “direction”\nWith heterogeneous ATE and monotonicity assumption, IV provides a “Local Average Treatment Effect” (LATE)"
+  },
+  {
+    "objectID": "slides/class10.html#late-and-iv-interpretation",
+    "href": "slides/class10.html#late-and-iv-interpretation",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "LATE and IV Interpretation",
+    "text": "LATE and IV Interpretation\n\nLATE is the effect of treatment among those affected by the instrument (compliers only).\nRecall original Wald estimator:\n\n\\[\\delta_{IV} = \\frac{E[Y_{i} | Z_{i}=1] - E[Y_{i} | Z_{i}=0]}{E[D_{i} | Z_{i}=1] - E[D_{i} | Z_{i}=0]}=E[Y_{i}(1) - Y_{i}(0) | \\text{complier}]\\]\n\nPractically, monotonicity assumes there are no defiers and restricts us to learning only about compliers"
+  },
+  {
+    "objectID": "slides/class10.html#is-late-meaningful",
+    "href": "slides/class10.html#is-late-meaningful",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Is LATE meaningful?",
+    "text": "Is LATE meaningful?\n\nLearn about average treatment effect for compliers\nDifferent estimates for different compliers\n\nIV based on merit scholarships\nIV based on financial aid\nSame compliers? Probably not"
+  },
+  {
+    "objectID": "slides/class10.html#late-with-defiers",
+    "href": "slides/class10.html#late-with-defiers",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "LATE with defiers",
+    "text": "LATE with defiers\n\nIn presence of defiers, IV estimates a weighted difference between effect on compliers and defiers (in general)\nLATE can be restored if subgroup of compliers accounts for the same percentage as defiers and has same LATE\nOffsetting behavior of compliers and defiers, so that remaining compliers dictate LATE"
+  },
+  {
+    "objectID": "slides/class10.html#marginal-treatment-effects",
+    "href": "slides/class10.html#marginal-treatment-effects",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Marginal Treatment Effects",
+    "text": "Marginal Treatment Effects\n\nLots of different treatment effects…ATT, ATU, LATE\nWould be nice to have full distribution, \\(f(\\delta-{i})\\), from which we could derive ATE, ATT, LATE, etc.\nMarginal treatment effect (MTE) is nonparametric function that links all of these together\n\nTreatment effect, \\(\\delta_{i} = Y_{i}(1) - Y_{i}(0)\\)\nTreatment governed by index, \\(D_{i} = \\mathbb{1}(\\gamma z_{i} \\geq v_{i})\\), with instruments \\(z\\)\n\n\n\\[\\delta^{MTE} (x, v_{i}) = E[\\delta_{i} | x_{i} = x, \\gamma z_{i} = v_{i}]\\]"
+  },
+  {
+    "objectID": "slides/class10.html#marginal-treatment-effects-1",
+    "href": "slides/class10.html#marginal-treatment-effects-1",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Marginal Treatment Effects",
+    "text": "Marginal Treatment Effects\n\\[\\delta^{MTE} (x, v_{i}) = E[\\delta_{i} | x_{i} = x, \\gamma z_{i}=v_{i}]\\]\n\n\\(\\gamma z_{i} = v_{i}\\) captures indifference between treatment and no treatment\nInstead of number (like ATT or LATE), \\(\\delta^{MTE}(x,v)\\) is a function of \\(v\\)\nAverage effect of treatment for everyone with the same \\(\\gamma z_{i}\\)"
+  },
+  {
+    "objectID": "slides/class10.html#marginal-treatment-effects-2",
+    "href": "slides/class10.html#marginal-treatment-effects-2",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Marginal Treatment Effects",
+    "text": "Marginal Treatment Effects\nWhat is \\(\\gamma z_{i}\\)?\nFor any single index model: \\[D_{i} = \\mathbb{1}(\\gamma z_{i} \\geq v_{i}) = \\mathbb{1}(u_{is} \\leq F(\\gamma z_{i})) \\text{ for } u_{is} \\in [0,1]\\]\n\n\\(F(\\gamma z_{i})\\) is CDF of \\(v{i}\\)\nInverse CDF transform to translate into uniform distribution\nYields propensity score, \\(P(z_{i}) = Pr(D_{i}=1 | z_{i}) = F(\\gamma z_{i})\\) (ranking all units according to probability of treatment)"
+  },
+  {
+    "objectID": "slides/class10.html#marginal-treatment-effects-3",
+    "href": "slides/class10.html#marginal-treatment-effects-3",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Marginal Treatment Effects",
+    "text": "Marginal Treatment Effects\n\nMTE is LATE as change in \\(z\\) approaches 0 (Heckman, 1997)\nMTE is Local IV:\n\n\\[\\delta^{LIV} (x,p) = \\frac{\\partial E[Y | x, P(z)=p]}{\\partial p}\\]\n\nHow does outcome \\(Y_{i}\\) change as we push one more person into treatment"
+  },
+  {
+    "objectID": "slides/class10.html#derivation-3",
+    "href": "slides/class10.html#derivation-3",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Derivation",
+    "text": "Derivation\n\\[\\begin{eqnarray*}\nY(0) &=& \\gamma_0 x + u_0\\\\\nY(1) &=& \\gamma_1 x + u_1\n\\end{eqnarray*}\\]\n\\(P(D=1 | z) = P(z)\\) works as our instrument with two assumptions:\n\n\\((u_0, u_1, u_s) \\perp P(z) | x\\). (Exogeneity)\nConditional on \\(z\\) there is enough variation in \\(z\\) for \\(P(z)\\) to take on all values \\(\\in(0,1)\\).\n\nMuch stronger than typical validity assumption, akin to special regressor in Lewbel’s work\nBinary variable, \\(D=\\mathbb{1}(V+W^{*}\\geq 0)\\). “If \\(V\\) is independent of \\(W\\), then variation in \\(V\\) changes the probability of \\(D=1\\) in such a way that traces out the distribution of \\(W^{*}\\)"
+  },
+  {
+    "objectID": "slides/class10.html#derivation-4",
+    "href": "slides/class10.html#derivation-4",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Derivation",
+    "text": "Derivation\n\nNow we can write, \\[\\small \\begin{eqnarray*}\nY &=& \\gamma_0' x + D(\\gamma_1 - \\gamma_0)' x + u_0 + D(u_1 - u_0)\\\\\nE[Y| x,P(z)=p] &=& \\gamma_0' x + p(\\gamma_1 - \\gamma_0)'x + E[D(u_1 - u_0)|x,P(z)=p]\n\\end{eqnarray*}\\]\nObserve \\(D=1\\) over the interval \\(u_s = [0,p]\\) and zero for higher values of \\(u_s\\). Let \\(u_1-u_0 \\equiv \\eta\\). \\[\\small \\begin{eqnarray*}\nE[D(u_1 - u_0) | P(z) =p,x] &=& \\int_{-\\infty}^{\\infty} \\int_{0}^{p} (u_1 - u_0) f((u_1-u_0) | u_s) d u_s d(u_1 -u_0)\\\\\nE[D(\\eta) | P(z) =p,x] &=& \\int_{-\\infty}^{\\infty} \\int_{0}^{p} \\eta f(\\eta | u_s)  d\\, \\eta d\\, u_s\\\\\n\\end{eqnarray*}\\]"
+  },
+  {
+    "objectID": "slides/class10.html#derivation-5",
+    "href": "slides/class10.html#derivation-5",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Derivation",
+    "text": "Derivation\nRecall: \\[\\begin{align*}\nE[Y| x,P(z)=p] &= \\gamma_0' X + p(\\gamma_1 - \\gamma_0)'X + E[D(u_1 - u_0)|x,P(z)=p]\\\\\n\\end{align*}\\]\nAnd the derivative: \\[\\begin{align*}\n\\delta^{MTE}(p) = \\frac{\\partial E[Y | x, P(z)=p]}{\\partial p} &= (\\gamma_1 - \\gamma_0)'x + \\int_{-\\infty}^{\\infty} \\eta f(\\eta | u_s =p) d\\, \\eta\\\\\n&= \\underbrace{(\\gamma_1 - \\gamma_0)'x}_{ATE(x)}+ E[\\eta | u_s =p]\n\\end{align*}\\]\nWhat is \\(E[\\eta | u_s =p]\\)? The expected unobserved gain from treatment of those people who are on the treatment/no-treatment margin \\(P(z)=p\\)."
+  },
+  {
+    "objectID": "slides/class10.html#mte-to-ate",
+    "href": "slides/class10.html#mte-to-ate",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "MTE to ATE",
+    "text": "MTE to ATE\nCalculate the outcome given \\((x,z)\\) (actually \\(z\\) and \\(P(z)=p\\)).\n\\[\\begin{align*}\n\\delta^{ATE}(x, T=1)&=E\\left(\\delta^{MTE} | X=x \\right)\\\\\n\\end{align*}\\]\nATE: We treat everyone. \\[\\begin{eqnarray*}\n\\int_{-\\infty}^{\\infty} \\delta^{MTE}(p) = (\\gamma_1 - \\gamma_0)'x + \\underbrace{\\int_{-\\infty}^{\\infty} E(\\eta | u_s) d\\, u_s}_{0}\n\\end{eqnarray*}\\]"
+  },
+  {
+    "objectID": "slides/class10.html#mte-to-att",
+    "href": "slides/class10.html#mte-to-att",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "MTE to ATT",
+    "text": "MTE to ATT\nCalculate the outcome given \\((x,z)\\) (actually \\(z\\) and \\(P(z)=p\\)).\n\\[\\begin{align*}\n\\delta^{ATT}(x, P(z), T=1)&=E\\left(\\delta^{MTE} | X=x, u_{s} \\leq P(z)\\right)\\\\\n\\end{align*}\\]\nATT: Treat only those with a large enough propensity score \\(P(z)&gt;p\\): \\[\\begin{eqnarray*}\n\\int_{-\\infty}^{\\infty} \\delta^{MTE}(p,x) \\frac{Pr(P(z | x) &gt; p)}{E[P(z | x)]} d\\,p\n\\end{eqnarray*}\\]"
+  },
+  {
+    "objectID": "slides/class10.html#mte-to-late",
+    "href": "slides/class10.html#mte-to-late",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "MTE to LATE",
+    "text": "MTE to LATE\nCalculate the outcome given \\((x,z)\\) (actually \\(z\\) and \\(P(z)=p\\)).\n\\[\\begin{align*}\n\\delta^{L A T E}\\left(x, P(z), P\\left(z^{\\prime}\\right)\\right)&=E\\left(\\delta^{MTE} | X=x, P\\left(z^{\\prime}\\right) \\leq u_s \\leq P(z)\\right)\n\\end{align*}\\]\nLATE: Integrate over the compliers: \\[\\begin{eqnarray*}\nLATE(x,z,z')= \\frac{1}{P(z) - P(z')} \\int_{P(z')}^{P(z)} \\delta^{MTE}(p,x)\n\\end{eqnarray*}\\]"
+  },
+  {
+    "objectID": "slides/class10.html#mte-to-ols-and-iv",
+    "href": "slides/class10.html#mte-to-ols-and-iv",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "MTE to OLS and IV",
+    "text": "MTE to OLS and IV\nThis is harder… \\[\\begin{align*}\nw^{I V}\\left(u_{s}\\right)=\\left[E\\left(P(z) | P(z)&gt;u_{s}\\right)-E(P(z))\\right] \\frac{E(P(z))}{\\operatorname{Var}(P(z))}\\\\\nw^{O L S}\\left(u_{s}\\right)=1+\\frac{E\\left(u_{1} | u_{s}\\right) h_{1}-E\\left(u_{0} | u_{s}\\right) h_{0}}{\\delta^{M T E}\\left(u_{s}\\right)}\\\\\nh_{1}=\\frac{E\\left(P(z) | P(z)&gt;u_{s}\\right)}{ E(P(z))}, \\quad h_{0}=\\frac{E\\left(P(z) | P(z)&lt;u_{s}\\right)}{E(P(z))}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/class10.html#mte-in-practice",
+    "href": "slides/class10.html#mte-in-practice",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "MTE in practice",
+    "text": "MTE in practice\n\nEstimate \\(P(z)= Pr(D=1 | z)\\) nonparametrically (\\(z\\) includes instruments and all exogenous \\(x\\) variables)\nFlexible/nonparametric regression of \\(Y\\) on \\(x\\) and \\(P(z)\\)\nDifferentiate w.r.t. \\(P(z)\\)\nPlot for all values of \\(P(z)=p\\)\n\nAs long as \\(P(z)\\) covers \\((0,1)\\), we can trace out the full distribution of \\(\\delta^{MTE}(p)\\)"
+  },
+  {
+    "objectID": "slides/class10.html#example",
+    "href": "slides/class10.html#example",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Example",
+    "text": "Example\nGrennan et al (2021)\n\nIdea: what is the effect of detailing in prescription drugs (statins)\nIV: Restrictions on detailing from conflict-of-interest policies imposed by large Academic Medical Centers…spillover to other hospitals\nEstimate MTE and examine welfare effects in structural framework"
+  },
+  {
+    "objectID": "slides/class10.html#judge-fixed-effects",
+    "href": "slides/class10.html#judge-fixed-effects",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Judge Fixed Effects",
+    "text": "Judge Fixed Effects\n\nMany different possible decision makers\nIndividuals randomly assigned to one decision maker\nDecision makers differ in leniency of assigning treatment\nCommon in crime studies due to random assignment of judges to defendants"
+  },
+  {
+    "objectID": "slides/class10.html#judge-fixed-effects-1",
+    "href": "slides/class10.html#judge-fixed-effects-1",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Judge Fixed Effects",
+    "text": "Judge Fixed Effects\nAizer and Doyle (2015), QJE, “Juvenile Incarceration, Human Capital, and Future Crime: Evidence from Randomly Assigned Judges”\n\nProposed instrument: propensity to convict by the judge\nIdea: judge has some fixed leniency, and random assignment into judges introduces exogenous variation in probability of conviction\nIn practice: judge assignment isn’t truly random, but it is plausibly exogenous"
+  },
+  {
+    "objectID": "slides/class10.html#judge-fixed-effects-2",
+    "href": "slides/class10.html#judge-fixed-effects-2",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Judge Fixed Effects",
+    "text": "Judge Fixed Effects\nConstructing the instrument:\n\nLeave-one-out mean \\[z_{j} = \\frac{1}{n_{j} - 1} \\sum_{k \\neq i}^{n_{j}-1} JI_{k}\\]\nThis is the mean of incarceration rates for judge \\(j\\) when excluding the current defendant, \\(i\\)\nCould also residualize \\(JI_{k}\\) (remove effects due to day of week, month, etc.)"
+  },
+  {
+    "objectID": "slides/class10.html#judge-fixed-effects-3",
+    "href": "slides/class10.html#judge-fixed-effects-3",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Judge Fixed Effects",
+    "text": "Judge Fixed Effects\n\nCommon design: possible in settings where some influential decision-makers exercise discretion and where individuals can’t control the match\nPractical issue: Use jackknife IV (JIVE) to “fix” small-sample bias\n\nJIVE more general than judge fixed effects design\nIdea: estimate first-stage without observation \\(i\\), use coefficients for predicted endogeneous variable for observation \\(i\\), repeat\nMay improve finite-sample bias but also loses efficiency\n\nBiggest threat: monotonicity…judges may be more/less lenient in different situations or for different defendants"
+  },
+  {
+    "objectID": "slides/class10.html#bartik-shift-share-instruments",
+    "href": "slides/class10.html#bartik-shift-share-instruments",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Bartik (shift-share) Instruments",
+    "text": "Bartik (shift-share) Instruments\n\nNamed after Timothy Bartik, traced back to Perlof (1957)\nOriginal idea: Estimate effect of employment growth rates on labor-market outcomes\n\nClear simultaneity problem\nSeek IV to shift labor demand"
+  },
+  {
+    "objectID": "slides/class10.html#bartik-instruments",
+    "href": "slides/class10.html#bartik-instruments",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Bartik Instruments",
+    "text": "Bartik Instruments\nDecompose observed growth rate into:\n\n“Share” (what extra growth would have occurred if each industry in an area grew at their industry national average)\n“Shift” (extra growth due to differential growth locally versus nationally)"
+  },
+  {
+    "objectID": "slides/class10.html#bartik-instruments-1",
+    "href": "slides/class10.html#bartik-instruments-1",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Bartik Instruments",
+    "text": "Bartik Instruments\n\nWant to estimate \\[y_{l} = \\alpha + \\delta I_{l} + \\beta w_{l} + \\varepsilon_{l}\\] for location \\(l\\) (possibly time \\(t\\) as well)\n\\(I_{l}\\) reflect immigration flows\n\\(w_{l}\\) captures other observables and region/time fixed effects"
+  },
+  {
+    "objectID": "slides/class10.html#bartik-instruments-2",
+    "href": "slides/class10.html#bartik-instruments-2",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Bartik Instruments",
+    "text": "Bartik Instruments\nInstrument:\n\\[B_{l} = \\sum_{k=1}^{K} z_{l,k} \\Delta_{k},\\]\n\n\\(l\\) denotes market location (e.g., Atlanta), country, etc. (wherever flows are coming into)\n\\(k\\) reflects the source country (where flows are coming out)\n\\(z_{lk}\\) denotes the share of immigrants from source \\(k\\) in location \\(l\\) (in a base period)\n\\(\\Delta_{k}\\) denotes the shift (i.e., change) from source country into the destination country as a whole (e.g., immigration into the U.S.)"
+  },
+  {
+    "objectID": "slides/class10.html#other-examples",
+    "href": "slides/class10.html#other-examples",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Other Examples",
+    "text": "Other Examples\n\\[\\begin{align}\nB_{l} &= \\sum_{k=1}^{K} z_{lk} \\Delta_{k},\\\\\n\\Delta_{lk} &= \\Delta_{k} + \\tilde{\\Delta_{lk}}\n\\end{align}\\]\nChina shock Autor, Dorn, and Hanson (2013):\n\n\\(z_{lk}\\): location, \\(l\\), and industry, \\(k\\), composition\n\\(\\Delta_{lk}\\): location, \\(l\\), and industry, \\(k\\), growth in imports from China\n\\(\\Delta_{k}\\): industry \\(k\\) growth of imports from China"
+  },
+  {
+    "objectID": "slides/class10.html#other-examples-1",
+    "href": "slides/class10.html#other-examples-1",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Other Examples",
+    "text": "Other Examples\n\\[\\begin{align}\nB_{l} &= \\sum_{k=1}^{K} z_{lk} \\Delta_{k},\\\\\n\\Delta_{lk} &= \\Delta_{k} + \\tilde{\\Delta_{lk}}\n\\end{align}\\]\nImmigrant enclave (Altonji and Card, 1991):\n\n\\(z_{lk}\\): share of people from foreign country \\(k\\) living in current location \\(l\\) (in base period)\n\\(\\Delta_{lk}\\): growth in the number of people from \\(k\\) to \\(l\\)\n\\(\\Delta_{k}\\): growth in people from \\(k\\) nationally"
+  },
+  {
+    "objectID": "slides/class10.html#other-examples-2",
+    "href": "slides/class10.html#other-examples-2",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Other Examples",
+    "text": "Other Examples\n\\[\\begin{align}\nB_{l} &= \\sum_{k=1}^{K} z_{lk} \\Delta_{k},\\\\\n\\Delta_{lk} &= \\Delta_{k} + \\tilde{\\Delta_{lk}}\n\\end{align}\\]\nMarket size and demography (Acemoglu and Linn, 2004):\n\n\\(z_{lk}\\): spending share on drug \\(l\\) from age group \\(k\\)\n\\(\\Delta_{lk}\\): growth in spending of group \\(k\\) on drug \\(l\\)\n\\(\\Delta_{k}\\): national growth in spending of group \\(k\\) (e.g., due to population aging)"
+  },
+  {
+    "objectID": "slides/class10.html#bartik-instruments-3",
+    "href": "slides/class10.html#bartik-instruments-3",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Bartik Instruments",
+    "text": "Bartik Instruments\n\nGoldsmith-Pinkham, Sorkin, and Swift (2020) show that using \\(B_{l}\\) as an instrument is equivalent to using local industry shares, \\(z_{lk}\\), as IVs\nCan decompose Bartik-style IV estimates into weighted combination of estimates where each share is an instrument (Rotemberg weights)\nBorusyak, Hull, and Jaravel (2021), ReStud, instead focus on situation in which the shifts are exogenous and the shares are potentially endogenous\nBorusyak and Hull (2023), Econometrica, provide general approach when using exogenous shifts (recentering as in empirical exercise)\n\nkey: literature was vague as to the underlying source of variation in the instrument…recent papers help in understanding this (and thus defending your strategy)"
+  },
+  {
+    "objectID": "slides/class10.html#shift-share-focusing-on-the-shift",
+    "href": "slides/class10.html#shift-share-focusing-on-the-shift",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "Shift-Share (focusing on the shift)",
+    "text": "Shift-Share (focusing on the shift)\n\nDid ACA medicaid expansion affect insurance status?\nConstruct “simulated” IV (dummy for whether person \\(i\\) is newly eligible given state expansion)\nInstrument can be thought of as, \\(z_{is} = f(x_{i}, e_{s})\\)\nWant to separate variation due to \\(e_{s}\\) (the state policy changes) from variation in demographics, \\(x_{i}\\)\n\nIdentify \\(p(x)\\), probability of eligibility on average across other states’ laws\nRecenter, \\(\\tilde{z}_{is} = z_{is} - p(x)\\). Can also just control for \\(p(x)\\) in regression."
+  },
+  {
+    "objectID": "slides/class10.html#references",
+    "href": "slides/class10.html#references",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nAizer, Anna, and Joseph J. Doyle Jr. 2015. “Juvenile Incarceration, Human Capital, and Future Crime: Evidence from Randomly Assigned Judges *.” The Quarterly Journal of Economics 130 (2): 759–803. https://doi.org/10.1093/qje/qjv003.\n\n\nAutor, David H., David Dorn, and Gordon H. Hanson. 2013. “The China Syndrome: Local Labor Market Effects of Import Competition in the United States.” American Economic Review 103 (6): 2121–68. https://doi.org/10.1257/aer.103.6.2121.\n\n\nBeckert, Walter. 2020. “A Note on Specification Testing in Some Structural Regression Models.” Oxford Bulletin of Economics and Statistics 82 (3): 686–95.\n\n\nBorusyak, Kirill, and Peter Hull. 2023. “Nonrandom Exposure to Exogenous Shocks.” Econometrica 91 (6): 2155–85. https://doi.org/10.3982/ECTA19367.\n\n\nBorusyak, Kirill, Peter Hull, and Xavier Jaravel. 2021. “Quasi-Experimental Shift-Share Research Designs.” Review of Economic Studies.\n\n\nConley, Timothy G, Christian B Hansen, and Peter E Rossi. 2012. “Plausibly Exogenous.” Review of Economics and Statistics 94 (1): 260–72.\n\n\nGoldsmith-Pinkham, Paul, Isaac Sorkin, and Henry Swift. 2020. “Bartik Instruments: What, When, Why, and How.” American Economic Review 110 (8): 2586–2624. https://doi.org/10.1257/aer.20181047.\n\n\nKippersluis, Hans van, and Cornelius A Rietveld. 2018. “Beyond Plausibly Exogenous.” The Econometrics Journal 21 (3): 316–31.\n\n\nKleibergen, Frank, and Richard Paap. 2006. “Generalized Reduced Rank Tests Using the Singular Value Decomposition.” Journal of Econometrics 133 (1): 97–126.\n\n\nLee, David S., Justin McCrary, Marcelo J. Moreira, and Jack R. Porter. 2021. “Valid t-Ratio Inference for IV.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w29124.\n\n\nMoreira, Marcelo J. 2003. “A Conditional Likelihood Ratio Test for Structural Models.” Econometrica 71 (4): 1027–48. https://doi.org/10.1111/1468-0262.00438.\n\n\nNevo, Aviv, and Adam M Rosen. 2012. “Identification with Imperfect Instruments.” Review of Economics and Statistics 94 (3): 659–71.\n\n\nOlea, José Luis Montiel, and Carolin Pflueger. 2013. “A Robust Test for Weak Instruments.” Journal of Business & Economic Statistics 31 (3): 358–69.\n\n\nOster, Emily. 2019. “Unobservable Selection and Coefficient Stability: Theory and Evidence.” Journal of Business & Economic Statistics 37 (2): 187–204. https://doi.org/10.1080/07350015.2016.1227711.\n\n\nSanderson, Eleanor, and Frank Windmeijer. 2016. “A Weak Instrument F-Test in Linear IV Models with Multiple Endogenous Variables.” Journal of Econometrics 190 (2): 212–21.\n\n\nStock, James H, and Motohiro Yogo. 2005. “Testing for Weak Instruments in Linear IV Regression.” In Identification and Inference for Econometric Models: Essays in Honor of Thomas Rothenberg. Cambridge University Press."
   }
 ]
