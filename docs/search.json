@@ -2847,5 +2847,103 @@
     "title": "A Quick Primer on Instrumental Variables",
     "section": "References",
     "text": "References\n\n\n\n\n\n\nAizer, Anna, and Joseph J. Doyle Jr. 2015. “Juvenile Incarceration, Human Capital, and Future Crime: Evidence from Randomly Assigned Judges *.” The Quarterly Journal of Economics 130 (2): 759–803. https://doi.org/10.1093/qje/qjv003.\n\n\nAutor, David H., David Dorn, and Gordon H. Hanson. 2013. “The China Syndrome: Local Labor Market Effects of Import Competition in the United States.” American Economic Review 103 (6): 2121–68. https://doi.org/10.1257/aer.103.6.2121.\n\n\nBeckert, Walter. 2020. “A Note on Specification Testing in Some Structural Regression Models.” Oxford Bulletin of Economics and Statistics 82 (3): 686–95.\n\n\nBorusyak, Kirill, and Peter Hull. 2023. “Nonrandom Exposure to Exogenous Shocks.” Econometrica 91 (6): 2155–85. https://doi.org/10.3982/ECTA19367.\n\n\nBorusyak, Kirill, Peter Hull, and Xavier Jaravel. 2021. “Quasi-Experimental Shift-Share Research Designs.” Review of Economic Studies.\n\n\nConley, Timothy G, Christian B Hansen, and Peter E Rossi. 2012. “Plausibly Exogenous.” Review of Economics and Statistics 94 (1): 260–72.\n\n\nGoldsmith-Pinkham, Paul, Isaac Sorkin, and Henry Swift. 2020. “Bartik Instruments: What, When, Why, and How.” American Economic Review 110 (8): 2586–2624. https://doi.org/10.1257/aer.20181047.\n\n\nKippersluis, Hans van, and Cornelius A Rietveld. 2018. “Beyond Plausibly Exogenous.” The Econometrics Journal 21 (3): 316–31.\n\n\nKleibergen, Frank, and Richard Paap. 2006. “Generalized Reduced Rank Tests Using the Singular Value Decomposition.” Journal of Econometrics 133 (1): 97–126.\n\n\nLee, David S., Justin McCrary, Marcelo J. Moreira, and Jack R. Porter. 2021. “Valid t-Ratio Inference for IV.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w29124.\n\n\nMoreira, Marcelo J. 2003. “A Conditional Likelihood Ratio Test for Structural Models.” Econometrica 71 (4): 1027–48. https://doi.org/10.1111/1468-0262.00438.\n\n\nNevo, Aviv, and Adam M Rosen. 2012. “Identification with Imperfect Instruments.” Review of Economics and Statistics 94 (3): 659–71.\n\n\nOlea, José Luis Montiel, and Carolin Pflueger. 2013. “A Robust Test for Weak Instruments.” Journal of Business & Economic Statistics 31 (3): 358–69.\n\n\nOster, Emily. 2019. “Unobservable Selection and Coefficient Stability: Theory and Evidence.” Journal of Business & Economic Statistics 37 (2): 187–204. https://doi.org/10.1080/07350015.2016.1227711.\n\n\nSanderson, Eleanor, and Frank Windmeijer. 2016. “A Weak Instrument F-Test in Linear IV Models with Multiple Endogenous Variables.” Journal of Econometrics 190 (2): 212–21.\n\n\nStock, James H, and Motohiro Yogo. 2005. “Testing for Weak Instruments in Linear IV Regression.” In Identification and Inference for Econometric Models: Essays in Honor of Thomas Rothenberg. Cambridge University Press."
+  },
+  {
+    "objectID": "slides/class12.html#outline",
+    "href": "slides/class12.html#outline",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Outline",
+    "text": "Outline\n\nMotivation\nPhysician Agency\nPolicy Issures"
+  },
+  {
+    "objectID": "slides/class12.html#variation-in-care",
+    "href": "slides/class12.html#variation-in-care",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Variation in care",
+    "text": "Variation in care"
+  },
+  {
+    "objectID": "slides/class12.html#wasteful",
+    "href": "slides/class12.html#wasteful",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Wasteful?",
+    "text": "Wasteful?\n\nEstimates are that more than 30% of health care expenditures are “wasteful”: (The Atlantic, 2013)\nSome clear areas of waste:\n\nPayment differentials by location of treatment (policy quirks)\nBetter imaging with little benefit\nProton treatment (for some conditions)\nHeart stents\nArthroscopic knee surgery\n\n\n\nMany estimates of “waste” are after-the-fact. It’s actually very hard to identify waste before-hand. Report on End-of-life Spending"
+  },
+  {
+    "objectID": "slides/class12.html#definition",
+    "href": "slides/class12.html#definition",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Definition",
+    "text": "Definition\n\nPhysicians are better informed about treatment decisions than patients, and so there exists some agency relationship between the two. For many conditions, patients can’t treat themselves even if they wanted to.\nPhysicians also face incentives other than patient welfare, such as income, reputation, organizational pressures, and career advancement"
+  },
+  {
+    "objectID": "slides/class12.html#basic-setup-from-mcguire2000",
+    "href": "slides/class12.html#basic-setup-from-mcguire2000",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Basic setup from McGuire (2000)",
+    "text": "Basic setup from McGuire (2000)\n\nDenote quantity of physician services by \\(x\\)\nDenote benefit of services to patient by \\(B(x)\\)\nPatients pay (and physicians receive) a price of \\(p\\) for each unit of service \\(x\\)\nPhysicians incur cost \\(c\\) for each unit of care\nNet benefit to patients is \\(NB(x)=B(x)-px\\)\nPhysicians must choose quantity of care at least better than the patient’s outside option, \\(NB(x)= B(x)-px \\geq NB^{0}\\)."
+  },
+  {
+    "objectID": "slides/class12.html#solving-the-model",
+    "href": "slides/class12.html#solving-the-model",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Solving the model",
+    "text": "Solving the model\nWith this framework, how much care will be provided? What is the optimal value of \\(x\\)?"
+  },
+  {
+    "objectID": "slides/class12.html#solving-the-model-1",
+    "href": "slides/class12.html#solving-the-model-1",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Solving the model",
+    "text": "Solving the model\n\nPatient’s objective: \\[\\max_{x} NB(x) = \\max_{x} B(x) - px\\]\nPhysician’s objective: \\[\\max_{x} \\pi(x) = \\max_{x} p x - c x \\text{ s.t. } NB(x) \\geq NB^{0}\\]\nLagrangian: \\[\\mathcal{L} = p x - c x + \\lambda (B(x) - p x - NB^{0})\\]\nFirst order conditions:\n\n\\[\\begin{align}\n\\frac{\\partial \\mathcal{L}}{\\partial p} & = x - \\lambda x = 0 \\\\\n\\frac{\\partial \\mathcal{L}}{\\partial x} & = p - c + \\lambda B'(x) - \\lambda p = 0 \\\\\n\\frac{\\partial \\mathcal{L}}{\\partial \\lambda} &= B(x) - p x - NB^{0} = 0\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/class12.html#physician-agency-in-a-graph",
+    "href": "slides/class12.html#physician-agency-in-a-graph",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Physician agency in a graph",
+    "text": "Physician agency in a graph"
+  },
+  {
+    "objectID": "slides/class12.html#agency-with-capitated-payments",
+    "href": "slides/class12.html#agency-with-capitated-payments",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Agency with capitated payments",
+    "text": "Agency with capitated payments\n\nPhysician receives fixed (“capitated”) amount for each patient, \\(R\\), along with some price per unit of service, \\(p_{s}\\)\nPhysician therefore paid \\(R + (p_{s} - c)x\\) for each patient\nNumber of patients for each physician expressed as a positive function of the net benefit offered, \\(n(NB)\\), where \\(NB=B(x) - p_{d}x\\). Here, we assume that the insurer sets \\(p_{d}\\) and \\(p_{s}\\) separately (the demand and supply price, respectively).\nPhysician again aims to maximize profits, \\(\\pi=n(NB)\\left[R+(p_{s}-c)x\\right]\\)."
+  },
+  {
+    "objectID": "slides/class12.html#solution-with-capitated-payments",
+    "href": "slides/class12.html#solution-with-capitated-payments",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Solution with capitated payments",
+    "text": "Solution with capitated payments\nMaximizing the profit function yields: \\[n'(NB)(B'(x) - p_{d}) \\left[R + (p_{s} - c)x \\right] + n(NB)(p_{s}-c) = 0\\]\nRearranging terms and multiplying both sides by \\(\\frac{1}{NB}\\), we get: \\[\\frac{B'(x) - p_{d}}{NB} \\frac{R + (p_{s} - c)x}{p_{s}-c} = - \\frac{1}{\\varepsilon_{n,NB}}\\]\n\n\nWhat happens for \\(R=0\\)?\nWhat about \\(R&gt;0\\), assuming \\(p_{s}&lt;c\\)?"
+  },
+  {
+    "objectID": "slides/class12.html#problems-with-basic-model",
+    "href": "slides/class12.html#problems-with-basic-model",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Problems with basic model",
+    "text": "Problems with basic model\n\nSetup from McGuire (2000) is useful as it introduces wedge between physician and patient optimums due solely to different costs faced by the two parties\nBut it’s not very flexible and it makes some strong assumptions about competition (outside options) and price setting/taking"
+  },
+  {
+    "objectID": "slides/class12.html#cutler2019",
+    "href": "slides/class12.html#cutler2019",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Cutler et al. (2019)",
+    "text": "Cutler et al. (2019)\nPhysicians aim to maximize: \\[u_{ij} = \\alpha B_{S}(x_{i}) + \\beta \\pi(x_{i}) - \\delta_{d} (x_{i} - x_{i}^{D}) - \\delta_{O}(x_{i} - x_{i}^{O}),\\]\n\n\\(B_{S}(x_{i})\\) is the perceived benefit to the patient, with utility weight \\(\\alpha\\)\n\\(\\pi(x_{i})\\) is the physician’s profit and \\(\\beta\\) the weight on profit in utility\n\\(x_{i}\\) is the quantity of care provided\n\\(x^{D}\\) and \\(x^{O}\\) are preferred quantities from an informed patient and from other organizational pressures, respectively\n\\(\\delta_{d}\\) and \\(\\delta_{O}\\) are functions of the deviations from these preferred quantities\n\n\nFirst order condition for \\(x_{i}\\) yields: \\[\\alpha B{'}_{S}(x_{i}) = - \\beta \\pi{'}(x_{i}) + \\delta_{d}{'} + \\delta_{O}{'}\\]"
+  },
+  {
+    "objectID": "slides/class12.html#taking-this-to-data",
+    "href": "slides/class12.html#taking-this-to-data",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "Taking this to data",
+    "text": "Taking this to data\n\nImpose functional form assumptions so that: \\[u_{ij} = \\alpha B(x_{i}) + \\beta \\pi x_{i} - \\frac{\\gamma_{D}}{2} (x_{i} - x_{i}^{D})^{2} - \\frac{\\gamma_{O}}{2} (x_{i} - x_{i}^{O})^{2}\\]\nTheoretical optimum: \\[\\alpha B{'}(x_{i}) = \\beta \\pi  - \\gamma_{D}(x_{i} - x_{i}^{D}) - \\gamma_{O}(x_{i} - x_{i}^{O})\\]\nFirst-order taylor expansion of \\(B{'}(x_{i})\\) around \\(\\bar{x}\\) yields: \\[x_{i} = \\bar{x} + Z_{i}^{D} + Z_{i}^{S} + \\varepsilon_{i},\\] so that observed treatment levels are a function of some mean value/starting point and demand and supply-side shifts"
+  },
+  {
+    "objectID": "slides/class12.html#references",
+    "href": "slides/class12.html#references",
+    "title": "Healthcare Variation and Physician Agency",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nCutler, David, Jonathan S. Skinner, Ariel Dora Stern, and David Wennberg. 2019. “Physician Beliefs and Patient Preferences: A New Look at Regional Variation in Health Care Spending.” American Economic Journal: Economic Policy 11 (1): 192–221. https://doi.org/10.1257/pol.20150421.\n\n\nMcGuire, Thomas G. 2000. “Physician Agency.” Handbook of Health Economics 1: 461–536."
   }
 ]

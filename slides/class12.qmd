@@ -1,0 +1,236 @@
+---
+title: "Healthcare Variation and Physician Agency"
+author: "Ian McCarthy | Emory University"
+format: 
+  revealjs:
+    theme: [moon]
+    preview-links: auto
+#    chalkboard:
+#      boardmarker-width: 5
+    slide-number: true
+    width: 1600
+    height: 900    
+    embed-resources: true
+from: markdown+emoji
+execute: 
+  echo: true
+---
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, lubridate, gapminder, scales,
+               hrbrthemes, gganimate, OECD)
+```
+
+## Outline
+
+1. Motivation
+2. Physician Agency
+3. Policy Issures
+
+---
+
+![](https://media.giphy.com/media/3orifb9GcyGZ8ClIuk/giphy.gif)
+
+
+
+# Motivation
+
+
+---
+
+## Variation in care
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+![](/files/figures/dartmouth_map.png)
+
+:::
+
+::: {.column width=50%}
+
+![](/files/figures/dartmouth_dist.png)
+
+:::
+
+::::
+
+---
+
+## Wasteful?
+
+- Estimates are that more than 30% of health care expenditures are "wasteful": [(The Atlantic, 2013)](https://www.theatlantic.com/health/archive/2013/12/youre-getting-too-much-healthcare/281896/)
+- Some clear areas of waste:
+  - Payment differentials by location of treatment (policy quirks)
+  - Better imaging with little benefit
+  - Proton treatment (for some conditions)
+  - Heart stents
+  - Arthroscopic knee surgery
+
+
+::: {.fragment}
+Many estimates of "waste" are after-the-fact. It's actually very hard to identify waste before-hand. [Report on End-of-life Spending](http://news.mit.edu/2018/value-late-life-health-care-spending-medicare-0628)
+
+:::
+
+
+# Physician Agency
+
+
+---
+
+## Definition
+
+- Physicians are better informed about treatment decisions than patients, and so there exists some **agency** relationship between the two. For many conditions, patients can't treat themselves even if they wanted to.
+- Physicians also face incentives other than patient welfare, such as income, reputation, organizational pressures, and career advancement
+
+---
+
+## Basic setup from @mcguire2000
+
+- Denote quantity of physician services by $x$
+- Denote benefit of services to patient by $B(x)$
+- Patients pay (and physicians receive) a price of $p$ for each unit of service $x$
+- Physicians incur cost $c$ for each unit of care
+- Net benefit to patients is $NB(x)=B(x)-px$
+- Physicians must choose quantity of care at least better than the patient's outside option, $NB(x)= B(x)-px \geq NB^{0}$.
+
+
+---
+
+## Solving the model
+
+With this framework, how much care will be provided? What is the optimal value of $x$?
+
+
+---
+
+## Solving the model
+
+- Patient's objective: $$\max_{x} NB(x) = \max_{x} B(x) - px$$
+- Physician's objective: $$\max_{x} \pi(x) = \max_{x} p x - c x \text{ s.t. } NB(x) \geq NB^{0}$$
+- Lagrangian: $$\mathcal{L} = p x - c x + \lambda (B(x) - p x - NB^{0})$$
+- First order conditions:
+
+$$\begin{align}
+\frac{\partial \mathcal{L}}{\partial p} & = x - \lambda x = 0 \\
+\frac{\partial \mathcal{L}}{\partial x} & = p - c + \lambda B'(x) - \lambda p = 0 \\
+\frac{\partial \mathcal{L}}{\partial \lambda} &= B(x) - p x - NB^{0} = 0
+\end{align}$$
+
+
+---
+
+$$\begin{align}
+\frac{\partial \mathcal{L}}{\partial p} & = x - \lambda x = 0 \\
+\frac{\partial \mathcal{L}}{\partial x} & = p - c + \lambda B'(x) - \lambda p = 0 \\
+\frac{\partial \mathcal{L}}{\partial \lambda} & = B(x) - p x - NB^{0} = 0
+\end{align}$$
+
+- From the first equation, we have $\lambda = 1$ (seller gains all surplus...any relaxation of surplus goes to profit)
+- From the second equation, we have $B'(x)=c$ (seller will produce until marginal cost equals marginal benefit)
+- Compare to patient's optimal, $B'(x)=p$
+
+
+---
+
+## Physician agency in a graph
+
+```{tikz}
+#| echo: false
+
+\usetikzlibrary{calc}
+\begin{tikzpicture}[scale=0.70, every node/.style={black,opacity=1, transform shape}]
+\draw [->] (0,0) node [below] {0} -- (0,0) -- (6,0) node [right] {$x$};
+\draw [->] (0,0) node [below] {0} -- (0,0) -- (0,5.5) node [above] {$NB$};
+\draw (0,5)--(6,1.4);
+\node [right] at (6,1.4) {$b(x)$};
+\draw (0,3.5)--(3.4,3.5);
+\draw (0,3)--(3.4,3);
+\draw (3.4,3.5)--(3.4,0);
+\draw[dashed] (2.5,3.5)--(2.5,0);
+\draw[dashed] (1.7,4)--(1.7,3.5);
+\node [above] at (.8, 3.7) {$NB^{0}$};
+\node [left] at (0,3) {$c$};
+\node [left] at (0,3.5) {$p$};
+\node [below] at (3.4,0) {$x^{*}$};
+\node [below] at (2.5,0) {$\bar{x}$};
+\draw [->] (2, 3.7) ..controls (2.4,3.9) and (2.7,3.7) .. (3,3.4);
+\end{tikzpicture}
+```
+
+
+---
+
+## Agency with capitated payments
+
+- Physician receives fixed ("capitated") amount for each patient, $R$, along with some price per unit of service, $p_{s}$
+- Physician therefore paid $R + (p_{s} - c)x$ for each patient
+- Number of patients for each physician expressed as a positive function of the net benefit offered, $n(NB)$, where $NB=B(x) - p_{d}x$. Here, we assume that the insurer sets $p_{d}$ and $p_{s}$ separately (the demand and supply price, respectively).
+- Physician again aims to maximize profits, $\pi=n(NB)\left[R+(p_{s}-c)x\right]$.
+
+
+---
+
+## Solution with capitated payments
+
+Maximizing the profit function yields:
+$$n'(NB)(B'(x) - p_{d}) \left[R + (p_{s} - c)x \right] + n(NB)(p_{s}-c) = 0$$
+
+Rearranging terms and multiplying both sides by $\frac{1}{NB}$, we get:
+$$\frac{B'(x) - p_{d}}{NB} \frac{R + (p_{s} - c)x}{p_{s}-c} = - \frac{1}{\varepsilon_{n,NB}}$$
+
+::: {.fragment}
+
+1. What happens for $R=0$?
+2. What about $R>0$, assuming $p_{s}<c$?
+
+:::
+
+
+---
+
+## Problems with basic model
+
+- Setup from @mcguire2000 is useful as it introduces wedge between physician and patient optimums due solely to different costs faced by the two parties
+- But it's not very flexible and it makes some strong assumptions about competition (outside options) and price setting/taking
+
+
+---
+
+## @cutler2019
+
+Physicians aim to maximize: $$u_{ij} = \alpha B_{S}(x_{i}) + \beta \pi(x_{i}) - \delta_{d} (x_{i} - x_{i}^{D}) - \delta_{O}(x_{i} - x_{i}^{O}),$$
+
+- $B_{S}(x_{i})$ is the perceived benefit to the patient, with utility weight $\alpha$
+- $\pi(x_{i})$ is the physician's profit and $\beta$ the weight on profit in utility
+- $x_{i}$ is the quantity of care provided
+- $x^{D}$ and $x^{O}$ are preferred quantities from an informed patient and from other organizational pressures, respectively
+- $\delta_{d}$ and $\delta_{O}$ are functions of the deviations from these preferred quantities
+
+::: {.fragment}
+First order condition for $x_{i}$ yields: $$\alpha B{'}_{S}(x_{i}) = - \beta \pi{'}(x_{i}) + \delta_{d}{'} + \delta_{O}{'}$$
+:::
+
+---
+
+$$\alpha B{'}_{S}(x_{i}) = - \beta \pi{'}(x_{i}) + \delta_{d}{'} + \delta_{O}{'}$$
+
+- Physician sets $x_{i}$ to balance the marginal benefit to the patient with financial incentives, disutility from deviating from the patient's preferred quantities, and disutility from organizational pressures
+- 'Supplier-induced demand'
+  - $x>x^{D}$: Not really an issue as it could still be that $B(x)>B(x^{D})$
+  - More narrowly, $x>x^{D}$ and $B(x)<B(x^{D})$
+
+---
+
+## Taking this to data
+
+- Impose functional form assumptions so that: $$u_{ij} = \alpha B(x_{i}) + \beta \pi x_{i} - \frac{\gamma_{D}}{2} (x_{i} - x_{i}^{D})^{2} - \frac{\gamma_{O}}{2} (x_{i} - x_{i}^{O})^{2}$$
+- Theoretical optimum: $$\alpha B{'}(x_{i}) = \beta \pi  - \gamma_{D}(x_{i} - x_{i}^{D}) - \gamma_{O}(x_{i} - x_{i}^{O})$$
+- First-order taylor expansion of $B{'}(x_{i})$ around $\bar{x}$ yields: $$x_{i} = \bar{x} + Z_{i}^{D} + Z_{i}^{S} + \varepsilon_{i},$$ so that observed treatment levels are a function of some mean value/starting point and demand and supply-side shifts
+
+
+## References
