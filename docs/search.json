@@ -2362,8 +2362,8 @@
     "objectID": "slides/class10.html#outline",
     "href": "slides/class10.html#outline",
     "title": "A Quick Primer on Instrumental Variables",
-    "section": "Outline",
-    "text": "Outline\n\nAssessing Selection on Unobservables\nBasics of Instrumental Variables\nTesting IV Assumptions\nInterpreting IV Results\nCommon IV Designs Today"
+    "section": "",
+    "text": "Assessing Selection on Unobservables\nBasics of Instrumental Variables\nTesting IV Assumptions\nInterpreting IV Results\nCommon IV Designs Today"
   },
   {
     "objectID": "slides/class10.html#oster2019",
@@ -2384,7 +2384,7 @@
     "href": "slides/class10.html#augmented-regression-somewhat-out-of-place-here",
     "title": "A Quick Primer on Instrumental Variables",
     "section": "Augmented regression (somewhat out of place here)",
-    "text": "Augmented regression (somewhat out of place here)\n\nOster (2019) and similar papers can say something about how bad selection on unobservables would need to be\nBut what kind of “improvement” do we really get in practice?"
+    "text": "Augmented regression (somewhat out of place here)\n\nOster (2019) and similar papers can say something about how bad selection on unobservables would need to be\nBut what kind of “improvement” do we really get in practice?\n\n\n\nOriginal test from Hausman (1978) not specific to endogeneity, just a general misspecification test\nCompare estimates from one estimator (efficient under the null) to another estimator that is consistent but inefficient under the null\nIn IV context, also known as Durbin-Wu-Hausman test, due to the series of papers pre-dating Hausman (1978), including Durbin and Wu in the 1950s\n\n\n\nEasily implemented as an “artificial” or “augmented” regression\nWe want to estimate \\(y=\\beta_{1}x_{1} + \\beta_{2}x_{2} + \\varepsilon\\), with exogenous variables \\(x_{1}\\), endogenous variables \\(x_{2}\\), and instruments \\(z\\)\n\nRegress each of the variables in \\(x_{2}\\) on \\(x_{1}\\) and \\(z\\) and form residuals, \\(\\hat{v}\\), \\(x_{2} = \\lambda_{x} x_{1} + \\lambda_{z} z + v\\)\nInclude \\(\\hat{v}\\) in the standard OLS regression of \\(y\\) on \\(x_{1}\\), \\(x_{2}\\), and \\(\\hat{v}\\).\nTest \\(H_{0}: \\beta_{\\hat{v}} = 0\\). Rejection implies OLS is inconsistent.\n\n\n\nIntuition: Only way for \\(x_{2}\\) to be correlated with \\(\\varepsilon\\) is through \\(v\\), assuming \\(z\\) is a “good” instrument"
   },
   {
     "objectID": "slides/class10.html#summary",
@@ -2398,7 +2398,7 @@
     "href": "slides/class10.html#what-is-instrumental-variables",
     "title": "A Quick Primer on Instrumental Variables",
     "section": "What is instrumental variables",
-    "text": "What is instrumental variables\nInstrumental Variables (IV) is a way to identify causal effects using variation in treatment particpation that is due to an exogenous variable that is only related to the outcome through treatment.\n\nDAG Selection"
+    "text": "What is instrumental variables\nInstrumental Variables (IV) is a way to identify causal effects using variation in treatment particpation that is due to an exogenous variable that is only related to the outcome through treatment.\n\n\n\n\n\nDAG Selection"
   },
   {
     "objectID": "slides/class10.html#simple-example",
@@ -2945,5 +2945,12 @@
     "title": "Healthcare Variation and Physician Agency",
     "section": "References",
     "text": "References\n\n\n\n\n\n\nCutler, David, Jonathan S. Skinner, Ariel Dora Stern, and David Wennberg. 2019. “Physician Beliefs and Patient Preferences: A New Look at Regional Variation in Health Care Spending.” American Economic Journal: Economic Policy 11 (1): 192–221. https://doi.org/10.1257/pol.20150421.\n\n\nMcGuire, Thomas G. 2000. “Physician Agency.” Handbook of Health Economics 1: 461–536."
+  },
+  {
+    "objectID": "slides/class10.html",
+    "href": "slides/class10.html",
+    "title": "A Quick Primer on Instrumental Variables",
+    "section": "",
+    "text": "Assessing Selection on Unobservables\nBasics of Instrumental Variables\nTesting IV Assumptions\nInterpreting IV Results\nCommon IV Designs Today"
   }
 ]
