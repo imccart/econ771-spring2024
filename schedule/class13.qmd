@@ -1,0 +1,8 @@
+---
+title: "Variation and Agency"
+---
+
+Slides for today, separately by subtopic, are available below:
+
+1. [Supply Side Variation](/slides/class13-1.pptx)
+2. [Physician Agency and Financial Incentives](/slides/class13-2.pdf)
