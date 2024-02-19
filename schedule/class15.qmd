@@ -1,0 +1,9 @@
+---
+title: "Mechanisms of Agency"
+---
+
+Slides for today, separately by subtopic, are available below:
+
+1. [Agency and Incentive Alignment](/slides/class15-1.pdf)
+2. Agency and Organizational Structure: No slides for this today due to time constraints.
+3. [Agency and Insurers](/slides/class15-3.pdf)

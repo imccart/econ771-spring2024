@@ -41,7 +41,7 @@ Below is a breakdown of topics for each class day this semester. Assignments are
 |  12   | 2/12   | Background                       | [{{< fa magnifying-glass >}}](/schedule/2-0.html)        |   [{{< fa person-chalkboard >}}](/slides/class12.html)    | | 
 |  13   | 2/14   | Variation and Agency             | [{{< fa magnifying-glass >}}](/schedule/2-1.html)        |   [{{< fa person-chalkboard >}}](/schedule/class13.html)    | | 
 |  14   | 2/16   | **Research proposals**           | [{{< fa magnifying-glass >}}](/schedule/proposals4.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
-|  15   | 2/19   | Different Mechanisms of Agency   | [{{< fa magnifying-glass >}}](/schedule/2-2.html)        |   [{{< fa person-chalkboard >}}](/slides/class15.html)    | | 
+|  15   | 2/19   | Different Mechanisms of Agency   | [{{< fa magnifying-glass >}}](/schedule/2-2.html)        |   [{{< fa person-chalkboard >}}](/schedule/class15.html)    | | 
 |  16   | 2/21   | Different Dimensions of Agency   | [{{< fa magnifying-glass >}}](/schedule/2-3.html)        |   [{{< fa person-chalkboard >}}](/slides/class16.html)    | | 
 |  17   | 2/23   | **Research proposals**           | [{{< fa magnifying-glass >}}](/schedule/proposals5.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 : {tbl-colwidths="\[10,15,35,10,10,10\]"}
