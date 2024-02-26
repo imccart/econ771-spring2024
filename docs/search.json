@@ -2973,5 +2973,257 @@
     "title": "Dimensions of Agency",
     "section": "",
     "text": "Slides for today, separately by subtopic, are available below:\n\nAgency and Referrals. Part of broad discussion of many papers.\nAgency in Hospital Choice\nAgency in Other Healthcare Settings. Part of broad discussion of many papers."
+  },
+  {
+    "objectID": "slides/class18.html#table-of-contents",
+    "href": "slides/class18.html#table-of-contents",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Table of contents",
+    "text": "Table of contents\n\nCompetition in Theory\nCompetition in Practice"
+  },
+  {
+    "objectID": "slides/class18.html#fixed-prices",
+    "href": "slides/class18.html#fixed-prices",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Fixed Prices",
+    "text": "Fixed Prices\n\nDemand: \\(q_{j}=s_{j}(z_{j}) \\times D(\\bar{p})\\)\nCosts: \\(c_{j}=c(q_{j},z_{j}) + F\\)\nProfits: \\(\\pi_{j} = \\bar{p}q_{j} - c_{j}\\)\n\n\nHospitals choose quality such that: \\[\\frac{\\partial \\pi_{j}}{\\partial z_{j}} = \\left(\\bar{p} - \\frac{\\partial c_{j}}{\\partial q_{j}} \\right)\\left(\\frac{\\partial s_{j}}{\\partial z_{j}}D + s_{j}\\frac{\\partial D}{\\partial z_{j}} \\right) - \\frac{\\partial c_{j}}{\\partial z_{j}}=0\\]"
+  },
+  {
+    "objectID": "slides/class18.html#fixed-prices-1",
+    "href": "slides/class18.html#fixed-prices-1",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Fixed Prices",
+    "text": "Fixed Prices\n\nIncrease in competition will tend to increase quality\nNegative welfare effects if \\(\\frac{\\partial D}{\\partial z_{j}}\\) is sufficiently small and fixed costs are large"
+  },
+  {
+    "objectID": "slides/class18.html#fixed-prices-2",
+    "href": "slides/class18.html#fixed-prices-2",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Fixed Prices",
+    "text": "Fixed Prices\nAlternative expression for quality: \\[z_{j} = \\left(\\bar{p} - c_{q} \\right) \\left(\\eta_{s} + \\eta_{D} \\right) \\frac{D s_{j}}{c_{z}}\\]\n\nQuality increasing in \\(\\bar{p}\\)\nQuality increasing in share and demand elasticities\nQuality increase in overall market share and market demand\nQuality decreasing in marginal cost"
+  },
+  {
+    "objectID": "slides/class18.html#market-prices",
+    "href": "slides/class18.html#market-prices",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Market Prices",
+    "text": "Market Prices\nProfit given by \\(\\pi = q(p,z) \\times (p-c-d\\times z) - F,\\) which yields\n\\[\\begin{align*}\n  p &= \\frac{\\epsilon_{p}}{\\epsilon_{p}-1} (c+dz) \\\\\n  z &= \\frac{\\epsilon_{z}}{\\epsilon_{z}+1} \\frac{p-c}{d}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/class18.html#market-prices-1",
+    "href": "slides/class18.html#market-prices-1",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Market Prices",
+    "text": "Market Prices\nRewrite in terms of elasticities:\n\\[\\begin{align*}\n  \\epsilon_{p} &= \\frac{p}{p-c-dz} \\\\\n  \\epsilon_{z} &= \\frac{dz}{p - c - dz}\n\\end{align*}\\]\n\nTaking the ratio and solving for \\(z\\) yields, \\[z = \\frac{p}{d}\\times \\frac{\\epsilon_{z}}{\\epsilon_{p}}.\\]"
+  },
+  {
+    "objectID": "slides/class18.html#market-prices-2",
+    "href": "slides/class18.html#market-prices-2",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Market Prices",
+    "text": "Market Prices\n\\[z = \\frac{p}{d}\\times \\frac{\\epsilon_{z}}{\\epsilon_{p}}\\]\nDorfman-Steiner condition: - Quality increases if the quality elasticity increases or if price increases - Quality increases if the price elasticity decreases or the marginal cost of quality decreases\n\nPrediction for competition: Hospitals will compete on whatever matters most to patients."
+  },
+  {
+    "objectID": "slides/class18.html#basic-bargaining-model",
+    "href": "slides/class18.html#basic-bargaining-model",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Basic Bargaining Model",
+    "text": "Basic Bargaining Model\nGowrisankaran, Nevo, and Town extend the Nash bargaining framework to consider a hospital-insurer negotiation. They propose a two-stage bargaining process:\n\nHospitals and insurers negotiate over the terms of their agreement (network inclusion and prices)\nIndividuals receive “health draws” which dictate their healthcare needs\n\n\nBargaining occurs over a base price, not specific to each procedure"
+  },
+  {
+    "objectID": "slides/class18.html#basic-bargaining-model-1",
+    "href": "slides/class18.html#basic-bargaining-model-1",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Basic Bargaining Model",
+    "text": "Basic Bargaining Model\n\nTotal expected cost to the insurer, \\(TC_{m}(N_{m},\\vec{p}_{m})\\)\nWillingness to pay to have access to hospital, \\(W_{m}(N_{m},\\vec{p}_{m})\\)\nTotal payoff for the MCO is \\[V_{m}(N_{m},\\vec{p}_{m}) = \\tau W_{m}(N_{m},\\vec{p}_{m}) - TC_{m}(N_{m},\\vec{p}_{m}),\\] where \\(\\tau\\) is the relative weight placed on employee/patient welfare\nNet value that MCO \\(m\\) receives from including hospital \\(j\\) in its network is then \\(V_{m}(N_{m},\\vec{p}_{m})-V_{m}(N_{m,-j},\\vec{p}_{m})\\)."
+  },
+  {
+    "objectID": "slides/class18.html#basic-bargaining-model-2",
+    "href": "slides/class18.html#basic-bargaining-model-2",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Basic Bargaining Model",
+    "text": "Basic Bargaining Model\nIn the case of a single hospital system, and denoting hospital \\(j\\)’s marginal cost for services provided to patients in MCO \\(m\\) is given by \\(mc_{mj}\\), the overall profit for hospital \\(j\\) for a given set of MCO contracts (denoted \\(M_{s}\\)), is \\[\\pi_{j}\\left(M_{s},\\{\\vec{p}_{m}\\}_{m\\in M_{s}} \\right)=\\sum_{m\\in M_{s}} q_{mj}(N_{m},\\vec{p}_{m}) \\left[p_{mj} - mc_{mj} \\right].\\]"
+  },
+  {
+    "objectID": "slides/class18.html#basic-bargaining-model-3",
+    "href": "slides/class18.html#basic-bargaining-model-3",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Basic Bargaining Model",
+    "text": "Basic Bargaining Model\nThe authors then derive the Nash bargaining solution as the choice of prices maximizing the exponentiated product of the net value from agreement:\n\\[\\begin{align*}\nNB^{m,j} \\left(p_{mj} | \\vec{p}_{m,-j}\\right) &= \\left(q_{mj}(N_{m},\\vec{p}_{m}) \\left[p_{mj} - mc_{mj} \\right]\\right)^{b_{j(m)}} \\\\\n& \\times \\left(V_{m}(N_{m},\\vec{p}_{m})-V_{m}(N_{m,-j},\\vec{p}_{m})\\right)^{b_{m(j)}},\n\\end{align*}\\]\nwhere \\(b_{j(m)}\\) is the bargaining weight of hospital \\(j\\) when facing MCO \\(m\\), \\(b_{m(j)}\\) is the bargaining weight of MCO \\(m\\) when facing hospital \\(j\\), and \\(\\vec{p}_{m,-j}\\) is the vector of prices for MCO \\(m\\) and hospitals other than \\(j\\). We can normalize bargaining weight such that \\(b_{j(m)} + b_{m(j)} = 1\\)."
+  },
+  {
+    "objectID": "slides/class18.html#basic-bargaining-model-4",
+    "href": "slides/class18.html#basic-bargaining-model-4",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Basic Bargaining Model",
+    "text": "Basic Bargaining Model\nTaking the natural log, the resulting first order condition yields:\n\\[\\begin{align*}\n\\frac{\\partial \\ln (NB^{m,s})}{\\partial p_{mj}} =& b_{s(m)} \\frac{q_{mj} + \\frac{\\partial q_{mj}}{\\partial p_{mj}} \\left[p_{mj}-mc_{mj}\\right]}{q_{mj}\\left[p_{mj}-mc_{mj}\\right]} \\\\\n& + b_{m(j)} \\frac{\\frac{\\partial V_{m}}{\\partial p_{mj}}}{V_{m}(N_{m},\\vec{p}_{m})-V_{m}(N_{m,-j},\\vec{p}_{m})} = 0\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/class18.html#basic-bargaining-model-5",
+    "href": "slides/class18.html#basic-bargaining-model-5",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Basic Bargaining Model",
+    "text": "Basic Bargaining Model\nSimplifying and rewriting, we get: \\[p_{mj} - mc_{mj} = -q_{mj} \\left(\\frac{\\partial q_{mj}}{\\partial p_{mj}} + q_{mj} \\times \\frac{b_{m(j)}}{b_{j(m)}} \\times \\frac{\\frac{\\partial V_{m}}{\\partial p_{mj}}}{\\triangle V_{m}} \\right)^{-1}\\]\n\n\\(\\triangle V_{m}\\) is positive by construction\nCan show that \\(\\frac{\\partial V_{m}}{\\partial p_{mj}}&lt;0\\) under most conditions\n\n\nBargaining tends to increase the “effective” price sensitivity and reduce hospital margins relative to standard pricing conditions (but not always)"
+  },
+  {
+    "objectID": "slides/class18.html#basic-bargaining-model-6",
+    "href": "slides/class18.html#basic-bargaining-model-6",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Basic Bargaining Model",
+    "text": "Basic Bargaining Model\n\nPrice response to other changes depends largely on \\(\\frac{\\partial V_{m}}{\\partial p_{mj}}\\)\nCan be expressed as: \\[-q_{mj}-\\alpha \\sum_{i}\\sum_{d}\\gamma_{id}c_{id}(1-c_{id}) \\left(\\sum_{k\\in N_{m}} p_{mk}s_{ikd} - p_{mj}\\right),\\] where \\(\\gamma_{id}\\) includes several terms including disease weights and probability of disease."
+  },
+  {
+    "objectID": "slides/class18.html#basic-bargaining-model-7",
+    "href": "slides/class18.html#basic-bargaining-model-7",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Basic Bargaining Model",
+    "text": "Basic Bargaining Model\n\\[-q_{mj}-\\alpha \\sum_{i}\\sum_{d}\\gamma_{id}c_{id}(1-c_{id}) \\left(\\sum_{k\\in N_{m}} p_{mk}s_{ikd} - p_{mj}\\right),\\]\n\n\\(c_{id}\\) denotes the coinsurance rate\nfinal term is the difference between hospital \\(j\\)’s price and the weighted average price of all other hospitals (weighted by their market share)\n\\(c_{id}\\times (1-c_{id})\\) shows role of coinsurance in steering patients to different hospitals"
+  },
+  {
+    "objectID": "slides/class18.html#key-issues",
+    "href": "slides/class18.html#key-issues",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Key Issues",
+    "text": "Key Issues\n\nMeasuring competitiveness\nReduced form - mergers, closures, structure-conduct-performance\nStructural estimation with bargaining models"
+  },
+  {
+    "objectID": "slides/class18.html#measuring-competitiveness",
+    "href": "slides/class18.html#measuring-competitiveness",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Measuring competitiveness",
+    "text": "Measuring competitiveness\n\nCommon measure is Herfindahl-Hirschman Index (HHI), \\(\\sum_{i=1}^{N} s_{i}^{2}\\).\n\n2,500 is considered highly concentrated\n1,800 is considered unconcentrated\n\n“Willingness to pay” is more recent measure (theoretically supported)\nBoth require a measure of the geographic market"
+  },
+  {
+    "objectID": "slides/class18.html#defining-the-market",
+    "href": "slides/class18.html#defining-the-market",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Defining the market",
+    "text": "Defining the market\nLots of subjectivity… - Radius around a hospital? - Concentric circles to define “catchment” areas? - Patient/physician referrals? - At what product-level do hospitals compete?"
+  },
+  {
+    "objectID": "slides/class18.html#trends-in-competitiveness",
+    "href": "slides/class18.html#trends-in-competitiveness",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Trends in competitiveness",
+    "text": "Trends in competitiveness\nAlmost any way you define it, hospital markets are more and more concentrated (less competitive) in recent decades. - 1990: 65% of MSAs highlgy concentrated, 23% unconcentrated - 2006: 77% highly concentrated, 11% unconcentrated"
+  },
+  {
+    "objectID": "slides/class18.html#hospital-concentration-over-time",
+    "href": "slides/class18.html#hospital-concentration-over-time",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Hospital concentration over time",
+    "text": "Hospital concentration over time\n\n\n\n\n\n\n\nSource: Gaynor, Ho, and Town (2015). The Industrial Organization of Health Care Markets. Journal of Economic Literature."
+  },
+  {
+    "objectID": "slides/class18.html#hospital-concentration-over-time-1",
+    "href": "slides/class18.html#hospital-concentration-over-time-1",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Hospital concentration over time",
+    "text": "Hospital concentration over time\n\nMore data and interactive report from the Health Care Cost Institute.\nPresentation from the National Institute for Health Care Management"
+  },
+  {
+    "objectID": "slides/class18.html#why",
+    "href": "slides/class18.html#why",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Why?",
+    "text": "Why?\nHistorical perception of hospital competition as “wasteful” and assumption that more capacity means more (unnecessary) care:\n\nLimit public spending by limiting competition\nPrevalence of certificate of need (CON) laws"
+  },
+  {
+    "objectID": "slides/class18.html#effects-of-reduced-competition",
+    "href": "slides/class18.html#effects-of-reduced-competition",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Effects of reduced competition",
+    "text": "Effects of reduced competition\n\nHigher prices\nLower quality, 2020 NEJM Paper\nMaybe lower costs (but not passed on to lower prices)\n\n\nEffects for both “in-market” and “out-of-market” mergers"
+  },
+  {
+    "objectID": "slides/class18.html#importance-of-the-market",
+    "href": "slides/class18.html#importance-of-the-market",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Importance of the market",
+    "text": "Importance of the market\nEvery analysis of competition requires some definition of the market. This is complicated in healthcare for several reasons:\n\nHospital markets more local than insurance markets\nHospitals are multi-product firms\nGeographic market may differ by procedure\nInsurance networks limit choice within a geographic market"
+  },
+  {
+    "objectID": "slides/class18.html#given-a-market",
+    "href": "slides/class18.html#given-a-market",
+    "title": "Healthcare Pricing and Competition",
+    "section": "Given a market",
+    "text": "Given a market\nOnce we have a measure of the market, we’d like to have a quick and easy way to assess competitiveness:\n\nHHI\nWTP"
+  },
+  {
+    "objectID": "slides/class18.html#hhi",
+    "href": "slides/class18.html#hhi",
+    "title": "Healthcare Pricing and Competition",
+    "section": "HHI",
+    "text": "HHI\n\nBasic Cournot framework: \\[\\pi_{i} = P(q) q_{i} - C_{i}(q_{i})\\]\nFirst order condition: \\[P'(q) q_{i} + P(q) - C_{i}'(q) = 0\\]"
+  },
+  {
+    "objectID": "slides/class18.html#hhi-1",
+    "href": "slides/class18.html#hhi-1",
+    "title": "Healthcare Pricing and Competition",
+    "section": "HHI",
+    "text": "HHI\n\nRewriting yields: \\[\\frac{P(q) - C_{i}'(q_{i})}{P(q)} = \\frac{q_{i}}{q} \\times \\frac{-P'(q)q}{P(q)}=\\frac{\\alpha_{i}}{\\eta}\\]\nConstant marginal costs: \\[\\frac{p - c_{i}}{p} = \\frac{\\alpha_{i}}{\\eta}\\]"
+  },
+  {
+    "objectID": "slides/class18.html#hhi-2",
+    "href": "slides/class18.html#hhi-2",
+    "title": "Healthcare Pricing and Competition",
+    "section": "HHI",
+    "text": "HHI\n\nIn equilibrium, \\[\\sum_{i}\\pi_{i} = \\sum_{i}(p - c_{i}) q_{i} = \\sum_{i}(p-c_{i})\\alpha_{i} q\\]\nTwo equivalent expressions\n\n\\(\\sum_{i} \\pi_{i} = \\left(p - \\sum_{i} \\alpha_{i} c_{i} \\right)q\\) and\n\\(\\sum_{i} \\pi_{i} = \\frac{pq}{\\eta} \\sum_{i} \\alpha_{i}^{2}\\) after substituting \\(p - c_{i} = \\alpha_{i} \\frac{p}{\\eta}\\)."
+  },
+  {
+    "objectID": "slides/class18.html#hhi-3",
+    "href": "slides/class18.html#hhi-3",
+    "title": "Healthcare Pricing and Competition",
+    "section": "HHI",
+    "text": "HHI\n\nEquating these two expressions yields:\\[\\frac{p - \\sum_{i} \\alpha_{i} c_{i}}{q} = \\frac{\\sum_{i} \\alpha_{i}^{2}}{\\eta} = \\frac{HHI}{\\eta}\\]\nTakeaway: In linear Cournot model with constant marginal costs and homogeneous products, the markup (a common measure of market power) is proportional to the HHI."
+  },
+  {
+    "objectID": "slides/class18.html#wtp",
+    "href": "slides/class18.html#wtp",
+    "title": "Healthcare Pricing and Competition",
+    "section": "WTP",
+    "text": "WTP\n\nAlternative measure from Capps et al. (2003)\nNot healthcare specific…option demand market where indermediary sells a “network” of products to consumers, and consumers are uncertain about final products they will need\nKey: consumers agree to ex ante restrict their choice set before they know what services are needed\nDerivation works backward…"
+  },
+  {
+    "objectID": "slides/class18.html#wtp-1",
+    "href": "slides/class18.html#wtp-1",
+    "title": "Healthcare Pricing and Competition",
+    "section": "WTP",
+    "text": "WTP\nStep 1. Derive ex post utility.\n\\[\\begin{align*}\nU_{ij} &= \\alpha R_{j} + H_{j}'\\Gamma X_{i} + \\tau_{1} T_{ij} + \\tau_{2} T_{ij} X_{i} + \\tau_{3} T_{ij} R_{j} - \\gamma(Y_{i},Z_{i}) P_{j}(Z_{i}) + \\varepsilon_{ij} \\\\\n&= U(H_{j},X_{i},\\lambda_{i}) - \\gamma(X_{i})P_{j}(Z_{i}) + \\varepsilon_{ij},\n\\end{align*}\\]\nwhich yields choice probabilities, \\[s_{ij} = s_{j}(G,X_{i},\\lambda_{i}) = \\frac{\\text{exp}(U(H_{j},X_{i},\\lambda_{i}))}{\\sum_{g\\in G}\\text{exp}(U(H_{g},X_{i},\\lambda_{i}))}.\\]"
+  },
+  {
+    "objectID": "slides/class18.html#wtp-2",
+    "href": "slides/class18.html#wtp-2",
+    "title": "Healthcare Pricing and Competition",
+    "section": "WTP",
+    "text": "WTP\nStep 2. Derive utility from access to network, \\(G\\), with \\(U(H_{g},X_{i},\\lambda_{i})\\) taken as given.\nThe patient’s expected maximum utility across all hospitals is, \\[V(G,X_{i},\\lambda_{i}) = \\text{E} \\left[\\max_{g\\in G} U(H_{g},X_{i},\\lambda_{i}) + \\varepsilon_{g} \\right] = \\text{ln} \\left[\\sum_{g\\in G} \\text{exp} (U(H_{g},X_{i},\\lambda_{i})) \\right].\\]"
+  },
+  {
+    "objectID": "slides/class18.html#wtp-3",
+    "href": "slides/class18.html#wtp-3",
+    "title": "Healthcare Pricing and Competition",
+    "section": "WTP",
+    "text": "WTP\nContribution of hospital \\(j\\) is then:\n\\[\\begin{align*}\n\\triangle V_{j}(G,X_{i},\\lambda_{i}) &= V(G,X_{i},\\lambda_{i}) - V(G_{-j},X_{i},\\lambda_{i}) \\\\\n&= \\text{ln} \\left[ \\left(\\sum_{k\\in G_{-j}} \\frac{ \\text{exp} (U(H_{k},X_{i},\\lambda_{i})) }{\\sum_{g\\in G} \\text{exp} (U(H_{g},X_{i},\\lambda_{i})) }\\right)^{-1} \\right] \\\\\n&= \\text{ln} \\left[ \\left(\\sum_{k\\in G_{-j}} s_{k}(G,X_{i},\\lambda_{i})\\right)^{-1} \\right] \\\\\n&= \\text{ln} \\left[ \\left( 1- s_{j}(G,X_{i},\\lambda_{i})\\right)^{-1} \\right].\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/class18.html#wtp-4",
+    "href": "slides/class18.html#wtp-4",
+    "title": "Healthcare Pricing and Competition",
+    "section": "WTP",
+    "text": "WTP\nTranslate into dollar values by weighting by the marginal utility of price \\[\\triangle \\tilde{W}_{j} = \\frac{\\triangle V_{j}}{\\gamma (X_{i})}.\\]"
+  },
+  {
+    "objectID": "slides/class18.html#wtp-5",
+    "href": "slides/class18.html#wtp-5",
+    "title": "Healthcare Pricing and Competition",
+    "section": "WTP",
+    "text": "WTP\nStep 3. Estimate ex ante WTP to include hospital \\(j\\) in patient’s network. (i.e., integrate over all possible health conditions)\n\\[W_{ij}(G,Y_{i},\\lambda_{i}) = \\int_{Z} \\frac{\\delta V_{j}(G,X_{i},\\lambda_{i})}{\\gamma (X_{i})} f(Z_{i}|Y_{i},\\lambda_{i}) dZ_{i}.\\]\nFurther integrating over all patients, \\((Y_{i},\\lambda_{i})\\), yields \\[WTP_{j} = N \\int_{\\lambda} \\int_{Z} \\int_{Y} \\frac{1}{\\gamma (X_{i})} \\text{ln}\\left[\\frac{1}{1-s_{j}(G,X_{i},\\lambda_{i})} \\right]f(Y_{i},Z_{i},\\lambda_{i})dY_{i} dZ_{i} d\\lambda_{i}.\\]"
+  },
+  {
+    "objectID": "slides/class18.html#wtp-in-practice",
+    "href": "slides/class18.html#wtp-in-practice",
+    "title": "Healthcare Pricing and Competition",
+    "section": "WTP in Practice",
+    "text": "WTP in Practice\nSimplify by calculating WTP for each “micro-market” (e.g., health condition) and taking sum:\n\\[WTP_{j} = - \\sum_{m} N_{m} \\text{ln}(1 - s_{mj})\\]"
   }
 ]
