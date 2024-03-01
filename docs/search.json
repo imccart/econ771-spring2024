@@ -2978,8 +2978,8 @@
     "objectID": "slides/class18.html#table-of-contents",
     "href": "slides/class18.html#table-of-contents",
     "title": "Healthcare Pricing and Competition",
-    "section": "Table of contents",
-    "text": "Table of contents\n\nCompetition in Theory\nCompetition in Practice"
+    "section": "",
+    "text": "Competition in Theory\nCompetition in Practice"
   },
   {
     "objectID": "slides/class18.html#fixed-prices",
@@ -3021,7 +3021,7 @@
     "href": "slides/class18.html#market-prices-2",
     "title": "Healthcare Pricing and Competition",
     "section": "Market Prices",
-    "text": "Market Prices\n\\[z = \\frac{p}{d}\\times \\frac{\\epsilon_{z}}{\\epsilon_{p}}\\]\nDorfman-Steiner condition: - Quality increases if the quality elasticity increases or if price increases - Quality increases if the price elasticity decreases or the marginal cost of quality decreases\n\nPrediction for competition: Hospitals will compete on whatever matters most to patients."
+    "text": "Market Prices\n\\[z = \\frac{p}{d}\\times \\frac{\\epsilon_{z}}{\\epsilon_{p}}\\]\nDorfman-Steiner condition:\n\nQuality increases if the quality elasticity increases or if price increases\nQuality increases if the price elasticity decreases or the marginal cost of quality decreases\n\n\nPrediction for competition: Hospitals will compete on whatever matters most to patients."
   },
   {
     "objectID": "slides/class18.html#basic-bargaining-model",
@@ -3098,14 +3098,14 @@
     "href": "slides/class18.html#defining-the-market",
     "title": "Healthcare Pricing and Competition",
     "section": "Defining the market",
-    "text": "Defining the market\nLots of subjectivity… - Radius around a hospital? - Concentric circles to define “catchment” areas? - Patient/physician referrals? - At what product-level do hospitals compete?"
+    "text": "Defining the market\nLots of subjectivity…\n\nRadius around a hospital?\nConcentric circles to define “catchment” areas?\nPatient/physician referrals?\nAt what product-level do hospitals compete?"
   },
   {
     "objectID": "slides/class18.html#trends-in-competitiveness",
     "href": "slides/class18.html#trends-in-competitiveness",
     "title": "Healthcare Pricing and Competition",
     "section": "Trends in competitiveness",
-    "text": "Trends in competitiveness\nAlmost any way you define it, hospital markets are more and more concentrated (less competitive) in recent decades. - 1990: 65% of MSAs highlgy concentrated, 23% unconcentrated - 2006: 77% highly concentrated, 11% unconcentrated"
+    "text": "Trends in competitiveness\nAlmost any way you define it, hospital markets are more and more concentrated (less competitive) in recent decades.\n\n1990: 65% of MSAs highlgy concentrated, 23% unconcentrated\n2006: 77% highly concentrated, 11% unconcentrated"
   },
   {
     "objectID": "slides/class18.html#hospital-concentration-over-time",
@@ -3225,5 +3225,19 @@
     "title": "Healthcare Pricing and Competition",
     "section": "WTP in Practice",
     "text": "WTP in Practice\nSimplify by calculating WTP for each “micro-market” (e.g., health condition) and taking sum:\n\\[WTP_{j} = - \\sum_{m} N_{m} \\text{ln}(1 - s_{mj})\\]"
+  },
+  {
+    "objectID": "schedule/class19.html",
+    "href": "schedule/class19.html",
+    "title": "Horizontal Integration",
+    "section": "",
+    "text": "Slides for today, separately by subtopic, are available below:\n\nPricing in Structure-Conduct-Performance Studies\nEffects of Mergers and Closures\nPricing and Bargaining. Not discussed specifically due to time."
+  },
+  {
+    "objectID": "slides/class18.html",
+    "href": "slides/class18.html",
+    "title": "Healthcare Pricing and Competition",
+    "section": "",
+    "text": "Competition in Theory\nCompetition in Practice"
   }
 ]

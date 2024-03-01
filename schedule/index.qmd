@@ -52,7 +52,7 @@ Below is a breakdown of topics for each class day this semester. Assignments are
 | Class | Dates  | Topic                            | Details | Slides | Assignment |
 |:-----:|--------|----------------------------------|:-------:|:------:|:----------:|
 |  18   | 2/26   | Background                       | [{{< fa magnifying-glass >}}](/schedule/3-0.html)        |   [{{< fa person-chalkboard >}}](/slides/class18.html)    | |
-|  19   | 2/28   | Horizontal Integration           | [{{< fa magnifying-glass >}}](/schedule/3-1.html)        |   [{{< fa person-chalkboard >}}](/slides/class19.html)    | | 
+|  19   | 2/28   | Horizontal Integration           | [{{< fa magnifying-glass >}}](/schedule/3-1.html)        |   [{{< fa person-chalkboard >}}](/schedule/class19.html)    | | 
 |  20   | 3/1    | **Research proposals**           | [{{< fa magnifying-glass >}}](/schedule/proposals6.html) | | [{{< fa pen  >}}](/assignments/research-proposals.html) |
 |  21   | 3/4    | Different Forms of Integration   | [{{< fa magnifying-glass >}}](/schedule/3-2.html)        |   [{{< fa person-chalkboard >}}](/slides/class21.html)    | | 
 |  22   | 3/6    | Different Outcomes and Settings  | [{{< fa magnifying-glass >}}](/schedule/3-3.html)        |   [{{< fa person-chalkboard >}}](/slides/class22.html)    | | 

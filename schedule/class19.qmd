@@ -1,0 +1,9 @@
+---
+title: "Horizontal Integration"
+---
+
+Slides for today, separately by subtopic, are available below:
+
+1. [Pricing in Structure-Conduct-Performance Studies](/slides/class19-1.pdf)
+2. [Effects of Mergers and Closures](/slides/class19-2.pdf)
+3. Pricing and Bargaining. Not discussed specifically due to time.
