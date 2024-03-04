@@ -2362,8 +2362,8 @@
     "objectID": "slides/class10.html#outline",
     "href": "slides/class10.html#outline",
     "title": "A Quick Primer on Instrumental Variables",
-    "section": "",
-    "text": "Assessing Selection on Unobservables\nBasics of Instrumental Variables\nTesting IV Assumptions\nInterpreting IV Results\nCommon IV Designs Today"
+    "section": "Outline",
+    "text": "Outline\n\nAssessing Selection on Unobservables\nBasics of Instrumental Variables\nTesting IV Assumptions\nInterpreting IV Results\nCommon IV Designs Today"
   },
   {
     "objectID": "slides/class10.html#oster2019",
@@ -2384,7 +2384,7 @@
     "href": "slides/class10.html#augmented-regression-somewhat-out-of-place-here",
     "title": "A Quick Primer on Instrumental Variables",
     "section": "Augmented regression (somewhat out of place here)",
-    "text": "Augmented regression (somewhat out of place here)\n\nOster (2019) and similar papers can say something about how bad selection on unobservables would need to be\nBut what kind of “improvement” do we really get in practice?\n\n\n\nOriginal test from Hausman (1978) not specific to endogeneity, just a general misspecification test\nCompare estimates from one estimator (efficient under the null) to another estimator that is consistent but inefficient under the null\nIn IV context, also known as Durbin-Wu-Hausman test, due to the series of papers pre-dating Hausman (1978), including Durbin and Wu in the 1950s\n\n\n\nEasily implemented as an “artificial” or “augmented” regression\nWe want to estimate \\(y=\\beta_{1}x_{1} + \\beta_{2}x_{2} + \\varepsilon\\), with exogenous variables \\(x_{1}\\), endogenous variables \\(x_{2}\\), and instruments \\(z\\)\n\nRegress each of the variables in \\(x_{2}\\) on \\(x_{1}\\) and \\(z\\) and form residuals, \\(\\hat{v}\\), \\(x_{2} = \\lambda_{x} x_{1} + \\lambda_{z} z + v\\)\nInclude \\(\\hat{v}\\) in the standard OLS regression of \\(y\\) on \\(x_{1}\\), \\(x_{2}\\), and \\(\\hat{v}\\).\nTest \\(H_{0}: \\beta_{\\hat{v}} = 0\\). Rejection implies OLS is inconsistent.\n\n\n\nIntuition: Only way for \\(x_{2}\\) to be correlated with \\(\\varepsilon\\) is through \\(v\\), assuming \\(z\\) is a “good” instrument"
+    "text": "Augmented regression (somewhat out of place here)\n\nOster (2019) and similar papers can say something about how bad selection on unobservables would need to be\nBut what kind of “improvement” do we really get in practice?"
   },
   {
     "objectID": "slides/class10.html#summary",
@@ -2398,7 +2398,7 @@
     "href": "slides/class10.html#what-is-instrumental-variables",
     "title": "A Quick Primer on Instrumental Variables",
     "section": "What is instrumental variables",
-    "text": "What is instrumental variables\nInstrumental Variables (IV) is a way to identify causal effects using variation in treatment particpation that is due to an exogenous variable that is only related to the outcome through treatment.\n\n\n\n\n\nDAG Selection"
+    "text": "What is instrumental variables\nInstrumental Variables (IV) is a way to identify causal effects using variation in treatment particpation that is due to an exogenous variable that is only related to the outcome through treatment.\n\nDAG Selection"
   },
   {
     "objectID": "slides/class10.html#simple-example",
@@ -2489,14 +2489,14 @@
     "href": "slides/class10.html#results-with-simulated-data",
     "title": "A Quick Primer on Instrumental Variables",
     "section": "Results with simulated data",
-    "text": "Results with simulated data\nRecall that the true treatment effect is 5.25\n\n\n\n\n\nCall:\nlm(formula = y ~ d, data = iv.dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-3.7806 -0.7061  0.0029  0.6757  3.9146 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  2.11415    0.01986   106.5   &lt;2e-16 ***\ndTRUE        6.11795    0.02929   208.9   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.032 on 4998 degrees of freedom\nMultiple R-squared:  0.8972,    Adjusted R-squared:  0.8972 \nF-statistic: 4.363e+04 on 1 and 4998 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n\nTSLS estimation, Dep. Var.: y, Endo.: d, Instr.: z\nSecond stage: Dep. Var.: y\nObservations: 5,000 \nStandard-errors: IID \n            Estimate Std. Error t value  Pr(&gt;|t|)    \n(Intercept)  2.51950   0.029146 86.4443 &lt; 2.2e-16 ***\nfit_dTRUE    5.23598   0.053196 98.4273 &lt; 2.2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\nRMSE: 1.12168   Adj. R2: 0.878546\nF-test (1st stage), dTRUE: stat = 2,789.0, p &lt; 2.2e-16, on 1 and 4,998 DoF.\n               Wu-Hausman: stat =   562.8, p &lt; 2.2e-16, on 1 and 4,997 DoF."
+    "text": "Results with simulated data\nRecall that the true treatment effect is 5.25\n\n\n\n\n\nCall:\nlm(formula = y ~ d, data = iv.dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-4.2715 -0.7106  0.0104  0.7050  4.1788 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  2.09340    0.02024   103.4   &lt;2e-16 ***\ndTRUE        6.14150    0.02975   206.4   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.049 on 4998 degrees of freedom\nMultiple R-squared:  0.895, Adjusted R-squared:  0.895 \nF-statistic: 4.261e+04 on 1 and 4998 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n\nTSLS estimation, Dep. Var.: y, Endo.: d, Instr.: z\nSecond stage: Dep. Var.: y\nObservations: 5,000 \nStandard-errors: IID \n            Estimate Std. Error t value  Pr(&gt;|t|)    \n(Intercept)  2.56067   0.030865 82.9627 &lt; 2.2e-16 ***\nfit_dTRUE    5.13227   0.056401 90.9958 &lt; 2.2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\nRMSE: 1.16326   Adj. R2: 0.870828\nF-test (1st stage), dTRUE: stat = 2,601.4, p &lt; 2.2e-16, on 1 and 4,998 DoF.\n               Wu-Hausman: stat =   680.3, p &lt; 2.2e-16, on 1 and 4,997 DoF."
   },
   {
     "objectID": "slides/class10.html#two-stage-equivalence",
     "href": "slides/class10.html#two-stage-equivalence",
     "title": "A Quick Primer on Instrumental Variables",
     "section": "Two-stage equivalence",
-    "text": "Two-stage equivalence\n\n\nR Code\nstep1 &lt;- lm(d ~ z, data=iv.dat)\nd.hat &lt;- predict(step1)\nstep2 &lt;- lm(y ~ d.hat, data=iv.dat)\nsummary(step2)\n\n\n\nCall:\nlm(formula = y ~ d.hat, data = iv.dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-9.0706 -2.1654 -0.1271  2.1690  8.6850 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  2.51950    0.07314   34.45   &lt;2e-16 ***\nd.hat        5.23598    0.13349   39.22   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.815 on 4998 degrees of freedom\nMultiple R-squared:  0.2354,    Adjusted R-squared:  0.2352 \nF-statistic:  1539 on 1 and 4998 DF,  p-value: &lt; 2.2e-16"
+    "text": "Two-stage equivalence\n\n\nR Code\nstep1 &lt;- lm(d ~ z, data=iv.dat)\nd.hat &lt;- predict(step1)\nstep2 &lt;- lm(y ~ d.hat, data=iv.dat)\nsummary(step2)\n\n\n\nCall:\nlm(formula = y ~ d.hat, data = iv.dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-8.5177 -2.2410 -0.0819  2.2315  8.5838 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  2.56067    0.07615   33.63   &lt;2e-16 ***\nd.hat        5.13227    0.13915   36.88   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.87 on 4998 degrees of freedom\nMultiple R-squared:  0.214, Adjusted R-squared:  0.2138 \nF-statistic:  1360 on 1 and 4998 DF,  p-value: &lt; 2.2e-16"
   },
   {
     "objectID": "slides/class10.html#key-iv-assumptions",
@@ -2510,14 +2510,14 @@
     "href": "slides/class10.html#checking-instrument",
     "title": "A Quick Primer on Instrumental Variables",
     "section": "Checking instrument",
-    "text": "Checking instrument\nBare minimum (probably not even that) is to check first stage and reduced form:\n\n\n\nCheck the ‘first stage’\n\n\n\n\nCall:\nlm(formula = d ~ z, data = iv.dat)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1.13046 -0.32500 -0.03084  0.33044  1.15203 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 0.462073   0.005648   81.81   &lt;2e-16 ***\nz           0.146520   0.002774   52.81   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.3993 on 4998 degrees of freedom\nMultiple R-squared:  0.3582,    Adjusted R-squared:  0.358 \nF-statistic:  2789 on 1 and 4998 DF,  p-value: &lt; 2.2e-16\n\n\n\n\nCheck the ‘reduced form’\n\n\n\n\nCall:\nlm(formula = y ~ z, data = iv.dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-9.0706 -2.1654 -0.1271  2.1690  8.6850 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  4.93891    0.03981  124.05   &lt;2e-16 ***\nz            0.76718    0.01956   39.22   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.815 on 4998 degrees of freedom\nMultiple R-squared:  0.2354,    Adjusted R-squared:  0.2352 \nF-statistic:  1539 on 1 and 4998 DF,  p-value: &lt; 2.2e-16"
+    "text": "Checking instrument\nBare minimum (probably not even that) is to check first stage and reduced form:\n\n\n\nCheck the ‘first stage’\n\n\n\n\nCall:\nlm(formula = d ~ z, data = iv.dat)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1.09299 -0.33106 -0.02355  0.34685  1.04044 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 0.458351   0.005721   80.12   &lt;2e-16 ***\nz           0.145621   0.002855   51.00   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.4045 on 4998 degrees of freedom\nMultiple R-squared:  0.3423,    Adjusted R-squared:  0.3422 \nF-statistic:  2601 on 1 and 4998 DF,  p-value: &lt; 2.2e-16\n\n\n\n\nCheck the ‘reduced form’\n\n\n\n\nCall:\nlm(formula = y ~ z, data = iv.dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-8.5177 -2.2410 -0.0819  2.2315  8.5838 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  4.91305    0.04060  121.01   &lt;2e-16 ***\nz            0.74737    0.02026   36.88   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.87 on 4998 degrees of freedom\nMultiple R-squared:  0.214, Adjusted R-squared:  0.2138 \nF-statistic:  1360 on 1 and 4998 DF,  p-value: &lt; 2.2e-16"
   },
   {
     "objectID": "slides/class10.html#do-we-need-iv",
     "href": "slides/class10.html#do-we-need-iv",
     "title": "A Quick Primer on Instrumental Variables",
     "section": "Do we need IV?",
-    "text": "Do we need IV?\n\nLet’s run an “augmented regression” to see if our OLS results are sufficiently different than IV\n\n\n\nR Code\nd.iv &lt;- lm(d ~ z, data=iv.dat)\nd.resid &lt;- residuals(d.iv)\nhaus.test &lt;- lm(y ~ d + d.resid, data=iv.dat)\nsummary(haus.test)\n\n\n\nCall:\nlm(formula = y ~ d + d.resid, data = iv.dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-3.8854 -0.6626 -0.0009  0.6680  3.5515 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  2.51950    0.02542   99.10   &lt;2e-16 ***\ndTRUE        5.23598    0.04640  112.84   &lt;2e-16 ***\nd.resid      1.37413    0.05792   23.72   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.9786 on 4997 degrees of freedom\nMultiple R-squared:  0.9076,    Adjusted R-squared:  0.9076 \nF-statistic: 2.455e+04 on 2 and 4997 DF,  p-value: &lt; 2.2e-16\n\n\n\nTest for significance of d.resid suggests OLS is inconsistent in this case"
+    "text": "Do we need IV?\n\nLet’s run an “augmented regression” to see if our OLS results are sufficiently different than IV\n\n\n\nR Code\nd.iv &lt;- lm(d ~ z, data=iv.dat)\nd.resid &lt;- residuals(d.iv)\nhaus.test &lt;- lm(y ~ d + d.resid, data=iv.dat)\nsummary(haus.test)\n\n\n\nCall:\nlm(formula = y ~ d + d.resid, data = iv.dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-3.9318 -0.6629  0.0109  0.6538  3.3928 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  2.56067    0.02611   98.07   &lt;2e-16 ***\ndTRUE        5.13227    0.04771  107.57   &lt;2e-16 ***\nd.resid      1.53451    0.05883   26.08   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.9842 on 4997 degrees of freedom\nMultiple R-squared:  0.9076,    Adjusted R-squared:  0.9076 \nF-statistic: 2.454e+04 on 2 and 4997 DF,  p-value: &lt; 2.2e-16\n\n\n\nTest for significance of d.resid suggests OLS is inconsistent in this case"
   },
   {
     "objectID": "slides/class10.html#testing-exclusion",
@@ -2978,8 +2978,8 @@
     "objectID": "slides/class18.html#table-of-contents",
     "href": "slides/class18.html#table-of-contents",
     "title": "Healthcare Pricing and Competition",
-    "section": "",
-    "text": "Competition in Theory\nCompetition in Practice"
+    "section": "Table of contents",
+    "text": "Table of contents\n\nCompetition in Theory\nCompetition in Practice"
   },
   {
     "objectID": "slides/class18.html#fixed-prices",
