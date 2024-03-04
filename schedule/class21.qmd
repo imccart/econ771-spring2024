@@ -1,0 +1,5 @@
+---
+title: "Different forms of integration"
+---
+
+Since no one signed up to present today, we'll work through a handful of the papers for this topic, namely @koch2017, @koch2021, @dafny2019, and @schmitt2018. These papers collectively deal with vertical integration between physicians and hospitals as well as out-of-market horizontal integration.

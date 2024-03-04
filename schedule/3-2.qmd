@@ -5,7 +5,7 @@ title: "Different Forms of Integration"
 The goal for today's class is to consider forms of consolidation other than traditional within-market horizontal integration. We'll focus on the following areas and papers:
 
 ### Vertical Integration
-Most people think of competition horizontally, but vertical integration (between physicians and hospitals, or between hospitals and insurers) has become very common in healthcare. We'll discuss @cuesta2019 and @koch2019 as examples of work in this area.
+Most people think of competition horizontally, but vertical integration (between physicians and hospitals, or between hospitals and insurers) has become very common in healthcare. We'll discuss @cuesta2019 and @koch2021 as examples of work in this area.
 
 ### Out-of-market Consolidation
 We have a good understanding of how horizontal integration can affect prices within the same geographic market, but we've seen more and more hospital mergers in which the merging parties are in separate geographic markets. Such mergers are difficult to analyze empirically without a good understanding of how such mergers affect prices. We'll discuss @dafny2019 and @schmitt2018 as examples of work in this area. @dafny2019 sets forth a common customer argument, and @schmitt2018 considers the role multi-market contact. There is a much older literature on multi-market contact, but @schmitt2018 was the first to consider this in the context of hospitals.
