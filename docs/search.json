@@ -774,7 +774,7 @@
     "href": "schedule/4-1.html",
     "title": "Information and Choice",
     "section": "",
-    "text": "The goal for today’s class is to understand the effects of information disclosure on insurance and provider choice. On the insurance side, prices (as in premiums, deductibles, etc.) are typically readily available, so the literature on that area tends to focus on quality disclosure. On the provider side, there is a literature focusing on both quality and price transparency, which we’ll discuss separately. Focus areas and selected papers for this class are listed below.\n\nInformation and Insurance Choice\nWe’ll start our discussion with Chernew, Gowrisankaran, and Scanlon (2008), who presents a nice model of patient learning in the context of quality disclosure. We’ll also discuss Dafny and Dranove (2008), which is one of the seminal papers in this area. The authors compare plan choices before and after the release of plan quality information, and they essentially ask whether the disclosure of such information is really “new” or if the market had already learned about plan quality through other means.\n\n\nQuality Information and Provider Choice\nSince healthcare is an experience good, we simply don’t know the quality of our care until after we’ve received it. But we might still be able to better predict quality based on providers’ past outcomes. Such information has historically been difficult or impossible to observe, but this is changing. We’ll discuss two studies on the effects of quality disclosure on provider choice: Dranove et al. (2003) and Brown et al. (2023).\n\n\nPrice Information and Provider Choice\nIn the U.S., prices for healthcare services are notoriously difficult to observe, but there have been recent efforts to change this. We’ll discuss two studies on the effects of price disclosure on provider choice: (christensen2023?) and Brown (2019).\n\n\n\n\n\nReferences\n\nBrown, Zach Y. 2019. “Equilibrium Effects of Health Care Price Information.” The Review of Economics and Statistics 101 (4): 699–712. https://doi.org/10.1162/rest_a_00765.\n\n\nBrown, Zach Y., Christopher Hansman, Jordan Keener, and Andre F. Veiga. 2023. “Information and Disparities in Health Care Quality: Evidence from GP Choice in England.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w31033.\n\n\nChernew, M., G. Gowrisankaran, and D. P. Scanlon. 2008. “Learning and the Value of Information: Evidence from Health Plan Report Cards.” Journal of Econometrics 144 (1): 156–74.\n\n\nDafny, L., and D. Dranove. 2008. “Do Report Cards Tell Consumers Anything They Don’t Already Know? The Case of Medicare HMOs.” RAND Journal of Economics 39 (3): 790–821.\n\n\nDranove, David, Daniel Kessler, Mark McClellan, and Mark Satterthwaite. 2003. “Is More Information Better? The Effects of Report Cards on Health Care Providers.” Journal of Political Economy 111 (3): 555–88."
+    "text": "The goal for today’s class is to understand the effects of information disclosure on insurance and provider choice. On the insurance side, prices (as in premiums, deductibles, etc.) are typically readily available, so the literature on that area tends to focus on quality disclosure. On the provider side, there is a literature focusing on both quality and price transparency, which we’ll discuss separately. Focus areas and selected papers for this class are listed below.\n\nInformation and Insurance Choice\nWe’ll start our discussion with Chernew, Gowrisankaran, and Scanlon (2008), who presents a nice model of patient learning in the context of quality disclosure. We’ll also discuss Dafny and Dranove (2008), which is one of the seminal papers in this area. The authors compare plan choices before and after the release of plan quality information, and they essentially ask whether the disclosure of such information is really “new” or if the market had already learned about plan quality through other means.\n\n\nQuality Information and Provider Choice\nSince healthcare is an experience good, we simply don’t know the quality of our care until after we’ve received it. But we might still be able to better predict quality based on providers’ past outcomes. Such information has historically been difficult or impossible to observe, but this is changing. We’ll discuss two studies on the effects of quality disclosure on provider choice: Dranove et al. (2003) and Brown et al. (2023).\n\n\nPrice Information and Provider Choice\nIn the U.S., prices for healthcare services are notoriously difficult to observe, but there have been recent efforts to change this. We’ll discuss two studies on the effects of price disclosure on provider choice: Christensen, Floyd, and Maffett (2020) and Brown (2019).\n\n\n\n\n\nReferences\n\nBrown, Zach Y. 2019. “Equilibrium Effects of Health Care Price Information.” The Review of Economics and Statistics 101 (4): 699–712. https://doi.org/10.1162/rest_a_00765.\n\n\nBrown, Zach Y., Christopher Hansman, Jordan Keener, and Andre F. Veiga. 2023. “Information and Disparities in Health Care Quality: Evidence from GP Choice in England.” Working {Paper}. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w31033.\n\n\nChernew, M., G. Gowrisankaran, and D. P. Scanlon. 2008. “Learning and the Value of Information: Evidence from Health Plan Report Cards.” Journal of Econometrics 144 (1): 156–74.\n\n\nChristensen, Hans B., Eric Floyd, and Mark Maffett. 2020. “The Only Prescription Is Transparency: The Effect of Charge-Price-Transparency Regulation on Healthcare Prices.” Management Science 66 (7): 2861–82. https://doi.org/10.1287/mnsc.2019.3330.\n\n\nDafny, L., and D. Dranove. 2008. “Do Report Cards Tell Consumers Anything They Don’t Already Know? The Case of Medicare HMOs.” RAND Journal of Economics 39 (3): 790–821.\n\n\nDranove, David, Daniel Kessler, Mark McClellan, and Mark Satterthwaite. 2003. “Is More Information Better? The Effects of Report Cards on Health Care Providers.” Journal of Political Economy 111 (3): 555–88."
   },
   {
     "objectID": "schedule/4-3.html",
@@ -3246,5 +3246,110 @@
     "title": "Different forms of integration",
     "section": "",
     "text": "Since no one signed up to present today, we’ll work through a handful of the papers for this topic, namely Thomas G. Koch, Wendling, and Wilson (2017), Thomas G. Koch, Wendling, and Wilson (2021), Dafny, Ho, and Lee (2019), and Schmitt (2018). These papers collectively deal with vertical integration between physicians and hospitals as well as out-of-market horizontal integration.\n\n\n\n\nReferences\n\nDafny, Leemore, Kate Ho, and Robin S Lee. 2019. “The Price Effects of Cross-Market Mergers: Theory and Evidence from the Hospital Industry.” RAND Journal of Economics 50 (2): 286–325.\n\n\nKoch, Thomas G., Brett W. Wendling, and Nathan E. Wilson. 2021. “The Effects of Physician and Hospital Integration on Medicare Beneficiaries’ Health Outcomes.” The Review of Economics and Statistics 103 (4): 725–39. https://doi.org/10.1162/rest_a_00924.\n\n\nKoch, Thomas G, Brett W Wendling, and Nathan E Wilson. 2017. “How Vertical Integration Affects the Quantity and Cost of Care for Medicare Beneficiaries.” Journal of Health Economics 52: 19–32.\n\n\nSchmitt, Matt. 2018. “Multimarket Contact in the Hospital Industry.” American Economic Journal: Economic Policy 10 (3): 361–87."
+  },
+  {
+    "objectID": "slides/class24.html#table-of-contents",
+    "href": "slides/class24.html#table-of-contents",
+    "title": "Information Disclosure",
+    "section": "Table of contents",
+    "text": "Table of contents\n\nInformation problems everwhere\nQuality disclosure\nPrice disclosure"
+  },
+  {
+    "objectID": "slides/class24.html#information-problems-are-everywhere",
+    "href": "slides/class24.html#information-problems-are-everywhere",
+    "title": "Information Disclosure",
+    "section": "Information problems are everywhere",
+    "text": "Information problems are everywhere\n\nHealthcare\nEducation (state funding decisions, college ratings, etc.)\nFinance (credit ratings, bond ratings, etc.)\nFood (nutrition labels, etc.)\nAny product really!"
+  },
+  {
+    "objectID": "slides/class24.html#specifically-in-healthcare",
+    "href": "slides/class24.html#specifically-in-healthcare",
+    "title": "Information Disclosure",
+    "section": "Specifically in healthcare…",
+    "text": "Specifically in healthcare…\n\nHospital quality (pay for performance, hospital choice/star ratings)\nHealth insurance (Medicare Advantage star ratings)\nHHA, SNF, Hospice (star ratings)\nPhysician quality (physician compare, report cards)\nGoogle reviews, yelp, etc. for all of the above"
+  },
+  {
+    "objectID": "slides/class24.html#background-dranove2010",
+    "href": "slides/class24.html#background-dranove2010",
+    "title": "Information Disclosure",
+    "section": "Background, Dranove and Jin (2010)",
+    "text": "Background, Dranove and Jin (2010)\n\nQuality often unknown or uncertain ex ante\nConsumers rely on other information to infer quality\nQuality disclosure provides consumers with direct information on product or service quality (unlike implied quality via price, brand, etc.)\nDranove and Jin (2010) discuss:\n\nFull (and voluntary) disclosure\nBarriers to full disclosure\nThird-party disclosure\nEmpirical evidence"
+  },
+  {
+    "objectID": "slides/class24.html#full-and-voluntary-disclosure",
+    "href": "slides/class24.html#full-and-voluntary-disclosure",
+    "title": "Information Disclosure",
+    "section": "Full (and Voluntary) Disclosure",
+    "text": "Full (and Voluntary) Disclosure\nUnder what conditions might all firms voluntarily disclose quality information (e.g., unraveling)?\n\nProducts identical except for single vertical dimension\nSellers have complete and private quality informatioin\nDisclosure is costless\nMonopoly or competitive market\nHomogeneous consumers with rational expectations about undisclosed quality\nAll quality disclosure is public information\n\n\nViolations of any condition will tend to prohibit full disclosure"
+  },
+  {
+    "objectID": "slides/class24.html#barriers-to-full-and-voluntary-disclosure",
+    "href": "slides/class24.html#barriers-to-full-and-voluntary-disclosure",
+    "title": "Information Disclosure",
+    "section": "Barriers to Full and Voluntary Disclosure",
+    "text": "Barriers to Full and Voluntary Disclosure\n\nDisclosure Costs: Even minimal costs can prevent sellers from disclosing\nMarket Structure: Duopoly and oligopoly markets may see strategic non-disclosure as a competitive tool\nConsumer Response: Lack of consumer attention or understanding can diminish the incentives for disclosure\nHeterogeneous Preferences: When consumer preferences vary widely, the impact of disclosure on market choices becomes unpredictable\nUnobservable Quality Attributes: In some markets, quality cannot be easily measured or observed"
+  },
+  {
+    "objectID": "slides/class24.html#third-party-disclosure",
+    "href": "slides/class24.html#third-party-disclosure",
+    "title": "Information Disclosure",
+    "section": "Third-party Disclosure",
+    "text": "Third-party Disclosure\nIf voluntary disclosure won’t work, third-party entities may verify and disseminate information about product quality. Key issues for third-party disclosure include:\n\nKey issues:\n\nPotential conflicts of interest if funded by sellers\nEnsuring unbiased and accurate reporting\nOvercoming information asymmetry without introducing new biases\n\nPotential effects:\n\nCan significantly affect consumer trust and behavior\nPotential to improve market efficiency by enhancing transparency"
+  },
+  {
+    "objectID": "slides/class24.html#empirical-evidence",
+    "href": "slides/class24.html#empirical-evidence",
+    "title": "Information Disclosure",
+    "section": "Empirical Evidence",
+    "text": "Empirical Evidence\n\nHealthcare: Disclosure of hospital quality metrics influences consumer choices and promotes competition among providers\nEducation: School performance reports affect parental choices for their children’s education, leading to shifts in school enrollments\nFinance: Transparency in financial reporting and bond ratings significantly affects investor behavior and market dynamics\n\n\nConsumer response varies significantly based on the type of information disclosed, how it is presented, and consumer awareness"
+  },
+  {
+    "objectID": "slides/class24.html#practical-barriers",
+    "href": "slides/class24.html#practical-barriers",
+    "title": "Information Disclosure",
+    "section": "Practical Barriers",
+    "text": "Practical Barriers\n\nQuality Measurement Challenges:\n\nDifficulty in accurately measuring and reporting quality across different industries\nImpact of these challenges on the reliability and effectiveness of disclosure\n\nStrategic disclosure: Evidence of both improvements in quality and strategic behavior to game disclosure systems (e.g., cream skimming, MA contract loading)\nCertifier Behavior: Potential biases and conflicts of interest that may affect the impartiality of third-party certifiers\n\n\n\nKey Takeaways:\n\nEmpirical evidence supports the notion that quality disclosure can influence market behavior\nBut…effectiveness depends on accuracy of information, engagement, integrity of certifiers, and “newness” of the information"
+  },
+  {
+    "objectID": "slides/class24.html#example-from-luco2019",
+    "href": "slides/class24.html#example-from-luco2019",
+    "title": "Information Disclosure",
+    "section": "Example from Luco (2019)",
+    "text": "Example from Luco (2019)\n\nMandatory online price disclosure for retail gasoline in Chile\nPredictions:\n\nIf consumers use the information, competition will increase and prices will fall\nIf consumers do not access the site, disclosure may facilitate tacit collusion\nPotential heterogeneity in use across markets, with distributional implications"
+  },
+  {
+    "objectID": "slides/class24.html#model",
+    "href": "slides/class24.html#model",
+    "title": "Information Disclosure",
+    "section": "Model",
+    "text": "Model\n\nLuco (2019) presents a theoretical model of price competition and consumer search\nShows that disclosure may facilitate coordination and increase prices\n\nDepends on the rate in which firms observe deviations from the collusive price and the share of informed consumers"
+  },
+  {
+    "objectID": "slides/class24.html#estimation",
+    "href": "slides/class24.html#estimation",
+    "title": "Information Disclosure",
+    "section": "Estimation",
+    "text": "Estimation\n\nStandard TWFE estimation: \\[y_{it} = \\beta_{0} + \\beta_{1} 1(\\text{Website Available})_{it} + \\gamma x_{it} + \\xi_{i} + \\eta_{t} + \\epsilon_{it}\\]\nThere was a rollout of the website, so this is staggered (pre-dates the recent DD stuff on staggered DD)\nInteract disclosure with income and search requests"
+  },
+  {
+    "objectID": "slides/class24.html#findings",
+    "href": "slides/class24.html#findings",
+    "title": "Information Disclosure",
+    "section": "Findings",
+    "text": "Findings\n\nCompetition decreases (prices increase) on average\nHigher prices increases for low income and low search areas\nPrice decreases in areas with high income and high search"
+  },
+  {
+    "objectID": "slides/class24.html#price-disclosure-in-healthcare",
+    "href": "slides/class24.html#price-disclosure-in-healthcare",
+    "title": "Information Disclosure",
+    "section": "Price Disclosure in Healthcare",
+    "text": "Price Disclosure in Healthcare\n\nSome small scale studies of price disclosure for specific health insurers or other contexts\nOnly large efforts are more recent through CMS price transparency initiatives\nData poorly formatted and difficult to use, compliance is low\nTurquoise Health claims to have collected and organized these data (haven’t used it myself)"
+  },
+  {
+    "objectID": "slides/class24.html#references",
+    "href": "slides/class24.html#references",
+    "title": "Information Disclosure",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nDranove, David, and Ginger Zhe Jin. 2010. “Quality Disclosure and Certification: Theory and Practice.” Journal of Economic Literature 48 (4): 935–63.\n\n\nLuco, Fernando. 2019. “Who Benefits from Information Disclosure? The Case of Retail Gasoline.” American Economic Journal: Microeconomics 11 (2): 277–305. https://doi.org/10.1257/mic.20170110."
   }
 ]

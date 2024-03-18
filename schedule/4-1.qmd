@@ -11,6 +11,6 @@ We'll start our discussion with @chernew2008, who presents a nice model of patie
 Since healthcare is an experience good, we simply don't know the quality of our care until after we've received it. But we might still be able to better predict quality based on providers' past outcomes. Such information has historically been difficult or impossible to observe, but this is changing. We'll discuss two studies on the effects of quality disclosure on provider choice: @dranove2003 and @brown2023.
 
 ### Price Information and Provider Choice
-In the U.S., prices for healthcare services are notoriously difficult to observe, but there have been recent efforts to change this. We'll discuss two studies on the effects of price disclosure on provider choice: @christensen2023 and @brown2019.
+In the U.S., prices for healthcare services are notoriously difficult to observe, but there have been recent efforts to change this. We'll discuss two studies on the effects of price disclosure on provider choice: @christensen2020 and @brown2019.
 
 

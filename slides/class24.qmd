@@ -1,0 +1,189 @@
+---
+title: "Information Disclosure"
+author: "Ian McCarthy | Emory University"
+format: 
+  revealjs:
+    theme: [moon]
+    preview-links: auto
+#    chalkboard:
+#      boardmarker-width: 5
+    slide-number: true
+    width: 1600
+    height: 900    
+    embed-resources: true
+from: markdown+emoji
+execute: 
+  echo: true
+---
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, lubridate, gapminder, scales)
+```
+
+## Table of contents
+
+1. Information problems everwhere
+2. Quality disclosure 
+3. Price disclosure
+
+
+# Information Problems
+
+---
+
+## Information problems are everywhere
+
+- Healthcare
+- Education (state funding decisions, college ratings, etc.)
+- Finance (credit ratings, bond ratings, etc.)
+- Food (nutrition labels, etc.)
+- Any product really!
+
+---
+
+## Specifically in healthcare...
+
+- Hospital quality (pay for performance, hospital choice/star ratings)
+- Health insurance (Medicare Advantage star ratings)
+- HHA, SNF, Hospice (star ratings)
+- Physician quality (physician compare, report cards)
+- Google reviews, yelp, etc. for all of the above
+
+
+# Quality Disclosure
+
+---
+
+## Background, @dranove2010
+
+- Quality often unknown or uncertain ex ante
+- Consumers rely on other information to infer quality
+- Quality disclosure provides consumers with direct information on product or service quality (unlike implied quality via price, brand, etc.)
+- @dranove2010 discuss:
+  - Full (and voluntary) disclosure
+  - Barriers to full disclosure
+  - Third-party disclosure
+  - Empirical evidence
+
+---
+
+## Full (and Voluntary) Disclosure
+
+Under what conditions might *all* firms voluntarily disclose quality information (e.g., unraveling)?
+
+  - Products identical except for single vertical dimension
+  - Sellers have complete and private quality informatioin
+  - Disclosure is costless
+  - Monopoly or competitive market
+  - Homogeneous consumers with rational expectations about undisclosed quality
+  - All quality disclosure is public information
+
+::: {.fragment}
+Violations of any condition will tend to prohibit full disclosure
+:::
+
+---
+
+## Barriers to Full and Voluntary Disclosure
+
+- **Disclosure Costs:** Even minimal costs can prevent sellers from disclosing
+- **Market Structure:** Duopoly and oligopoly markets may see strategic non-disclosure as a competitive tool
+- **Consumer Response:** Lack of consumer attention or understanding can diminish the incentives for disclosure
+- **Heterogeneous Preferences:** When consumer preferences vary widely, the impact of disclosure on market choices becomes unpredictable
+- **Unobservable Quality Attributes:** In some markets, quality cannot be easily measured or observed
+
+---
+
+## Third-party Disclosure
+
+If voluntary disclosure won't work, third-party entities may verify and disseminate information about product quality. Key issues for third-party disclosure include:
+
+- **Key issues:**
+  - Potential conflicts of interest if funded by sellers
+  - Ensuring unbiased and accurate reporting
+  - Overcoming information asymmetry without introducing new biases
+
+- **Potential effects:**
+  - Can significantly affect consumer trust and behavior
+  - Potential to improve market efficiency by enhancing transparency
+
+---
+
+## Empirical Evidence
+
+- Healthcare: Disclosure of hospital quality metrics influences consumer choices and promotes competition among providers
+- Education: School performance reports affect parental choices for their children’s education, leading to shifts in school enrollments
+- Finance: Transparency in financial reporting and bond ratings significantly affects investor behavior and market dynamics
+
+::: {.fragment}
+Consumer response varies significantly based on the type of information disclosed, how it is presented, and consumer awareness
+:::
+
+---
+
+## Practical Barriers
+
+- **Quality Measurement Challenges:**
+  - Difficulty in accurately measuring and reporting quality across different industries
+  - Impact of these challenges on the reliability and effectiveness of disclosure
+- **Strategic disclosure:** Evidence of both improvements in quality and strategic behavior to game disclosure systems (e.g., cream skimming, MA contract loading)
+- **Certifier Behavior:** Potential biases and conflicts of interest that may affect the impartiality of third-party certifiers
+
+::: {.fragment}
+- **Key Takeaways:**
+  - Empirical evidence supports the notion that quality disclosure can influence market behavior
+  - But...effectiveness depends on accuracy of information, engagement, integrity of certifiers, and "newness" of the information
+:::
+
+
+# Price Disclosure
+
+---
+
+## Example from @luco2019
+
+- Mandatory online price disclosure for retail gasoline in Chile
+- Predictions:
+  - If consumers use the information, competition will increase and prices will fall
+  - If consumers do not access the site, disclosure may facilitate tacit collusion
+  - Potential heterogeneity in use across markets, with distributional implications
+
+---
+
+## Model
+
+- @luco2019 presents a theoretical model of price competition and consumer search
+- Shows that disclosure may facilitate coordination and increase prices
+  - Depends on the rate in which firms observe deviations from the collusive price and the share of informed consumers
+
+---
+
+## Estimation
+
+- Standard TWFE estimation: $$y_{it} = \beta_{0} + \beta_{1} 1(\text{Website Available})_{it} + \gamma x_{it} + \xi_{i} + \eta_{t} + \epsilon_{it}$$
+- There was a rollout of the website, so this is staggered (pre-dates the recent DD stuff on staggered DD)
+- Interact disclosure with income and search requests
+
+---
+
+## Findings
+
+- Competition decreases (prices increase) on average
+- Higher prices increases for low income and low search areas
+- Price decreases in areas with high income and high search 
+
+---
+
+## Price Disclosure in Healthcare
+
+- Some small scale studies of price disclosure for specific health insurers or other contexts
+- Only large efforts are more recent through CMS price transparency initiatives
+- Data poorly formatted and difficult to use, compliance is low
+- Turquoise Health claims to have collected and organized these data (haven't used it myself)
+
+
+---
+
+## References
