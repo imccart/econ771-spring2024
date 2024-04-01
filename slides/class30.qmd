@@ -1,0 +1,177 @@
+---
+title: "Physician Learning"
+author: "Ian McCarthy | Emory University"
+format: 
+  revealjs:
+    theme: [moon]
+    preview-links: auto
+#    chalkboard:
+#      boardmarker-width: 5
+    slide-number: true
+    width: 1600
+    height: 900    
+    embed-resources: true
+from: markdown+emoji
+execute: 
+  echo: true
+---
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, lubridate, gapminder, scales)
+```
+
+
+# Some Background
+
+---
+
+## A Primer on Learning Models (@ching2013)
+
+- Often modeled as consumer learning, but the basic setup is the same
+- Consumers have incomplete information about product attributes and learn about them over time (e.g., through experience)
+- Today, we'll work through the basics of a consumer learning model
+
+---
+
+## Discrete Choice vs Learning
+
+- "work within the traditional random utility framework maintains the strong assumption that consumers know the attributes of their choice options perfectly"
+- More realistically, "they make choices based on perceived attributes. Over time, consumers receive information signals that enable them to learn more about products. It is this inherent temporal aspect of learning models that distinguishes them from static choice under uncertainty models."
+
+---
+
+## Key aspects of learning models
+
+1. Forward-looking versus myopic
+2. Linear versus risk-averse
+3. Sources of information
+4. Updating rules (Bayesian, etc.)
+
+---
+
+## Timeline of literature
+
+- Pre 1996: Computational limitations necessitated very simple structures that did not capture much of the complexity of learning
+- @erdem1996: First paper to use Bayesian updating in a learning model, employing new methods from @keane1994 to greatly simplify estimation of dynamic discrete choice models
+- Post 1996 (really post 2000): Extension of learning models with more complex structures (at least in some dimensions)
+
+
+# Erdem and Keane (1996)
+
+---
+
+## Basic Structure
+
+- Consumers have incomplete information about product quality
+- Prior: $q_{j} \sim N(q_{j1}, \sigma_{j1}^{2})$ for $j=1,..., J$
+- Consumers observe quality through experience, but it is a noisy signal of true quality $\tilde{q}_{jt} = q_{j} + \epsilon_{jt}$ where $\epsilon_{jt} \sim N(0, \sigma_{\epsilon}^{2})$
+- Note: the the prior and the signal are assumed to follow a normal distribution, thus we have conjugate priors (the prior combines with the signal to form a closed form distribution for the posterior, in this case another normal distribution)
+
+$$\begin{align}
+q_{j2} &= \frac{\sigma_{j1}^{2}}{\sigma_{j1}^{2} + \sigma_{\epsilon}^{2}}\tilde{q}_{j1} + \frac{\sigma_{\epsilon}^{2}}{\sigma_{j1}^{2} + \sigma_{\epsilon}^{2}}q_{j1} \\\
+\sigma_{j2}^{2} &= \frac{1}{\frac{1}{\sigma_{j1}^{2}} + \frac{1}{\sigma_{\epsilon}^{2}}}\end{align}$$
+
+---
+
+## Multiple Periods
+
+Generalizing to $N_{j}(t)$ periods, we have:
+
+$$\begin{align}
+q_{jt} &= \frac{\sigma_{j1}^{2}}{N_{j}(t) \sigma_{j1}^{2} + \sigma_{\epsilon}^{2}}\sum_{s=1}^{t-1}\tilde{q}_{js}d_{js} + \frac{\sigma_{\epsilon}^{2}}{N_{j}(t) \sigma_{j1}^{2} + \sigma_{\epsilon}^{2}}q_{j1} \\\
+\sigma_{jt}^{2} &= \frac{1}{\frac{1}{\sigma_{j1}^{2}} + N_{j}(t) \frac{1}{\sigma_{\epsilon}^{2}}},\end{align}$$
+
+where $N_{j}(t)$ denotes the number of signals received up to time $t$, and $d_{js}$ is a dummy variable that equals 1 if a signal is received for product $j$ at time $s$ and 0 otherwise.
+
+- Posterior mean, $q_{jt}$, is a weighted average of the prior and all quality signals received up to time $t$
+- Posterior variance, $\sigma_{jt}^{2}$, decreases with the number of signals received
+- In the limit, as $t \rightarrow \infty$, the posterior mean converges to the true quality of the product
+
+---
+
+## Utility
+
+- Today's purchase affects tomorrow's information set, which affects future utility, etc.
+- Requires dynamic programming to solve for the optimal decisions (in general), with
+
+$$V(j, t | I_{t}) = U(j,t | I_{t}) + \beta EV(I_{t+1} | I_{t}, j),$$ where
+
+- $U(.)$ is utility of product $j$ at time $t$ given information set $I_{t}$
+- $EV(.)$ is the expected present value of future payoffs conditional on $I_{t}$ and $j$
+
+---
+
+## Forward-looking learning
+
+- May be optimal to choose a brand with lower perceived quality today if it provides more information
+- Consider a special case where of selecting between a new product $n$ or an old product $o$
+- $V(n,t | I_{t}) = q_{nt} - p_{nt} + e_{nt} + \beta EV(I_{t+1} | I_{t}, n)$, where $I_{t+1} = \{q_{n,t+1}, \sigma^{2}_{n,t+1}\}$
+- $V(o,t | I_{t}) = q_{ot} - p_{ot} + e_{ot} + \beta EV(I_{t+1} | I_{t}, o)$, where $I_{t+1} = I_{t}$
+- The consumer chooses $n$ if $V_{nt}^{*} \equiv V(n,t | I_{t}) > V(o,t | I_{t}) > 0$
+
+$$\begin{align}
+V_{nt}^{*}  &= (q_{nt} - p_{nt}) - (q_{ot} - p_{ot}) + (e_{nt}-e_{ot}) + \beta (EV(I_{t+1} | I_{t}, n) - EV(I_{t_1}|I_{t},o) \\\
+ &=(q_{nt} - p_{nt}) - (q_{ot} - p_{ot}) + (e_{nt}-e_{ot}) + G_{t}.\end{align}$$
+
+- Can be shown that $G_{t}>0$ so that more information is always better
+
+---
+
+## Estimation
+
+- Complicated due to expected value of future payoffs, $$EV(I_{t+1} | I_{t}, j) = E_{t} \max \{V(1, t+1 | I_{t+1}), V(2, t+1 | I_{t+1}), ..., V(J, t+1 | I_{t+1})\}$$
+- Decision maker can form expected maximum, but this just pushes the problem one period ahead
+- How do we fully solve the dynamic optimization problem?
+
+---
+
+## Estimation
+
+- Key insight is that there exists a terminal period, $T$
+- $V(j,T | I_{T}) = E[U(j,T) | I_{T}]$ for all $j$...so
+
+$$EV(I_{T} | I_{T-1}, j) = E_{T-1} \max \{ E[U(1, T) | I_{T}], ..., E[U(J, T) | I_{T}] \},$$
+
+---
+
+## Estimation
+
+$$EV(I_{T} | I_{T-1}, j) = E_{T-1} \max \{E[U(1, T) | I_{T}], ..., E[U(J, T) | I_{T}] \}$$
+
+- Can be solved for explicitly in some settings (e.g., only error is $e_{jt}$ with logit assumptions)
+- Can be solved for numerically in other settings (e.g., with more general error structures or multiple signals per period)
+- With $EV(I_{T} | I_{T-1}, j)$, we can solve for $V(j,T-1 | I_{T-1}) = E[U(j,T-1) | I_{T-1}] + \beta EV(I_{T} | I_{T-1}, j)$
+
+
+---
+
+## Barriers to estimation
+
+- Solving by backward induction is intuitively appealing but computationally infeasible
+- Neet to calculate $EV(I_{T} | I_{T-1}, j)$ for all possible $(I_{T-1},j)$
+- In this simple setup, we have $2\times J$ variables at any given time (quality and variance for each product)
+- And those variables are continuous, so the full state space has infinitely many points
+- Need to discretize the state space (e.g., with $G$ grid points)
+- Yields $G^{2 \times J}$ grid points...still too many for practical estimation
+
+---
+
+## Erdem and Keane (1996) and Keane and Wolpin (1994)
+
+- Key insight: Randomly selected subset of state points
+- Expected value functions approximate out-of-sample (e.g., based on a regression from the subset of sampled state points)
+
+---
+
+## Final estimation
+
+- Dynamic programming solution/approximation must be performed for each iteration of the likelihood estimation
+- But...identification is a problem in these models
+- At a minimum, need a normalization since only utility differences matter for choice
+- For things that only enter into $EV(.)$ terms, identification requires variation in information sets across decision-makers
+
+---
+
+## References
