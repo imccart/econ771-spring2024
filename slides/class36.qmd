@@ -1,0 +1,1088 @@
+---
+title: "Review of Empirical Exercises"
+author: "Ian McCarthy | Emory University"
+format: 
+  revealjs:
+    theme: [moon]
+    preview-links: auto
+#    chalkboard:
+#      boardmarker-width: 5
+    slide-number: true
+    width: 1600
+    height: 900    
+    embed-resources: true
+from: markdown+emoji
+execute: 
+  echo: true
+---
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, lubridate, gapminder, scales)
+```
+
+
+## Areas of empirical work
+
+Empirical excercises cover four "applied" areas:
+
+1. Difference-in-differences
+2. Instrumental variables
+3. Regression discontinuity
+4. Demand estimation and hospital market construction
+
+::: {.fragment}
+Today, let's talk about each of these (briefly). And provide some code examples/hints.
+:::
+
+---
+
+## Workflow 
+
+Another sub-goal of the exercises is to practice good workflow. I'll focus on two possible workflows:
+
+1. "Solo-author" workflow, where everything lives on your computer, Git/GitHub, and **nothing** is hard-coded
+2. "Co-author" workflow, where you transition to Overleaf for writing purposes
+
+
+# Exercise 1: Difference-in-differences
+
+---
+
+## Question
+
+Does Medicaid expansion reduced hospital uncompensated care costs?
+
+---
+
+## Data
+
+1. Hospital Cost Report Information System
+2. Provider of Services files
+3. Medicaid expansion from KFF
+
+---
+
+## Data management
+
+
+- Create hcris, pos, and KFF medicaid datasets separately
+- Join appropriately
+- Define expansion period and uncompensated care costs
+- Trim data to remove outliers (many, many different/better ways to do this)
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "R Code"
+full.data <- hcris.data %>% rename(state_short=state) %>%
+  left_join(pos.data %>% select(provider_number=provider, category, own_change, beds_cert, beds_tot, name,
+                                term_date, fac_type, own_type, category_sub, profit_status, year), 
+            by=c("provider_number", "year")) %>%
+  left_join(medicaid.data, by="state_short") %>%
+  mutate(profit_status = 
+           case_when(
+             own_type=="Non-profit Private" ~ "Non Profit",
+             own_type %in% c("Physician Owned","Profit") ~ "For Profit"
+           )) %>%
+  mutate(expand_year=year(date_adopted),
+         expand = (year>=expand_year & !is.na(expand_year)),
+         uncomp_care=uncomp_care*cost_to_charge) %>%
+  rename(expand_ever=expanded) %>%
+  filter(year>=2003, year<2020,
+         uncomp_care>0, tot_pat_rev>0)
+
+trim.data <- full.data %>%
+  group_by(year) %>%
+  mutate(ptile_uncomp=ntile(uncomp_care,100)) %>%
+  filter(ptile_uncomp>1 & ptile_uncomp<99)
+```
+
+
+---
+
+## Identification strategy (ies)
+
+- DD with staggered treatment adoption (Medicaid expansion)
+- Work through different specifications/strategies:
+  - TWFE by group and with staggered treatment
+  - Event study by group and with staggered treatment
+  - Sun and Abraham with event study
+  - Callaway and Sant'Anna with event study
+  - Rambachan and Roth "honest DD"
+
+---
+
+## Estimation
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "TWFE"
+reg.data1 <- trim.data %>% mutate(uncomp_care=uncomp_care/1000) %>%
+  mutate(treat=
+           case_when(
+             year>=expand_year & !is.na(expand_year) ~ 1,
+             year<expand_year & !is.na(expand_year) ~0,
+             is.na(expand_year) ~ 0
+           )
+         )
+
+reg.data2 <- trim.data %>% mutate(uncomp_care=uncomp_care/1000) %>%
+  filter(is.na(expand_year) | expand_year==2014) %>%
+  mutate(post=(year>=2014),
+         treat=post*expand_ever)
+
+reg.data3 <- trim.data %>% mutate(uncomp_care=uncomp_care/1000) %>%
+  filter(is.na(expand_year) | expand_year==2015) %>%
+  mutate(post=(year>=2015),
+         treat=post*expand_ever)
+
+reg.data4 <- trim.data %>% mutate(uncomp_care=uncomp_care/1000) %>%
+  filter(is.na(expand_year) | expand_year==2016) %>%
+  mutate(post=(year>=2016),
+         treat=post*expand_ever)
+
+dd.est1 <- feols(uncomp_care~treat | year + provider_number, data=reg.data1)
+dd.est2 <- feols(uncomp_care~treat | year + provider_number, data=reg.data2)
+dd.est3 <- feols(uncomp_care~treat | year + provider_number, data=reg.data3)
+dd.est4 <- feols(uncomp_care~treat | year + provider_number, data=reg.data4)
+
+sum.fmt <- function(x) formatC(x, digits = 2, big.mark = ",", format = "f")
+dd.summary <- msummary(list("Full Sample"=dd.est1, "Expand 2014"=dd.est2, 
+                            "Expand 2015"=dd.est3, "Expand 2016"=dd.est4),
+                       shape=term + statistic ~ model, 
+                       gof_map=NA,
+                       coef_omit='Intercept',
+                       coef_rename=c("treat"="Expansion"),
+                       fmt= sum.fmt,
+                       vcov = ~provider_number,
+                       output="markdown",
+                       caption="TWFE Estimates for Different Treatment Groups",
+                       label="ddmodels")
+```
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Event Studies"
+
+## based on full data
+event.data1 <- reg.data1 %>%
+  mutate(event_time=
+           case_when(
+             !is.na(expand_year) ~ year-expand_year,
+             is.na(expand_year) ~ -1
+           )
+         ) 
+
+event.reg1 <- feols(uncomp_care ~ i(as.factor(event_time), expand_ever, ref=-1) | year + provider_number, 
+                   cluster=~provider_number, data=event.data1)
+
+
+
+## based on 2014 treatment group only
+event.reg2 <- feols(uncomp_care ~ i(as.factor(year), expand_ever, ref=2013) | year + provider_number, 
+                    cluster=~provider_number, data=reg.data2)
+
+```
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Sun and Abraham"
+
+sa.data <- event.data1 %>%
+  mutate(expand_year = ifelse(expand_ever==FALSE, 10000, expand_year),
+         time_to_treat = ifelse(expand_ever==FALSE, -1, year-expand_year),
+         time_to_treat = ifelse(time_to_treat < -15, -15, time_to_treat))
+
+sa.reg <- feols(uncomp_care ~ sunab(expand_year, time_to_treat) | year + provider_number,
+                cluster=~provider_number, data=sa.data)
+sa.est <- tidy(summary(sa.reg, agg=FALSE)) %>%
+  filter(str_detect(term,"cohort::2014|cohort::2015|cohort::2016")) %>%
+  mutate(term=str_replace(term,"time_to_treat::",""),
+         term=str_replace(term,":cohort::",":")) %>%
+  separate(term,c("period","cohort"),":") %>%
+  mutate(period=as.numeric(period)) %>%
+  select(period, cohort, estimate, p.value) %>%
+  rename(p_value=p.value) 
+
+sa.event.plot <- iplot(sa.reg, xlab = "Time to Treatment", main="Sun and Abraham Event Study")
+```
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Callaway and Sant'Anna"
+
+cs.data <- reg.data1 %>%
+  mutate(expand_year=ifelse(is.na(expand_year),0,expand_year)) %>%
+  group_by(provider_number) %>%
+  mutate(hospital_id=cur_group_id()) %>% ungroup()
+
+
+cs.mod <- att_gt(yname="uncomp_care", tname="year", idname="hospital_id",
+                 gname="expand_year",
+                 data=cs.data, panel=TRUE, est_method="dr",
+                 allow_unbalanced_panel=TRUE)
+cs.event <- aggte(cs.mod, type="dynamic")
+
+coef.cs <- tidy(cs.event) %>%
+  select(rel_year=event.time, estimate, ci_lower=conf.low, ci_upper=conf.high) %>%
+  mutate(rel_year=as.numeric(rel_year))
+coef.cs <- as_tibble(coef.cs)
+
+cs.plot <- ggplot(coef.cs, aes(x=rel_year, y=estimate)) + 
+  geom_point(size = 2)  +
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper)) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  geom_vline(xintercept = -0.5, linetype = "dashed") +
+  theme(legend.position="none") +
+  scale_x_continuous(breaks = -15:5, minor_breaks = NULL) +
+  scale_y_continuous(minor_breaks = NULL, label=comma) +
+  labs(x = "Relative Time", y = "Estimated Effect, $1000s", color = NULL, title = NULL) +
+  theme_bw()
+```
+
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Rambachan and Roth Honest DD"
+
+library(devtools)
+install_github("bcallaway11/BMisc", dependencies = TRUE)
+install_github("asheshrambachan/HonestDiD", dependencies = TRUE)
+
+library(HonestDiD)
+source('solutions/exercise1/fn_honest_did.R')
+
+cs.hd <- att_gt(yname="uncomp_care", tname="year", idname="hospital_id",
+                 gname="expand_year",
+                 data=cs.data, panel=TRUE, est_method="dr",
+                 allow_unbalanced_panel=TRUE,
+                base_period="universal")
+cs.hd.event <- aggte(cs.hd, type="dynamic", min_e=-10, max_e=5)
+
+hd.cs <- honest_did(cs.hd.event, type="smoothness", Mvec=seq(from=0, to=2000, by=500))
+hd.cs.graph <- createSensitivityPlot(hd.cs$robust_ci,
+                                        hd.cs$orig_ci)
+
+coef.cs.hd <- hd.cs$robust_ci %>% bind_rows(hd.cs$orig_ci) %>%
+  mutate(type=case_when(
+    M==2000 ~ "M = +2,000",
+    M==1500 ~ "M = +1,500",
+    M==1000 ~ "M = +1,000",
+    M==500 ~ "M = +500",
+    M==0 ~ "M = 0",
+    is.na(M) ~ "Original"
+  ))
+
+cs.hd.plot <- ggplot(coef.cs.hd, aes(x=factor(type, 
+                                              level=c('Original', 'M = 0', 'M = +500', 'M = +1,000', 'M = +1,500', 'M = +2,000')))) + 
+  geom_linerange(aes(ymin = lb, ymax = ub)) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  theme(legend.position="none") +
+  scale_y_continuous(minor_breaks = NULL, label=comma) +
+  labs(x = "Violation in Parallel Trends", y = "Estimated Effect (at t=0)", color = NULL, title = NULL) +
+  theme_bw()
+```
+
+
+
+# Exercise 2: Instrumental Variables
+
+---
+
+## Question
+
+What is the effect of vertical integration on total physician billable activity?
+
+
+---
+
+## Data
+
+1. Medicare Data on Provider and Practice Specialty (MD-PPAS)
+2. Medicare Utilization and Payment Data (PUF)
+3. Physician Fee Schedule (PFS)...already provided for you
+
+---
+
+## Data management
+
+- Using MD-PPAS, PFS, and PUF...calculate physician relative price changes due to price shock
+- Aggregate to practice level
+- Repeat 100 times for random realizations of price shock
+- Recenter practice level price changes based on random realizations
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "R Code"
+
+pfs.update <- read_tsv("solutions/exercise2/data/input/PFS_update_data.txt")
+taxid.base <- read_csv("solutions/exercise2/data/input/MDPPAS/PhysicianData_2009.csv") %>%
+  select(npi, tax_id_base=group1)
+
+## for recentering (part 8)
+pfs.year <- pfs.update %>% filter(year==2012)
+value <- 1:100
+n.rows=nrow(pfs.year)
+pfs.year.rc <- bind_cols(pfs.year,
+                           map_dfc(value, ~pfs.year %>% transmute(!!paste0('dprice_rel_2010_', .x) := sample(dprice_rel_2010, n.rows)))) %>%
+  select(hcpcs, starts_with('dprice_rel_2010_'))
+##
+
+step <- 0
+for (i in 2012:2017) {
+  step <- step+1
+  
+  if (i<=2013) {
+    pfs.yearly <- pfs.update %>% filter(year==i)
+  } else {
+    pfs.yearly <- pfs.update %>% filter(year==2013)
+  }
+  
+  
+  mdppas <- read_csv(paste0("solutions/exercise2/data/input/MDPPAS/PhysicianData_",i,".csv"))
+  
+  medicare.puf <- read_delim(paste0("solutions/exercise2/data/input/utilization-payment-puf/",i,"/Medicare_Provider_Util_Payment_PUF_CY",i,".txt")) %>%
+    mutate(year=i) %>%
+    rename_with(tolower) %>%
+    filter(str_detect(nppes_credentials, "M.D.|MD|m.d.|md")) %>%
+    mutate(npi=as.numeric(npi),
+           spend=average_medicare_allowed_amt*bene_day_srvc_cnt)
+
+  price.shock <- medicare.puf %>% inner_join(taxid.base, by="npi") %>%
+    inner_join(pfs.yearly %>% select(hcpcs, dprice_rel_2010, price_nonfac_orig_2010, price_nonfac_orig_2007), by=c("hcpcs_code"="hcpcs")) %>%
+    mutate_at(vars(dprice_rel_2010, price_nonfac_orig_2010, price_nonfac_orig_2007), replace_na, 0) %>%
+    mutate(price_shock = case_when(
+            i<=2013 ~ ((i-2009)/4)*dprice_rel_2010,
+            i>2013  ~ dprice_rel_2010),
+          denom = line_srvc_cnt*price_nonfac_orig_2010,
+          numer = price_shock*line_srvc_cnt*price_nonfac_orig_2010) %>%
+    group_by(npi) %>%
+    summarize(phy_numer=sum(numer, na.rm=TRUE), phy_denom=sum(denom, na.rm=TRUE), tax_id_base=first(tax_id_base)) %>%
+    ungroup() %>%
+    mutate(phy_rev_change=phy_numer/phy_denom)
+
+  price.shock.practice <- price.shock %>%
+    group_by(tax_id_base) %>%
+    summarize(practice_rev_change=sum(phy_rev_change, na.rm=TRUE)) %>%
+    ungroup()
+  
+  price.shock.rc <- medicare.puf %>% inner_join(taxid.base, by="npi") %>%
+    inner_join(pfs.yearly %>% select(hcpcs, price_nonfac_orig_2010), by=c("hcpcs_code"="hcpcs")) %>%        
+    inner_join(pfs.year.rc, by=c("hcpcs_code"="hcpcs")) %>%
+    mutate(across(starts_with('dprice_rel_2010'), replace_na, 0)) %>%
+    mutate(across(starts_with('dprice_rel_2010'),
+                  ~ case_when(
+                    i<=2013 ~ ((i-2009)/4)*(.x),
+                    i>2013 ~ .x),
+                  .names = "price_shock{sub('dprice_rel_2010_','_',col)}"),
+           denom = line_srvc_cnt*price_nonfac_orig_2010,
+           across(starts_with('price_shock'),
+                  ~ (.x)*line_srvc_cnt*price_nonfac_orig_2010,
+                  .names = "numer{sub('price_shock_','_',col)}")) %>%
+    group_by(npi) %>%
+    summarize(across(starts_with('numer'),
+                     ~ sum( .x, na.rm=TRUE),
+                     .names = "phy_{col}"),
+              phy_denom=sum(denom, na.rm=TRUE),
+              tax_id_base=first(tax_id_base)) %>%
+    ungroup() %>%
+    mutate(across(starts_with('phy_numer'),
+                  ~ (.x)/phy_denom,
+                  .names = "phy_rev_change{sub('phy_numer_','_',col)}"))
+
+  price.shock.practice.rc <- price.shock.rc %>%
+    group_by(tax_id_base) %>%
+    summarize(across(starts_with('phy_rev_change'),
+                     ~ sum(.x, na.rm=TRUE),
+                     .names = "{sub('phy','practice',col)}")) %>%
+    ungroup() %>%
+    mutate(mean_practice_shock=rowMeans( across(starts_with('practice_rev_change_')), na.rm=TRUE)) %>%
+    select(tax_id_base, mean_practice_shock)
+
+  phy.data <- medicare.puf %>% 
+    group_by(npi) %>%
+    summarize(total_claims=sum(bene_day_srvc_cnt, na.rm=TRUE),
+              total_spend=sum(spend, na.rm=TRUE),
+              total_patients=sum(bene_unique_cnt, na.rm=TRUE)) %>%
+    inner_join(taxid.base, by="npi") %>%
+    inner_join(mdppas %>% select(npi, group1, group2, pos_opd, pos_office, pos_asc), by="npi") %>%
+    inner_join(price.shock %>% select(-tax_id_base), by="npi") %>%
+    inner_join(price.shock.practice, by="tax_id_base")  %>%
+    inner_join(price.shock.practice.rc, by="tax_id_base")  %>%
+    rename(tax_id_2009=tax_id_base) %>%
+    mutate(year=i) %>%
+    ungroup()
+  
+  if (step==1) {
+    final.data <- phy.data
+  } else {
+    final.data <- bind_rows(final.data, phy.data)
+  }
+}
+
+```
+
+
+---
+
+## Identification strategy
+
+- First, assess potential role of selection on unobservables
+- Exploit PPIS price shock as instrument for integration
+  - Consider new work on instrument strength
+  - Consider "recentering" as proposed by Borusyak and Hull
+
+---
+
+## Estimation
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Role of selection on observables"
+
+delta.dx <- feols(ln_claims ~ int | npi + year, data=reg.data)
+delta.d <- feols(ln_claims ~ int, data=reg.data)
+
+hat.dx <- tidy(delta.dx) %>% select(estimate)
+hat.d <- tidy(delta.d) %>% filter(term=='int1') %>% select(estimate)
+R.dx <- glance(delta.dx)$r.squared
+R.d <- glance(delta.d)$r.squared
+oster.data <- tibble(
+  coef_dx = hat.dx$estimate,
+  coef_d = hat.d$estimate,
+  r_dx = R.dx,
+  r_d = R.d
+)
+
+rho <- tibble(
+  rho= c(0,.5,1,1.5,2),
+)
+
+r.max <- tibble(
+  r_max= c(0.5, 0.6, 0.7, 0.8, 0.9, 1)
+)
+
+oster.bound <- crossing(rho, r.max) %>%
+  bind_cols(oster.data) %>%
+  mutate(d_upper = coef_dx - rho*(coef_d - coef_dx)*( (r_max - r_dx)/(r_dx - r_d)))
+
+oster.table <- pivot_wider(oster.bound %>% select(rho, r_max, d_upper),
+            names_from=rho,
+            names_glue="rho_{rho}",
+            values_from=d_upper)
+
+kable(oster.table, format="latex",
+      col.names=c("Max R2","Rho 0","Rho 0.5", "Rho 1.0", "Rho 1.5", "Rho 2.0"),
+      digits=c(1,3,3,3,3,3),
+      format.args=list(big.mark=","),
+      booktabs=T) %>%
+  kable_styling(latex_options=c("HOLD_position")) %>%
+  save_kable("solutions/exercise2/t3_oster.tex")
+```
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "IV Estimation"
+
+mod.fs <- feols(as.numeric(int) ~ practice_rev_change | npi + year, data=reg.data)
+mod.iv <- feols(ln_claims ~ 0 | npi + year | int ~ practice_rev_change, data=reg.data)
+mod.rf <- feols(ln_claims ~ practice_rev_change | npi + year, data=reg.data)
+
+iv.summary <- msummary(list("OLS"=mod.ols, "IV"=mod.iv, 
+                            "Reduced Form"=mod.rf, "First Stage"=mod.fs),
+                       shape=term + statistic ~ model, 
+                       gof_map=NA,
+                       coef_omit='Intercept',
+                       coef_rename=c("int1"="Integration",
+                                     "fit_int1"="Integration",
+                                     "practice_rev_change"="Instrument"),
+                       vcov = ~npi,
+                       caption="Instrumental Variables Estimates",
+                       output="solutions/exercise2/t4-iv.tex",
+                       label="ivmodels",
+                       booktabs=T) %>%
+  kable_styling(latex_options='HOLD_position')
+
+```
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Weak Instruments"
+
+mod.fe1 <- feols(as.numeric(int) ~ 1 | npi + year, data=reg.data)
+mod.fe2 <- feols(practice_rev_change ~ 1 | npi + year, data=reg.data)
+mod.fe3 <- feols(ln_claims ~ 1 | npi + year, data=reg.data)
+
+ar.data <- reg.data %>%
+  filter(!is.na(npi)) %>%
+  add_residuals(mod.fe1, var="x_hat") %>%
+  add_residuals(mod.fe2, var="z_hat") %>%
+  add_residuals(mod.fe3, var="y_hat") %>%
+  select(y_hat, x_hat, z_hat, npi, year)
+
+ar.data <- as.data.frame(ar.data)
+Y=ar.data[,"y_hat"]
+D=ar.data[,"x_hat"]
+Z=ar.data[,"z_hat"]
+weak.test <- ivmodel(Y=Y, D=D, Z=Z)
+kable(weak.test$AR$ci, format="latex",
+      col.names=c("Lower CI","Upper CI"),
+      digits=c(3,3),
+      booktabs=T) %>%
+  kable_styling(latex_options=c("HOLD_position")) %>%
+  save_kable("solutions/exercise2/t6_ar.tex")
+
+## still need Lee et al tF stat
+lee.tf <- msummary(list("IV"=mod.iv, "First Stage"=mod.fs),
+                        shape=term + statistic ~ model, 
+                        gof_map=NA,
+                        coef_omit='Intercept',
+                        coef_rename=c("int1"="Integration",
+                                      "fit_int1"="Integration",
+                                      "practice_rev_change"="Instrument"),
+                        vcov = ~npi,
+                        statistic="statistic",
+                        caption="Instrumental Variables Estimates",
+                        output="solutions/exercise2/t6-tf.tex",
+                        label="ivmodels",
+                        booktabs=T) %>%
+  kable_styling(latex_options='HOLD_position')
+
+```
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Recentering"
+
+reg.data <- reg.data %>%
+  mutate(mean_shock=mean_practice_shock/1000) %>%
+  mutate(shock_rc=practice_rev_change-mean_shock)
+
+mod.fs2 <- feols(as.numeric(int) ~ shock_rc | npi + year, data=reg.data)
+mod.iv2 <- feols(ln_claims ~ 0 | npi + year | int ~ shock_rc, data=reg.data)
+mod.rf2 <- feols(ln_claims ~ shock_rc | npi + year, data=reg.data)
+
+iv.summary2 <- msummary(list("OLS"=mod.ols, "IV"=mod.iv2, 
+                            "Reduced Form"=mod.rf2, "First Stage"=mod.fs2),
+                       shape=term + statistic ~ model, 
+                       gof_map=NA,
+                       coef_omit='Intercept',
+                       coef_rename=c("int1"="Integration",
+                                     "fit_int1"="Integration",
+                                     "shock_rc"="Recentered Instrument"),
+                       vcov = ~npi,
+                       caption="Instrumental Variables Estimates",
+                       output="solutions/exercise2/t7-iv2.tex",
+                       label="ivmodels",
+                       booktabs=T) %>%
+  kable_styling(latex_options='HOLD_position')
+```
+
+
+
+# Exercise 3: Regression Discontinuity
+
+---
+
+## Question
+
+What is the effect of the low income subsidy on Part D enrollment?
+
+
+---
+
+## Data
+
+1. Replication data from Ericson (2014)
+2. Based on Part D enrollment and low-income subsidity data (publicly available)
+
+---
+
+## Data management
+
+Just combining datasets from replication files
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "R Code"
+
+# calculate shares from pdp data
+pdp.data <- pdp.data %>%
+  group_by(state, year) %>%
+  mutate(state_yr_enroll = sum(enrollment, na.rm=TRUE)) %>%
+  ungroup() %>%
+  mutate(share = enrollment/state_yr_enroll,
+         ln_share = log(share))
+
+# reshape subsidy data to long
+lis.data <- pivot_longer(lis.data, cols=c("s2006","s2007","s2008","s2009","s2010"), 
+                         names_to="year",
+                         names_prefix="s",
+                         values_to="LISsubsidy") %>%
+  mutate(year=as.numeric(year))
+
+# merge the subsidy data into the pdp data and create new variables matching Ericson's code files
+final.data <- pdp.data %>%
+  inner_join(lis.data, by=c("PDPregion","year")) %>%
+  mutate(LISPremium = premium - LISsubsidy,
+         proposedBenchmarkPlan = ifelse(LISPremium<=0,1,0),
+         ProblemObs = case_when(
+           LISPremium < 0 & LIS == 0 ~ 1,
+           LISPremium > 0 & LIS == 1 ~ 2
+         ),
+         LISPremium = ifelse(benefit=="E",NA,LISPremium),
+         proposedBenchmarkPlan = ifelse(benefit=="E", NA, proposedBenchmarkPlan),
+         LISPremiumNeg = ifelse(LISPremium<=0, LISPremium, 0),
+         LISPremiumPos = ifelse(LISPremium>=0, LISPremium, 0))
+
+# recreate Ericson RD windows
+final.data.rd <- final.data %>%
+  mutate(RDwindow1 = ifelse(LISPremium>=-10 & LISPremium<=10 & year==2006, 1, 0),
+         belowBench1 = ifelse(LISPremium<=0 & RDwindow1==1, 1, 0),
+         RDwindow2 = ifelse(LISPremium>=-4 & LISPremium<=4 & year==2006, 1, 0),
+         belowBench2 = ifelse(LISPremium<=0 & RDwindow2==1, 1, 0),
+         RDwindow3 = ifelse(LISPremium>=-2.5 & LISPremium<=2.5 & year==2006, 1, 0),
+         belowBench3 = ifelse(LISPremium<=0 & RDwindow3==1, 1, 0),
+         RDwindow4 = ifelse(LISPremium>=-6 & LISPremium<=6 & year==2006, 1, 0),
+         belowBench4 = ifelse(LISPremium<=0 & RDwindow4==1, 1, 0)) %>%
+  select(uniqueID, starts_with(c("RDwindow","belowBench"))) %>%
+  group_by(uniqueID) %>%
+  summarize_all(max, na.rm=TRUE) %>%
+  filter_at(vars(RDwindow1:belowBench4), all_vars(is.finite(.)))
+
+final.data <- final.data %>%
+  left_join(final.data.rd, by=c("uniqueID"))
+
+```
+
+
+---
+
+## Identification strategy
+
+- Binned scatterplots
+- RD estimation
+  - Manipulation of the running variable
+  - Optimal bandwidth and inference
+- Extension of Ericson (2014) using IV
+
+---
+
+## Estimation
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Binned Scatterplots"
+
+final.bw1 <- final.data %>% 
+  filter(RDwindow1==1, benefit=="B", year==2006)
+
+rd.result1 <- rdplot(y=final.bw1$ln_share, 
+                     x=final.bw1$LISPremium, 
+                     c=0,
+                     p=4,
+                     hide=TRUE,
+                     ci=95,
+                     nbins=20)
+
+bin.avg1 <- as_tibble(rd.result1$vars_bins)
+
+rd.plot1 <- bin.avg1 %>%
+  ggplot() +
+  geom_point(aes(x=rdplot_mean_bin, y=rdplot_mean_y)) +
+  geom_vline(aes(xintercept=0),linetype='dashed') +
+  labs(
+    x="Monthly premium - LIS subsidy, 2006",
+    y="log enrollment share, 2006"
+  ) +
+  geom_line(aes(x=rdplot_mean_bin, y=rdplot_ci_l), linetype='longdash') +
+  geom_line(aes(x=rdplot_mean_bin, y=rdplot_ci_r), linetype='longdash') +
+  theme_bw()
+
+
+```
+
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Binned Scatterplots with Different Binwidths"
+
+rd.result2 <- rdplot(y=final.bw1$ln_share, 
+                     x=final.bw1$LISPremium, 
+                     c=0,
+                     p=4,
+                     hide=TRUE,
+                     ci=95,
+                     nbins=10)
+
+bin.avg2 <- as_tibble(cbind(rd.result2$vars_bins))
+
+rd.plot2 <- bin.avg2 %>%
+  ggplot() +
+  geom_point(aes(x=rdplot_mean_bin, y=rdplot_mean_y)) +
+  geom_vline(aes(xintercept=0),linetype='dashed') +
+  labs(
+    x="Monthly premium - LIS subsidy, 2006",
+    y="log enrollment share, 2006"
+  ) +
+  geom_line(aes(x=rdplot_mean_bin, y=rdplot_ci_l), linetype='longdash') +
+  geom_line(aes(x=rdplot_mean_bin, y=rdplot_ci_r), linetype='longdash') +
+  theme_bw()
+
+
+
+rd.result3 <- rdplot(y=final.bw1$ln_share, 
+                     x=final.bw1$LISPremium, 
+                     c=0,
+                     p=4,
+                     hide=TRUE,
+                     ci=95,
+                     nbins=30)
+
+bin.avg3 <- as_tibble(cbind(rd.result3$vars_bins))
+
+rd.plot3 <- bin.avg3 %>%
+  ggplot() +
+  geom_point(aes(x=rdplot_mean_bin, y=rdplot_mean_y)) +
+  geom_vline(aes(xintercept=0),linetype='dashed') +
+  labs(
+    x="Monthly premium - LIS subsidy, 2006",
+    y="log enrollment share, 2006"
+  ) +
+  geom_line(aes(x=rdplot_mean_bin, y=rdplot_ci_l), linetype='longdash') +
+  geom_line(aes(x=rdplot_mean_bin, y=rdplot_ci_r), linetype='longdash') +
+  theme_bw()
+
+
+```
+
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Scatterplot with Optimal Binwidth"
+
+rd.result4 <- rdplot(y=final.bw1$ln_share, 
+                     x=final.bw1$LISPremium, 
+                     c=0,
+                     p=4,
+                     hide=TRUE,
+                     ci=95,
+                     binselect="es")
+
+bin.avg4 <- as_tibble(cbind(rd.result4$vars_bins))
+
+rd.plot4 <- bin.avg4 %>%
+  ggplot() +
+  geom_point(aes(x=rdplot_mean_bin, y=rdplot_mean_y)) +
+  geom_vline(aes(xintercept=0),linetype='dashed') +
+  labs(
+    x="Monthly premium - LIS subsidy, 2006",
+    y="log enrollment share, 2006"
+  ) +
+  geom_line(aes(x=rdplot_mean_bin, y=rdplot_ci_l), linetype='longdash') +
+  geom_line(aes(x=rdplot_mean_bin, y=rdplot_ci_r), linetype='longdash') +
+  theme_bw()
+
+opt.bins <- nrow(bin.avg4)
+
+```
+
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Manipulation Test"
+
+rd.test <- rddensity(X=final.bw1$LISPremium, p=4)
+pval.rd.test <- rd.test$test$p_jk
+diff.rd.test <- rd.test$hat$diff
+rd.test.plot <- rdplotdensity(rd.test, final.bw1$LISPremium,
+                              lcol = c("black","black"),
+                              xlabel = "Monthly premium - LIS subsidy, 2006",
+                              plotRange = c(-10,10),
+                              plotN = 100)
+
+```
+
+
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "RD Estimation"
+
+data.2006 <- final.data %>%
+  filter(year==2006) %>%
+  select(orgParentCode, planName, state, contractId, uniqueID,
+         enrollment, share, ln_share, LISPremium_2006=LISPremium,
+         premium_2006=premium)
+
+
+for (i in 2006:2010) {
+  rd.dat <- final.data %>% filter(year==i) %>%
+    left_join(data.2006 %>% select(uniqueID, LISPremium_2006), by=c("uniqueID"))
+  rd.est.p1 <- rdrobust(y=rd.dat$ln_share, x=rd.dat$LISPremium_2006, h=4, kernel="uniform")
+  rd.est.p2 <- rdrobust(y=rd.dat$ln_share, x=rd.dat$LISPremium_2006, h=4, kernel="uniform", p=2)
+  
+  ti <- data.frame(
+    term=c("RD Linear", "RD Polynomial"),
+    estimate=c(-1*rd.est.p1$coef[1], -1*rd.est.p2$coef[1]),
+    std.error=c(rd.est.p1$se[1], rd.est.p2$se[1])
+  )
+  
+  gl <- data.frame(
+    N1 = rd.est.p1$M[1],
+    N2 = rd.est.p1$M[2]
+  )
+
+  mod <- list(
+    tidy=ti,
+    glance=gl
+  )
+
+  class(mod) <- "modelsummary_list"
+    
+  assign(paste0("mod",i),mod)
+}
+
+```
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "CE-optimal Bandwidth"
+
+for (i in 2006:2010) {
+  rd.dat <- final.data %>% filter(year==i) %>%
+    left_join(data.2006 %>% select(uniqueID, LISPremium_2006), by=c("uniqueID"))
+  rd.est.p1 <- rdrobust(y=rd.dat$ln_share, x=rd.dat$LISPremium_2006, bwselect="cerrd", kernel="uniform")
+  rd.est.p2 <- rdrobust(y=rd.dat$ln_share, x=rd.dat$LISPremium_2006, bwselect="cerrd", kernel="uniform", p=2)
+
+  ti <- data.frame(
+    term=c("RD Linear", "RD Polynomial"),
+    estimate=c(-1*rd.est.p1$coef[1], -1*rd.est.p2$coef[1]),
+    std.error=c(rd.est.p1$se[1], rd.est.p2$se[1])
+  )
+  
+  gl <- data.frame(
+    N1 = rd.est.p1$M[1],
+    N2 = rd.est.p1$M[2]
+  )
+  
+  mod <- list(
+    tidy=ti,
+    glance=gl
+  )
+  
+  class(mod) <- "modelsummary_list"
+  
+  assign(paste0("modce",i),mod)
+  
+}
+
+```
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Discontinuity as IV"
+
+data.2007 <- final.data %>%
+  filter(year==2007) %>%
+  select(orgParentCode, planName, state, contractId, uniqueID,
+         premium_2007=premium)
+
+reg.data <- data.2006 %>%
+  left_join(data.2007, by=c("orgParentCode","planName","state",
+                            "contractId","uniqueID")) %>%
+  mutate(premium_diff=premium_2007-premium_2006)
+
+mean.share <- round(as.numeric(reg.data %>% summarize(mean_share=mean(share, na.rm=TRUE))), 3)
+inertia <- feols(premium_diff~1 | ln_share~LISPremium_2006, data=reg.data)
+
+```
+
+# Exercise 4: Demand Estimation and Market Share Construction
+
+---
+
+## Question
+
+What is the role of market definition on market shares and demand estimates?
+
+
+---
+
+## Data
+
+1. Hospital Cost Report Information System
+2. Hospital Service Area Files
+
+---
+
+## Data management
+
+- Biggest issue is creating markets using the community detection algorithm
+- I did that for you with the 'hospital_markets' data due to time, but if you want to do it yourself, please take a look at my ongoing [Hospital Choice Project](https://github.com/imccart/hospital-delivery-choice)
+
+
+---
+
+## Market Definition
+
+
+**Every** analysis of competition requires some definition of the market. This is complicated in healthcare for several reasons:
+
+1. Hospital markets more local than insurance markets
+2. Hospitals are multi-product firms
+3. Geographic market may differ by procedure
+4. Insurance networks limit choice within a geographic market
+
+
+---
+
+## Hospital Service Areas (HSAs)
+
+1. Begin with town or cities with a hospital (possibly more than one)
+2. Assign zip codes to that town/hospital(s) if the plurality of people in that zip code receive care from that town/hospital(s)
+3. Define the HSA as all contiguous zip codes from step 2
+
+Around 3,400 HSAs total
+
+
+---
+
+## Hospital Referral Regions (HRRs)
+
+- Contiguous HSAs
+- Population of at least 120,000
+- Account for at least 65% of residents' health care services (cardiovascular and neurosurgery)
+
+306 HRRs total
+
+---
+
+## Community Detection
+
+Goal: Identify connected nodes (some geographic region like zip code or county) where residents tend to receive health care services
+
+---
+
+## Community Detection
+
+1. Form data on geographic units, providers, and patient counts (bipartite). This is a matrix with geographic unit as row, provider as columns, and patient counts as cells
+2. Convert to matrix on counts of connections (common hospitals) between geographic areas (unipartite)
+3. Employ "cluster walktrap" algorithm to identify clusters of geographic units
+
+---
+
+## Cluster Walktrap
+
+What is a "cluster walktrap"?
+
+- Identify densely connected subgraphs (aka communities) 
+- Random walk
+    - "walker" moves from node to node, uniformly randomly among neighbors
+    - "distance" will be large across communities and small within a community
+- Algorithm
+    - Begin with each node as its own community and calculate distance from each adjacent node
+    - Merge two adjacent communities, selected based on minimum sum of squared distances between each node and its community
+    - Update distances between communities and repeat
+
+
+---
+
+## Estimation
+
+- Asked to estimate a discrete choice logit model, but we only have continuous data on market shares at the hospital level
+- So...we need to employ @berry1994
+- His paper shows that a logit discrete choice model can be estimated with continuous market share data as follows...
+
+
+---
+
+## Basic Setup
+
+Indirect utility of person $i$, $$u_{ij} = x_{ij}\beta + \epsilon_{ij},$$ where $x_{ij}$ denotes person (and perhaps product) characteristics and $\epsilon_{ij}$ denotes an error term. 
+
+- Standard logit: one choice, $j=0,1$
+- Multinomial logit: many possible choices, $j=0,1,...,J$
+
+
+---
+
+## Logit terminology
+
+A few different terms for very similar models:
+
+- Multinomial Logit: Individual covariates only, alternative-specific coeficients. 
+$$u_{ij}=x_{i}\beta_{j} + \epsilon_{ij},$$ such that $$p_{ij} = \frac{e^{x_{i}\beta_{j}}}{\sum_{k} e^{x_{i}\beta_{k}}}$$
+
+- Conditional Logit: Allow for alternative-specific regressors, such that $$u_{ij}=x_{ij}\beta + \epsilon_{ij}$$
+- "Mixed" Logit: Allow for individual and alternative-specific regressors, such that $$u_{ij}=x_{ij}\beta + w_{i} \gamma_{j} + \epsilon_{ij}$$
+
+::: {.fragment}
+*but* people sometimes use "mixed" to refer to random-coefficients logit
+:::
+
+---
+
+## Does it matter?
+
+These are really all the same and it's just a matter of specification (e.g., interact individual covariates with product characteristics or with product dummies). I'll refer to them as "multinomial" logit.
+
+
+---
+
+## The Indepenence of Irrelevant Alternatives
+
+Fundamental issue with logit models...the ratio of choice probabilities for $j$ and $k$ does not depend on any other alternatives: $$\frac{P_{ij}}{P_{ik}} = \frac{e^{V_{ij}}}{e^{V_{ik}}}.$$
+
+---
+
+## Relaxing IIA
+
+- This is really an omitted variables problem...with enough interactions, we can allow for a sufficiently rich substitution pattern
+- Alternatively, relax assumptions on the error term with nested logit or random-coefficient logit (or multinomial probit)
+
+---
+
+## Discrete choice with market level data
+
+Utility of individual $i$ from selecting product $j$ is $$U_{ij}=\delta_{j}+\epsilon_{ij},$$
+where $\delta_{j}=x_{j}\beta + \xi_{j}$, and $\xi_{j}$ represents the mean level of utility derived from unobserved characteristics.
+
+---
+
+## Discrete choice with market level data
+
+Goal is to find $\hat{\delta}$ to statisfy moment condition, $$\frac{1}{J}\sum_{j} (\hat{\delta}_{j}-x_{j}\beta)z_{j}=0.$$
+
+In standard logit, $s_{j}=e^{\delta_{j}}/\sum e^{\delta_{j}}$, and $\delta_{j}$ then follows directly from taking logs and subtracting the outside share (with the normalization of $\delta_{0}=0$, which yields the estimating equation $$\ln(s_{j}) - \ln(s_{0}) = x_{j}\beta + \xi_{j}$$
+
+---
+
+## Discrete choice with market level data
+
+- Standard logit imposes cross-price elasticities that are proportional to market shares (limited substitution patterns)
+- Relax with nested logit or random-coefficients logit
+
+---
+
+## References
